@@ -1,0 +1,44 @@
+[agents]
+enabled = true
+max_concurrent_threads_per_session = 3
+default_subagent_reasoning_effort = "medium"
+
+[agents.product]
+description = "Product manager for requirements, prioritization, acceptance criteria, user value, and non-goals. Must not modify application code."
+config_file = "agents/product.toml"
+
+[agents.architect]
+description = "Read-oriented senior software architect for boundaries, API contracts, data flow, scalability, and tradeoffs."
+config_file = "agents/architect.toml"
+
+[agents.designer]
+description = "Product/UI/UX designer for flows, layout, consistency, states, responsive design, and accessibility."
+config_file = "agents/designer.toml"
+
+[agents.backend]
+description = "Senior backend engineer focused on the Django backend in smart-paper/."
+config_file = "agents/backend.toml"
+
+[agents.frontend]
+description = "Senior frontend engineer focused on the Next.js frontend in smart-paper-front/."
+config_file = "agents/frontend.toml"
+
+[agents.qa]
+description = "QA engineer focused on real user behavior, acceptance criteria, exploratory testing, and regressions."
+config_file = "agents/qa.toml"
+
+[agents.tester]
+description = "Automated testing specialist for unit, integration, regression, and edge-case tests."
+config_file = "agents/tester.toml"
+
+[agents.reviewer]
+description = "Read-only independent senior code reviewer for correctness, regressions, maintainability, performance, and complexity."
+config_file = "agents/reviewer.toml"
+
+[agents.security]
+description = "Read-only application security reviewer for auth, authorization, injection, secrets, file handling, rate limiting, and data risks."
+config_file = "agents/security.toml"
+
+[agents.devops]
+description = "DevOps/SRE engineer for Docker, CI/CD, deployment configuration, health checks, observability, rollback, and production readiness."
+config_file = "agents/devops.toml"
