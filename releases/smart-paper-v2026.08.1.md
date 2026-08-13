@@ -25,7 +25,8 @@ Date: 2026-08-13
 | Android versionName | `2026.08.1` |
 | Data mode | `NEXT_PUBLIC_DATA_MODE=local` |
 | APK filename | `SmartPaper-local-2026.08.1-debug.apk` |
-| APK path | Not produced in this environment |
+| APK path | `releases/artifacts/SmartPaper-local-2026.08.1-debug.apk` |
+| APK SHA-256 | `52514d0c3985a79cedc575ddcc697350c08214038170fa085b2caaa3854b21a1` |
 
 ## Validation
 
@@ -38,7 +39,7 @@ Date: 2026-08-13
 | Frontend build | Docker: `npm run build` | Passed |
 | Android local-data build | Docker: `NEXT_PUBLIC_DATA_MODE=local npm run build` | Passed |
 | Android local-data sync | Docker: `npx cap sync android` | Passed |
-| Android APK build | Docker: `cd android && ./gradlew assembleDebug` | Blocked before Gradle by Docker Android SDK image registry/TLS timeout |
+| Android APK build | Docker: `cd android && ./gradlew assembleDebug` | Passed; built with `eclipse-temurin:21-jdk` on `linux/amd64` |
 
 ## Release Notes
 
@@ -48,10 +49,9 @@ Date: 2026-08-13
 - Fixed Android export so generated files are written through Capacitor Filesystem and opened with the native share sheet.
 - Improved Android dark/focus mode reliability by disabling WebView forced darkening and tightening planner contrast, focus states, input surfaces, and mobile header wrapping.
 - Added team release documentation for Git tags and Android local-data version records.
+- Stored the Android local-data debug APK in the team repository release artifacts.
 
 ## Known Follow-Ups
 
-- Re-run the Android APK build when the Docker Android SDK image can be pulled successfully.
-- Rename/copy the APK to `SmartPaper-local-2026.08.1-debug.apk` once produced.
+- Consider moving APK binaries to GitHub Release assets or Git LFS if release artifacts grow large.
 - Review dependency audit findings separately; npm reported 11 audit issues during Docker dependency installation.
-
