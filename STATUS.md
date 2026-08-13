@@ -1,10 +1,11 @@
 # Smart Paper Status
 
-Last updated: 2026-08-08.
+Last updated: 2026-08-13.
 
 ## Current Technical State
 
 - Workspace root is a coordination Git repository with project memory files now populated.
+- Team release workflow is documented in `docs/release-workflow.md`, with release records stored under `releases/`.
 - `smart-paper/` is an independent backend Git repository.
 - `smart-paper-front/` is an independent frontend Git repository.
 - The app appears to be a working personal weekly planner, finance tracker, and export/import tool.
@@ -16,6 +17,7 @@ Last updated: 2026-08-08.
 - SQLite database with committed Django migrations.
 - Planner APIs for week list, week detail save/load, and summaries.
 - Finance APIs for PIN unlock, overview/update, and income edit/delete.
+- Finance PIN unlock now throttles repeated invalid PIN attempts per client address.
 - Export/import APIs for JSON, CSV, XLSX, Markdown, merge, and replace.
 - Tests exist in `planner/tests.py` and `finance/tests.py`.
 - Dockerfile, Docker Compose, and Gunicorn startup script exist.
@@ -32,7 +34,7 @@ Last updated: 2026-08-08.
 
 ## Test / Lint / Build Status
 
-- Backend tests: passed on 2026-08-08 with `.venv/bin/python manage.py test` (`16` tests).
+- Backend tests: passed on 2026-08-13 with `.venv/bin/python manage.py test` (`22` tests).
 - Backend lint: no lint command or lint config discovered.
 - Backend type check: no type-check command or config discovered.
 - Frontend lint: passed on 2026-08-08 with `npm run lint`.
@@ -46,7 +48,6 @@ Last updated: 2026-08-08.
 - Backend mutation endpoints use `csrf_exempt`.
 - Planner endpoints have no authentication/authorization.
 - Finance uses a shared PIN unlock rather than per-user accounts/authorization.
-- No rate limiting found for finance PIN attempts.
 - No CI configuration found.
 - No frontend automated tests found.
 - No backend lint/type-check tooling found.
@@ -58,6 +59,7 @@ Last updated: 2026-08-08.
 - Security model needs confirmation: single-user private app versus multi-user app.
 - Backup/import safety expectations should be documented before larger data changes.
 - Android release/signing workflow is not documented.
+- Release signing/distribution details remain separate from the new local-data debug APK version record.
 
 ## Major TODOs
 

@@ -8,13 +8,13 @@ This roadmap is based on repository inspection only. Speculative ideas are marke
   - Needs confirmation: single-user private app or multi-user product.
 - Prepare backend settings for non-development deployment.
   - Move secrets and debug/host/CSRF/CORS settings to environment-aware configuration.
-- Add brute-force protection or rate limiting for finance PIN unlock attempts.
 - Add CI or a repeatable validation script for backend tests and frontend lint/type/build.
 
 ## High Value
 
 - Add frontend automated tests around primary user flows: weekly planner save/load, finance unlock/add/edit/delete, export/import, language switching.
 - Document production deployment and environment variables.
+- Use team-level release records and Git tags after mature changes, including Android local-data version metadata for each tagged release.
 - Add import/export regression tests across backend and local-storage frontend mode.
 - Improve operational readiness: health check, logging expectations, deployment rollback notes.
 
@@ -25,6 +25,7 @@ This roadmap is based on repository inspection only. Speculative ideas are marke
 - Make API error handling more structured for frontend display.
 - Clarify backup replace mode in UX and docs because it deletes old planner/finance data before import.
 - Add accessibility review for forms, focus states, keyboard flows, and RTL/LTR behavior.
+- Consider trusted-proxy client address handling or user-account-based throttling if Smart Paper becomes a multi-user or internet-exposed app.
 
 ## Later / Ideas
 

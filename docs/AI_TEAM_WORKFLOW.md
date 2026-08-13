@@ -36,8 +36,9 @@ the lead should execute exactly one improvement cycle, then stop.
 12. Re-run validation.
 13. Update `STATUS.md`.
 14. Update `ROADMAP.md` if needed.
-15. Report the final result.
-16. Stop. Do not automatically start another feature.
+15. If the work is mature enough to release, prepare a tag/release recommendation using `docs/release-workflow.md`; do not create tags without human approval.
+16. Report the final result.
+17. Stop. Do not automatically start another feature.
 
 ## Quality Gates
 
@@ -62,6 +63,7 @@ The AI team may autonomously:
 - update documentation
 - prepare commits
 - prepare a PR
+- prepare release notes and tag recommendations
 
 The AI team must not autonomously:
 
@@ -73,6 +75,7 @@ The AI team must not autonomously:
 - destroy infrastructure
 - expose secrets
 - perform irreversible Git operations
+- create or push release tags without explicit human approval
 
 Human approval is required for those actions.
 
