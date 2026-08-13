@@ -30,6 +30,7 @@ Last updated: 2026-08-13.
 - Local browser-storage mode selected by `NEXT_PUBLIC_DATA_MODE=local`.
 - Android local-data export now uses native Capacitor file sharing instead of browser download links.
 - Android UI polish now disables WebView forced darkening, improves planner dark/focus contrast, and makes headers more mobile-friendly.
+- Android app version for release `smart-paper-v2026.08.1` is `versionCode 2` and `versionName 2026.08.1`.
 - English/Persian translation support.
 - Tailwind CSS styling.
 - Capacitor Android project and build instructions.
