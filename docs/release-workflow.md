@@ -16,7 +16,7 @@ Do not tag failed or partially validated work.
 
 ## Tag Naming
 
-Use the same release name in all repositories that changed:
+Use the same release name in all three repositories for every shipped release:
 
 ```text
 smart-paper-vYYYY.MM.N
@@ -31,22 +31,24 @@ smart-paper-v2026.08.2
 
 `YYYY.MM` is the release month. `N` starts at `1` and increments for each tagged release in that month.
 
-## Android Version Rule
+## Android Version And Signing Rule
 
 For every tagged release that includes a working Android local-data app:
 
 - Increment `smart-paper-front/android/app/build.gradle` `versionCode`.
 - Set `versionName` to the release tag without the `smart-paper-v` prefix.
-- Build Android with `NEXT_PUBLIC_DATA_MODE=local`.
-- Record the APK filename and validation result in `releases/`.
+- Build Android with the stable-signed release workflow.
+- Record the APK filename, checksum, signing certificate fingerprint, and validation result in `releases/`.
+- Do not publish debug APKs for phone installs that should support future updates.
+- Keep `smart-paper-front/android/smart-paper-release.jks` and `smart-paper-front/android/keystore.properties` private and backed up. They are intentionally ignored by Git.
 
 Example mapping:
 
 ```text
-Git tag: smart-paper-v2026.08.1
-Android versionCode: 2
-Android versionName: "2026.08.1"
-APK name: SmartPaper-local-2026.08.1-debug.apk
+Git tag: smart-paper-v2026.08.5
+Android versionCode: 6
+Android versionName: "2026.08.5"
+APK name: SmartPaper-local-2026.08.5-release.apk
 ```
 
 ## Release Checklist
@@ -74,39 +76,93 @@ npx tsc --noEmit
 npm run build
 ```
 
-3. For Android local-data releases:
+3. For Android local-data releases, build the stable-signed APK:
 
 ```bash
 cd smart-paper-front
-NEXT_PUBLIC_DATA_MODE=local npm run build
-npx cap sync android
-cd android
-./gradlew assembleDebug
+scripts/build-android-release-docker.sh
 ```
 
-4. Copy or rename the debug APK using the release version:
+4. Verify the APK signature. The certificate SHA-256 should stay stable across releases:
 
 ```bash
 cd smart-paper-front
-cp android/app/build/outputs/apk/debug/app-debug.apk SmartPaper-local-2026.08.1-debug.apk
+docker run --rm --platform linux/amd64 \
+  -v "$PWD":/app \
+  -v smart-paper-front-android-sdk:/opt/android-sdk \
+  -w /app \
+  eclipse-temurin:21-jdk \
+  sh -lc 'export PATH=/opt/android-sdk/build-tools/36.0.0:$PATH; apksigner verify --print-certs android/app/build/outputs/apk/release/app-release.apk'
 ```
 
-5. Create a release record in `releases/` from `releases/TEMPLATE.md`.
+Current stable signing certificate SHA-256:
 
-6. Commit each changed repository in its own Git history.
+```text
+59912e191b4588996b4f3641c9b3609e77fa75aa6695be789ece1a0325faf2a5
+```
 
-7. Create annotated tags in the repositories that changed:
+5. Copy the APK into the team repository before tagging:
 
 ```bash
-git tag -a smart-paper-v2026.08.1 -m "Smart Paper 2026.08.1"
+cd ..
+cp smart-paper-front/android/app/build/outputs/apk/release/app-release.apk \
+  releases/artifacts/SmartPaper-local-YYYY.MM.N-release.apk
+shasum -a 256 releases/artifacts/SmartPaper-local-YYYY.MM.N-release.apk
 ```
 
-8. Push commits and tags only when approved:
+6. Create a release record in `releases/` from `releases/TEMPLATE.md`.
+
+The release record path must match the tag:
+
+```text
+releases/smart-paper-vYYYY.MM.N.md
+```
+
+7. Commit each changed repository in its own Git history.
+
+For the team repo, commit the release record, APK artifact, and nested app repo pointer before creating the tag.
+
+8. Create annotated tags in all three repositories:
+
+```bash
+git tag -a smart-paper-vYYYY.MM.N -m "Smart Paper vYYYY.MM.N"
+```
+
+9. Push commits first, then push tags:
 
 ```bash
 git push
-git push origin smart-paper-v2026.08.1
+git push origin smart-paper-vYYYY.MM.N
 ```
+
+## GitHub Release Publishing
+
+The team repository has `.github/workflows/publish-release.yml`.
+
+When a `smart-paper-v*` tag is pushed in the team repository, GitHub Actions automatically creates or updates the GitHub Release and uploads the matching APK asset.
+
+The workflow expects both files to already exist in the tagged team commit:
+
+```text
+releases/smart-paper-vYYYY.MM.N.md
+releases/artifacts/SmartPaper-local-YYYY.MM.N-release.apk
+```
+
+The workflow publishes committed APK artifacts. It does not build the APK itself.
+
+Correct order for automatic publishing:
+
+```text
+build signed APK
+copy APK into releases/artifacts/
+write release note
+commit and push app repos
+commit and push team main
+create and push tags, with the team tag last
+GitHub Release is generated automatically
+```
+
+For an existing tag, run the `Publish GitHub Release` workflow manually from GitHub Actions and pass the tag name.
 
 ## Team Agent Responsibilities
 
@@ -116,4 +172,3 @@ git push origin smart-paper-v2026.08.1
 - Security reviews sensitive changes before release.
 - DevOps confirms release/build commands and artifact notes.
 - Lead updates `STATUS.md`, `ROADMAP.md`, and `releases/`.
-

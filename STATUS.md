@@ -30,7 +30,9 @@ Last updated: 2026-08-13.
 - Local browser-storage mode selected by `NEXT_PUBLIC_DATA_MODE=local`.
 - Android local-data export now uses native Capacitor file sharing instead of browser download links.
 - Android UI polish now disables WebView forced darkening, improves planner dark/focus contrast, and makes headers more mobile-friendly.
-- Android app version for release `smart-paper-v2026.08.1` is `versionCode 2` and `versionName 2026.08.1`.
+- Android app version for release `smart-paper-v2026.08.4` is `versionCode 5` and `versionName 2026.08.4`.
+- Android release APKs are stable-signed with the private local keystore in `smart-paper-front/android/`; future update-compatible APKs must use the same ignored signing files.
+- Team repo tag pushes now publish GitHub Releases through `.github/workflows/publish-release.yml` when the matching release note and APK artifact are already committed.
 - English/Persian translation support.
 - Tailwind CSS styling.
 - Capacitor Android project and build instructions.
@@ -45,7 +47,8 @@ Last updated: 2026-08-13.
 - Frontend build: passed on 2026-08-08 with `npm run build`.
 - Frontend Docker validation for Android export fix: passed on 2026-08-13 with `npm run lint`, `npx tsc --noEmit`, `npm run build`, `NEXT_PUBLIC_DATA_MODE=local npm run build`, and `npx cap sync android`.
 - Frontend Docker validation for Android UI polish: passed on 2026-08-13 with `npm run lint`, `npx tsc --noEmit`, `npm run build`, `NEXT_PUBLIC_DATA_MODE=local npm run build`, and `npx cap sync android`.
-- Android APK build: attempted on 2026-08-13 with Docker Android SDK image; blocked by registry/image pull failures, not by Gradle output.
+- Android signed release build: passed on 2026-08-13 with `scripts/build-android-release-docker.sh`; latest signed artifact is `releases/artifacts/SmartPaper-local-2026.08.4-release.apk`.
+- GitHub Release publishing workflow: validated on 2026-08-13 by tag `smart-paper-v2026.08.4`.
 - Frontend tests: no test script or test config discovered.
 
 ## Known Technical Problems
@@ -64,8 +67,7 @@ Last updated: 2026-08-13.
 - Production deployment requirements and environment variables need clearer documentation.
 - Security model needs confirmation: single-user private app versus multi-user app.
 - Backup/import safety expectations should be documented before larger data changes.
-- Android release/signing workflow is not documented.
-- Release signing/distribution details remain separate from the new local-data debug APK version record.
+- Android release/signing workflow and GitHub Release publishing are documented in `docs/release-workflow.md` and `releases/README.md`.
 
 ## Major TODOs
 

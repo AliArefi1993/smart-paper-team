@@ -30,6 +30,8 @@ cd smart-paper-front
 - Do not deploy production automatically.
 - Do not run destructive Git commands unless the user explicitly asks for them.
 - Keep commits scoped to the repository that owns the changed files.
+- For Android releases, follow `docs/release-workflow.md`: build a stable-signed APK, commit the APK and release record to the team repo, push `main`, then push the `smart-paper-v*` team tag so GitHub Releases publish automatically.
+- Normal scoped commits, pushes, and release tags are allowed when they complete the requested work; human approval is still required for destructive Git, production deploys, production data changes, or secret exposure.
 
 ## Engineering Workflow
 
