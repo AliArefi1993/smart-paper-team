@@ -28,6 +28,7 @@ Last updated: 2026-08-13.
 - Routes for planner, finance, summaries, and export/import.
 - API wrappers for planner, finance, export/import.
 - Local browser-storage mode selected by `NEXT_PUBLIC_DATA_MODE=local`.
+- Android local-data export now uses native Capacitor file sharing instead of browser download links.
 - English/Persian translation support.
 - Tailwind CSS styling.
 - Capacitor Android project and build instructions.
@@ -40,6 +41,8 @@ Last updated: 2026-08-13.
 - Frontend lint: passed on 2026-08-08 with `npm run lint`.
 - Frontend type check: passed on 2026-08-08 with `npx tsc --noEmit`.
 - Frontend build: passed on 2026-08-08 with `npm run build`.
+- Frontend Docker validation for Android export fix: passed on 2026-08-13 with `npm run lint`, `npx tsc --noEmit`, `npm run build`, `NEXT_PUBLIC_DATA_MODE=local npm run build`, and `npx cap sync android`.
+- Android APK build: attempted on 2026-08-13 with Docker Android SDK image; blocked by registry/image pull failures, not by Gradle output.
 - Frontend tests: no test script or test config discovered.
 
 ## Known Technical Problems
