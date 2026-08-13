@@ -10,6 +10,7 @@ This is the working release record for the next tag. Rename it to the final tag 
 
 - Backend finance PIN brute-force protection.
 - Android local-data export file sharing fix.
+- Android dark/focus mode UI polish.
 - Team release/tag workflow and Android local-data version record.
 
 ## Repository Tags
@@ -42,7 +43,8 @@ This is the working release record for the next tag. Rename it to the final tag 
 | Frontend lint | Docker: `npm run lint` | Passed |
 | Frontend type check | Docker: `npx tsc --noEmit` | Passed |
 | Frontend build | Docker: `npm run build` | Passed |
-| Android local-data sync | Docker: `NEXT_PUBLIC_DATA_MODE=local npm run build && npx cap sync android` | Passed |
+| Android local-data build | Docker: `NEXT_PUBLIC_DATA_MODE=local npm run build` | Passed |
+| Android local-data sync | Docker: `npx cap sync android` | Passed |
 | Android build | `NEXT_PUBLIC_DATA_MODE=local npm run build && npx cap sync android && cd android && ./gradlew assembleDebug` | Blocked by Docker Android SDK image pull failure |
 
 ## Release Notes Draft
@@ -51,6 +53,7 @@ This is the working release record for the next tag. Rename it to the final tag 
 - Throttle blocks repeated invalid PIN attempts and preserves lockout across browser sessions and backend workers.
 - Added regression tests for lockout, cooldown, fresh sessions, and spoofed forwarding headers.
 - Fixed Android export so generated files are written through Capacitor Filesystem and opened with the native share sheet.
+- Improved Android dark/focus mode reliability by disabling WebView forced darkening and tightening planner contrast, focus states, input surfaces, and mobile header wrapping.
 - Added team release documentation for Git tags and Android local-data version records.
 
 ## Open Before Tagging
