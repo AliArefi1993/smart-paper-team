@@ -1,0 +1,78 @@
+name: Publish GitHub Release
+
+on:
+  push:
+    tags:
+      - "smart-paper-v*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag to publish, for example smart-paper-v2026.08.3"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  publish-release:
+    name: Publish release asset
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resolve release tag
+        id: release
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            tag="${{ inputs.tag }}"
+          else
+            tag="${GITHUB_REF_NAME}"
+          fi
+          version="${tag#smart-paper-v}"
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout release tag
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.release.outputs.tag }}
+
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ steps.release.outputs.tag }}
+          RELEASE_VERSION: ${{ steps.release.outputs.version }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          notes_file="releases/${RELEASE_TAG}.md"
+          release_apk="releases/artifacts/SmartPaper-local-${RELEASE_VERSION}-release.apk"
+          debug_apk="releases/artifacts/SmartPaper-local-${RELEASE_VERSION}-debug.apk"
+
+          if [ ! -f "$notes_file" ]; then
+            echo "Missing release notes: $notes_file" >&2
+            exit 1
+          fi
+
+          if [ -f "$release_apk" ]; then
+            apk="$release_apk"
+          elif [ -f "$debug_apk" ]; then
+            apk="$debug_apk"
+          else
+            echo "Missing APK artifact for ${RELEASE_TAG}" >&2
+            exit 1
+          fi
+
+          title="Smart Paper ${RELEASE_VERSION}"
+
+          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            gh release edit "$RELEASE_TAG" --title "$title" --notes-file "$notes_file"
+            gh release upload "$RELEASE_TAG" "$apk" --clobber
+          else
+            gh release create "$RELEASE_TAG" "$apk" \
+              --verify-tag \
+              --title "$title" \
+              --notes-file "$notes_file"
+          fi
