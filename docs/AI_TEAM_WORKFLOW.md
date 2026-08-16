@@ -50,6 +50,20 @@ A feature is not complete until:
 - no unresolved critical/high-severity review finding remains
 - documentation is updated where necessary
 
+## Testing Ownership
+
+- QA owns user-flow acceptance, exploratory scenarios, and release-readiness confidence.
+- Tester owns automated regression coverage and validation commands.
+- For main features, use both QA and Tester before release unless the maintainer explicitly scopes the work down.
+- Reviewer owns independent correctness and maintainability findings; Security and DevOps are used when the change touches sensitive data, auth, deployment, Android release, or release automation.
+
+## Commit Ownership
+
+- Backend and frontend agents may commit their own scoped repository changes after relevant checks pass and no critical/high findings remain.
+- Keep commits inside the repository that owns the changed files: backend commits from `smart-paper/`, frontend commits from `smart-paper-front/`, and team-memory/release commits from the workspace root.
+- The lead coordinates commit order across repositories and prepares release/tag recommendations.
+- Human approval is still required before merges to protected branches, production deploys, production data changes, destructive Git operations, or release tag pushes.
+
 ## Safety Boundaries
 
 The AI team may autonomously:

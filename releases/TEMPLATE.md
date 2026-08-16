@@ -21,7 +21,7 @@ Date:
 | Android versionCode |  |
 | Android versionName | `YYYY.MM.N` |
 | Data mode | `NEXT_PUBLIC_DATA_MODE=local` |
-| APK filename | `SmartPaper-local-YYYY.MM.N-debug.apk` |
+| APK filename | `SmartPaper-local-YYYY.MM.N-release.apk` |
 | APK path |  |
 
 ## Validation
@@ -33,7 +33,8 @@ Date:
 | Frontend lint | `npm run lint` |  |
 | Frontend type check | `npx tsc --noEmit` |  |
 | Frontend build | `npm run build` |  |
-| Android build | `NEXT_PUBLIC_DATA_MODE=local npm run build && npx cap sync android && cd android && ./gradlew assembleDebug` |  |
+| Android signed release build | `scripts/build-android-release-docker.sh` |  |
+| APK signature | `apksigner verify --print-certs android/app/build/outputs/apk/release/app-release.apk` |  |
 
 ## Release Notes
 
@@ -42,4 +43,3 @@ Date:
 ## Known Follow-Ups
 
 - 
-

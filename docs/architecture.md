@@ -40,15 +40,16 @@ smart-paper-front with NEXT_PUBLIC_DATA_MODE=local
 - Migrations:
   - `planner/migrations/0001_initial.py`
   - `planner/migrations/0002_dayplan_exercise_goal_dayplan_learning_goal_and_more.py`
+  - `planner/migrations/0003_plannersectionconfig_and_more.py`
   - `finance/migrations/0001_initial.py`
 - Background jobs: none found.
 
 ## Backend Modules
 
-- `planner/models.py`: `Week` and `DayPlan`.
-- `planner/views.py`: week list, week detail, week summaries, serialization, Saturday-based week calculation.
+- `planner/models.py`: `Week`, `DayPlan`, and `PlannerSectionConfig`. `DayPlan` stores 10 stable section slots; slots 1-4 map to legacy `main`, `second`, `learning`, and `exercise` fields, while slots 5-10 use `slot_5` through `slot_10` field groups.
+- `planner/views.py`: week list, week detail, week summaries, planner section settings, serialization, Saturday-based week calculation.
 - `planner/export_views.py`: JSON/CSV/XLSX/Markdown export and JSON import.
-- `planner/urls.py`: `/api/weeks/`, `/api/week-summaries/`, `/api/weeks/<start_date>/`, `/api/export/`, `/api/import/`.
+- `planner/urls.py`: `/api/weeks/`, `/api/week-summaries/`, `/api/weeks/<start_date>/`, `/api/planner-sections/`, `/api/export/`, `/api/import/`.
 - `finance/models.py`: `FinanceState` and `IncomeEntry`.
 - `finance/views.py`: finance unlock, overview, income edit/delete, finance serialization.
 - `finance/urls.py`: `/api/finance/unlock/`, `/api/finance/`, `/api/finance/incomes/<entry_id>/`.
@@ -61,7 +62,7 @@ smart-paper-front with NEXT_PUBLIC_DATA_MODE=local
 - Finance unlock checks a PIN against `FINANCE_PIN_HASH`.
 - `scripts/start_backend.sh` can derive `FINANCE_PIN_HASH` from `FINANCE_PIN` on startup.
 - The frontend sends `credentials: "include"` for finance/export/import API calls so Django session cookies work.
-- Planner week endpoints are unauthenticated.
+- Planner week endpoints and planner section settings are unauthenticated because Smart Paper is currently treated as single-user/private software.
 
 ## API Communication
 
@@ -80,16 +81,19 @@ smart-paper-front with NEXT_PUBLIC_DATA_MODE=local
   - `/`: weekly planner.
   - `/finance`: finance.
   - `/export`: export/import.
+  - `/settings`: planner section settings.
   - `/summaries`: multi-week summaries.
 - Key components:
   - `WeeklyPlanner`
   - `FinanceView`
   - `ExportView`
+  - `SettingsView`
   - `WeekSummariesView`
   - `LanguageToggle`
 - State management: React `useState`, `useEffect`, `useMemo`; no external state library found.
 - Internationalization: custom `src/lib/i18n.ts` and `useLanguage`, persisted in localStorage.
-- Local data mode: `src/lib/local-store.ts` implements planner, finance, export/import, and finance unlock behavior in browser storage.
+- Local data mode: `src/lib/local-store.ts` implements planner, planner section settings, finance, export/import, and finance unlock behavior in browser storage.
+- `src/lib/planner-sections.ts` normalizes planner section metadata and maps old four-section data into stable `slot_1` through `slot_10` records for backend and local-storage modes.
 
 ## External Services And Integrations
 
@@ -110,7 +114,7 @@ smart-paper-front with NEXT_PUBLIC_DATA_MODE=local
 ## Known Architecture Risks
 
 - `DEBUG = True`, hard-coded `SECRET_KEY`, and empty `ALLOWED_HOSTS` are development defaults and are not production-ready.
-- Planner endpoints are unauthenticated.
+- Planner endpoints and planner section settings are unauthenticated.
 - Finance protection is a shared PIN/session gate, not per-user authorization.
 - CSRF exemptions are used on JSON mutation endpoints.
 - No background processing, observability, health checks, or CI/CD configuration was found.

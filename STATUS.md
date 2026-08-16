@@ -1,6 +1,6 @@
 # Smart Paper Status
 
-Last updated: 2026-08-13.
+Last updated: 2026-08-16.
 
 ## Current Technical State
 
@@ -8,29 +8,32 @@ Last updated: 2026-08-13.
 - Team release workflow is documented in `docs/release-workflow.md`, with release records stored under `releases/`.
 - `smart-paper/` is an independent backend Git repository.
 - `smart-paper-front/` is an independent frontend Git repository.
-- The app appears to be a working personal weekly planner, finance tracker, and export/import tool.
-- No product feature implementation was changed during this setup pass.
+- The app is treated as a single-user personal weekly planner, finance tracker, and export/import tool.
+- Configurable planner sections are implemented in the current uncommitted backend/frontend work: 10 stable section slots, first four active by default, remaining six hidden by default.
 
 ## Implemented Backend
 
 - Django 6.0.4 project with `planner` and `finance` apps.
 - SQLite database with committed Django migrations.
-- Planner APIs for week list, week detail save/load, and summaries.
+- Planner APIs for week list, week detail save/load, summaries, and planner section settings.
+- Planner data uses stable section slots `slot_1` through `slot_10` in current uncommitted work, with legacy `main`, `second`, `learning`, and `exercise` mapped to slots 1-4.
 - Finance APIs for PIN unlock, overview/update, and income edit/delete.
 - Finance PIN unlock now throttles repeated invalid PIN attempts per client address.
 - Export/import APIs for JSON, CSV, XLSX, Markdown, merge, and replace.
+- Export/import JSON includes `schema_version: 2` and planner section settings in current uncommitted work.
 - Tests exist in `planner/tests.py` and `finance/tests.py`.
 - Dockerfile, Docker Compose, and Gunicorn startup script exist.
 
 ## Implemented Frontend
 
 - Next.js 16.2.4 / React 19.2.4 / TypeScript app.
-- Routes for planner, finance, summaries, and export/import.
-- API wrappers for planner, finance, export/import.
+- Routes for planner, finance, summaries, export/import, and settings.
+- API wrappers for planner, planner section settings, finance, and export/import.
 - Local browser-storage mode selected by `NEXT_PUBLIC_DATA_MODE=local`.
+- Local browser-storage mode supports configurable planner sections in current uncommitted work.
 - Android local-data export now uses native Capacitor file sharing instead of browser download links.
 - Android UI polish now disables WebView forced darkening, improves planner dark/focus contrast, and makes headers more mobile-friendly.
-- Android app version for release `smart-paper-v2026.08.4` is `versionCode 5` and `versionName 2026.08.4`.
+- Android app version for release candidate `smart-paper-v2026.08.7` is `versionCode 8` and `versionName 2026.08.7`.
 - Android release APKs are stable-signed with the private local keystore in `smart-paper-front/android/`; future update-compatible APKs must use the same ignored signing files.
 - Team repo tag pushes now publish GitHub Releases through `.github/workflows/publish-release.yml` when the matching release note and APK artifact are already committed.
 - English/Persian translation support.
@@ -39,7 +42,7 @@ Last updated: 2026-08-13.
 
 ## Test / Lint / Build Status
 
-- Backend tests: passed on 2026-08-13 with `.venv/bin/python manage.py test` (`22` tests).
+- Backend tests: passed on 2026-08-16 with `.venv/bin/python manage.py test` (`28` tests) for configurable planner sections.
 - Backend lint: no lint command or lint config discovered.
 - Backend type check: no type-check command or config discovered.
 - Frontend lint: passed on 2026-08-08 with `npm run lint`.
@@ -47,7 +50,9 @@ Last updated: 2026-08-13.
 - Frontend build: passed on 2026-08-08 with `npm run build`.
 - Frontend Docker validation for Android export fix: passed on 2026-08-13 with `npm run lint`, `npx tsc --noEmit`, `npm run build`, `NEXT_PUBLIC_DATA_MODE=local npm run build`, and `npx cap sync android`.
 - Frontend Docker validation for Android UI polish: passed on 2026-08-13 with `npm run lint`, `npx tsc --noEmit`, `npm run build`, `NEXT_PUBLIC_DATA_MODE=local npm run build`, and `npx cap sync android`.
+- Frontend Docker validation for configurable planner sections: passed on 2026-08-16 with `docker run --rm -v "$PWD":/app -w /app node:24-bookworm bash -lc 'npm ci && npm run lint && npx tsc --noEmit && npm run build'`.
 - Android signed release build: passed on 2026-08-13 with `scripts/build-android-release-docker.sh`; latest signed artifact is `releases/artifacts/SmartPaper-local-2026.08.4-release.apk`.
+- Android signed release build for `smart-paper-v2026.08.7`: passed on 2026-08-16 with `scripts/build-android-release-docker.sh`; artifact is `releases/artifacts/SmartPaper-local-2026.08.7-release.apk`.
 - GitHub Release publishing workflow: validated on 2026-08-13 by tag `smart-paper-v2026.08.4`.
 - Frontend tests: no test script or test config discovered.
 
@@ -55,7 +60,7 @@ Last updated: 2026-08-13.
 
 - Backend settings contain development defaults: hard-coded Django `SECRET_KEY`, `DEBUG = True`, and `ALLOWED_HOSTS = []`.
 - Backend mutation endpoints use `csrf_exempt`.
-- Planner endpoints have no authentication/authorization.
+- Planner endpoints and planner section settings have no authentication/authorization.
 - Finance uses a shared PIN unlock rather than per-user accounts/authorization.
 - No CI configuration found.
 - No frontend automated tests found.
@@ -65,13 +70,13 @@ Last updated: 2026-08-13.
 ## Missing Documentation
 
 - Production deployment requirements and environment variables need clearer documentation.
-- Security model needs confirmation: single-user private app versus multi-user app.
+- Security model is currently single-user private/personal; multi-user auth would be a future product direction change.
 - Backup/import safety expectations should be documented before larger data changes.
 - Android release/signing workflow and GitHub Release publishing are documented in `docs/release-workflow.md` and `releases/README.md`.
 
 ## Major TODOs
 
-- Decide whether Smart Paper is strictly single-user local/private software or needs multi-user auth.
+- Treat Smart Paper as single-user local/private software unless the maintainer explicitly changes direction.
 - Create production settings strategy for Django secrets, debug, allowed hosts, CSRF, CORS, and database configuration.
 - Add CI for backend tests and frontend lint/type/build.
 - Add frontend automated tests for planner, finance, export/import, and language flows.

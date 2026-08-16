@@ -7,9 +7,11 @@ Smart Paper is a personal weekly planning, progress tracking, finance tracking, 
 - Provides a Saturday-to-Friday weekly planner.
 - Tracks a weekly goal and weekly note.
 - Tracks seven day plans per week.
-- Splits each day into four sections: main, second, learning, and exercise.
+- Splits each day into configurable planner sections.
+- Provides 10 stable planner section slots; the first four default to Main, Second, Learning, and Exercise, while slots 5-10 are hidden until activated.
+- Lets the user rename planner sections and activate/hide section slots from Settings.
 - Records minutes, goals, and notes for each day section.
-- Shows week totals by section and total minutes.
+- Shows week totals by active section and total visible minutes.
 - Shows multi-week summaries with filters for empty weeks and selectable month ranges.
 - Tracks a finance goal and income entries.
 - Protects finance data behind a PIN/session unlock when using the Django backend.
@@ -20,14 +22,16 @@ Smart Paper is a personal weekly planning, progress tracking, finance tracking, 
 
 ## Likely Target Users
 
-- Needs confirmation: the primary user appears to be an individual using the app as a personal "smart paper" for weekly goals, time tracking, progress review, income tracking, and AI-assisted reflection.
-- Needs confirmation: Persian language support suggests the app is intended for bilingual English/Persian personal use.
+- The current intended user is one individual using the app as a personal "smart paper" for weekly goals, time tracking, progress review, income tracking, and AI-assisted reflection.
+- Persian language support is intended for bilingual English/Persian personal use.
+- Data migration perfection is not a priority while the app remains single-user/personal; practical forward progress is preferred unless the maintainer explicitly requests careful historical migration.
 
 ## Primary User Workflows
 
 - Choose the current, previous, or future week and record weekly goals/notes.
 - Enter daily section goals, notes, and duration minutes.
 - Save the week and review total planned/tracked minutes by category.
+- Open Settings to rename section slots and choose which sections are active in the planner.
 - Open summaries to review recent weeks and hide or show empty weeks.
 - Unlock Finance with a PIN, set a finance goal, and add/edit/delete income records.
 - Open Export, unlock finance, preview aggregate data, download/share a backup or report file, or import a JSON backup.
@@ -46,6 +50,7 @@ Smart Paper is a personal weekly planning, progress tracking, finance tracking, 
 ## Explicit Non-Claims
 
 - No multi-user account system is implemented.
+- No per-user planner settings are implemented; section settings are global for the personal app.
 - No background jobs are implemented.
 - No production infrastructure beyond Docker/Docker Compose configuration was found.
 - No committed frontend automated test suite was found.
