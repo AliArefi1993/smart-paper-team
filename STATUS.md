@@ -1,6 +1,6 @@
 # Smart Paper Status
 
-Last updated: 2026-08-16.
+Last updated: 2026-08-25.
 
 ## Current Technical State
 
@@ -9,18 +9,20 @@ Last updated: 2026-08-16.
 - `smart-paper/` is an independent backend Git repository.
 - `smart-paper-front/` is an independent frontend Git repository.
 - The app is treated as a single-user personal weekly planner, finance tracker, and export/import tool.
-- Configurable planner sections are implemented in the current uncommitted backend/frontend work: 10 stable section slots, first four active by default, remaining six hidden by default.
+- Configurable planner sections are implemented: 10 stable section slots, first four active by default, remaining six hidden by default.
+- Timed day schedule entries are implemented, with Android local morning notification settings.
 
 ## Implemented Backend
 
 - Django 6.0.4 project with `planner` and `finance` apps.
 - SQLite database with committed Django migrations.
 - Planner APIs for week list, week detail save/load, summaries, and planner section settings.
-- Planner data uses stable section slots `slot_1` through `slot_10` in current uncommitted work, with legacy `main`, `second`, `learning`, and `exercise` mapped to slots 1-4.
+- Planner data uses stable section slots `slot_1` through `slot_10`, with legacy `main`, `second`, `learning`, and `exercise` mapped to slots 1-4.
+- Planner day schedule entries are persisted with `DayScheduleEntry` and included in week detail save/load.
 - Finance APIs for PIN unlock, overview/update, and income edit/delete.
 - Finance PIN unlock now throttles repeated invalid PIN attempts per client address.
 - Export/import APIs for JSON, CSV, XLSX, Markdown, merge, and replace.
-- Export/import JSON includes `schema_version: 2` and planner section settings in current uncommitted work.
+- Export/import JSON uses `schema_version: 3` and includes planner section settings plus day schedule entries.
 - Tests exist in `planner/tests.py` and `finance/tests.py`.
 - Dockerfile, Docker Compose, and Gunicorn startup script exist.
 
@@ -30,10 +32,11 @@ Last updated: 2026-08-16.
 - Routes for planner, finance, summaries, export/import, and settings.
 - API wrappers for planner, planner section settings, finance, and export/import.
 - Local browser-storage mode selected by `NEXT_PUBLIC_DATA_MODE=local`.
-- Local browser-storage mode supports configurable planner sections in current uncommitted work.
+- Local browser-storage mode supports configurable planner sections and timed day schedule entries.
+- Settings includes an opt-in Android local morning plan notification with configurable time.
 - Android local-data export now uses native Capacitor file sharing instead of browser download links.
 - Android UI polish now disables WebView forced darkening, improves planner dark/focus contrast, and makes headers more mobile-friendly.
-- Android app version for release candidate `smart-paper-v2026.08.7` is `versionCode 8` and `versionName 2026.08.7`.
+- Android app version for release candidate `smart-paper-v2026.08.8` is `versionCode 9` and `versionName 2026.08.8`.
 - Android release APKs are stable-signed with the private local keystore in `smart-paper-front/android/`; future update-compatible APKs must use the same ignored signing files.
 - Team repo tag pushes now publish GitHub Releases through `.github/workflows/publish-release.yml` when the matching release note and APK artifact are already committed.
 - English/Persian translation support.
@@ -42,7 +45,7 @@ Last updated: 2026-08-16.
 
 ## Test / Lint / Build Status
 
-- Backend tests: passed on 2026-08-16 with `.venv/bin/python manage.py test` (`28` tests) for configurable planner sections.
+- Backend tests: passed on 2026-08-25 with `.venv/bin/python manage.py test` (`32` tests) for configurable planner sections and timed schedule entries.
 - Backend lint: no lint command or lint config discovered.
 - Backend type check: no type-check command or config discovered.
 - Frontend lint: passed on 2026-08-08 with `npm run lint`.
@@ -51,6 +54,9 @@ Last updated: 2026-08-16.
 - Frontend Docker validation for Android export fix: passed on 2026-08-13 with `npm run lint`, `npx tsc --noEmit`, `npm run build`, `NEXT_PUBLIC_DATA_MODE=local npm run build`, and `npx cap sync android`.
 - Frontend Docker validation for Android UI polish: passed on 2026-08-13 with `npm run lint`, `npx tsc --noEmit`, `npm run build`, `NEXT_PUBLIC_DATA_MODE=local npm run build`, and `npx cap sync android`.
 - Frontend Docker validation for configurable planner sections: passed on 2026-08-16 with `docker run --rm -v "$PWD":/app -w /app node:24-bookworm bash -lc 'npm ci && npm run lint && npx tsc --noEmit && npm run build'`.
+- Frontend Docker validation for timed schedule entries and notification settings: passed on 2026-08-25 with `npm run lint`, `npx tsc --noEmit`, `npm run build`, and `NEXT_PUBLIC_DATA_MODE=local npm run build`.
+- Capacitor Android sync for timed schedule notification plugin: passed on 2026-08-25 with `npx cap sync android`.
+- Android signed release build for `smart-paper-v2026.08.8`: passed on 2026-08-25 with `scripts/build-android-release-docker.sh`; artifact is `releases/artifacts/SmartPaper-local-2026.08.8-release.apk`.
 - Android signed release build: passed on 2026-08-13 with `scripts/build-android-release-docker.sh`; latest signed artifact is `releases/artifacts/SmartPaper-local-2026.08.4-release.apk`.
 - Android signed release build for `smart-paper-v2026.08.7`: passed on 2026-08-16 with `scripts/build-android-release-docker.sh`; artifact is `releases/artifacts/SmartPaper-local-2026.08.7-release.apk`.
 - GitHub Release publishing workflow: validated on 2026-08-13 by tag `smart-paper-v2026.08.4`.
@@ -64,6 +70,7 @@ Last updated: 2026-08-16.
 - Finance uses a shared PIN unlock rather than per-user accounts/authorization.
 - No CI configuration found.
 - No frontend automated tests found.
+- Android local notification delivery still needs real-device validation for permission denied/allowed states and app restart behavior.
 - No backend lint/type-check tooling found.
 - `smart-paper-front/` contains old dependency-like directories named `node_modules-blocked-*`; they are excluded by `tsconfig.json`/ESLint ignores but should be reviewed for repository hygiene.
 
@@ -80,6 +87,7 @@ Last updated: 2026-08-16.
 - Create production settings strategy for Django secrets, debug, allowed hosts, CSRF, CORS, and database configuration.
 - Add CI for backend tests and frontend lint/type/build.
 - Add frontend automated tests for planner, finance, export/import, and language flows.
+- Add frontend automated tests for timed schedule entry creation/edit/delete, sorting, and local import/export.
 - Add a small health check endpoint or operational readiness path if deployment will continue.
 - Review and remove or document `node_modules-blocked-*` directories in the frontend repo.
 
