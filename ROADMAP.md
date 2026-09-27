@@ -14,6 +14,7 @@ This roadmap is based on repository inspection only. Speculative ideas are marke
 - Add frontend automated tests around configurable planner sections: settings save/load, hide/activate behavior, planner save/load with custom labels, summaries, and local export/import.
 - Add frontend automated tests around timed schedule entries: add/edit/delete, sorting, local storage normalization, and export/import round trip.
 - Validate week-template usage after release; consider optional daily and section-level template defaults if they prove useful.
+- Validate the compact template sheet and current-week auto-centering on physical Android devices in English and Persian.
 - Document production deployment and environment variables.
 - Use team-level release records and Git tags after mature changes, including Android local-data version metadata for each tagged release.
 - Add import/export regression tests across backend and local-storage frontend mode.

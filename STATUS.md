@@ -38,7 +38,7 @@ Last updated: 2026-09-27.
 - Settings includes an opt-in Android local morning plan notification with configurable time.
 - Android local-data export now uses native Capacitor file sharing instead of browser download links.
 - Android UI polish now disables WebView forced darkening, improves planner dark/focus contrast, and makes headers more mobile-friendly.
-- Android app version for release `smart-paper-v2026.09.1` is `versionCode 10` and `versionName 2026.09.1`.
+- Android app version for release `smart-paper-v2026.09.2` is `versionCode 11` and `versionName 2026.09.2`.
 - Android release APKs are stable-signed with the private local keystore in `smart-paper-front/android/`; future update-compatible APKs must use the same ignored signing files.
 - Team repo tag pushes now publish GitHub Releases through `.github/workflows/publish-release.yml` when the matching release note and APK artifact are already committed.
 - English/Persian translation support.
@@ -61,6 +61,7 @@ Last updated: 2026-09-27.
 - Capacitor Android sync for timed schedule notification plugin: passed on 2026-08-25 with `npx cap sync android`.
 - Android signed release build for `smart-paper-v2026.08.8`: passed on 2026-08-25 with `scripts/build-android-release-docker.sh`; artifact is `releases/artifacts/SmartPaper-local-2026.08.8-release.apk`.
 - Android signed release build for `smart-paper-v2026.09.1`: passed on 2026-09-27 with `scripts/build-android-release-docker.sh`; artifact is `releases/artifacts/SmartPaper-local-2026.09.1-release.apk`.
+- Android signed release build for `smart-paper-v2026.09.2`: passed on 2026-09-27 with `scripts/build-android-release-docker.sh`; artifact is `releases/artifacts/SmartPaper-local-2026.09.2-release.apk`.
 - Android signed release build: passed on 2026-08-13 with `scripts/build-android-release-docker.sh`; latest signed artifact is `releases/artifacts/SmartPaper-local-2026.08.4-release.apk`.
 - Android signed release build for `smart-paper-v2026.08.7`: passed on 2026-08-16 with `scripts/build-android-release-docker.sh`; artifact is `releases/artifacts/SmartPaper-local-2026.08.7-release.apk`.
 - GitHub Release publishing workflow: validated on 2026-08-13 by tag `smart-paper-v2026.08.4`.
