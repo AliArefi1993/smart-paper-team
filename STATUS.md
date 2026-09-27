@@ -1,6 +1,6 @@
 # Smart Paper Status
 
-Last updated: 2026-08-25.
+Last updated: 2026-09-27.
 
 ## Current Technical State
 
@@ -11,6 +11,7 @@ Last updated: 2026-08-25.
 - The app is treated as a single-user personal weekly planner, finance tracker, and export/import tool.
 - Configurable planner sections are implemented: 10 stable section slots, first four active by default, remaining six hidden by default.
 - Timed day schedule entries are implemented, with Android local morning notification settings.
+- Day-level notes and reusable week goal/note templates are implemented.
 
 ## Implemented Backend
 
@@ -22,7 +23,7 @@ Last updated: 2026-08-25.
 - Finance APIs for PIN unlock, overview/update, and income edit/delete.
 - Finance PIN unlock now throttles repeated invalid PIN attempts per client address.
 - Export/import APIs for JSON, CSV, XLSX, Markdown, merge, and replace.
-- Export/import JSON uses `schema_version: 3` and includes planner section settings plus day schedule entries.
+- Export/import JSON uses `schema_version: 4` and includes planner section settings, day notes, schedule entries, and week templates.
 - Tests exist in `planner/tests.py` and `finance/tests.py`.
 - Dockerfile, Docker Compose, and Gunicorn startup script exist.
 
@@ -33,10 +34,11 @@ Last updated: 2026-08-25.
 - API wrappers for planner, planner section settings, finance, and export/import.
 - Local browser-storage mode selected by `NEXT_PUBLIC_DATA_MODE=local`.
 - Local browser-storage mode supports configurable planner sections and timed day schedule entries.
+- Local browser-storage mode supports day notes and reusable week templates.
 - Settings includes an opt-in Android local morning plan notification with configurable time.
 - Android local-data export now uses native Capacitor file sharing instead of browser download links.
 - Android UI polish now disables WebView forced darkening, improves planner dark/focus contrast, and makes headers more mobile-friendly.
-- Android app version for release candidate `smart-paper-v2026.08.8` is `versionCode 9` and `versionName 2026.08.8`.
+- Android app version for release `smart-paper-v2026.09.1` is `versionCode 10` and `versionName 2026.09.1`.
 - Android release APKs are stable-signed with the private local keystore in `smart-paper-front/android/`; future update-compatible APKs must use the same ignored signing files.
 - Team repo tag pushes now publish GitHub Releases through `.github/workflows/publish-release.yml` when the matching release note and APK artifact are already committed.
 - English/Persian translation support.
@@ -46,6 +48,7 @@ Last updated: 2026-08-25.
 ## Test / Lint / Build Status
 
 - Backend tests: passed on 2026-08-25 with `.venv/bin/python manage.py test` (`32` tests) for configurable planner sections and timed schedule entries.
+- Backend tests: passed on 2026-09-27 with `.venv/bin/python manage.py test` (`33` tests) for day notes and reusable week templates.
 - Backend lint: no lint command or lint config discovered.
 - Backend type check: no type-check command or config discovered.
 - Frontend lint: passed on 2026-08-08 with `npm run lint`.
@@ -57,6 +60,7 @@ Last updated: 2026-08-25.
 - Frontend Docker validation for timed schedule entries and notification settings: passed on 2026-08-25 with `npm run lint`, `npx tsc --noEmit`, `npm run build`, and `NEXT_PUBLIC_DATA_MODE=local npm run build`.
 - Capacitor Android sync for timed schedule notification plugin: passed on 2026-08-25 with `npx cap sync android`.
 - Android signed release build for `smart-paper-v2026.08.8`: passed on 2026-08-25 with `scripts/build-android-release-docker.sh`; artifact is `releases/artifacts/SmartPaper-local-2026.08.8-release.apk`.
+- Android signed release build for `smart-paper-v2026.09.1`: passed on 2026-09-27 with `scripts/build-android-release-docker.sh`; artifact is `releases/artifacts/SmartPaper-local-2026.09.1-release.apk`.
 - Android signed release build: passed on 2026-08-13 with `scripts/build-android-release-docker.sh`; latest signed artifact is `releases/artifacts/SmartPaper-local-2026.08.4-release.apk`.
 - Android signed release build for `smart-paper-v2026.08.7`: passed on 2026-08-16 with `scripts/build-android-release-docker.sh`; artifact is `releases/artifacts/SmartPaper-local-2026.08.7-release.apk`.
 - GitHub Release publishing workflow: validated on 2026-08-13 by tag `smart-paper-v2026.08.4`.
