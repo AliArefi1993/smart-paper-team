@@ -22,16 +22,16 @@ the lead should execute exactly one improvement cycle, then stop.
 
 ## One Improvement Cycle
 
-1. Read project state: `AGENTS.md`, `PRODUCT.md`, `STATUS.md`, `ROADMAP.md`, and relevant docs.
+1. Read `STATUS.md`, then use the task-based context routing in `AGENTS.md`; do not preload every project document.
 2. Inspect both repositories where relevant.
-3. Ask Product to identify valuable candidate improvements.
+3. Use `ROADMAP.md` and current evidence to identify valuable candidate improvements; involve Product only when scope or user value is ambiguous.
 4. Choose one bounded improvement.
 5. Use Designer and/or Architect only if relevant.
 6. Write acceptance criteria.
 7. Plan the implementation.
-8. Delegate backend/frontend implementation as appropriate.
+8. Delegate only bounded, independent work when doing so reduces latency or risk; keep small changes with the lead.
 9. Run relevant tests, builds, lint checks, and type checks.
-10. Run Reviewer, Security, QA, and Tester as appropriate.
+10. Use Reviewer, Security, QA, and Tester according to change risk; do not invoke every role by default.
 11. Fix valid important findings.
 12. Re-run validation.
 13. Update `STATUS.md`.

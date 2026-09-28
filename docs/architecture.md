@@ -45,12 +45,14 @@ smart-paper-front with NEXT_PUBLIC_DATA_MODE=local
   - `finance/migrations/0001_initial.py`
 - Background jobs: none found.
 
+See `docs/database.md` for entity relationships, persistence ownership, and schema-change checks.
+
 ## Backend Modules
 
-- `planner/models.py`: `Week`, `DayPlan`, `DayScheduleEntry`, and `PlannerSectionConfig`. `DayPlan` stores 10 stable section slots; `DayScheduleEntry` stores exact-time day agenda items separately from section minutes.
-- `planner/views.py`: week list, week detail, week summaries, planner section settings, timed schedule entry serialization, Saturday-based week calculation.
+- `planner/models.py`: `Week`, `WeekTemplate`, `DayPlan`, `DayScheduleEntry`, and `PlannerSectionConfig`. `DayPlan` stores day notes and 10 stable section slots; `WeekTemplate` stores reusable full-week snapshots; `DayScheduleEntry` stores exact-time agenda items separately from section minutes.
+- `planner/views.py`: week list/detail, summaries, full-week templates, planner section settings, timed schedule entry serialization, and Saturday-based week calculation.
 - `planner/export_views.py`: JSON/CSV/XLSX/Markdown export and JSON import.
-- `planner/urls.py`: `/api/weeks/`, `/api/week-summaries/`, `/api/weeks/<start_date>/`, `/api/planner-sections/`, `/api/export/`, `/api/import/`.
+- `planner/urls.py`: `/api/weeks/`, `/api/week-summaries/`, `/api/weeks/<start_date>/`, `/api/week-templates/`, `/api/planner-sections/`, `/api/export/`, `/api/import/`.
 - `finance/models.py`: `FinanceState` and `IncomeEntry`.
 - `finance/views.py`: finance unlock, overview, income edit/delete, finance serialization.
 - `finance/urls.py`: `/api/finance/unlock/`, `/api/finance/`, `/api/finance/incomes/<entry_id>/`.
