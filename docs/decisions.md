@@ -16,11 +16,12 @@ This file records durable choices that constrain future work. It is intentionall
 - **Why:** Current planner APIs, global section settings, and shared finance PIN do not provide per-user isolation.
 - **Consequence:** Do not imply multi-user security. Internet-facing deployment requires a new authentication and authorization design.
 
-### D-003 — Maintain backend and local-data parity
+### D-003 — Maintain backend and local-data parity (superseded by D-007)
 
 - **Decision:** User-facing planner, finance, export/import, and template behavior should work through both Django API adapters and local browser storage unless a requirement explicitly says otherwise.
 - **Why:** Web/backend use and static Capacitor Android use are both supported product modes.
 - **Consequence:** Contract changes normally require backend serialization, frontend types/adapters, local-store normalization, and import/export review.
+- **Status:** Superseded by D-007 for Android-first development.
 
 ### D-004 — Preserve stable planner slot identities
 
@@ -39,6 +40,12 @@ This file records durable choices that constrain future work. It is intentionall
 - **Decision:** Stable Android releases use the established private signing material; the APK, release record, app revisions, and `smart-paper-v*` tag are coordinated from the team root.
 - **Why:** Matching signatures preserve update compatibility, and one release record ties all three repositories together.
 - **Consequence:** Follow `docs/release-workflow.md`; never replace or expose signing secrets.
+
+### D-007 — Make the downloadable Android APK the primary product
+
+- **Decision:** Focus new product work on the local-data Capacitor Android app in `smart-paper-front/`. Keep Django and backend-mode web code available but pause their feature roadmap.
+- **Why:** The current product runs on a phone without a server, and the first distribution goal is a signed APK for others to download.
+- **Consequence:** Android changes do not require parallel backend features. Revisit backend parity when a server, sync, or web use case is chosen. Prioritize local data safety, phone usability, and signed upgrade testing.
 
 ## Adding Or Changing A Decision
 

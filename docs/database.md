@@ -34,6 +34,7 @@ The finance session unlock gates finance and export/import endpoints; it is not 
 
 - Backend mode persists Django models in SQLite and exposes JSON endpoints.
 - Local-data mode persists compatible planner, template, section, finance, and settings records in browser `localStorage` for static/Android use.
+- Android is the primary release target. Django storage is paused unless a server or sync use case is chosen.
 - Cross-stack data changes must review Django models/migrations, serializers/views, frontend types and adapters, local-store normalization, and import/export compatibility.
 
 ## Backup Contract
@@ -42,6 +43,7 @@ The finance session unlock gates finance and export/import endpoints; it is not 
 - Backend contract: `smart-paper/planner/export_views.py`.
 - Local-data contract: `smart-paper-front/src/lib/local-store.ts` and `smart-paper-front/src/lib/export-format.ts`.
 - Import supports merge/upsert and destructive replace behavior. Treat replace-mode changes as data-safety work.
+- Android JSON backups are not encrypted. Save and verify a copy outside the app.
 
 ## Migration Rules
 

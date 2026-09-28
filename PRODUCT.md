@@ -1,6 +1,6 @@
 # Smart Paper Product
 
-Smart Paper is a personal weekly planning, progress tracking, finance tracking, and data export application.
+Smart Paper is a personal weekly planning, progress tracking, finance tracking, and data export application. Its primary release target is a downloadable Android APK that stores each person's data on their own phone.
 
 ## What It Currently Does
 
@@ -24,9 +24,9 @@ Smart Paper is a personal weekly planning, progress tracking, finance tracking, 
 
 ## Likely Target Users
 
-- The current intended user is one individual using the app as a personal "smart paper" for weekly goals, time tracking, progress review, income tracking, and AI-assisted reflection.
+- The intended use is one person's planner and finance record per device. The first distribution goal is a signed Android APK for other people to download.
 - Persian language support is intended for bilingual English/Persian personal use.
-- Data migration perfection is not a priority while the app remains single-user/personal; practical forward progress is preferred unless the maintainer explicitly requests careful historical migration.
+- Backup and restore safety is a release priority because phone data is stored locally.
 
 ## Primary User Workflows
 
@@ -58,4 +58,5 @@ Smart Paper is a personal weekly planning, progress tracking, finance tracking, 
 - No per-user planner settings are implemented; section settings are global for the personal app.
 - No background jobs are implemented.
 - No production infrastructure beyond Docker/Docker Compose configuration was found.
-- No committed frontend automated test suite was found.
+- No broad frontend integration or end-to-end test suite is implemented.
+- The Android PIN is only a screen lock; local finance data and JSON backups are not encrypted.

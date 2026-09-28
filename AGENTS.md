@@ -29,6 +29,7 @@ Do not preload every project document. Load context according to the task:
 2. Run `scripts/project-context.sh` when repository state or revision freshness matters.
 3. Read only the task-specific source below:
    - product behavior or scope: `PRODUCT.md`
+   - quick list of shipped capabilities and recent work: `feature.md`
    - prioritization or next improvement: `ROADMAP.md`
    - cross-stack contracts or system boundaries: `docs/architecture.md`
    - persistence entities, relationships, or migrations: `docs/database.md`
@@ -82,6 +83,7 @@ Update durable memory in the same change when facts move:
 
 - `STATUS.md`: current capability, current risk, repository revision, and latest relevant validation only.
 - `PRODUCT.md`: user-visible behavior or explicit product boundary changes.
+- `feature.md`: short feature list and most recent completed work; keep it current after user-visible changes.
 - `ROADMAP.md`: priority changes; remove work that is complete.
 - `docs/architecture.md`: contracts, persistence, integration, or system-boundary changes.
 - `docs/database.md`: entity, relationship, ownership, migration, or backup-contract changes.

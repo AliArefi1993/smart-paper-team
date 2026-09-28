@@ -7,6 +7,8 @@ Smart Paper is split into two independent application repositories inside this c
 - Backend: `smart-paper/`, a Django 6 project exposing JSON endpoints.
 - Frontend: `smart-paper-front/`, a Next.js 16 / React 19 app that calls the backend API or uses browser local storage in local-data mode.
 
+The downloadable Android APK is the primary product. It bundles the static frontend in local-data mode and does not call Django. Backend and hosted-web feature work is paused until a server, sync, or web use case is chosen.
+
 ```text
 User browser / Android WebView
   |
@@ -114,7 +116,7 @@ See `docs/database.md` for entity relationships, persistence ownership, and sche
   - backend container on `8010`
   - frontend Node container on `3000`, mounting `../smart-paper-front`
 - Frontend production command is `npm run build` then `npm run start`.
-- Android build uses `NEXT_PUBLIC_DATA_MODE=local npm run build`, then `npx cap sync android`, then Gradle `assembleDebug`.
+- Android builds use static local-data output. `smart-paper-front/scripts/build-android-release-docker.sh` packages a stable-signed release APK for distribution.
 
 ## Known Architecture Risks
 
@@ -124,3 +126,4 @@ See `docs/database.md` for entity relationships, persistence ownership, and sche
 - CSRF exemptions are used on JSON mutation endpoints.
 - No background processing, observability, health checks, or CI/CD configuration was found.
 - Morning plan reminders are local device notifications, not server push notifications.
+- Android data is stored in WebView `localStorage`; the local finance PIN does not encrypt it. Off-device JSON backup and tested restore are required before relying on the app as a sole data store.

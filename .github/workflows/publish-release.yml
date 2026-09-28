@@ -49,21 +49,17 @@ jobs:
 
           notes_file="releases/${RELEASE_TAG}.md"
           release_apk="releases/artifacts/SmartPaper-local-${RELEASE_VERSION}-release.apk"
-          debug_apk="releases/artifacts/SmartPaper-local-${RELEASE_VERSION}-debug.apk"
 
           if [ ! -f "$notes_file" ]; then
             echo "Missing release notes: $notes_file" >&2
             exit 1
           fi
 
-          if [ -f "$release_apk" ]; then
-            apk="$release_apk"
-          elif [ -f "$debug_apk" ]; then
-            apk="$debug_apk"
-          else
-            echo "Missing APK artifact for ${RELEASE_TAG}" >&2
+          if [ ! -f "$release_apk" ]; then
+            echo "Missing signed release APK: $release_apk" >&2
             exit 1
           fi
+          apk="$release_apk"
 
           title="Smart Paper ${RELEASE_VERSION}"
 

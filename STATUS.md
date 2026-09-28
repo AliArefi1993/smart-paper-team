@@ -6,10 +6,10 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 
 ## Current Focus
 
-- No feature is currently in progress.
+- Android-first APK readiness is in progress; see `tasks/2026-09-29-android-apk-readiness.md`.
 - Latest prepared release record: `smart-paper-v2026.09.2` (2026-09-27).
 - Latest local and remote team tag: `smart-paper-v2026.09.1` (remote tag checked 2026-09-29). The `2026.09.2` record is prepared, not tagged.
-- Next priorities are production-safe backend settings, repeatable CI, and frontend regression tests; see `ROADMAP.md`.
+- Next priority is a safe, phone-tested downloadable APK. Backend feature work is paused; see `ROADMAP.md` and decision D-007.
 
 ## Repository State
 
@@ -23,6 +23,7 @@ Run `scripts/project-context.sh` for current branches, revisions, working-tree c
 - Finance goal and income tracking; Django mode protects finance and export/import with a throttled shared PIN/session unlock.
 - JSON backup/import (`schema_version: 4`) plus CSV, XLSX, and Markdown exports.
 - Two persistence modes: Django/SQLite API mode and browser `localStorage` mode selected by `NEXT_PUBLIC_DATA_MODE=local`.
+- The Android APK packages `smart-paper-front/` in local-data mode; it does not require Django.
 - Capacitor Android app with native file sharing and opt-in local morning plan notifications.
 
 ## Technical Baseline
@@ -44,19 +45,27 @@ The prepared `smart-paper-v2026.09.2` revision passed on 2026-09-27:
 
 See `releases/smart-paper-v2026.09.2.md` for commands, artifact hashes, and scope. These checks describe that revision; rerun relevant checks after new changes.
 
+## Current Unreleased Validation
+
+- Frontend revision `f659211`: Android local-data import safety tests (5), lint, TypeScript check, and static build passed in Docker on 2026-09-29.
+- No physical Android device is available in this workspace; signed APK install, backup/restore, and update checks remain open.
+
 ## Known Risks And Gaps
 
 - Backend production settings are unsafe defaults: hard-coded `SECRET_KEY`, `DEBUG = True`, and empty `ALLOWED_HOSTS`.
 - JSON mutation endpoints use `csrf_exempt`; planner APIs have no authentication. This is accepted only for the current private/single-user boundary.
 - Finance uses a shared PIN/session gate, not user accounts.
-- No CI, frontend automated tests, backend lint, or backend type-check configuration is present.
+- No CI, broad frontend integration suite, backend lint, or backend type-check configuration is present.
 - Android notifications and full-week template UX still need physical-device checks in English and Persian.
-- Production environment/deployment and backup-replace safety documentation remain incomplete.
+- Production environment and deployment documentation remain incomplete for any future hosted backend.
 - Old `node_modules-blocked-*` directories in the frontend need a repository-hygiene decision.
+- Local finance data is not encrypted; its client-side PIN is a screen lock only.
+- Production dependency audit still needs Android applicability review before wider APK sharing.
 
 ## Context Pointers
 
 - Product contract: `PRODUCT.md`
+- Short feature summary: `feature.md`
 - Priorities: `ROADMAP.md`
 - System design: `docs/architecture.md`
 - Data model: `docs/database.md`

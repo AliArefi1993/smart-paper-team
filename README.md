@@ -10,6 +10,7 @@ This repository coordinates the Smart Paper product. It stores durable project c
 | `smart-paper-front/` | Next.js frontend and Capacitor Android repository |
 | `STATUS.md` | concise current-state snapshot |
 | `PRODUCT.md` | implemented product behavior and boundaries |
+| `feature.md` | short feature list and recent completed work |
 | `ROADMAP.md` | prioritized future work |
 | `docs/architecture.md` | cross-stack architecture and contracts |
 | `docs/database.md` | persistence model and data ownership |
