@@ -36,7 +36,7 @@ the lead should execute exactly one improvement cycle, then stop.
 12. Re-run validation.
 13. Update `STATUS.md`.
 14. Update `ROADMAP.md` if needed.
-15. If the work is mature enough to release, prepare a tag/release recommendation using `docs/release-workflow.md`; do not create tags without human approval.
+15. If the user requested a release, complete the release workflow in `docs/release-workflow.md`. Otherwise, record a release recommendation without creating a tag.
 16. Report the final result.
 17. Stop. Do not automatically start another feature.
 
@@ -59,10 +59,10 @@ A feature is not complete until:
 
 ## Commit Ownership
 
-- Backend and frontend agents may commit their own scoped repository changes after relevant checks pass and no critical/high findings remain.
+- Commit and push validated, scoped changes automatically, following `AGENTS.md`.
 - Keep commits inside the repository that owns the changed files: backend commits from `smart-paper/`, frontend commits from `smart-paper-front/`, and team-memory/release commits from the workspace root.
-- The lead coordinates commit order across repositories and prepares release/tag recommendations.
-- Human approval is still required before merges to protected branches, production deploys, production data changes, destructive Git operations, or release tag pushes.
+- The lead coordinates commit order across repositories and handles tags when a release was requested.
+- Human approval is still required before merges to protected branches, production deploys, production data changes, or destructive Git operations.
 
 ## Safety Boundaries
 
@@ -75,7 +75,7 @@ The AI team may autonomously:
 - run builds
 - run lint/type checks
 - update documentation
-- prepare commits
+- commit and push validated, scoped changes
 - prepare a PR
 - prepare release notes and tag recommendations
 
@@ -89,7 +89,7 @@ The AI team must not autonomously:
 - destroy infrastructure
 - expose secrets
 - perform irreversible Git operations
-- create or push release tags without explicit human approval
+- create or push release tags outside a requested release workflow
 
 Human approval is required for those actions.
 

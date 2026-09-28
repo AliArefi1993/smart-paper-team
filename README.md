@@ -37,7 +37,7 @@ git -C smart-paper status --short --branch
 git -C smart-paper-front status --short --branch
 ```
 
-Commit files only in the repository that owns them. Do not merge protected branches, deploy production, modify production data, or perform irreversible Git operations without human approval.
+Commit files only in the repository that owns them. Validated task changes are committed and pushed automatically under `AGENTS.md`. Do not merge protected branches, deploy production, modify production data, or perform irreversible Git operations without human approval.
 
 ## Starting Meaningful Work
 

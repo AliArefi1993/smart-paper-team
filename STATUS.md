@@ -8,18 +8,12 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 
 - No feature is currently in progress.
 - Latest prepared release record: `smart-paper-v2026.09.2` (2026-09-27).
-- Latest local team tag: `smart-paper-v2026.09.1`; confirm remote publication state before describing `2026.09.2` as published.
+- Latest local and remote team tag: `smart-paper-v2026.09.1` (remote tag checked 2026-09-29). The `2026.09.2` record is prepared, not tagged.
 - Next priorities are production-safe backend settings, repeatable CI, and frontend regression tests; see `ROADMAP.md`.
 
-## Repository Baseline
+## Repository State
 
-| Repository | Branch | Recorded revision | Role |
-| --- | --- | --- | --- |
-| team root | `main` | `46b29c7` | coordination, durable memory, releases |
-| `smart-paper/` | `main` | `68c789b` | Django backend |
-| `smart-paper-front/` | `main` | `2cdf6c0` | Next.js web UI and Capacitor Android app |
-
-Run `scripts/project-context.sh` instead of assuming these revisions are still current.
+Run `scripts/project-context.sh` for current branches, revisions, working-tree changes, and the latest local release tag.
 
 ## Implemented Product
 
@@ -59,7 +53,6 @@ See `releases/smart-paper-v2026.09.2.md` for commands, artifact hashes, and scop
 - Android notifications and full-week template UX still need physical-device checks in English and Persian.
 - Production environment/deployment and backup-replace safety documentation remain incomplete.
 - Old `node_modules-blocked-*` directories in the frontend need a repository-hygiene decision.
-- The prepared `smart-paper-v2026.09.2` release has no corresponding local team tag; publishing state needs confirmation.
 
 ## Context Pointers
 

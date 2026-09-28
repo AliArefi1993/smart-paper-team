@@ -2,6 +2,7 @@
 
 This workspace uses the root team repository as the durable release memory.
 The backend and frontend remain independent Git repositories.
+Run this checklist when the user requests a release. Routine validated changes are committed and pushed under `AGENTS.md`; they do not create a release tag by themselves.
 
 ## When To Create A Tag
 

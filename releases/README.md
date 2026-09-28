@@ -1,6 +1,6 @@
 # Smart Paper Releases
 
-This directory records tagged Smart Paper releases from the team workspace.
+This directory contains prepared release records and tagged Smart Paper releases. A versioned record alone does not prove a tag was created or published; check the team repository tag and GitHub Release before describing it as shipped.
 
 Each release file should include:
 

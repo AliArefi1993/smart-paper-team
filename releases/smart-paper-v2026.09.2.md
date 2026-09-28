@@ -2,6 +2,8 @@
 
 Date: 2026-09-27
 
+Status: prepared; no team release tag exists locally or on origin as of 2026-09-29.
+
 ## Scope
 
 - Expand week templates into full-week snapshots covering all days, notes, section durations/goals/notes, and timed items.
