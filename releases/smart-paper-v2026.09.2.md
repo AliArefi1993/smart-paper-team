@@ -2,7 +2,7 @@
 
 Date: 2026-09-29
 
-Status: signed candidate prepared; publication pending required physical-phone checks. No `smart-paper-v2026.09.2` tag exists locally or on origin as of 2026-09-29.
+Status: released at the maintainer's direction on 2026-09-29. Physical-phone acceptance remains unverified.
 
 ## Scope
 
@@ -42,7 +42,7 @@ Status: signed candidate prepared; publication pending required physical-phone c
 | Frontend import safety tests | `npm test` | Passed, 5 tests, 2026-09-29 |
 | Android signed release build | `scripts/build-android-release-docker.sh` | Passed, 2026-09-29 |
 | APK signature and version | `apksigner verify --print-certs` and `aapt dump badging` | Passed; stable certificate, versionCode 11, versionName 2026.09.2 |
-| Physical-phone acceptance | `tasks/2026-09-29-android-apk-readiness.md` checklist | Pending; no ADB-connected device in this workspace |
+| Physical-phone acceptance | `tasks/2026-09-29-android-apk-readiness.md` checklist | Not run; no ADB-connected device in this workspace. This was disclosed before publication. |
 
 ## Dependency Audit Scope
 
@@ -59,4 +59,4 @@ Status: signed candidate prepared; publication pending required physical-phone c
 ## Known Follow-Ups
 
 - Test full-week template behavior and sheet usability on a physical Android device in both English and Persian.
-- On a phone, verify an upgrade from 2026.09.1 preserves planner and finance data; export JSON outside the app, restore it on a spare device, and check offline use and notifications before tagging.
+- Post-release phone check: verify an upgrade from 2026.09.1 preserves planner and finance data; export JSON outside the app, restore it on a spare device, and check offline use and notifications.

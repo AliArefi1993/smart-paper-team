@@ -7,9 +7,9 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 ## Current Focus
 
 - Android-first APK readiness is in progress; see `tasks/2026-09-29-android-apk-readiness.md`.
-- Latest signed candidate: `smart-paper-v2026.09.2` (rebuilt 2026-09-29); tag and GitHub publication await physical-phone acceptance.
-- Latest local and remote team tag: `smart-paper-v2026.09.1` (remote tag checked 2026-09-29). The `2026.09.2` record is prepared, not tagged.
-- Next priority is a safe, phone-tested downloadable APK. Backend feature work is paused; see `ROADMAP.md` and decision D-007.
+- Latest release: `smart-paper-v2026.09.2` (2026-09-29), published at the maintainer's direction with physical-phone checks outstanding.
+- Latest local and remote team tag: `smart-paper-v2026.09.2`.
+- Next priority is post-release phone validation of backup/restore, upgrade, notifications, and English/Persian layouts. Backend feature work is paused; see `ROADMAP.md` and decision D-007.
 
 ## Repository State
 
@@ -48,7 +48,7 @@ See `releases/smart-paper-v2026.09.2.md` for commands, artifact hashes, and scop
 ## Current Unreleased Validation
 
 - Frontend revision `a385e47`: Android local-data lint, TypeScript check, static build, and import safety tests (5) passed in Docker on 2026-09-29. The design pass was reviewed in browser at desktop and mobile widths in English/Persian; see `tasks/2026-09-29-design-system-review.md`.
-- No physical Android device is available in this workspace; signed APK install, backup/restore, update, and final on-device layout checks remain open.
+- No physical Android device is available in this workspace; signed APK install, backup/restore, update, and final on-device layout checks remain open after publication.
 
 ## Known Risks And Gaps
 

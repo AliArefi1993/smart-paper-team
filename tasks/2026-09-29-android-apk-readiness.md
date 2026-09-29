@@ -48,4 +48,4 @@ Make the local-data Android app the primary product and improve data safety befo
 
 ## Outcome / Handoff
 
-The updated `2026.09.2` APK is staged in `releases/artifacts/`, signed with the existing certificate and versionCode 11. Backend tests (33), migration drift, frontend lint/type/build, and import safety tests (5) passed on 2026-09-29. No new release tag or GitHub Release has been published. Run the phone checklist before creating the release tag.
+The updated `2026.09.2` APK is signed with the existing certificate and versionCode 11. Backend tests (33), migration drift, frontend lint/type/build, and import safety tests (5) passed on 2026-09-29. The maintainer directed publication with phone checks outstanding. Run the phone checklist as post-release validation and record the results before another release.
