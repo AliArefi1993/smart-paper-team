@@ -7,7 +7,7 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 ## Current Focus
 
 - Android-first APK readiness is in progress; see `tasks/2026-09-29-android-apk-readiness.md`.
-- Latest prepared release record: `smart-paper-v2026.09.2` (2026-09-27).
+- Latest signed candidate: `smart-paper-v2026.09.2` (rebuilt 2026-09-29); tag and GitHub publication await physical-phone acceptance.
 - Latest local and remote team tag: `smart-paper-v2026.09.1` (remote tag checked 2026-09-29). The `2026.09.2` record is prepared, not tagged.
 - Next priority is a safe, phone-tested downloadable APK. Backend feature work is paused; see `ROADMAP.md` and decision D-007.
 
@@ -36,11 +36,11 @@ Run `scripts/project-context.sh` for current branches, revisions, working-tree c
 
 ## Latest Verified Prepared-Release Checks
 
-The prepared `smart-paper-v2026.09.2` revision passed on 2026-09-27:
+The updated `smart-paper-v2026.09.2` candidate passed on 2026-09-29:
 
 - Backend tests: 33 passed.
 - Backend migration drift check: no changes detected.
-- Frontend lint, TypeScript check, and production build: passed in Docker.
+- Frontend lint, TypeScript check, local-data production build, and 5 import safety tests: passed in Docker.
 - Stable-signed Android release build and APK signature verification: passed.
 
 See `releases/smart-paper-v2026.09.2.md` for commands, artifact hashes, and scope. These checks describe that revision; rerun relevant checks after new changes.
@@ -60,7 +60,7 @@ See `releases/smart-paper-v2026.09.2.md` for commands, artifact hashes, and scop
 - Production environment and deployment documentation remain incomplete for any future hosted backend.
 - Old `node_modules-blocked-*` directories in the frontend need a repository-hygiene decision.
 - Local finance data is not encrypted; its client-side PIN is a screen lock only.
-- Production dependency audit still needs Android applicability review before wider APK sharing.
+- Production dependency audit reports 1 critical, 4 high, and 1 moderate finding; Android static-export applicability was reviewed for this candidate, with residual `xlsx` advisories documented in the release record.
 
 ## Context Pointers
 

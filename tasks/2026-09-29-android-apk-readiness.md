@@ -34,7 +34,8 @@ Make the local-data Android app the primary product and improve data safety befo
 | --- | --- |
 | Local import tests | 5 passed in Docker, 2026-09-29 |
 | Frontend lint/type/local build | Passed in Docker, 2026-09-29 |
-| Production dependency audit | 1 critical, 4 high, 1 moderate finding; Android applicability review pending |
+| Production dependency audit | 1 critical, 4 high, 1 moderate finding; static Android applicability reviewed in `releases/smart-paper-v2026.09.2.md` |
+| Stable-signed 2026.09.2 candidate | Built, signature verified, SHA-256 `06e192b93827d14794d646717db96d8fb3e43cfe2db5cc1bc2776667779a8139` |
 | Phone backup/restore and upgrade | Not run; no connected device/ADB in this workspace |
 
 ## Phone Release Checklist
@@ -47,4 +48,4 @@ Make the local-data Android app the primary product and improve data safety befo
 
 ## Outcome / Handoff
 
-Code and documentation are ready for phone validation. A new release APK has not been published. Reassess the dependency audit findings and run the phone checklist before creating a release tag.
+The updated `2026.09.2` APK is staged in `releases/artifacts/`, signed with the existing certificate and versionCode 11. Backend tests (33), migration drift, frontend lint/type/build, and import safety tests (5) passed on 2026-09-29. No new release tag or GitHub Release has been published. Run the phone checklist before creating the release tag.
