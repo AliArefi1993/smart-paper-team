@@ -7,6 +7,7 @@ This roadmap is based on repository inspection only. Speculative ideas are marke
 - Prove JSON backup and restore on a phone, including failed and cancelled imports.
 - Validate install and upgrade on a physical phone without losing saved data.
 - Test planner, templates, finance, export/restore, English/Persian layout, offline use, and notification behavior on a phone.
+- Test the focus/rest timer on a phone, including app suspension and reopening after a session completes.
 - Validate the compact template sheet and current-week auto-centering on a phone in both languages.
 - Publish only a stable-signed release APK with a matching record and checksum.
 - Add focused local-data regression tests and repeatable frontend lint/type/build checks.
@@ -35,6 +36,7 @@ This roadmap is based on repository inspection only. Speculative ideas are marke
 - Add accessibility review for forms, focus states, keyboard flows, and RTL/LTR behavior.
 - Validate Android local morning notifications on a real device, including permission denial, app restart, and device reboot behavior.
 - Consider trusted-proxy client address handling or user-account-based throttling if Smart Paper becomes a multi-user or internet-exposed app.
+- Consider a native completion notification only if phone use shows a need for an alert while the app is in the background.
 
 ## Later / Ideas
 

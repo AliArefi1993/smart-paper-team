@@ -21,6 +21,7 @@ Smart Paper is a personal weekly planning, progress tracking, finance tracking, 
 - Supports English and Persian UI text.
 - Supports a local browser-storage mode for Android/static export builds.
 - Supports opt-in Android local morning plan notifications.
+- Provides a focus/rest timer with editable session lengths, an hourglass display, and a countdown that resumes accurately after app navigation or suspension.
 
 ## Likely Target Users
 
@@ -35,6 +36,7 @@ Smart Paper is a personal weekly planning, progress tracking, finance tracking, 
 - Add, edit, or delete exact-time day schedule entries.
 - Save the week and review total planned/tracked minutes by category.
 - Open Settings to rename section slots, choose active sections, and enable a morning plan notification.
+- Open Focus Timer to run focus and rest sessions, pause or reset them, and explicitly start each next phase.
 - Open summaries to review recent weeks and hide or show empty weeks.
 - Unlock Finance with a PIN, set a finance goal, and add/edit/delete income records.
 - Open Export, unlock finance, preview aggregate data, download/share a backup or report file, or import a JSON backup.
@@ -57,6 +59,7 @@ Smart Paper is a personal weekly planning, progress tracking, finance tracking, 
 - No multi-user account system is implemented.
 - No per-user planner settings are implemented; section settings are global for the personal app.
 - No background jobs are implemented.
+- The focus timer does not add minutes to planner totals or issue an Android background completion notification.
 - No production infrastructure beyond Docker/Docker Compose configuration was found.
 - No broad frontend integration or end-to-end test suite is implemented.
 - The Android PIN is only a screen lock; local finance data and JSON backups are not encrypted.

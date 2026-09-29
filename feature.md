@@ -13,8 +13,9 @@ Updated: 2026-09-29. Keep this file short and update it when user-visible featur
 - Export JSON backups and readable CSV, Excel, or Markdown files.
 - Import a JSON backup by merge or replace.
 - Set an optional morning plan notification.
+- Run focus and rest countdowns with configurable lengths and an hourglass display; a session stays accurate after navigation or app suspension.
 
-## Done for the next APK
+## Recent completed work
 
 - Aligned planner, finance, summaries, export, and settings around a calmer paper-and-teal palette.
 - Improved primary-action contrast, selection cues, and Persian RTL week/day navigation.

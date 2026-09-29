@@ -6,10 +6,10 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 
 ## Current Focus
 
-- Android-first APK readiness is in progress; see `tasks/2026-09-29-android-apk-readiness.md`.
-- Latest release: `smart-paper-v2026.09.2` (2026-09-29), published at the maintainer's direction with physical-phone checks outstanding.
-- Latest local and remote team tag: `smart-paper-v2026.09.2`.
-- Next priority is post-release phone validation of backup/restore, upgrade, notifications, and English/Persian layouts. Backend feature work is paused; see `ROADMAP.md` and decision D-007.
+- Android-first APK validation remains active; see `tasks/2026-09-29-android-apk-readiness.md` and `tasks/2026-09-29-focus-rest-timer.md`.
+- Latest release: `smart-paper-v2026.09.3` (2026-09-29), published at the maintainer's direction with physical-phone checks outstanding.
+- Latest local and remote team tag: `smart-paper-v2026.09.3`.
+- Next priority is post-release phone validation of the timer, backup/restore, upgrade, notifications, and English/Persian layouts. Backend feature work is paused; see `ROADMAP.md` and decision D-007.
 
 ## Repository State
 
@@ -25,30 +25,31 @@ Run `scripts/project-context.sh` for current branches, revisions, working-tree c
 - Two persistence modes: Django/SQLite API mode and browser `localStorage` mode selected by `NEXT_PUBLIC_DATA_MODE=local`.
 - The Android APK packages `smart-paper-front/` in local-data mode; it does not require Django.
 - Capacitor Android app with native file sharing and opt-in local morning plan notifications.
+- Dedicated focus/rest timer with configurable lengths, hourglass progress, and deadline recovery after navigation or suspension; no planner-minute logging or background completion alarm.
 
 ## Technical Baseline
 
 - Backend: Python, Django 6.0.4, SQLite, `planner` and `finance` apps, committed migrations, Docker/Compose, Gunicorn startup path.
 - Frontend: Next.js 16.2.4, React 19.2.4, TypeScript, Tailwind CSS 4, Capacitor 8.
-- Frontend routes: planner, finance, summaries, export/import, and settings.
-- Android release: `versionCode 11`, `versionName 2026.09.2`; stable-signed APKs must continue using the existing ignored local signing material.
+- Frontend routes: planner, timer, finance, summaries, export/import, and settings.
+- Android release: `versionCode 12`, `versionName 2026.09.3`; stable-signed APKs must continue using the existing ignored local signing material.
 - Team `smart-paper-v*` tags publish GitHub Releases when the matching release record and APK are committed.
 
 ## Latest Verified Prepared-Release Checks
 
-The updated `smart-paper-v2026.09.2` candidate passed on 2026-09-29:
+The `smart-paper-v2026.09.3` candidate passed on 2026-09-29:
 
 - Backend tests: 33 passed.
 - Backend migration drift check: no changes detected.
-- Frontend lint, TypeScript check, local-data production build, and 5 import safety tests: passed in Docker.
+- Frontend lint, TypeScript check, local-data production build, and 13 timer/import tests: passed in Docker.
 - Stable-signed Android release build and APK signature verification: passed.
 
-See `releases/smart-paper-v2026.09.2.md` for commands, artifact hashes, and scope. These checks describe that revision; rerun relevant checks after new changes.
+See `releases/smart-paper-v2026.09.3.md` for commands, artifact hashes, and scope. These checks describe that revision; rerun relevant checks after new changes.
 
 ## Current Unreleased Validation
 
-- Frontend revision `a385e47`: Android local-data lint, TypeScript check, static build, and import safety tests (5) passed in Docker on 2026-09-29. The design pass was reviewed in browser at desktop and mobile widths in English/Persian; see `tasks/2026-09-29-design-system-review.md`.
-- No physical Android device is available in this workspace; signed APK install, backup/restore, update, and final on-device layout checks remain open after publication.
+- Frontend revision `3926f34`: Android local-data lint, TypeScript check, static build, and 13 tests passed in Docker on 2026-09-29. The timer was reviewed in a built browser preview at phone width in English/Persian, including keyboard phase controls and reload recovery.
+- No physical Android device is available in this workspace; signed APK install, timer suspension/expiry, backup/restore, update, and final on-device layout checks remain open after publication.
 
 ## Known Risks And Gaps
 
