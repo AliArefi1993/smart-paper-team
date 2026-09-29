@@ -47,6 +47,12 @@ This file records durable choices that constrain future work. It is intentionall
 - **Why:** The current product runs on a phone without a server, and the first distribution goal is a signed APK for others to download.
 - **Consequence:** Android changes do not require parallel backend features. Revisit backend parity when a server, sync, or web use case is chosen. Prioritize local data safety, phone usability, and signed upgrade testing.
 
+### D-008 — Use semantic, low-noise visual cues
+
+- **Decision:** Use a light paper canvas, dark ink, and deep teal for primary actions across screens; retain the planner's optional dark mode. Reserve amber for attention, rose for errors or destructive actions, and green for success. Keep labels and selection indicators alongside color.
+- **Why:** Consistent roles and readable contrast make dense weekly and finance screens easier to scan in English and Persian. A hue alone has no guaranteed psychological effect.
+- **Consequence:** New screens should reuse these roles and meet text contrast requirements. Do not encode planner categories, status, or selection through color alone.
+
 ## Adding Or Changing A Decision
 
 Add an entry only when the choice is costly to reverse, crosses repository boundaries, defines a product constraint, or is likely to be debated again. Include the decision, reason, and practical consequence. If superseded, keep the old entry and point it to the replacement.

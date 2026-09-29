@@ -48,7 +48,7 @@ Smart Paper is a personal weekly planning, progress tracking, finance tracking, 
 - Session-based finance unlock using Django sessions and a configured password hash.
 - Next.js App Router frontend with React client components.
 - API abstraction that switches between backend API mode and local storage mode with `NEXT_PUBLIC_DATA_MODE=local`.
-- Tailwind CSS-based responsive UI with dark visual styling in the current screens.
+- Tailwind CSS-based responsive UI with a light paper-and-teal visual style across screens and an optional dark planner mode.
 - Capacitor Android shell configuration for static-export local mode.
 - Capacitor local notifications for opt-in Android morning plan reminders.
 

@@ -47,8 +47,8 @@ See `releases/smart-paper-v2026.09.2.md` for commands, artifact hashes, and scop
 
 ## Current Unreleased Validation
 
-- Frontend revision `f659211`: Android local-data import safety tests (5), lint, TypeScript check, and static build passed in Docker on 2026-09-29.
-- No physical Android device is available in this workspace; signed APK install, backup/restore, and update checks remain open.
+- Frontend revision `a385e47`: Android local-data lint, TypeScript check, static build, and import safety tests (5) passed in Docker on 2026-09-29. The design pass was reviewed in browser at desktop and mobile widths in English/Persian; see `tasks/2026-09-29-design-system-review.md`.
+- No physical Android device is available in this workspace; signed APK install, backup/restore, update, and final on-device layout checks remain open.
 
 ## Known Risks And Gaps
 

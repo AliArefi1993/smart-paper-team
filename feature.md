@@ -16,6 +16,8 @@ Updated: 2026-09-29. Keep this file short and update it when user-visible featur
 
 ## Done for the next APK
 
+- Aligned planner, finance, summaries, export, and settings around a calmer paper-and-teal palette.
+- Improved primary-action contrast, selection cues, and Persian RTL week/day navigation.
 - Made backup import validate data before changing saved records.
 - Added rollback if an import storage write fails.
 - Added confirmation before replacing all saved data.
