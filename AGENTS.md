@@ -41,6 +41,14 @@ Do not preload every project document. Load context according to the task:
 
 For a small, repository-local task, do not read product, roadmap, architecture, and release docs unless the task needs them.
 
+## Chat And Token Budget
+
+- Continue the current chat while pursuing the same unfinished objective or reviewing its result.
+- For an unrelated objective, recommend a fresh chat in this project; its context comes from `STATUS.md`, the relevant task file, and narrow code reads, not a copied transcript.
+- If the same objective continues but the chat grows slow or its context indicator is low, suggest Codex's compact action before starting over. Use a side chat for a short tangent when available.
+- At a meaningful task boundary, leave only the essential result, remaining blocker, and next action in the relevant task/status files. Do not append conversation summaries or preload unrelated history.
+- Do not start new chats or scheduled context checks automatically; suggest them only when useful and let the user choose.
+
 ## Git Rules
 
 - Inspect Git status separately in the root workspace, `smart-paper/`, and `smart-paper-front/` before and after meaningful work.
