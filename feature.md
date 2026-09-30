@@ -1,6 +1,6 @@
 # Smart Paper Features
 
-Updated: 2026-09-29. Keep this file short and update it when user-visible features change.
+Updated: 2026-09-30. Keep this file short and update it when user-visible features change.
 
 ## In the Android app
 
@@ -17,6 +17,7 @@ Updated: 2026-09-29. Keep this file short and update it when user-visible featur
 
 ## Recent completed work
 
+- Fixed phone-width planner overflow and the overlapping language selector; the save bar remains in the visible viewport.
 - Aligned planner, finance, summaries, export, and settings around a calmer paper-and-teal palette.
 - Improved primary-action contrast, selection cues, and Persian RTL week/day navigation.
 - Made backup import validate data before changing saved records.
