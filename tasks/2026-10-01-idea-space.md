@@ -1,6 +1,6 @@
 # Task: Give ideas a separate home
 
-Status: implementation committed locally; Android device QA pending
+Status: released in `smart-paper-v2026.10.1`; Android device QA pending
 Created: 2026-10-01
 Updated: 2026-10-01
 
@@ -37,8 +37,8 @@ Add a phone-first notes space that makes it easy to start writing and revisit un
 | --- | --- |
 | Frontend lint, types, 23 tests, local build | Passed in Docker |
 | Local browser capture and Persian layout | Passed; physical Android validation remains |
-| Physical Android test | Pending |
+| Physical Android test | Pending after requested release |
 
 ## Outcome / Handoff
 
-Frontend commit `bff7ea2` is local. Automatic approval review rejected pushing directly to frontend `main`; push awaits human approval. Before release, test the Android keyboard, new and edited notes, branches, search, language switch, and restore from both schema 4 and schema 5 backups. A backend notes API is a later decision if hosted use resumes.
+Frontend feature commit `bff7ea2` and release version commit `8411e08` are in `smart-paper-v2026.10.1`. The maintainer requested publication before physical-phone checks. Next, test the Android keyboard, new and edited notes, branches, search, language switch, install/upgrade, and restore from both schema 4 and schema 5 backups. A backend notes API is a later decision if hosted use resumes.

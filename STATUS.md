@@ -7,10 +7,10 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 ## Current Focus
 
 - Android-first APK validation remains active; `2026.09.8` was released at maintainer direction before physical-phone checks. See `tasks/2026-09-30-ai-report-handoff.md`.
-- Latest release: `smart-paper-v2026.09.8` (2026-09-30), self-explanatory selective AI reports.
-- Latest local and remote team tag: `smart-paper-v2026.09.8`.
+- Latest release: `smart-paper-v2026.10.1` (2026-10-01), Idea Space notes.
+- Latest local and remote team tag: `smart-paper-v2026.10.1`.
 - Local browser QA covered report filtering, finance opt-in, backup download, Persian controls, and sharing fallback. Next priority is Android-runtime QA of install/upgrade, native sharing, restore, offline behavior, notifications, and layout. Backend feature work is paused; see `ROADMAP.md` and decision D-007.
-- Idea Space is implemented in frontend commit `bff7ea2`: local notes, writing sparks, daily rediscovery, branches, search, and JSON backup support. Automated and browser checks passed; physical Android QA remains. The commit is local because automatic approval review rejected a direct push to frontend `main`.
+- Idea Space is included in the `2026.10.1` Android release: local notes, writing sparks, daily rediscovery, branches, search, and JSON backup support. Automated and browser checks passed; physical Android QA remains.
 
 ## Repository State
 
@@ -34,19 +34,19 @@ Run `scripts/project-context.sh` for current branches, revisions, working-tree c
 - Backend: Python, Django 6.0.4, SQLite, `planner` and `finance` apps, committed migrations, Docker/Compose, Gunicorn startup path.
 - Frontend: Next.js 16.2.4, React 19.2.4, TypeScript, Tailwind CSS 4, Capacitor 8.
 - Frontend routes: planner, ideas, timer, finance, summaries, export/import, and settings.
-- Android release: `versionCode 17`, `versionName 2026.09.8`; stable-signed APKs must continue using the existing ignored local signing material.
+- Android release: `versionCode 18`, `versionName 2026.10.1`; stable-signed APKs must continue using the existing ignored local signing material.
 - Team `smart-paper-v*` tags publish GitHub Releases when the matching release record and APK are committed.
 
 ## Latest Verified Release Checks
 
-The `smart-paper-v2026.09.8` build passed on 2026-09-30:
+The `smart-paper-v2026.10.1` build passed on 2026-10-01:
 
 - Backend 33 tests and migration check: passed; backend source unchanged.
-- Frontend lint, TypeScript, 21 tests, and local-data production build: passed in Docker.
-- Stable-signed Android APK build, signature, and versionCode 17/versionName 2026.09.8: passed.
-- Product, design, and security review of the AI report handoff completed. Prior local browser QA covered field/date selection, finance opt-in, JSON backup download, Persian controls, and denied-share download fallback.
+- Frontend lint, TypeScript, 23 tests, and local-data production build: passed in Docker.
+- Stable-signed Android APK build, signature, and versionCode 18/versionName 2026.10.1: passed.
+- Local browser check covered Idea Space capture and Persian layout.
 
-See `releases/smart-paper-v2026.09.8.md` for artifact checksum and scope. Physical install, upgrade, native backup restore and sharing, timer, notifications, and full bilingual layout remain unverified; the maintainer directed release before these checks.
+See `releases/smart-paper-v2026.10.1.md` for artifact checksum and scope. Physical install, upgrade, native backup restore and sharing, notes, timer, notifications, and full bilingual layout remain unverified; the maintainer directed release before these checks.
 
 ## Known Risks And Gaps
 
