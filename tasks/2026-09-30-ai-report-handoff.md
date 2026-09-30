@@ -1,6 +1,6 @@
 # Task: Self-explanatory AI report handoff
 
-Status: implemented; signed Android release prepared
+Status: implemented and published in `smart-paper-v2026.09.8`
 Created: 2026-09-30
 Updated: 2026-09-30
 
@@ -16,7 +16,7 @@ Make the selected Markdown report useful when the person sends it to an AI chat 
 - [x] Finance-only and planner-only reports describe only their selected category and retain the existing field allowlist.
 - [x] English and Persian UI guidance explains attaching and sending the file.
 - [x] Frontend lint, TypeScript, tests, and local-data build pass.
-- [x] Signed APK and matching release record/tag prepared for publication.
+- [x] Signed APK and matching release record/tag published.
 
 ## Verification
 
@@ -27,4 +27,4 @@ Make the selected Markdown report useful when the person sends it to an AI chat 
 
 ## Outcome / Handoff
 
-The report begins with context and a first-response request before the selected records. It remains a local Markdown projection; Smart Paper does not upload it to ChatGPT.
+The report begins with context and a first-response request before the selected records. It remains a local Markdown projection; Smart Paper does not upload it to ChatGPT. GitHub Release `smart-paper-v2026.09.8` contains the signed APK.
