@@ -18,6 +18,7 @@ Updated: 2026-09-30. Keep this file short and update it when user-visible featur
 
 ## Recent completed work
 
+- Download the selected AI report when browser sharing is denied after the browser claims it is available.
 - Added field and date selection to the AI report; finance is off by default and a filtered report cannot be restored as a backup.
 - Gave each Android JSON backup a dated filename and showed the selected backup's week and income counts before replacing saved data.
 - Checked local backup structure before showing the replace confirmation, so invalid files fail without a destructive prompt.

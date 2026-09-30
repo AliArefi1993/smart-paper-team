@@ -1,6 +1,6 @@
 # Task: Android AI-report release candidate
 
-Status: released at maintainer direction; local post-release QA in progress
+Status: `.6` released at maintainer direction; local browser QA completed; `.7` follow-up in progress
 Created: 2026-09-30
 Updated: 2026-09-30
 
@@ -19,7 +19,7 @@ Prepare and publish a stable-signed `smart-paper-v2026.09.6` APK containing the 
 - [x] Android versionCode 15 and versionName 2026.09.6 are packaged.
 - [x] Stable-signed APK certificate and SHA-256 are recorded.
 - [x] Relevant automated frontend and backend checks pass.
-- [ ] Post-release QA documents local results and device-only gaps.
+- [x] Post-release QA documents local results and device-only gaps.
 - [x] Matching release record, APK artifact, and three repository tags are pushed in release order.
 
 ## Verification
@@ -30,6 +30,8 @@ Prepare and publish a stable-signed `smart-paper-v2026.09.6` APK containing the 
 | Signed APK build and signature | Passed; stable cert `59912e19…2a5`, APK SHA-256 `a718260a…2cd1d` |
 | Backend | 33 tests and migration check passed |
 | Physical phone | Not available in this workspace |
+| Local browser QA | Saved a planner goal, day note, and 15 minutes; selected date/field filters included only requested content. Finance was off by default. After PIN unlock, income amount was optional and its note remained excluded. Persian controls rendered. JSON backup downloaded with schema 4, one week, and one income entry. |
+| Browser share failure | Browser advertised file sharing but denied the chooser. A fallback fix downloaded the selected Markdown file; regression test added, and 19 frontend tests passed. The `.6` APK predates this fix; `.7` packages it. |
 
 ## Decisions And Risks
 
@@ -38,4 +40,4 @@ Prepare and publish a stable-signed `smart-paper-v2026.09.6` APK containing the 
 
 ## Outcome / Handoff
 
-Frontend revision `82b46d0` and the stable-signed APK are published in `smart-paper-v2026.09.6`. Full artifact metadata and checksum are in the release record. Continue local QA and record any device-only gaps.
+Frontend revision `82b46d0` and the stable-signed APK are published in `smart-paper-v2026.09.6`. Full artifact metadata and checksum are in the release record. Local browser QA found and verified a browser sharing fallback fix in frontend `75a0275`; `.7` publication is in progress. Android install/upgrade, native chooser, notifications, offline persistence, and restore through the native picker still require an Android runtime or phone.
