@@ -1,8 +1,8 @@
-# Smart Paper Release Candidate: smart-paper-v2026.09.6
+# Smart Paper Release: smart-paper-v2026.09.6
 
 Date: 2026-09-30
 
-Status: stable-signed candidate prepared; tag and GitHub Release pending physical-phone acceptance.
+Status: released at maintainer direction with physical-phone acceptance outstanding. Local post-release QA is in progress.
 
 ## Scope
 
@@ -15,9 +15,9 @@ Status: stable-signed candidate prepared; tag and GitHub Release pending physica
 
 | Repository | Prepared commit | Tag status |
 | --- | --- | --- |
-| team root | This candidate record and APK commit | `smart-paper-v2026.09.6` pending |
-| backend `smart-paper/` | `68c789b` (unchanged) | `smart-paper-v2026.09.6` pending |
-| frontend `smart-paper-front/` | `82b46d0` | `smart-paper-v2026.09.6` pending |
+| team root | This release record and APK commit | `smart-paper-v2026.09.6` |
+| backend `smart-paper/` | `68c789b` (unchanged) | `smart-paper-v2026.09.6` |
+| frontend `smart-paper-front/` | `82b46d0` | `smart-paper-v2026.09.6` |
 
 ## Android Local-Data Artifact
 
@@ -40,7 +40,7 @@ Status: stable-signed candidate prepared; tag and GitHub Release pending physica
 | Android local-data sync and signed build | `scripts/build-android-release-docker.sh` at `82b46d0` | Passed |
 | APK signature and version | Docker `apksigner verify --print-certs`; `aapt dump badging` | Passed; stable certificate, code 15, name 2026.09.6 |
 | Local browser export screen | Persian narrow-width layout and invalid date feedback | Passed |
-| Physical-phone acceptance | Install, upgrade, backup/restore, AI share, bilingual/offline/timer/notification checks | Pending; no connected phone or `adb` in workspace |
+| Physical-phone acceptance | Install, upgrade, backup/restore, AI share, bilingual/offline/timer/notification checks | Not run before release; maintainer directed publication first |
 
 ## Release Notes
 
@@ -50,4 +50,4 @@ Status: stable-signed candidate prepared; tag and GitHub Release pending physica
 
 ## Known Follow-Ups
 
-- Complete the phone checklist in `releases/NEXT.md`, including the outstanding `.5` upgrade/launch retest. Record the results before creating the three repository tags; push the team tag last to trigger GitHub Release publishing.
+- Complete post-release QA without relying only on a physical install, then record which checks remain device-only. The `.5` upgrade/launch retest remains open.

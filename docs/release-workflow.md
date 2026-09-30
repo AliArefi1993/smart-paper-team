@@ -77,7 +77,7 @@ npx tsc --noEmit
 npm run build
 ```
 
-For a downloadable Android APK, also run `npm test` and the local-data build. Before tagging, test the signed APK on a physical phone: save and reopen planner/finance data; export JSON to a destination outside the app and restore it; install the new APK over the old one and confirm data remains; check English/Persian layout, offline use, and notification permission/restart behavior. Keep the tag pending if these checks are incomplete.
+For a downloadable Android APK, also run `npm test` and the local-data build. Before tagging, test the signed APK on a physical phone: save and reopen planner/finance data; export JSON to a destination outside the app and restore it; install the new APK over the old one and confirm data remains; check English/Persian layout, offline use, and notification permission/restart behavior. Keep the tag pending if these checks are incomplete, unless the maintainer explicitly directs publication with the checks outstanding. Record that exception and continue validation after publication.
 
 3. For Android local-data releases, build the stable-signed APK:
 

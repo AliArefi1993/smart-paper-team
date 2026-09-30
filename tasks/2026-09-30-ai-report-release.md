@@ -1,12 +1,12 @@
 # Task: Android AI-report release candidate
 
-Status: signed candidate prepared; phone checks pending
+Status: released at maintainer direction; local post-release QA in progress
 Created: 2026-09-30
 Updated: 2026-09-30
 
 ## Objective
 
-Prepare a stable-signed `smart-paper-v2026.09.6` APK containing the selective AI report and backup improvements, then tag and publish after the documented physical-phone acceptance checks pass.
+Prepare and publish a stable-signed `smart-paper-v2026.09.6` APK containing the selective AI report and backup improvements, then continue QA locally. The maintainer directed publication before physical-phone checks.
 
 ## Context
 
@@ -19,8 +19,8 @@ Prepare a stable-signed `smart-paper-v2026.09.6` APK containing the selective AI
 - [x] Android versionCode 15 and versionName 2026.09.6 are packaged.
 - [x] Stable-signed APK certificate and SHA-256 are recorded.
 - [x] Relevant automated frontend and backend checks pass.
-- [ ] Physical-phone checks in `releases/NEXT.md` pass.
-- [ ] Matching release record, APK artifact, and three repository tags are pushed in release order.
+- [ ] Post-release QA documents local results and device-only gaps.
+- [x] Matching release record, APK artifact, and three repository tags are pushed in release order.
 
 ## Verification
 
@@ -33,9 +33,9 @@ Prepare a stable-signed `smart-paper-v2026.09.6` APK containing the selective AI
 
 ## Decisions And Risks
 
-- Follow `docs/release-workflow.md`: keep the release tag pending while required phone checks are incomplete.
+- The maintainer explicitly directed this release before physical-phone checks and asked for local QA afterward.
 - The previous `.5` release also has a pending physical-phone retest.
 
 ## Outcome / Handoff
 
-Frontend revision `82b46d0` and the stable-signed APK are prepared. Full artifact metadata and checksum are in `releases/smart-paper-v2026.09.6.md`. The phone checklist is the remaining gate before tags and publication.
+Frontend revision `82b46d0` and the stable-signed APK are published in `smart-paper-v2026.09.6`. Full artifact metadata and checksum are in the release record. Continue local QA and record any device-only gaps.
