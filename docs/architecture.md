@@ -97,7 +97,7 @@ See `docs/database.md` for entity relationships, persistence ownership, and sche
   - `LanguageToggle`
 - State management: React `useState`, `useEffect`, `useMemo`; no external state library found.
 - Internationalization: custom `src/lib/i18n.ts` and `useLanguage`, persisted in localStorage.
-- Local data mode: `src/lib/local-store.ts` implements planner, planner section settings, finance, export/import, and finance unlock behavior in browser storage.
+- Local data mode: `src/lib/local-store.ts` implements planner, planner section settings, finance, export/import, and finance unlock behavior in browser storage. `src/lib/idea-notes.ts` owns Idea Space records; local JSON backup/import includes them. Backend mode currently shows Idea Space as unavailable.
 - Selective AI reports are generated in the frontend from an allowlisted Markdown projection. Android local mode reads planner records without a finance unlock; finance fields require the existing unlock. Date filtering applies to day records and income entries, while full JSON backups retain their separate restore schema.
 - `src/lib/planner-sections.ts` normalizes planner section metadata and maps old four-section data into stable `slot_1` through `slot_10` records for backend and local-storage modes.
 - `src/lib/notifications.ts` stores opt-in morning notification settings and schedules the next Android local notification when supported and permitted.

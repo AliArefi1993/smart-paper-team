@@ -33,13 +33,14 @@ The finance session unlock gates finance and export/import endpoints; it is not 
 ## Dual Persistence
 
 - Backend mode persists Django models in SQLite and exposes JSON endpoints.
-- Local-data mode persists compatible planner, template, section, finance, and settings records in browser `localStorage` for static/Android use.
+- Local-data mode persists planner, template, section, finance, settings, and Idea Space records in browser `localStorage` for static/Android use. Idea Space currently has no Django model.
 - Android is the primary release target. Django storage is paused unless a server or sync use case is chosen.
 - Cross-stack data changes must review Django models/migrations, serializers/views, frontend types and adapters, local-store normalization, and import/export compatibility.
 
 ## Backup Contract
 
-- Current JSON backup schema: `schema_version: 4`.
+- Local-data JSON backup schema: `schema_version: 5`, adding `idea_notes` with stable IDs, body, creation/update timestamps, and an optional parent ID. Older local backups remain importable; replace with an older backup clears Idea Space notes, while merge preserves existing notes.
+- Django JSON backup schema remains `schema_version: 4`.
 - Backend contract: `smart-paper/planner/export_views.py`.
 - Local-data contract: `smart-paper-front/src/lib/local-store.ts` and `smart-paper-front/src/lib/export-format.ts`.
 - Import supports merge/upsert and destructive replace behavior. Treat replace-mode changes as data-safety work.

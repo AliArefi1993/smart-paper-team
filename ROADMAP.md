@@ -9,6 +9,7 @@ This roadmap is based on repository inspection only. Speculative ideas are marke
 - Test planner, templates, finance, export/restore, English/Persian layout, offline use, and notification behavior on a phone.
 - Test selective AI report sharing to ChatGPT through Android's chooser and the save-then-attach fallback on a phone.
 - Test the focus/rest timer on a phone, including app suspension and reopening after a session completes.
+- Test Idea Space capture, editing, branching, search, keyboard behavior, backup/restore, and upgrade on a phone in English and Persian.
 - Validate the compact template sheet and current-week auto-centering on a phone in both languages.
 - Publish only a stable-signed release APK with a matching record and checksum.
 - Add focused local-data regression tests and repeatable frontend lint/type/build checks.

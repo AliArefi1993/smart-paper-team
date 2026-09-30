@@ -1,6 +1,6 @@
 # Smart Paper Status
 
-Last updated: 2026-09-30.
+Last updated: 2026-10-01.
 
 This is a present-state snapshot, not a changelog. Shipped history and validation details live in `releases/`; implementation history lives in each repository's Git log.
 
@@ -10,6 +10,7 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 - Latest release: `smart-paper-v2026.09.8` (2026-09-30), self-explanatory selective AI reports.
 - Latest local and remote team tag: `smart-paper-v2026.09.8`.
 - Local browser QA covered report filtering, finance opt-in, backup download, Persian controls, and sharing fallback. Next priority is Android-runtime QA of install/upgrade, native sharing, restore, offline behavior, notifications, and layout. Backend feature work is paused; see `ROADMAP.md` and decision D-007.
+- Idea Space is implemented in frontend commit `bff7ea2`: local notes, writing sparks, daily rediscovery, branches, search, and JSON backup support. Automated and browser checks passed; physical Android QA remains. The commit is local because automatic approval review rejected a direct push to frontend `main`.
 
 ## Repository State
 
@@ -21,17 +22,18 @@ Run `scripts/project-context.sh` for current branches, revisions, working-tree c
 - Exact-time day schedule entries and reusable full-week templates.
 - Multi-week summaries and English/Persian UI.
 - Finance goal and income tracking; Django mode protects finance and export/import with a throttled shared PIN/session unlock.
-- JSON backup/import (`schema_version: 4`) plus CSV, XLSX, and Markdown exports.
+- Local JSON backup/import (`schema_version: 5`, including Idea Space notes) plus CSV, XLSX, and Markdown exports; older backups remain importable. Django backup remains schema 4.
 - Two persistence modes: Django/SQLite API mode and browser `localStorage` mode selected by `NEXT_PUBLIC_DATA_MODE=local`.
 - The Android APK packages `smart-paper-front/` in local-data mode; it does not require Django.
 - Capacitor Android app with native file sharing and opt-in local morning plan notifications.
 - Dedicated focus/rest timer with configurable lengths, hourglass progress, and deadline recovery after navigation or suspension; no planner-minute logging or background completion alarm.
+- Local-data Idea Space with freeform notes, optional writing prompts, daily return of an older thought, branches, and search.
 
 ## Technical Baseline
 
 - Backend: Python, Django 6.0.4, SQLite, `planner` and `finance` apps, committed migrations, Docker/Compose, Gunicorn startup path.
 - Frontend: Next.js 16.2.4, React 19.2.4, TypeScript, Tailwind CSS 4, Capacitor 8.
-- Frontend routes: planner, timer, finance, summaries, export/import, and settings.
+- Frontend routes: planner, ideas, timer, finance, summaries, export/import, and settings.
 - Android release: `versionCode 17`, `versionName 2026.09.8`; stable-signed APKs must continue using the existing ignored local signing material.
 - Team `smart-paper-v*` tags publish GitHub Releases when the matching release record and APK are committed.
 
@@ -53,6 +55,7 @@ See `releases/smart-paper-v2026.09.8.md` for artifact checksum and scope. Physic
 - Finance uses a shared PIN/session gate, not user accounts.
 - No CI, broad frontend integration suite, backend lint, or backend type-check configuration is present.
 - Android notifications and full-week template UX still need physical-device checks in English and Persian.
+- Idea Space capture, editing, branching, keyboard behavior, backup/restore, and upgrade still need physical Android checks.
 - Production environment and deployment documentation remain incomplete for any future hosted backend.
 - Old `node_modules-blocked-*` directories in the frontend need a repository-hygiene decision.
 - Local finance data is not encrypted; its client-side PIN is a screen lock only.

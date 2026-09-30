@@ -24,6 +24,7 @@ Smart Paper is a personal weekly planning, progress tracking, finance tracking, 
 - Supports a local browser-storage mode for Android/static export builds.
 - Supports opt-in Android local morning plan notifications.
 - Provides a focus/rest timer with editable session lengths, an hourglass display, and a countdown that resumes accurately after app navigation or suspension.
+- Provides a separate Android Idea Space for freeform notes with optional writing sparks, daily rediscovery, branching, editing, search, and local JSON backup/restore.
 
 ## Likely Target Users
 
@@ -39,6 +40,7 @@ Smart Paper is a personal weekly planning, progress tracking, finance tracking, 
 - Save the week and review total planned/tracked minutes by category.
 - Open Settings to rename section slots, choose active sections, and enable a morning plan notification.
 - Open Focus Timer to run focus and rest sessions, pause or reset them, and explicitly start each next phase.
+- Open Idea Space to capture an unfinished thought, use an optional spark, or grow a thought that returns from earlier writing.
 - Open summaries to review recent weeks and hide or show empty weeks.
 - Unlock Finance with a PIN, set a finance goal, and add/edit/delete income records.
 - Open Export, unlock finance, preview aggregate data, download/share a backup or report file, or import a JSON backup.
@@ -66,3 +68,4 @@ Smart Paper is a personal weekly planning, progress tracking, finance tracking, 
 - No production infrastructure beyond Docker/Docker Compose configuration was found.
 - No broad frontend integration or end-to-end test suite is implemented.
 - The Android PIN is only a screen lock; local finance data and JSON backups are not encrypted.
+- Idea Space currently stores notes only in Android/local-data mode; the Django backend does not store them.

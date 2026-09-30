@@ -15,9 +15,11 @@ Updated: 2026-09-30. Keep this file short and update it when user-visible featur
 - Import a JSON backup by merge or replace.
 - Set an optional morning plan notification.
 - Run focus and rest countdowns with configurable lengths and an hourglass display; a session stays accurate after navigation or app suspension.
+- Capture freeform ideas, use optional writing sparks, revisit an older thought each day, branch from notes, and search or edit them. Notes are included in JSON backups.
 
 ## Recent completed work
 
+- Added Idea Space as a separate, bilingual writing area without required titles or categories.
 - Added a self-explanatory introduction and AI response request to selective reports, with scope limits and a reminder that omitted fields are unknown.
 - Download the selected AI report when browser sharing is denied after the browser claims it is available.
 - Added field and date selection to the AI report; finance is off by default and a filtered report cannot be restored as a backup.
