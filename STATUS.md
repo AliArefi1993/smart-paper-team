@@ -6,10 +6,10 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 
 ## Current Focus
 
-- Android-first APK validation remains active; see `tasks/2026-09-29-android-apk-readiness.md`, `tasks/2026-09-29-focus-rest-timer.md`, and `tasks/2026-09-30-android-launch-position.md`.
+- Android-first APK validation remains active; a signed `2026.09.6` candidate awaits physical-phone acceptance. See `tasks/2026-09-30-ai-report-release.md` and `releases/NEXT.md`.
 - Latest release: `smart-paper-v2026.09.5` (2026-09-30), a launch-position patch awaiting physical-phone retest.
 - Latest local and remote team tag: `smart-paper-v2026.09.5`.
-- Next priority is phone validation of the opening viewport and timer, backup/restore, upgrade, notifications, and English/Persian layouts. Backend feature work is paused; see `ROADMAP.md` and decision D-007.
+- Next priority is phone validation of the opening viewport and timer, backup/restore, upgrade, AI report sharing, notifications, and English/Persian layouts. Backend feature work is paused; see `ROADMAP.md` and decision D-007.
 
 ## Repository State
 
@@ -32,7 +32,7 @@ Run `scripts/project-context.sh` for current branches, revisions, working-tree c
 - Backend: Python, Django 6.0.4, SQLite, `planner` and `finance` apps, committed migrations, Docker/Compose, Gunicorn startup path.
 - Frontend: Next.js 16.2.4, React 19.2.4, TypeScript, Tailwind CSS 4, Capacitor 8.
 - Frontend routes: planner, timer, finance, summaries, export/import, and settings.
-- Android release: `versionCode 14`, `versionName 2026.09.5`; stable-signed APKs must continue using the existing ignored local signing material.
+- Latest published Android release: `versionCode 14`, `versionName 2026.09.5`. Prepared signed candidate: `versionCode 15`, `versionName 2026.09.6`; stable-signed APKs must continue using the existing ignored local signing material.
 - Team `smart-paper-v*` tags publish GitHub Releases when the matching release record and APK are committed.
 
 ## Latest Verified Prepared-Release Checks
@@ -51,6 +51,7 @@ See `releases/smart-paper-v2026.09.5.md` for commands, artifact hashes, and scop
 - Unreleased frontend revision `f327cf2`: Android JSON backups receive dated filenames; local restore files are validated before replace confirmation, which now shows the selected file and its week/income counts. Frontend lint, TypeScript, 13 tests, and local-data build passed in Docker on 2026-09-30.
 - Unreleased frontend revision `6930db0`: Android local-data users can choose report fields and an inclusive date range, preview Markdown, and hand the file to the device chooser. Finance is off by default and rechecked when sharing. Frontend lint, TypeScript, 18 tests, and local-data build passed in Docker on 2026-09-30; physical-phone ChatGPT handoff remains unverified.
 - No physical Android device is available in this workspace; signed APK install, launch-position retest, timer suspension/expiry, backup/restore, and update checks remain open after publication.
+- Frontend revision `82b46d0`: a stable-signed `2026.09.6` APK candidate passed build, signature, and version checks. Backend 33 tests and migration check passed. Candidate APK SHA-256 is recorded in `releases/smart-paper-v2026.09.6.md`; no `.6` tag has been created.
 
 ## Known Risks And Gaps
 
