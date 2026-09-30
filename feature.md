@@ -17,6 +17,7 @@ Updated: 2026-09-30. Keep this file short and update it when user-visible featur
 
 ## Recent completed work
 
+- Kept the planner and mobile save bar at the phone viewport origin on launch; contained week/day scrolling within their rows.
 - Fixed phone-width planner overflow and the overlapping language selector; the save bar remains in the visible viewport.
 - Aligned planner, finance, summaries, export, and settings around a calmer paper-and-teal palette.
 - Improved primary-action contrast, selection cues, and Persian RTL week/day navigation.
