@@ -1,6 +1,6 @@
 # Task: Android AI-report release candidate
 
-Status: `.6` released at maintainer direction; local browser QA completed; `.7` follow-up in progress
+Status: `.6` and `.7` published at maintainer direction; local browser QA complete
 Created: 2026-09-30
 Updated: 2026-09-30
 
@@ -40,4 +40,4 @@ Prepare and publish a stable-signed `smart-paper-v2026.09.6` APK containing the 
 
 ## Outcome / Handoff
 
-Frontend revision `82b46d0` and the stable-signed APK are published in `smart-paper-v2026.09.6`. Full artifact metadata and checksum are in the release record. Local browser QA found and verified a browser sharing fallback fix in frontend `75a0275`; `.7` publication is in progress. Android install/upgrade, native chooser, notifications, offline persistence, and restore through the native picker still require an Android runtime or phone.
+Frontend revision `82b46d0` and the stable-signed APK were published in `smart-paper-v2026.09.6`. Local browser QA found and verified a browser sharing fallback fix in frontend `75a0275`; the signed `.7` APK was published with the fix. Full artifact metadata and checksums are in the release records. Android install/upgrade, native chooser, notifications, offline persistence, and restore through the native picker still require an Android runtime or phone.
