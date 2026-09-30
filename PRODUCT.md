@@ -18,6 +18,7 @@ Smart Paper is a personal weekly planning, progress tracking, finance tracking, 
 - Protects finance data behind a PIN/session unlock when using the Django backend.
 - Exports planner and finance data as JSON, CSV, Excel, and Markdown for AI review.
 - Imports Smart Paper JSON backups in merge/upsert or replace mode.
+- Gives Android JSON backups dated filenames and shows the chosen file's week and income counts before replace confirmation.
 - Supports English and Persian UI text.
 - Supports a local browser-storage mode for Android/static export builds.
 - Supports opt-in Android local morning plan notifications.

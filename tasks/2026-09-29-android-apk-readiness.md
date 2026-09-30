@@ -2,7 +2,7 @@
 
 Status: in progress
 Created: 2026-09-29
-Updated: 2026-09-29
+Updated: 2026-09-30
 
 ## Objective
 
@@ -49,3 +49,5 @@ Make the local-data Android app the primary product and improve data safety befo
 ## Outcome / Handoff
 
 The updated `2026.09.2` APK is signed with the existing certificate and versionCode 11. Backend tests (33), migration drift, frontend lint/type/build, and import safety tests (5) passed on 2026-09-29. The maintainer directed publication with phone checks outstanding. Run the phone checklist as post-release validation and record the results before another release.
+
+On 2026-09-30, an unreleased frontend improvement gave local JSON backups dated filenames and moved validation before the replace prompt. The prompt identifies the chosen file and shows its week/income counts. Frontend lint, TypeScript, 13 tests, and local-data build passed in Docker. Physical-phone restore validation remains open.
