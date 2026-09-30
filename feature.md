@@ -11,13 +11,14 @@ Updated: 2026-09-30. Keep this file short and update it when user-visible featur
 - Track a finance goal and income entries.
 - Use English or Persian.
 - Export JSON backups and readable CSV, Excel, or Markdown files.
-- Create a selective Markdown AI report by field and date range, preview its text, and share it using the phone's app chooser.
+- Create a selective Markdown AI report by field and date range, preview its text, and share it using the phone's app chooser. The file explains itself and asks the AI for a grounded first response.
 - Import a JSON backup by merge or replace.
 - Set an optional morning plan notification.
 - Run focus and rest countdowns with configurable lengths and an hourglass display; a session stays accurate after navigation or app suspension.
 
 ## Recent completed work
 
+- Added a self-explanatory introduction and AI response request to selective reports, with scope limits and a reminder that omitted fields are unknown.
 - Download the selected AI report when browser sharing is denied after the browser claims it is available.
 - Added field and date selection to the AI report; finance is off by default and a filtered report cannot be restored as a backup.
 - Gave each Android JSON backup a dated filename and showed the selected backup's week and income counts before replacing saved data.

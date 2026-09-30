@@ -6,9 +6,9 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 
 ## Current Focus
 
-- Android-first APK validation remains active; `2026.09.7` was released at maintainer direction before physical-phone checks. See `tasks/2026-09-30-ai-report-release.md`.
-- Latest release: `smart-paper-v2026.09.7` (2026-09-30), browser AI-report sharing fallback after the `.6` selective report release.
-- Latest local and remote team tag: `smart-paper-v2026.09.7`.
+- Android-first APK validation remains active; `2026.09.8` was released at maintainer direction before physical-phone checks. See `tasks/2026-09-30-ai-report-handoff.md`.
+- Latest release: `smart-paper-v2026.09.8` (2026-09-30), self-explanatory selective AI reports.
+- Latest local and remote team tag: `smart-paper-v2026.09.8`.
 - Local browser QA covered report filtering, finance opt-in, backup download, Persian controls, and sharing fallback. Next priority is Android-runtime QA of install/upgrade, native sharing, restore, offline behavior, notifications, and layout. Backend feature work is paused; see `ROADMAP.md` and decision D-007.
 
 ## Repository State
@@ -32,19 +32,19 @@ Run `scripts/project-context.sh` for current branches, revisions, working-tree c
 - Backend: Python, Django 6.0.4, SQLite, `planner` and `finance` apps, committed migrations, Docker/Compose, Gunicorn startup path.
 - Frontend: Next.js 16.2.4, React 19.2.4, TypeScript, Tailwind CSS 4, Capacitor 8.
 - Frontend routes: planner, timer, finance, summaries, export/import, and settings.
-- Android release: `versionCode 16`, `versionName 2026.09.7`; stable-signed APKs must continue using the existing ignored local signing material.
+- Android release: `versionCode 17`, `versionName 2026.09.8`; stable-signed APKs must continue using the existing ignored local signing material.
 - Team `smart-paper-v*` tags publish GitHub Releases when the matching release record and APK are committed.
 
 ## Latest Verified Release Checks
 
-The `smart-paper-v2026.09.7` build passed on 2026-09-30:
+The `smart-paper-v2026.09.8` build passed on 2026-09-30:
 
 - Backend 33 tests and migration check: passed; backend source unchanged.
-- Frontend lint, TypeScript, 19 tests, and local-data production build: passed in Docker.
-- Stable-signed Android APK build, signature, and versionCode 16/versionName 2026.09.7: passed.
-- Local browser QA: field/date selection, finance opt-in, JSON backup download, Persian controls, and denied-share download fallback checked.
+- Frontend lint, TypeScript, 21 tests, and local-data production build: passed in Docker.
+- Stable-signed Android APK build, signature, and versionCode 17/versionName 2026.09.8: passed.
+- Product, design, and security review of the AI report handoff completed. Prior local browser QA covered field/date selection, finance opt-in, JSON backup download, Persian controls, and denied-share download fallback.
 
-See `releases/smart-paper-v2026.09.7.md` for artifact checksum and scope. Physical install, upgrade, native backup restore and sharing, timer, notifications, and full bilingual layout remain unverified; the maintainer directed release before these checks.
+See `releases/smart-paper-v2026.09.8.md` for artifact checksum and scope. Physical install, upgrade, native backup restore and sharing, timer, notifications, and full bilingual layout remain unverified; the maintainer directed release before these checks.
 
 ## Known Risks And Gaps
 
