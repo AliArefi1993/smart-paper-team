@@ -49,6 +49,7 @@ See `releases/smart-paper-v2026.09.5.md` for commands, artifact hashes, and scop
 
 - Frontend revision `0e7d5dd`: Android local-data lint, TypeScript check, static build, and 13 tests passed in Docker on 2026-09-30. A built browser review at 393px confirmed Persian fresh launch at the horizontal origin and save-bar placement in both languages.
 - Unreleased frontend revision `f327cf2`: Android JSON backups receive dated filenames; local restore files are validated before replace confirmation, which now shows the selected file and its week/income counts. Frontend lint, TypeScript, 13 tests, and local-data build passed in Docker on 2026-09-30.
+- Unreleased frontend revision `6930db0`: Android local-data users can choose report fields and an inclusive date range, preview Markdown, and hand the file to the device chooser. Finance is off by default and rechecked when sharing. Frontend lint, TypeScript, 18 tests, and local-data build passed in Docker on 2026-09-30; physical-phone ChatGPT handoff remains unverified.
 - No physical Android device is available in this workspace; signed APK install, launch-position retest, timer suspension/expiry, backup/restore, and update checks remain open after publication.
 
 ## Known Risks And Gaps

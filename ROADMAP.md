@@ -7,6 +7,7 @@ This roadmap is based on repository inspection only. Speculative ideas are marke
 - Prove JSON backup and restore on a phone, including failed and cancelled imports.
 - Validate install and upgrade on a physical phone without losing saved data.
 - Test planner, templates, finance, export/restore, English/Persian layout, offline use, and notification behavior on a phone.
+- Test selective AI report sharing to ChatGPT through Android's chooser and the save-then-attach fallback on a phone.
 - Test the focus/rest timer on a phone, including app suspension and reopening after a session completes.
 - Validate the compact template sheet and current-week auto-centering on a phone in both languages.
 - Publish only a stable-signed release APK with a matching record and checksum.
@@ -40,7 +41,6 @@ This roadmap is based on repository inspection only. Speculative ideas are marke
 
 ## Later / Ideas
 
-- Needs confirmation: richer AI review workflow using exported Markdown/JSON.
 - Needs confirmation: multi-user accounts and per-user data separation if Smart Paper stops being a single-user personal app.
 - Needs confirmation: charts/trends for planner and finance progress.
 - Needs confirmation: recurring timed events, calendar import/export, or per-event reminder alarms.
