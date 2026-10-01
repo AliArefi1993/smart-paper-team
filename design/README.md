@@ -2,6 +2,8 @@
 
 This directory holds durable design work for the Android-first Smart Paper interface. Figma is the preferred editable canvas; this repository holds the problem, decisions, handoff, and verification so Product, Designer, Frontend, and QA can work from the same evidence.
 
+Editable Figma file: [Smart Paper — Product Design](https://www.figma.com/design/QM23WOITohVqGMZCdSRc3n). The first frame is the [interface foundations board](https://www.figma.com/design/QM23WOITohVqGMZCdSRc3n?node-id=1-2). Add screen frames to this file or link a separate file from the relevant design record.
+
 ## Files
 
 - `foundations.md`: current interface foundations and design constraints.
@@ -15,4 +17,4 @@ This directory holds durable design work for the Android-first Smart Paper inter
 3. Frontend implements in `smart-paper-front/`, using the record and actual Figma context. A generated snippet is a starting point, not the production source.
 4. Designer and QA compare the running UI with the record on a phone-sized screen in both languages. Record observed differences and validation.
 
-Do not claim a Figma file exists until it is created and linked. The Figma connection is account-specific; repo documents remain usable without it.
+The Figma connection is account-specific; repo documents remain usable without it.

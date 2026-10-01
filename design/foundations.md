@@ -2,6 +2,8 @@
 
 Updated: 2026-10-01. This is a map of the current interface, not a claim that every screen has been visually audited.
 
+Editable reference: [Figma foundations board](https://www.figma.com/design/QM23WOITohVqGMZCdSRc3n?node-id=1-2). Its colors were checked against `smart-paper-front/src/app/globals.css` and its rendered screenshot was inspected on 2026-10-01. It is a starting board, not a finished screen design.
+
 ## Product context
 
 Smart Paper is an Android-first personal planner with local storage. The planner is dense; quick scanning and safe data entry matter more than ornament. English and Persian are first-class UI languages. The planner has an optional dark mode; other routes use the light paper palette. See `PRODUCT.md` and decisions D-007/D-008.
