@@ -24,7 +24,7 @@ Smart Paper is a personal weekly planning, progress tracking, finance tracking, 
 - Supports a local browser-storage mode for Android/static export builds.
 - Supports opt-in Android local morning plan notifications.
 - Provides a focus/rest timer with editable session lengths, an hourglass display, and a countdown that resumes accurately after app navigation or suspension.
-- Provides a separate Android Idea Space for freeform notes with optional writing sparks, daily rediscovery, branching, editing, search, and local JSON backup/restore.
+- Provides a separate Android Idea Space for freeform notes with expandable optional writing sparks, daily rediscovery, branching, editing, search, and local JSON backup/restore.
 
 ## Likely Target Users
 
