@@ -11,6 +11,7 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 - Latest local and remote team tag: `smart-paper-v2026.10.1`.
 - Local browser QA covered report filtering, finance opt-in, backup download, Persian controls, and sharing fallback. Next priority is Android-runtime QA of install/upgrade, native sharing, restore, offline behavior, notifications, and layout. Backend feature work is paused; see `ROADMAP.md` and decision D-007.
 - Idea Space is included in the `2026.10.1` Android release: local notes, writing sparks, daily rediscovery, branches, search, and JSON backup support. Automated and browser checks passed; physical Android QA remains.
+- Product and Designer now have repo skills and a `design/` workspace for briefs, editable-design links, implementation handoffs, and bilingual Android review. Figma is the preferred canvas once connected; no Figma file has been created yet.
 
 ## Repository State
 

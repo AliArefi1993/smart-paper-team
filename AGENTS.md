@@ -35,6 +35,7 @@ Do not preload every project document. Load context according to the task:
    - persistence entities, relationships, or migrations: `docs/database.md`
    - why a durable choice was made: `docs/decisions.md`
    - continuing meaningful multi-step work: the relevant file under `tasks/`
+   - product discovery or visual design: the relevant skill under `skills/` and files under `design/`
    - release or Android packaging: `docs/release-workflow.md`, `releases/NEXT.md`, and the latest relevant release record
    - implementation: the owning repository's `AGENTS.md`, then the relevant code and tests
 4. Use `rg` and narrow file reads before opening large files. Treat code and migrations as authoritative for implementation details.

@@ -16,6 +16,8 @@ This repository coordinates the Smart Paper product. It stores durable project c
 | `docs/database.md` | persistence model and data ownership |
 | `docs/decisions.md` | durable decisions and their reasons |
 | `tasks/` | context for active and completed multi-step work |
+| `design/` | product design briefs, interface foundations, and implementation handoffs |
+| `skills/` | reusable Product and Designer workflows |
 | `releases/` | shipped release records and APK artifacts |
 
 ## Fast Start

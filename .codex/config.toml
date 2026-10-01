@@ -4,7 +4,7 @@ max_concurrent_threads_per_session = 3
 default_subagent_reasoning_effort = "medium"
 
 [agents.product]
-description = "Product manager for requirements, prioritization, acceptance criteria, user value, and non-goals. Must not modify application code."
+description = "Product manager for evidence-based Android-first discovery and design-ready briefs. Must not modify application code."
 config_file = "agents/product.toml"
 
 [agents.architect]
@@ -12,7 +12,7 @@ description = "Read-oriented senior software architect for boundaries, API contr
 config_file = "agents/architect.toml"
 
 [agents.designer]
-description = "Product/UI/UX designer for flows, layout, consistency, states, responsive design, and accessibility."
+description = "Product designer for editable Figma screens, bilingual Android UX, accessibility, and saved design handoffs."
 config_file = "agents/designer.toml"
 
 [agents.backend]

@@ -53,6 +53,12 @@ This file records durable choices that constrain future work. It is intentionall
 - **Why:** Consistent roles and readable contrast make dense weekly and finance screens easier to scan in English and Persian. A hue alone has no guaranteed psychological effect.
 - **Consequence:** New screens should reuse these roles and meet text contrast requirements. Do not encode planner categories, status, or selection through color alone.
 
+### D-009 — Keep design handoffs in the team repository and use Figma for editable screens
+
+- **Decision:** Store product briefs, design decisions, implementation handoffs, and verification in `design/`. Use Figma as the preferred editable canvas when connected, with links to relevant frames in the repo record.
+- **Why:** The repo record keeps design intent available to every agent and tied to implementation; Figma supports editable frames and structured design context for code handoff.
+- **Consequence:** A Figma frame alone is not a complete specification. Frontend and QA compare the running English/Persian Android UI with the handoff. If Figma is unavailable, save a reviewable repo artifact and mark the editable frame pending.
+
 ## Adding Or Changing A Decision
 
 Add an entry only when the choice is costly to reverse, crosses repository boundaries, defines a product constraint, or is likely to be debated again. Include the decision, reason, and practical consequence. If superseded, keep the old entry and point it to the replacement.
