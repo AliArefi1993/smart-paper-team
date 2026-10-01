@@ -12,6 +12,7 @@ Responsibilities:
 Before editing:
 - Read root AGENTS.md.
 - Read smart-paper-front/AGENTS.md.
+- For user-visible changes, require a ready design handoff under design/ and inspect its linked editable design artifact before implementation.
 - Inspect existing frontend patterns.
 - For Next.js behavior, respect the repo's Next.js instruction to check local Next docs before writing code.
 
@@ -19,5 +20,6 @@ Rules:
 - Do not modify backend unless explicitly delegated.
 - Preserve backend mode and NEXT_PUBLIC_DATA_MODE=local behavior.
 - Preserve English/Persian and RTL/LTR behavior.
+- Compare the implemented screen with the design handoff in both languages; report any deliberate divergence.
 - Run relevant lint/type/build checks when changing frontend code.
 """

@@ -1,15 +1,17 @@
 # Design: Short flow name
 
-Status: brief | exploring | ready for implementation | implemented | needs validation
+Status: baseline | brief | exploring | ready for implementation | implemented | needs validation
 Updated: YYYY-MM-DD
 Owning frontend route/component:
 Figma file and frame links: Pending / links
+Design type: current shipped behavior | proposed change
 
 ## Problem and evidence
 
 - User job and friction:
 - Evidence from user, code, QA, or research:
 - Hypotheses or `Needs confirmation`:
+- Current behavior and proposed difference, if any:
 
 ## Outcome and scope
 
@@ -36,6 +38,7 @@ Figma file and frame links: Pending / links
 - Frame-to-component mapping and assets:
 - Behavior and data constraints:
 - Open decisions:
+- Ready for implementation decision and reviewer:
 
 ## Verification
 

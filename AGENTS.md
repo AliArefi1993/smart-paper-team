@@ -69,6 +69,8 @@ For meaningful changes, follow:
 
 UNDERSTAND -> SPECIFY -> PLAN -> IMPLEMENT -> TEST -> REVIEW -> FIX -> VERIFY -> DOCUMENT
 
+For any task that changes a user-visible screen, interaction, copy, or flow, Designer must review the current behavior and save a design handoff under `design/` before frontend implementation begins. The handoff must link editable Figma frames when available and cover the affected states in English and Persian. Product defines the problem and acceptance criteria first when scope or user value is uncertain. Frontend starts only after the handoff is marked ready for implementation. For a task with no user-facing effect, record `Design: not applicable` in its task or plan instead of inventing a screen design.
+
 The repository files are durable project memory. Agents should inspect the repositories and docs rather than relying only on conversation context.
 
 For multi-step, cross-repository, migration, or release work, create or update a task document from `tasks/TEMPLATE.md`. Keep it concise and evidence-based. Small local fixes do not require one.

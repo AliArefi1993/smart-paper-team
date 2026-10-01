@@ -13,6 +13,7 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 - Idea Space is included in the `2026.10.1` Android release: local notes, writing sparks, daily rediscovery, branches, search, and JSON backup support. Automated and browser checks passed; physical Android QA remains.
 - Product and Designer now have repo skills and a `design/` workspace for briefs, editable-design links, implementation handoffs, and bilingual Android review. The connected Figma file holds foundations and Idea Space mobile frames.
 - The first design pilot refreshed Idea Space in frontend revision `820692a`: editable English/Persian Figma frames and a writing-first layout with expandable sparks. Local-data lint, type check, 23 tests, and build passed; 390px browser review passed in both languages. Physical Android review remains.
+- Shipped-screen coverage now includes a route/state inventory, source-backed flow briefs covering all seven routes, and an editable bilingual phone design atlas. Planner EN/FA Figma drafts were added beside the previously reviewed Idea Space frames. The Planner drafts and atlas have not been visually checked; Figma Starter tool limits block additional frames and screenshots. Designer-ready handoff is now required before future user-visible frontend implementation. See `tasks/2026-10-01-full-app-design-coverage.md`.
 
 ## Repository State
 
