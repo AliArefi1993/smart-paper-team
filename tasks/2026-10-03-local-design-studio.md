@@ -15,7 +15,7 @@ Design: not applicable to the shipped app; this changes design tooling and proce
 - [x] All seven shipped routes have editable, bilingual phone stories migrated from the existing structural atlas; representative material states are browsable separately.
 - [x] The studio uses current paper/teal foundations and clearly marks illustrative data and unverified visual fidelity.
 - [x] Designer skill, workspace instructions, inventory, and handoff docs name the local studio as the primary design artifact.
-- [x] Dependency install, type check, static Storybook build, and dev-server smoke test pass. Visual comparison remains pending because the available browser surface blocked local file preview by policy in the earlier task; no alternate browser route was attempted.
+- [x] Dependency install, type check, static Storybook build, and dev-server smoke test pass. The local browser renders the Export overview story in English and Persian. Comparison with the running app remains pending.
 - [x] Scoped team commit is pushed; backend and frontend repositories remain untouched.
 
 ## Plan
@@ -27,4 +27,4 @@ Design: not applicable to the shipped app; this changes design tooling and proce
 
 ## Verification and handoff
 
-Storybook 10.6.1 and React/Vite run from `design/studio/`. Seven route story files provide 32 named bilingual baseline/state drafts. `npm run typecheck`, `npm run build`, and `npm run storybook -- --smoke-test --ci` passed. The static build index contains 32 stories. The built UI was not visually inspected, and the stories are structural sketches with illustrative text rather than pixel-matched current screens. Next design work should inspect the local stories and running app in a permitted preview, adjust layout/copy, then add proposal stories for future changes before Frontend work.
+Storybook 10.6.1 and React/Vite run from `design/studio/`. Seven route story files provide 32 named bilingual baseline/state drafts. `npm run typecheck`, `npm run build`, and `npm run storybook -- --smoke-test --ci` passed. The static build index contains 32 stories. On 2026-10-03, the dev preview initially hung because React's CommonJS entry was served without a default export. Explicit Vite dependency optimization fixed this; the in-app browser rendered the Export overview story with English and Persian content after a server restart. The stories are structural sketches with illustrative text rather than pixel-matched current screens. Next design work should compare the local stories with the running app, adjust layout/copy, then add proposal stories for future changes before Frontend work.
