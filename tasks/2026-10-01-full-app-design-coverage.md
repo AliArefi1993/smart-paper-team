@@ -1,12 +1,12 @@
 # Task: Design coverage for shipped app
 
-Status: partial — design baseline recorded; Figma Starter tool limit blocks full frame coverage
+Status: partial — design baseline recorded; local story review and running-UI comparison pending
 Created: 2026-10-01
 Updated: 2026-10-01
 
 ## Objective
 
-Document every shipped Android-facing Smart Paper route in editable design artifacts and durable design records, then make a ready Designer handoff a required step before future user-visible implementation. Complete Figma coverage remains the target once the account tool limit permits it.
+Document every shipped Android-facing Smart Paper route in editable design artifacts and durable design records, then make a ready Designer handoff a required step before future user-visible implementation. The local Storybook studio is now the primary canvas; Figma coverage is optional.
 
 ## Context
 
@@ -57,4 +57,4 @@ Document every shipped Android-facing Smart Paper route in editable design artif
 
 ## Outcome / Handoff
 
-All seven routes have source-backed flow/state coverage and bilingual editable HTML structural drafts; Planner and Idea Space also have Figma frames. The Planner frames are not visually verified. Timer, Summaries, Finance, Export, and Settings Figma frames and targeted state variants remain. No baseline is a `ready for implementation` redesign handoff. Frontend agent instruction revision `6e13acd` was pushed to `main`; this team's commit revision is recorded by Git. Resume frame creation and EN/FA visual comparison when Figma access is available, then inspect the atlas or running UI in a permitted browser/device and fix any fidelity gaps.
+All seven routes have source-backed flow/state coverage and bilingual editable Storybook structural drafts; the local studio has 32 named stories and is tracked in `tasks/2026-10-03-local-design-studio.md`. Planner and Idea Space also have Figma frames, but the Planner frames are not visually verified. Local stories still need visual comparison with the running app and missing loading/success and accessibility states; Figma frame completion is optional. No baseline is a `ready for implementation` redesign handoff. Frontend agent instruction revision `6e13acd` was pushed to `main`; this team's revisions are recorded by Git.

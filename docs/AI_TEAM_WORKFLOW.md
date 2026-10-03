@@ -26,7 +26,7 @@ the lead should execute exactly one improvement cycle, then stop.
 2. Inspect both repositories where relevant.
 3. Use `ROADMAP.md` and current evidence to identify valuable candidate improvements; involve Product only when scope or user value is ambiguous.
 4. Choose one bounded improvement.
-5. Write acceptance criteria. For every user-visible change, Designer reviews the current experience and saves a `design/` handoff marked ready for implementation before application code is edited. Product frames the problem first when scope or user value is uncertain. Use Architect when relevant.
+5. Write acceptance criteria. For every user-visible change, Designer reviews the current experience, prototypes the affected states in `design/studio/`, and saves a `design/` handoff marked ready for implementation before application code is edited. Product frames the problem first when scope or user value is uncertain. Use Architect when relevant.
 6. Review the chosen scope and design against the acceptance criteria. Frontend uses the linked editable design artifact and handoff; record `Design: not applicable` for tasks with no user-facing effect.
 7. Plan the implementation.
 8. Delegate only bounded, independent work when doing so reduces latency or risk; keep small changes with the lead.

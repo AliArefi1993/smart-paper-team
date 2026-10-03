@@ -1,6 +1,6 @@
 # Smart Paper Status
 
-Last updated: 2026-10-01.
+Last updated: 2026-10-03.
 
 This is a present-state snapshot, not a changelog. Shipped history and validation details live in `releases/`; implementation history lives in each repository's Git log.
 
@@ -11,9 +11,9 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 - Latest local and remote team tag: `smart-paper-v2026.10.1`.
 - Local browser QA covered report filtering, finance opt-in, backup download, Persian controls, and sharing fallback. Next priority is Android-runtime QA of install/upgrade, native sharing, restore, offline behavior, notifications, and layout. Backend feature work is paused; see `ROADMAP.md` and decision D-007.
 - Idea Space is included in the `2026.10.1` Android release: local notes, writing sparks, daily rediscovery, branches, search, and JSON backup support. Automated and browser checks passed; physical Android QA remains.
-- Product and Designer now have repo skills and a `design/` workspace for briefs, editable-design links, implementation handoffs, and bilingual Android review. The connected Figma file holds foundations and Idea Space mobile frames.
+- Product and Designer have repo skills and a `design/` workspace for briefs, local screen stories, implementation handoffs, and bilingual Android review. Figma remains an optional reference.
 - The first design pilot refreshed Idea Space in frontend revision `820692a`: editable English/Persian Figma frames and a writing-first layout with expandable sparks. Local-data lint, type check, 23 tests, and build passed; 390px browser review passed in both languages. Physical Android review remains.
-- Shipped-screen coverage now includes a route/state inventory, source-backed flow briefs covering all seven routes, and an editable bilingual phone design atlas. Planner EN/FA Figma drafts were added beside the previously reviewed Idea Space frames. The Planner drafts and atlas have not been visually checked; Figma Starter tool limits block additional frames and screenshots. Designer-ready handoff is now required before future user-visible frontend implementation. See `tasks/2026-10-01-full-app-design-coverage.md`.
+- Shipped-screen coverage includes a route/state inventory, source-backed flow briefs for all seven routes, and a local React/Storybook design studio with 32 bilingual route/state stories. The studio type check, static build, and dev-server smoke test pass; visual comparison with the running app remains open. The earlier atlas and Planner Figma drafts have not been visually checked; Figma Starter tool limits block further screenshots. Designer-ready local stories and a handoff are required before future user-visible frontend implementation. See `tasks/2026-10-03-local-design-studio.md` and `tasks/2026-10-01-full-app-design-coverage.md`.
 
 ## Repository State
 

@@ -1,8 +1,24 @@
 # Shipped screen and design coverage inventory
 
-Updated: 2026-10-01. Source: `PRODUCT.md`, `feature.md`, and the current routes/components in `smart-paper-front/src/app/` and `src/components/`. This lists implemented Android/local-data behavior. It is a coverage map, not validation of every rendered state.
+Updated: 2026-10-03. Source: `PRODUCT.md`, `feature.md`, and the current routes/components in `smart-paper-front/src/app/` and `src/components/`. This lists implemented Android/local-data behavior. It is a coverage map, not validation of every rendered state.
 
-Editable design file: [Smart Paper — Product Design](https://www.figma.com/design/QM23WOITohVqGMZCdSRc3n). The [foundations board](https://www.figma.com/design/QM23WOITohVqGMZCdSRc3n?node-id=1-2) is a reference, not a screen. [Idea Space English](https://www.figma.com/design/QM23WOITohVqGMZCdSRc3n?node-id=3-2) and [Idea Space Persian](https://www.figma.com/design/QM23WOITohVqGMZCdSRc3n?node-id=3-32) are reviewed populated phone proposals. [Planner English](https://www.figma.com/design/QM23WOITohVqGMZCdSRc3n?node-id=15-2) and [Planner Persian](https://www.figma.com/design/QM23WOITohVqGMZCdSRc3n?node-id=15-55) are editable structural drafts, with visual QA pending because the Figma Starter tool limit blocked screenshots and further edits. The [repo-native coverage atlas](coverage-atlas.html) provides editable structural phone drafts for all seven routes in both languages; its sample copy and data are illustrative and its layouts are not yet validated against the running app.
+The primary editable canvas is the [local Storybook studio](studio/src/stories/). It has bilingual phone baselines for all seven routes and separate source-backed state sketches; phone/wide controls are available, though wide layouts are not yet visually validated. Story data and content are illustrative. The earlier [atlas](coverage-atlas.html) is retained as a historical reference. The optional [Figma file](https://www.figma.com/design/QM23WOITohVqGMZCdSRc3n) contains [foundations](https://www.figma.com/design/QM23WOITohVqGMZCdSRc3n?node-id=1-2), reviewed [Idea Space English](https://www.figma.com/design/QM23WOITohVqGMZCdSRc3n?node-id=3-2) and [Persian](https://www.figma.com/design/QM23WOITohVqGMZCdSRc3n?node-id=3-32) proposal frames, and unreviewed [Planner English](https://www.figma.com/design/QM23WOITohVqGMZCdSRc3n?node-id=15-2) and [Persian](https://www.figma.com/design/QM23WOITohVqGMZCdSRc3n?node-id=15-55) drafts.
+
+## Local story coverage
+
+All stories default to paired English/Persian 390px drafts. The named exports in [route story files](studio/src/stories/) cover:
+
+| Route | Baseline and material state stories |
+| --- | --- |
+| `/` | [Planner](studio/src/stories/Planner.stories.tsx): Populated, Sparse, ScheduleSheet, TemplateSheet, UnsavedDecision |
+| `/ideas` | [Ideas](studio/src/stories/Ideas.stories.tsx): Populated, Empty, NoSearchMatches, Edit, DeleteDecision |
+| `/timer` | [Timer](studio/src/stories/Timer.stories.tsx): Ready, Running, Paused, Completed, InvalidDuration |
+| `/summaries` | [Summaries](studio/src/stories/Summaries.stories.tsx): Populated, Empty, Filtered |
+| `/finance` | [Finance](studio/src/stories/Finance.stories.tsx): Unlocked, Locked, Empty, EditIncome, Validation |
+| `/export` | [Export](studio/src/stories/Export.stories.tsx): Overview, Locked, AiReport, ImportReplaceDecision, Validation |
+| `/settings` | [Settings](studio/src/stories/Settings.stories.tsx): Default, Edit, Validation, UnsavedDecision |
+
+These are structural sketches migrated from source-backed inventory, not fidelity-checked UI. Loading, success, accessibility, keyboard, and other states listed below still need design review. Figma coverage in the next table is optional and remains incomplete.
 
 ## Route coverage
 
@@ -25,4 +41,4 @@ Editable design file: [Smart Paper — Product Design](https://www.figma.com/des
 
 ## Design-first implementation gate
 
-For future user-facing changes, Product records the problem and acceptance criteria in `design/` or the relevant task, Designer maps the changed flow and states in Figma and writes a `design/TEMPLATE.md` handoff, then Frontend implements against that handoff. Designer and QA compare the running result in both languages and record any differences. Existing Figma coverage is reference context, not proof that every shipped state has been visually validated.
+For future user-facing changes, Product records the problem and acceptance criteria in `design/` or the relevant task, Designer creates proposal stories for changed flows and states in `design/studio/` and writes a `design/TEMPLATE.md` handoff, then Frontend implements against that handoff. Designer and QA compare the running result in both languages and record any differences. Existing baseline stories and Figma frames are reference context, not proof that every shipped state has been visually validated.

@@ -3,7 +3,8 @@
 Status: baseline | brief | exploring | ready for implementation | implemented | needs validation
 Updated: YYYY-MM-DD
 Owning frontend route/component:
-Figma file and frame links: Pending / links
+Local studio story links: Pending / links
+Optional Figma file and frame links: Pending / links
 Design type: current shipped behavior | proposed change
 
 ## Problem and evidence
