@@ -21,44 +21,166 @@ const nav: Record<Language, string[]> = {
   fa: ["برنامه", "ایده‌ها", "زمان‌سنج", "خلاصه‌ها", "مالی", "خروجی", "تنظیمات"],
 };
 
+const links: Record<RouteKey, number[]> = {
+  "/": [1, 2, 3, 4, 5, 6],
+  "/ideas": [0],
+  "/timer": [0],
+  "/summaries": [4, 5, 0],
+  "/finance": [0, 3, 5],
+  "/export": [4, 0],
+  "/settings": [0, 3],
+};
+
+const dialogVariants: VariantKey[] = [
+  "schedule",
+  "template",
+  "unsaved",
+  "delete",
+  "replace",
+];
+
 function VariantScene({
   spec,
   language,
+  dialog = false,
 }: {
   spec: VariantSpec;
   language: Language;
+  dialog?: boolean;
 }) {
   return (
-    <div className={`state-panel ${spec.tone ?? "plain"}`}>
+    <section
+      className={`state-panel ${spec.tone ?? "plain"} ${dialog ? "state-dialog" : ""}`}
+      role={dialog ? "dialog" : undefined}
+      aria-modal={dialog ? true : undefined}
+      aria-label={dialog ? spec.title[language] : undefined}
+    >
+      {dialog && <div className="dialog-grip" aria-hidden="true" />}
+      {spec.route === "/timer" && (
+        <div className="timer-phase">
+          <span className="selected">
+            {language === "fa" ? "تمرکز" : "Focus"}
+          </span>
+          <span>{language === "fa" ? "استراحت" : "Rest"}</span>
+        </div>
+      )}
       <h4>{spec.title[language]}</h4>
       <p>{spec.message[language]}</p>
       {spec.timer && (
-        <div className="circle">
-          <span className="num">{spec.timer}</span>
+        <div className="hourglass">
+          <svg viewBox="0 0 160 190" aria-hidden="true">
+            <path
+              d="M24 20 H136 Q130 63 85 94 H75 Q30 63 24 20 Z M75 96 H85 Q130 127 136 170 H24 Q30 127 75 96 Z"
+              fill="#e7f4ef"
+              stroke="#0f766e"
+              strokeWidth="5"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M43 34 H117 Q108 59 80 85 Q52 59 43 34 Z"
+              fill="#d69a54"
+              opacity={
+                spec.key === "completed"
+                  ? 0
+                  : spec.key === "running"
+                    ? 0.7
+                    : 0.42
+              }
+            />
+            <path
+              d="M80 110 Q58 138 48 159 H112 Q102 138 80 110 Z"
+              fill="#d69a54"
+              opacity={
+                spec.key === "completed"
+                  ? 0.9
+                  : spec.key === "running"
+                    ? 0.32
+                    : 0.55
+              }
+            />
+            <path
+              d="M15 18 H145 M15 172 H145"
+              stroke="#125b53"
+              strokeWidth="8"
+              strokeLinecap="round"
+            />
+          </svg>
+          <span className="num" dir="ltr">
+            {spec.timer}
+          </span>
+        </div>
+      )}
+      {spec.timer && (
+        <div
+          className="timer-progress"
+          role="progressbar"
+          aria-label={language === "fa" ? "پیشرفت زمان‌سنج" : "Timer progress"}
+          aria-valuenow={
+            spec.key === "completed" ? 100 : spec.key === "paused" ? 51 : 26
+          }
+          aria-valuemin={0}
+          aria-valuemax={100}
+        >
+          <span
+            style={{
+              width:
+                spec.key === "completed"
+                  ? "100%"
+                  : spec.key === "paused"
+                    ? "51%"
+                    : "26%",
+            }}
+          />
         </div>
       )}
       {spec.fields && (
         <div className="stack">
           {spec.fields.map((field) => (
-            <div className="field" key={field.en}>
-              {field[language]}
-            </div>
+            <label className="studio-input" key={field.en}>
+              <span>{field[language]}</span>
+              <input
+                type={
+                  field.en === "PIN"
+                    ? "password"
+                    : field.en.toLowerCase().includes("time")
+                      ? "time"
+                      : field.en.toLowerCase().includes("date")
+                        ? "date"
+                        : "text"
+                }
+                aria-label={field[language]}
+              />
+            </label>
           ))}
         </div>
       )}
       {spec.actions && (
         <div className="row" style={{ marginTop: 12, flexWrap: "wrap" }}>
           {spec.actions.map((action, index) => (
-            <span
-              className={`btn ${index === 0 ? "alt" : spec.tone === "urgent" ? "danger" : ""}`}
+            <button
+              type="button"
+              className={`btn ${spec.route === "/timer" ? (index > 0 ? "alt" : "") : index === 0 && spec.actions!.length > 1 ? "alt" : spec.tone === "urgent" ? "danger" : ""}`}
               key={action.en}
             >
               {action[language]}
-            </span>
+            </button>
           ))}
         </div>
       )}
-    </div>
+      {spec.route === "/timer" && spec.timer && (
+        <div className="timer-settings">
+          <h5>{language === "fa" ? "مدت جلسه‌ها" : "Session lengths"}</h5>
+          <div className="grid2">
+            <div className="field">
+              {language === "fa" ? "تمرکز · ۲۵ دقیقه" : "Focus · 25 min"}
+            </div>
+            <div className="field">
+              {language === "fa" ? "استراحت · ۵ دقیقه" : "Rest · 5 min"}
+            </div>
+          </div>
+        </div>
+      )}
+    </section>
   );
 }
 
@@ -74,7 +196,20 @@ function Phone({
   const scene = variants.find(
     (candidate) => candidate.route === route && candidate.key === variant,
   );
-  const currentIndex = pages.indexOf(page);
+  const isDialog = !!scene && dialogVariants.includes(variant);
+  const showBaseline =
+    !scene || !(["empty", "locked"].includes(variant) || route === "/timer");
+  const content = (
+    route === "/timer"
+      ? copy.content.replace(
+          /<div class="circle">.*?<\/div>/,
+          `<div class="hourglass"><svg viewBox="0 0 160 190" aria-hidden="true"><path d="M24 20 H136 Q130 63 85 94 H75 Q30 63 24 20 Z M75 96 H85 Q130 127 136 170 H24 Q30 127 75 96 Z" fill="#e7f4ef" stroke="#0f766e" stroke-width="5" stroke-linejoin="round"/><path d="M15 18 H145 M15 172 H145" stroke="#125b53" stroke-width="8" stroke-linecap="round"/></svg><span class="num">25:00</span></div>`,
+        )
+      : copy.content
+  ).replace(
+    /<span class="btn([^"]*)">([^<]*)<\/span>/g,
+    '<button type="button" class="btn$1">$2</button>',
+  );
 
   return (
     <div>
@@ -83,31 +218,48 @@ function Phone({
         {width === "phone" ? "390px phone" : "wide"} · structural draft
       </div>
       <div
-        className={`phone ${width === "wide" ? "wide" : ""}`}
+        className={`phone ${width === "wide" ? "wide" : ""} ${isDialog ? "has-dialog" : ""}`}
         lang={language}
         dir={language === "fa" ? "rtl" : "ltr"}
       >
-        <div className="bar">
-          <span>Smart Paper</span>
-          <span>{language === "fa" ? "فارسی" : "English"} · ☰</span>
-        </div>
+        <header className={`route-head ${route === "/" ? "planner-head" : ""}`}>
+          <div className="route-brand">
+            <span>Smart Paper</span>
+            <strong>{copy.title}</strong>
+          </div>
+          <nav
+            aria-label={language === "fa" ? "صفحه‌های مرتبط" : "Related pages"}
+            className="route-links"
+          >
+            <span className="route-language">
+              {language === "fa" ? "FA · EN" : "EN · FA"}
+            </span>
+            {links[route].map((index) => (
+              <span className="route-link" key={index}>
+                {nav[language][index]}
+              </span>
+            ))}
+            {route === "/" && (
+              <span className="route-link">
+                {language === "fa" ? "تمرکز · تیره" : "Focus · Dark"}
+              </span>
+            )}
+          </nav>
+        </header>
         <div className="body">
-          <span className="eyebrow">{page.path}</span>
-          <h3>{copy.title}</h3>
           <p className="lede">{copy.lede}</p>
-          {scene ? (
+          {scene && !isDialog && (
             <VariantScene spec={scene} language={language} />
-          ) : (
-            <div dangerouslySetInnerHTML={{ __html: copy.content }} />
+          )}
+          {showBaseline && (
+            <div dangerouslySetInnerHTML={{ __html: content }} />
           )}
         </div>
-        <div className="nav">
-          {nav[language].map((item, index) => (
-            <span key={item}>
-              {index === currentIndex ? <b>{item}</b> : item}
-            </span>
-          ))}
-        </div>
+        {scene && isDialog && (
+          <div className="state-scrim">
+            <VariantScene spec={scene} language={language} dialog />
+          </div>
+        )}
       </div>
     </div>
   );

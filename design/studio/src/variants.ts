@@ -39,8 +39,8 @@ export const variants: VariantSpec[] = [
     key: "sparse",
     title: { en: "A clear day", fa: "روزی بدون برنامه" },
     message: {
-      en: "No timed entries yet. Keep the weekly goal and active sections available.",
-      fa: "هنوز برنامه زمان‌دار ثبت نشده است. هدف هفته و بخش‌های فعال همچنان در دسترس هستند.",
+      en: "No timed entries for Sunday yet. You can still set a daily goal and save the week.",
+      fa: "هنوز برنامه زمان‌داری برای یکشنبه نیست. همچنان می‌توانید هدف روز را بنویسید و هفته را ذخیره کنید.",
     },
     actions: [
       { en: "Add schedule entry", fa: "افزودن برنامه زمانی" },
@@ -52,8 +52,8 @@ export const variants: VariantSpec[] = [
     key: "schedule",
     title: { en: "Add a timed entry", fa: "افزودن برنامه زمان‌دار" },
     message: {
-      en: "A sheet keeps the selected day in context.",
-      fa: "پنل، روز انتخاب‌شده را در زمینه نگه می‌دارد.",
+      en: "Sunday · This week. Choose a title and exact start and end times.",
+      fa: "یکشنبه · این هفته. عنوان و زمان دقیق آغاز و پایان را انتخاب کنید.",
     },
     fields: [
       { en: "Title", fa: "عنوان" },
@@ -70,8 +70,8 @@ export const variants: VariantSpec[] = [
     key: "template",
     title: { en: "Week templates", fa: "الگوهای هفته" },
     message: {
-      en: "Save the full week, apply a saved template, or delete it with confirmation.",
-      fa: "هفته کامل را ذخیره کنید، الگو را اعمال کنید یا پس از تأیید حذف کنید.",
+      en: "Writing week · Save the current week or apply a saved full-week plan.",
+      fa: "هفته نوشتن · هفته کنونی را ذخیره کنید یا یک برنامه کامل ذخیره‌شده را اعمال کنید.",
     },
     actions: [
       { en: "Save template", fa: "ذخیره الگو" },
@@ -85,8 +85,8 @@ export const variants: VariantSpec[] = [
     key: "unsaved",
     title: { en: "Unsaved week changes", fa: "تغییرات ذخیره‌نشده هفته" },
     message: {
-      en: "Changing the week or leaving this screen can discard edits.",
-      fa: "تغییر هفته یا ترک صفحه ممکن است ویرایش‌ها را از بین ببرد.",
+      en: "Save your edits before switching weeks or leaving this page.",
+      fa: "پیش از تغییر هفته یا ترک این صفحه، ویرایش‌ها را ذخیره کنید.",
     },
     actions: [
       { en: "Keep editing", fa: "ادامه ویرایش" },
@@ -99,8 +99,8 @@ export const variants: VariantSpec[] = [
     key: "empty",
     title: { en: "Start with one thought", fa: "با یک فکر شروع کنید" },
     message: {
-      en: "No notes yet. The editor stays primary; optional sparks remain available.",
-      fa: "هنوز یادداشتی نیست. ویرایشگر اصلی است و جرقه‌های اختیاری در دسترس‌اند.",
+      en: "Your saved thoughts will appear here. Start with anything on your mind.",
+      fa: "فکرهای ذخیره‌شده شما اینجا نمایش داده می‌شوند. با هرچه در ذهن دارید شروع کنید.",
     },
     fields: [{ en: "Your idea", fa: "ایده شما" }],
     actions: [{ en: "Save idea", fa: "ذخیره ایده" }],
@@ -110,8 +110,8 @@ export const variants: VariantSpec[] = [
     key: "search",
     title: { en: "No matching ideas", fa: "ایده‌ای پیدا نشد" },
     message: {
-      en: "Keep the search term visible and make clearing it easy.",
-      fa: "عبارت جست‌وجو نمایان بماند و پاک‌کردن آن آسان باشد.",
+      en: "No notes match this search. Try another term or clear it.",
+      fa: "یادداشتی با این جست‌وجو پیدا نشد. عبارت دیگری بنویسید یا آن را پاک کنید.",
     },
     fields: [{ en: "Search ideas", fa: "جست‌وجوی ایده‌ها" }],
     actions: [{ en: "Clear search", fa: "پاک‌کردن جست‌وجو" }],
@@ -124,8 +124,8 @@ export const variants: VariantSpec[] = [
       fa: "ویرایش یا شاخه‌دادن به یک فکر",
     },
     message: {
-      en: "Preserve the original note context while changing or branching it.",
-      fa: "زمینه یادداشت اصلی هنگام ویرایش یا شاخه‌دادن حفظ شود.",
+      en: "Editing a note from today. Your changes stay on this device.",
+      fa: "در حال ویرایش یادداشت امروز. تغییرات روی همین دستگاه می‌مانند.",
     },
     fields: [{ en: "Thought text", fa: "متن فکر" }],
     actions: [
@@ -138,8 +138,8 @@ export const variants: VariantSpec[] = [
     key: "delete",
     title: { en: "Delete this idea?", fa: "این ایده حذف شود؟" },
     message: {
-      en: "This removes the selected note. Make the destructive choice explicit.",
-      fa: "یادداشت انتخاب‌شده حذف می‌شود. اقدام حذف باید روشن باشد.",
+      en: "This note will be removed from this device.",
+      fa: "این یادداشت از این دستگاه حذف می‌شود.",
     },
     actions: [
       { en: "Cancel", fa: "انصراف" },
@@ -152,8 +152,8 @@ export const variants: VariantSpec[] = [
     key: "running",
     title: { en: "Focus is running", fa: "تمرکز در حال اجراست" },
     message: {
-      en: "The countdown can recover after navigation or suspension.",
-      fa: "شمارش معکوس پس از جابه‌جایی یا توقف برنامه بازیابی می‌شود.",
+      en: "Stay with this focus session or pause it when you need a break.",
+      fa: "این جلسه تمرکز را ادامه دهید یا هنگام نیاز به استراحت مکث کنید.",
     },
     timer: "18:42",
     actions: [
@@ -166,8 +166,8 @@ export const variants: VariantSpec[] = [
     key: "paused",
     title: { en: "Focus is paused", fa: "تمرکز متوقف شده است" },
     message: {
-      en: "Elapsed and remaining time must stay unambiguous.",
-      fa: "زمان گذشته و باقی‌مانده باید روشن باشند.",
+      en: "12 minutes and 15 seconds remain. Resume when you're ready.",
+      fa: "۱۲ دقیقه و ۱۵ ثانیه باقی مانده است. هر وقت آماده بودید ادامه دهید.",
     },
     timer: "12:15",
     actions: [
@@ -180,8 +180,8 @@ export const variants: VariantSpec[] = [
     key: "completed",
     title: { en: "Focus complete", fa: "تمرکز تمام شد" },
     message: {
-      en: "The next rest phase starts only after an explicit action.",
-      fa: "مرحله استراحت تنها با اقدام صریح آغاز می‌شود.",
+      en: "Your focus session is complete. Prepare the rest phase when you're ready.",
+      fa: "جلسه تمرکز تمام شد. هر وقت آماده بودید مرحله استراحت را آماده کنید.",
     },
     timer: "00:00",
     actions: [
@@ -208,8 +208,8 @@ export const variants: VariantSpec[] = [
     key: "empty",
     title: { en: "No weeks in this range", fa: "هفته‌ای در این بازه نیست" },
     message: {
-      en: "The selected month range stays visible so it can be changed.",
-      fa: "بازه ماه‌های انتخاب‌شده نمایان می‌ماند تا بتوان آن را تغییر داد.",
+      en: "No weeks are available in this range. Choose a wider range.",
+      fa: "هفته‌ای در این بازه وجود ندارد. بازه بزرگ‌تری انتخاب کنید.",
     },
     fields: [
       { en: "From month", fa: "از ماه" },
@@ -221,8 +221,8 @@ export const variants: VariantSpec[] = [
     key: "filtered",
     title: { en: "Empty weeks hidden", fa: "هفته‌های خالی پنهان‌اند" },
     message: {
-      en: "The filter explains why fewer week cards are shown.",
-      fa: "فیلتر دلیل نمایش کارت‌های کمتر را روشن می‌کند.",
+      en: "Weeks without saved activity are hidden from this list.",
+      fa: "هفته‌های بدون فعالیت ذخیره‌شده از این فهرست پنهان شده‌اند.",
     },
     actions: [{ en: "Show empty weeks", fa: "نمایش هفته‌های خالی" }],
   },
@@ -243,8 +243,8 @@ export const variants: VariantSpec[] = [
     key: "empty",
     title: { en: "No income added yet", fa: "هنوز درآمدی ثبت نشده است" },
     message: {
-      en: "The annual goal may also be unset. Keep both first actions visible.",
-      fa: "ممکن است هدف سالانه نیز تعیین نشده باشد. هر دو اقدام آغازین نمایان باشند.",
+      en: "No income has been added. Set a yearly goal or record your first entry.",
+      fa: "هنوز درآمدی ثبت نشده است. هدف سالانه تعیین کنید یا اولین درآمد را ثبت کنید.",
     },
     actions: [
       { en: "Set goal", fa: "تنظیم هدف" },
@@ -256,8 +256,8 @@ export const variants: VariantSpec[] = [
     key: "edit",
     title: { en: "Edit income", fa: "ویرایش درآمد" },
     message: {
-      en: "Amount must be positive and the date is required.",
-      fa: "مبلغ باید مثبت باشد و تاریخ لازم است.",
+      en: "Project work · September 20, 2026. Update the amount, note, or date.",
+      fa: "کار پروژه‌ای · ۲۰ سپتامبر ۲۰۲۶. مبلغ، یادداشت یا تاریخ را ویرایش کنید.",
     },
     fields: [
       { en: "Amount", fa: "مبلغ" },
@@ -313,8 +313,8 @@ export const variants: VariantSpec[] = [
     key: "replace",
     title: { en: "Replace old data?", fa: "داده‌های قبلی جایگزین شوند؟" },
     message: {
-      en: "Show selected-file counts. Planner, idea, and finance data will be replaced and cannot be restored by undo.",
-      fa: "تعداد داده‌های فایل انتخاب‌شده نمایش داده شود. داده‌های برنامه، ایده و مالی جایگزین می‌شوند و بازگشت‌پذیر نیستند.",
+      en: "Selected backup: 12 weeks, 8 ideas, 3 income entries. Replacing removes current local data and cannot be undone.",
+      fa: "پشتیبان انتخاب‌شده: ۱۲ هفته، ۸ ایده و ۳ درآمد. جایگزینی داده‌های محلی کنونی را حذف می‌کند و بازگشت ندارد.",
     },
     actions: [
       { en: "Cancel", fa: "انصراف" },

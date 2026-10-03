@@ -1,6 +1,6 @@
 # Shipped screen and design coverage inventory
 
-Updated: 2026-10-03. Source: `PRODUCT.md`, `feature.md`, and the current routes/components in `smart-paper-front/src/app/` and `src/components/`. This lists implemented Android/local-data behavior. It is a coverage map, not validation of every rendered state.
+Updated: 2026-10-04. Source: `PRODUCT.md`, `feature.md`, and the current routes/components in `smart-paper-front/src/app/` and `src/components/`. This lists implemented Android/local-data behavior. It is a coverage map, not validation of every rendered state.
 
 The primary editable canvas is the [local Storybook studio](studio/src/stories/). It has bilingual phone baselines for all seven routes and separate source-backed state sketches; phone/wide controls are available, though wide layouts are not yet visually validated. Story data and content are illustrative. The earlier [atlas](coverage-atlas.html) is retained as a historical reference. The optional [Figma file](https://www.figma.com/design/QM23WOITohVqGMZCdSRc3n) contains [foundations](https://www.figma.com/design/QM23WOITohVqGMZCdSRc3n?node-id=1-2), reviewed [Idea Space English](https://www.figma.com/design/QM23WOITohVqGMZCdSRc3n?node-id=3-2) and [Persian](https://www.figma.com/design/QM23WOITohVqGMZCdSRc3n?node-id=3-32) proposal frames, and unreviewed [Planner English](https://www.figma.com/design/QM23WOITohVqGMZCdSRc3n?node-id=15-2) and [Persian](https://www.figma.com/design/QM23WOITohVqGMZCdSRc3n?node-id=15-55) drafts.
 
@@ -18,7 +18,7 @@ All stories default to paired English/Persian 390px drafts. The named exports in
 | `/export` | [Export](studio/src/stories/Export.stories.tsx): Overview, Locked, AiReport, ImportReplaceDecision, Validation |
 | `/settings` | [Settings](studio/src/stories/Settings.stories.tsx): Default, Edit, Validation, UnsavedDecision |
 
-These are structural sketches migrated from source-backed inventory, not fidelity-checked UI. Loading, success, accessibility, keyboard, and other states listed below still need design review. Figma coverage in the next table is optional and remains incomplete.
+These are structural sketches migrated from source-backed inventory, not fidelity-checked UI. The 2026-10-04 refinement adds route-specific navigation, contextual decision sheets, and a closer timer state; see [the design record](2026-10-04-baseline-story-refinement.md). Loading, success, accessibility, keyboard, and other states listed below still need design review. Figma coverage in the next table is optional and remains incomplete.
 
 ## Route coverage
 

@@ -68,3 +68,7 @@ Designer and QA approve the seven-route inventory and 32 bilingual stories as **
 - Medium: Timer's generic circle does not match the shipped hourglass; loading, error, success, dark planner, long-content, keyboard, and wide-layout states remain missing or unverified.
 
 Approval gate: compare each route with a running local-data build in English and Persian, correct the structural and state-context differences, then have Designer and QA review the resulting stories again. Until then, keep their status as reference drafts, not `ready for implementation`.
+
+## Refinement — 2026-10-04
+
+The studio now uses route-specific navigation groups, contextual sheets for decisions, a timer hourglass and phase/status structure, larger focusable state controls, and user-facing example copy. Empty and locked stories no longer show populated baseline data behind them. See [`design/2026-10-04-baseline-story-refinement.md`](../design/2026-10-04-baseline-story-refinement.md) for the design direction and verification. This addresses part of the review; the baseline remains unapproved until full running-app comparison and Designer/QA review.

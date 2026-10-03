@@ -59,6 +59,7 @@ section > p {
   align-items: start;
 }
 .phone {
+  position: relative;
   width: 390px;
   max-width: 100%;
   min-height: 690px;
@@ -123,7 +124,7 @@ section > p {
   margin: 0 0 8px;
 }
 .box p {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--muted);
   margin: 4px 0;
 }
@@ -146,9 +147,9 @@ section > p {
   background: white;
   border-radius: 9px;
   padding: 9px 10px;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--muted);
-  min-height: 36px;
+  min-height: 44px;
 }
 .field.tall {
   min-height: 64px;
@@ -157,7 +158,7 @@ section > p {
   border-radius: 99px;
   background: var(--soft);
   padding: 5px 9px;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 650;
   white-space: normal;
 }
@@ -173,10 +174,20 @@ section > p {
   border-radius: 9px;
   background: var(--teal);
   color: white;
-  min-height: 38px;
+  min-height: 44px;
   padding: 8px 12px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 750;
+}
+button.btn {
+  border: 0;
+  cursor: default;
+  font-family: inherit;
+}
+button.btn:focus-visible,
+.studio-input input:focus-visible {
+  outline: 3px solid #d69a54;
+  outline-offset: 2px;
 }
 .btn.alt {
   background: var(--soft);
@@ -332,9 +343,169 @@ section > p {
   margin: 0 0 8px;
 }
 .state-panel p {
-  font-size: 12px;
+  font-size: 14px;
   color: #536660;
   margin: 6px 0;
+}
+.route-head {
+  padding: 17px 16px;
+  background: #fff;
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+.route-head.planner-head {
+  border-radius: 18px;
+  margin: 12px 12px 0;
+  border: 1px solid var(--line);
+}
+.route-brand span {
+  display: block;
+  color: var(--teal);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.route-brand strong {
+  display: block;
+  font-size: 25px;
+  line-height: 1.25;
+  margin-top: 4px;
+}
+.route-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px;
+  margin-top: 13px;
+}
+.route-link,
+.route-language {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid #b6c9bf;
+  border-radius: 10px;
+  padding: 7px;
+  background: #f1f5f2;
+  font-size: 13px;
+  font-weight: 700;
+}
+.route-language {
+  background: white;
+  color: var(--teal);
+}
+.phone.has-dialog {
+  height: 600px;
+  min-height: 0;
+}
+.state-scrim {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  background: #1028238a;
+  z-index: 2;
+}
+.state-dialog {
+  width: 100%;
+  max-height: 86%;
+  overflow: auto;
+  margin: 0;
+  border-radius: 24px 24px 0 0;
+  padding: 22px 18px 28px;
+  box-shadow: 0 -12px 30px #10282330;
+}
+.state-dialog h4 {
+  font-size: 20px;
+}
+.dialog-grip {
+  width: 45px;
+  height: 5px;
+  border-radius: 99px;
+  background: #b6c9bf;
+  margin: -8px auto 18px;
+}
+.studio-input {
+  display: grid;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.studio-input input {
+  min-height: 44px;
+  width: 100%;
+  border: 1px solid #b6c9bf;
+  border-radius: 10px;
+  padding: 8px 10px;
+  background: white;
+  color: var(--ink);
+  font: inherit;
+}
+.hourglass {
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  margin: 16px auto;
+}
+.hourglass svg {
+  width: 125px;
+  height: 150px;
+}
+.hourglass .num {
+  font-size: 43px;
+  font-weight: 800;
+}
+.timer-phase {
+  width: fit-content;
+  display: flex;
+  gap: 4px;
+  margin: 0 auto 18px;
+  padding: 4px;
+  border: 1px solid #b6c9bf;
+  border-radius: 99px;
+  background: white;
+  font-size: 13px;
+  font-weight: 700;
+}
+.timer-phase span {
+  min-width: 82px;
+  padding: 7px 12px;
+  text-align: center;
+  border-radius: 99px;
+}
+.timer-phase .selected {
+  background: var(--teal);
+  color: white;
+}
+.timer-progress {
+  height: 8px;
+  border-radius: 99px;
+  background: #d9e4de;
+  overflow: hidden;
+}
+.timer-progress span {
+  height: 100%;
+  display: block;
+  background: var(--teal);
+}
+.timer-settings {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid var(--line);
+}
+.timer-settings h5 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.phone.wide .route-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+.phone.wide .route-link,
+.phone.wide .route-language {
+  padding-inline: 14px;
 }
 .state-panel.urgent {
   background: #fff0ee;
