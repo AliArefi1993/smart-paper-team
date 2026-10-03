@@ -1,6 +1,6 @@
 # Task: Design coverage for shipped app
 
-Status: partial — design baseline recorded; local story review and running-UI comparison pending
+Status: partial — Designer and QA reviewed structural stories; design fidelity not approved
 Created: 2026-10-01
 Updated: 2026-10-01
 
@@ -58,3 +58,13 @@ Document every shipped Android-facing Smart Paper route in editable design artif
 ## Outcome / Handoff
 
 All seven routes have source-backed flow/state coverage and bilingual editable Storybook structural drafts; the local studio has 32 named stories and is tracked in `tasks/2026-10-03-local-design-studio.md`. Planner and Idea Space also have Figma frames, but the Planner frames are not visually verified. Local stories still need visual comparison with the running app and missing loading/success and accessibility states; Figma frame completion is optional. No baseline is a `ready for implementation` redesign handoff. Frontend agent instruction revision `6e13acd` was pushed to `main`; this team's revisions are recorded by Git.
+
+## Designer and QA review — 2026-10-03
+
+Designer and QA approve the seven-route inventory and 32 bilingual stories as **structural coverage only**. They do not approve the stories as faithful designs of shipped pages or complete flow handoffs. Designer visually inspected Planner Populated and Schedule Sheet in Storybook; the running frontend could not be compared locally because its macOS Next.js SWC binary was missing and the attempted download timed out. QA reviewed story code and the source-backed inventory.
+
+- High: `studio/src/ScreenPreview.tsx` applies one invented header/footer to every route; shipped navigation differs by route. State stories replace the page with a generic panel instead of showing the state in its screen context. Planner Schedule Sheet, for example, lacks the selected day, underlying planner, and sheet overlay.
+- High: Placeholder fields and button-like spans are not interactive or accessible controls. Small labels and targets need phone review.
+- Medium: Timer's generic circle does not match the shipped hourglass; loading, error, success, dark planner, long-content, keyboard, and wide-layout states remain missing or unverified.
+
+Approval gate: compare each route with a running local-data build in English and Persian, correct the structural and state-context differences, then have Designer and QA review the resulting stories again. Until then, keep their status as reference drafts, not `ready for implementation`.
