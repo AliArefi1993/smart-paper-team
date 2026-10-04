@@ -17,6 +17,7 @@ Designer and QA reviewed the initial 32 bilingual stories on 2026-10-03. Their f
 - Give the timer a focus/rest phase control, hourglass, visible remaining time, progress, and session lengths in running, paused, and completed states.
 - Give locked and empty states a clear page-level state without showing contradictory populated data underneath. Use actual labeled controls in state sketches, and at least 44px action targets.
 - Replace design-instruction copy inside screens with illustrative user-facing English and Persian examples. The production translation source remains `smart-paper-front/src/lib/i18n.ts`.
+- Planner's populated and sparse stories show the editable structure used by the shipped screen: weekly goal/note, selected day note and schedule, then a minutes input, +15/+30/+60/reset controls, goal, and note for each illustrative active section. Section minute shortcuts work locally in the prototype.
 
 ## Coverage and constraints
 
@@ -30,5 +31,6 @@ Remaining work before Designer and QA approval: compare every route and key stat
 | --- | --- | --- |
 | Local Storybook type check and build | `npm run typecheck`, `npm run build` on 2026-10-04 | Passed |
 | Browser review of representative EN/FA states | Planner schedule sheet, Timer running, Finance locked in local Storybook; visual and accessibility snapshots | Passed for these samples |
+| Planner section detail | Populated and sparse EN/FA stories show four distinct section forms; Main +15 updates only its own minutes in both languages | Passed in local browser |
 | Comparison with running local-data frontend | Host preview requires missing macOS Next.js SWC binary | Blocked locally |
 | Designer and QA approval of refined designs | Requires full comparison and state review | Pending |

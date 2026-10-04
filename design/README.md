@@ -11,6 +11,7 @@ From `design/studio/`, run `npm ci`, then `npm run storybook`. Open the local ad
 The [route stories](studio/src/stories/) have bilingual 390px baselines for all seven shipped routes and separate material states. The controls switch between English/Persian and phone/wide; each named story selects a state. The [screen content](studio/src/atlas-data.ts) and [state examples](studio/src/variants.ts) are editable, illustrative structural prototypes. They are not exact rendered app screens or approved proposals; compare them with the running app before calling them validated.
 
 The [2026-10-04 baseline refinement](2026-10-04-baseline-story-refinement.md) records route-specific navigation, state sheets, timer and control improvements, plus the remaining Designer and QA approval gates.
+The [Planner preview](studio/src/PlannerPreview.tsx) now exposes each active section's separate minutes, quick adjustments, goal, and note in the populated and sparse bilingual stories.
 
 ## Files
 

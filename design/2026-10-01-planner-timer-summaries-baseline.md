@@ -1,17 +1,18 @@
 # Planner, timer, and summaries — shipped flow baseline
 
 Status: structural baseline; Figma and running-UI comparison incomplete
-Updated: 2026-10-01
+Updated: 2026-10-04
 Design type: current shipped behavior
 Sources: `smart-paper-front/src/components/weekly-planner.tsx`, `focus-timer.tsx`, `week-summaries-view.tsx`, `src/lib/i18n.ts`, `PRODUCT.md`, and `design/screen-inventory.md`
-Visual reference: [bilingual route drafts](coverage-atlas.html#planner), [Planner English Figma draft](https://www.figma.com/design/QM23WOITohVqGMZCdSRc3n?node-id=15-2), [Planner Persian Figma draft](https://www.figma.com/design/QM23WOITohVqGMZCdSRc3n?node-id=15-55)
+Visual reference: [editable Planner stories](studio/src/stories/Planner.stories.tsx), [Planner preview source](studio/src/PlannerPreview.tsx), [bilingual route drafts](coverage-atlas.html#planner), [Planner English Figma draft](https://www.figma.com/design/QM23WOITohVqGMZCdSRc3n?node-id=15-2), [Planner Persian Figma draft](https://www.figma.com/design/QM23WOITohVqGMZCdSRc3n?node-id=15-55)
 
 ## Planner `/`
 
 - **User job:** choose a Saturday–Friday week, set a weekly goal/note, plan one day at a time on phone, record minutes/goals/notes in configurable sections, and place exact-time entries. The current layout also exposes full-week templates and a planner-only dark mode.
 - **Primary flow:** change week or day → edit weekly/day content → add or edit scheduled entries as needed → save and read feedback. The phone save bar must remain reachable above system controls and the keyboard.
 - **Material decisions:** leaving an unsaved week or route needs the existing confirmation; schedule creation/edit/deletion and template save/apply/deletion need their own sheets and destructive or overwrite warnings. Empty schedule and sparse section content must remain legible.
-- **Designer coverage still needed:** compare the two Figma drafts with the running UI and fix wrapping/overflow, especially the weekly goal card. Add EN/FA sparse and populated frames, dark mode, schedule and template sheets, unsaved decision, loading/error/success, and a wide layout. Use exact `i18n.ts` copy in final frames.
+- **Section structure in local stories:** the populated and sparse English/Persian Planner previews show separate weekly goal/note, day note, timed schedule, and four illustrative active sections (Main, Second, Learning, Exercise). Each section has its own editable minutes input, +15/+30/+60 and reset shortcuts, goal, and note. This follows the section structure in `weekly-planner.tsx`; sample values and copy are illustrative. The minute shortcuts were checked in the local browser in both languages on 2026-10-04.
+- **Designer coverage still needed:** compare the local and Figma drafts with the running UI and fix wrapping/overflow, especially the weekly goal card. Verify the section layout with all ten configurable slots, long names, dark mode, loading/error/success, sheets, and a wide layout. Use exact `i18n.ts` copy in final frames.
 
 ## Focus timer `/timer`
 
@@ -34,7 +35,7 @@ Use the paper/teal foundations in [foundations.md](foundations.md). The atlas an
 | Check | Result |
 | --- | --- |
 | Source-backed flow and state mapping | Recorded |
-| Bilingual editable repo-native structural drafts | Present in atlas; not visually validated |
+| Bilingual editable repo-native structural drafts | Planner populated and sparse stories visually checked for section fields on 2026-10-04; running-app comparison pending |
 | Planner editable Figma drafts | Present; screenshot/overflow review blocked by Starter tool limit |
 | Timer and summaries Figma frames | Pending |
 | Running UI and physical Android comparison | Pending |

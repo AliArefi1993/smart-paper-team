@@ -27,12 +27,12 @@ export const pages: ScreenData[] = [
     en: {
       title: "This week",
       lede: "Plan one day at a time",
-      content: `<div class="week"><span class="pill">Sat</span><span class="pill on">Sun</span><span class="pill">Mon</span><span class="pill">Tue</span><span class="pill">Wed</span><span class="pill">Thu</span><span class="pill">Fri</span></div><div class="box soft"><h4>Weekly goal</h4><div class="field">Finish a focused writing session</div><p>Save the week when your goal and notes are ready.</p></div><div class="box"><div class="row"><h4>Sunday · Main</h4><span class="pill">45 min</span></div><div class="field">Draft the first page · 45 minutes</div></div><div class="box"><div class="row"><h4>Timed schedule</h4><span class="btn alt">Add entry</span></div><p><span class="num">09:00</span> · Plan the day</p><p><span class="num">14:30</span> · Review notes</p></div><div class="grid2"><span class="btn alt">Week templates</span><span class="btn">Save week</span></div>`,
+      content: "",
     },
     fa: {
       title: "این هفته",
       lede: "هر روز را جداگانه برنامه‌ریزی کنید",
-      content: `<div class="week"><span class="pill">ش</span><span class="pill on">ی</span><span class="pill">د</span><span class="pill">س</span><span class="pill">چ</span><span class="pill">پ</span><span class="pill">ج</span></div><div class="box soft"><h4>هدف هفته</h4><div class="field">یک جلسه نوشتن متمرکز</div><p>پس از تکمیل هدف و یادداشت‌ها، هفته را ذخیره کنید.</p></div><div class="box"><div class="row"><h4>یکشنبه · اصلی</h4><span class="pill">۴۵ دقیقه</span></div><div class="field">پیش‌نویس صفحه اول · ۴۵ دقیقه</div></div><div class="box"><div class="row"><h4>برنامه زمانی</h4><span class="btn alt">افزودن</span></div><p><span class="num">09:00</span> · برنامه روز</p><p><span class="num">14:30</span> · مرور یادداشت‌ها</p></div><div class="grid2"><span class="btn alt">الگوهای هفته</span><span class="btn">ذخیره هفته</span></div>`,
+      content: "",
     },
   },
   {

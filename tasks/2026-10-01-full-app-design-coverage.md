@@ -72,3 +72,5 @@ Approval gate: compare each route with a running local-data build in English and
 ## Refinement — 2026-10-04
 
 The studio now uses route-specific navigation groups, contextual sheets for decisions, a timer hourglass and phase/status structure, larger focusable state controls, and user-facing example copy. Empty and locked stories no longer show populated baseline data behind them. See [`design/2026-10-04-baseline-story-refinement.md`](../design/2026-10-04-baseline-story-refinement.md) for the design direction and verification. This addresses part of the review; the baseline remains unapproved until full running-app comparison and Designer/QA review.
+
+The Planner populated and sparse stories now include separate minutes, quick minute adjustments, goal, and note for each of four illustrative active sections, plus distinct weekly and day fields. English and Persian browser checks verified section structure and independent minute adjustment. The local story still needs comparison with the running frontend and Android layout review.

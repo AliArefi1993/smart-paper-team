@@ -1,5 +1,6 @@
 import { pages, type Language, type RouteKey } from "./atlas-data";
 import { variants, type VariantKey, type VariantSpec } from "./variants";
+import { PlannerPreview } from "./PlannerPreview";
 
 export type PreviewProps = {
   route: RouteKey;
@@ -248,11 +249,19 @@ function Phone({
         </header>
         <div className="body">
           <p className="lede">{copy.lede}</p>
-          {scene && !isDialog && (
+          {scene && !isDialog && route !== "/" && (
             <VariantScene spec={scene} language={language} />
           )}
-          {showBaseline && (
-            <div dangerouslySetInnerHTML={{ __html: content }} />
+          {route === "/" ? (
+            <PlannerPreview
+              key={`${language}-${variant}`}
+              language={language}
+              variant={variant}
+            />
+          ) : (
+            showBaseline && (
+              <div dangerouslySetInnerHTML={{ __html: content }} />
+            )
           )}
         </div>
         {scene && isDialog && (
