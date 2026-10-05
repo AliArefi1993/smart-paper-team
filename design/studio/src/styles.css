@@ -527,6 +527,124 @@ button.btn:focus-visible,
   min-height: 560px;
   border-radius: 18px;
 }
+
+/* Proposed app-wide night palette. Scoped so shipped light baselines stay intact. */
+.phone.theme-dark {
+  --paper: #101b1b;
+  --ink: #eef5f1;
+  --muted: #b6c8c2;
+  --line: #3b5550;
+  --soft: #243532;
+  --teal: #72dbcb;
+  --teal-soft: #1c403b;
+  --amber: #453922;
+  --rose: #472a2b;
+  background: var(--paper);
+  color: var(--ink);
+  border-color: #53716a;
+  color-scheme: dark;
+}
+.route-appearance {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  min-height: 36px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--soft);
+  font-size: 11px;
+  font-weight: 700;
+}
+.route-appearance span {
+  padding: 6px 9px;
+  border-radius: 999px;
+}
+.route-appearance .selected {
+  background: var(--teal);
+  color: #092522;
+}
+.theme-dark .route-head,
+.theme-dark .box,
+.theme-dark .state-panel,
+.theme-dark .states,
+.theme-dark .nav,
+.theme-dark .bar,
+.theme-dark .field,
+.theme-dark .studio-input input,
+.theme-dark .timer-phase {
+  background: #1b2b29;
+  color: var(--ink);
+  border-color: var(--line);
+}
+.theme-dark .box.soft,
+.theme-dark .pill.on {
+  background: var(--teal-soft);
+}
+.theme-dark .box.warn,
+.theme-dark .state-panel.attention {
+  background: var(--amber);
+  border-color: #8a7043;
+}
+.theme-dark .box.danger,
+.theme-dark .state-panel.urgent {
+  background: var(--rose);
+  border-color: #ad6868;
+}
+.theme-dark .box p,
+.theme-dark .state-panel p,
+.theme-dark .lede,
+.theme-dark .caption,
+.theme-dark .mini,
+.theme-dark .field,
+.theme-dark .states,
+.theme-dark .nav {
+  color: var(--muted);
+}
+.theme-dark .route-link,
+.theme-dark .route-language,
+.theme-dark .pill,
+.theme-dark .btn.alt {
+  background: var(--soft);
+  color: var(--ink);
+  border-color: var(--line);
+}
+.theme-dark .route-brand span,
+.theme-dark .eyebrow,
+.theme-dark .lang,
+.theme-dark .nav b,
+.theme-dark .pill.on {
+  color: var(--teal);
+}
+.theme-dark .btn:not(.alt):not(.danger),
+.theme-dark .timer-phase .selected {
+  background: #72dbcb;
+  color: #092522;
+}
+.theme-dark .btn.danger {
+  background: #c97878;
+  color: #1d0d0d;
+}
+.theme-dark .meter,
+.theme-dark .timer-progress {
+  background: #38544e;
+}
+.theme-dark .meter::before,
+.theme-dark .timer-progress span {
+  background: #72dbcb;
+}
+.theme-dark .route-head,
+.theme-dark .nav,
+.theme-dark .bar,
+.theme-dark .divider,
+.theme-dark .timer-settings {
+  border-color: var(--line);
+}
+.theme-dark button:focus-visible,
+.theme-dark input:focus-visible {
+  outline: 3px solid #f2c578;
+  outline-offset: 2px;
+}
 .studio-pair.wide {
   grid-template-columns: repeat(2, minmax(0, 680px));
   max-width: 1420px;

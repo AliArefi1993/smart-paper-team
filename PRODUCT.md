@@ -22,6 +22,7 @@ Smart Paper is a personal weekly planning, progress tracking, finance tracking, 
 - Imports Smart Paper JSON backups in merge/upsert or replace mode.
 - Gives Android JSON backups dated filenames and shows the chosen file's week and income counts before replace confirmation.
 - Supports English and Persian UI text.
+- Offers a saved Light/Dark appearance choice across Planner, Idea Space, Timer, Summaries, Finance, Export/AI report, and Settings.
 - Supports a local browser-storage mode for Android/static export builds.
 - Supports opt-in Android local morning plan notifications.
 - Provides a focus/rest timer with editable session lengths, an hourglass display, and a countdown that resumes accurately after app navigation or suspension.
@@ -56,7 +57,7 @@ Smart Paper is a personal weekly planning, progress tracking, finance tracking, 
 - Session-based finance unlock using Django sessions and a configured password hash.
 - Next.js App Router frontend with React client components.
 - API abstraction that switches between backend API mode and local storage mode with `NEXT_PUBLIC_DATA_MODE=local`.
-- Tailwind CSS-based responsive UI with a light paper-and-teal visual style across screens and an optional dark planner mode.
+- Tailwind CSS-based responsive UI with light paper-and-teal and optional app-wide dark appearances.
 - Capacitor Android shell configuration for static-export local mode.
 - Capacitor local notifications for opt-in Android morning plan reminders.
 

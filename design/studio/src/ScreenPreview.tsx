@@ -7,6 +7,7 @@ export type PreviewProps = {
   language: "both" | Language;
   variant: VariantKey;
   width: "phone" | "wide";
+  theme?: "light" | "dark";
 };
 
 const nav: Record<Language, string[]> = {
@@ -190,6 +191,7 @@ function Phone({
   language,
   variant,
   width,
+  theme = "light",
 }: Omit<PreviewProps, "language"> & { language: Language }) {
   const page = pages.find((candidate) => candidate.path === route);
   if (!page) return null;
@@ -216,10 +218,10 @@ function Phone({
     <div>
       <div className="studio-frame-label">
         {language === "fa" ? "فارسی · راست‌به‌چپ" : "English · left-to-right"} ·{" "}
-        {width === "phone" ? "390px phone" : "wide"} · structural draft
+        {width === "phone" ? "390px phone" : "wide"} · {theme} proposal
       </div>
       <div
-        className={`phone ${width === "wide" ? "wide" : ""} ${isDialog ? "has-dialog" : ""}`}
+        className={`phone ${width === "wide" ? "wide" : ""} ${isDialog ? "has-dialog" : ""} ${theme === "dark" ? "theme-dark" : ""}`}
         lang={language}
         dir={language === "fa" ? "rtl" : "ltr"}
       >
@@ -240,11 +242,10 @@ function Phone({
                 {nav[language][index]}
               </span>
             ))}
-            {route === "/" && (
-              <span className="route-link">
-                {language === "fa" ? "تمرکز · تیره" : "Focus · Dark"}
-              </span>
-            )}
+            <span className="route-appearance" role="group" aria-label={language === "fa" ? "ظاهر" : "Appearance"}>
+              <span className={theme === "light" ? "selected" : ""}>{language === "fa" ? "روشن" : "Light"}</span>
+              <span className={theme === "dark" ? "selected" : ""}>{language === "fa" ? "تیره" : "Dark"}</span>
+            </span>
           </nav>
         </header>
         <div className="body">
@@ -279,6 +280,7 @@ export function ScreenPreview({
   language,
   variant,
   width,
+  theme = "light",
 }: PreviewProps) {
   const page = pages.find((candidate) => candidate.path === route);
   if (!page) return null;
@@ -303,6 +305,7 @@ export function ScreenPreview({
             language={item}
             variant={variant}
             width={width}
+            theme={theme}
           />
         ))}
       </div>

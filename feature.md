@@ -11,6 +11,7 @@ Updated: 2026-10-05. Keep this file short and update it when user-visible featur
 - Review multi-week summaries.
 - Track a finance goal and income entries.
 - Use English or Persian.
+- Choose a saved Light or Dark appearance across every app page, including summaries and reports.
 - Export JSON backups and readable CSV, Excel, or Markdown files.
 - Create a selective Markdown AI report by field and date range, preview its text, and share it using the phone's app chooser. The file explains itself and asks the AI for a grounded first response.
 - Import a JSON backup by merge or replace.
@@ -20,6 +21,7 @@ Updated: 2026-10-05. Keep this file short and update it when user-visible featur
 
 ## Recent completed work
 
+- Extended the Planner's dark appearance to all routes and kept the choice across navigation and reloads.
 - Made Planner sections compact and scroll the opened section into view; goals and notes grow as written, with a full writing view and clearer save/retry feedback.
 - Refined Idea Space's bilingual phone layout so writing and saving stay prominent; optional sparks expand on demand and return focus to the editor after selection.
 - Added Idea Space as a separate, bilingual writing area without required titles or categories.
