@@ -2,7 +2,7 @@
 
 Date: 2026-10-05
 
-Status: prepared locally; GitHub publication awaits approval to push protected `main` branches. No release tag has been pushed.
+Status: publication approved by the maintainer on 2026-10-05 with physical-phone and screen-reader checks outstanding.
 
 ## Scope
 
@@ -15,9 +15,9 @@ Status: prepared locally; GitHub publication awaits approval to push protected `
 
 | Repository | Commit | Tag |
 | --- | --- | --- |
-| team root | This release record, APK, design handoff, and frontend pointer commit | `smart-paper-v2026.10.2` pending |
-| backend `smart-paper/` | `68c789b` (unchanged) | `smart-paper-v2026.10.2` pending |
-| frontend `smart-paper-front/` | `ed2b5a3` | `smart-paper-v2026.10.2` pending |
+| team root | This release record, APK, design handoff, and frontend pointer commits | `smart-paper-v2026.10.2` |
+| backend `smart-paper/` | `68c789b` (unchanged) | `smart-paper-v2026.10.2` |
+| frontend `smart-paper-front/` | `ed2b5a3` | `smart-paper-v2026.10.2` |
 
 ## Android Local-Data Artifact
 
@@ -57,4 +57,3 @@ The production `npm audit` reports 1 critical, 4 high, and 1 moderate package fi
 - On a physical Android phone, install over the prior release, reopen saved planner and finance data, test backup export/restore outside the app, offline use, notifications, and English/Persian layouts.
 - Review Planner with a screen reader and test ten active sections with long custom labels.
 - Configured section names are stored as user text; the current default English names remain English when the UI language switches to Persian. Optional language-specific section labels remain a roadmap item.
-- Publish the prepared release only after approval to update protected `main`; push repository commits first and the team release tag last.
