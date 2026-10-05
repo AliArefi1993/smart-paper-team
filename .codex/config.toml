@@ -12,7 +12,7 @@ description = "Read-oriented senior software architect for boundaries, API contr
 config_file = "agents/architect.toml"
 
 [agents.designer]
-description = "Product designer for editable Figma screens, bilingual Android UX, accessibility, and saved design handoffs."
+description = "Product designer for repo-native screen stories, bilingual Android UX, accessibility, and saved design handoffs."
 config_file = "agents/designer.toml"
 
 [agents.backend]

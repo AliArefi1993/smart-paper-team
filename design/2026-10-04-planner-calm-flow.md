@@ -52,3 +52,4 @@ This handoff is ready for frontend implementation. Frontend should map it to the
 | Current-app source comparison | Completed 2026-10-05; differences and preserved flows documented above |
 | Designer implementation handoff | Ready 2026-10-05 |
 | Built-app QA review | Passed on 2026-10-05 at 390px: last section lands 96px below viewport top in EN/FA; one section opens at a time; long goal/note fields fit without horizontal overflow; Enter inserts a newline; writing view returns focus; saved content reopens; Persian dark mode, template/schedule sheets, and unsaved-week warning remain usable. Physical Android and screen reader review remain. |
+| User feedback after release | The user installed `2026.10.2` and reported a substantially better experience compared with the earlier Planner, attributing the improvement to the design-first workflow. This does not replace targeted Android or accessibility checks. |

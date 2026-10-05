@@ -14,7 +14,7 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 - Product and Designer have repo skills and a `design/` workspace for briefs, local screen stories, implementation handoffs, and bilingual Android review. Figma remains an optional reference.
 - The first design pilot refreshed Idea Space in frontend revision `820692a`: editable English/Persian Figma frames and a writing-first layout with expandable sparks. Local-data lint, type check, 23 tests, and build passed; 390px browser review passed in both languages. Physical Android review remains.
 - Shipped-screen coverage includes a route/state inventory, source-backed flow briefs for all seven routes, and a local React/Storybook design studio with 32 bilingual route/state stories. Designer and QA approved these as structural coverage only on 2026-10-03. The 2026-10-04 refinement improves route navigation, contextual sheets, timer states, control sizing, and example copy; Planner stories now show distinct minutes, goal, and note controls for each active section in English and Persian. Fidelity and complete flow handoffs remain unapproved until running-app comparison and re-review. The earlier atlas and Planner Figma drafts have not been visually checked; Figma Starter tool limits block further screenshots. Designer-ready local stories and a handoff are required before future user-visible frontend implementation. See `design/2026-10-04-baseline-story-refinement.md` and `tasks/2026-10-01-full-app-design-coverage.md`.
-- The [Calm Planner design](design/2026-10-04-planner-calm-flow.md) is included in `2026.10.2`: compact section summaries, scroll placement, growing writing fields, full writing view, and safer save feedback. Docker lint/type/tests/build and 390px EN/FA browser review passed. Physical Android and screen reader review remain; see `releases/smart-paper-v2026.10.2.md`.
+- The [Calm Planner design](design/2026-10-04-planner-calm-flow.md) is included in `2026.10.2`: compact section summaries, scroll placement, growing writing fields, full writing view, and safer save feedback. The user installed the release and reported a substantially better experience after the design-first workflow. Docker lint/type/tests/build and 390px EN/FA browser review passed. Physical flow and screen reader checks remain; see `releases/smart-paper-v2026.10.2.md`.
 
 ## Repository State
 
@@ -50,7 +50,7 @@ The `smart-paper-v2026.10.2` build passed on 2026-10-05:
 - Stable-signed Android APK build, signature, and versionCode 19/versionName 2026.10.2: passed.
 - 390px Planner browser QA in English and Persian: passed.
 
-See `releases/smart-paper-v2026.10.2.md` for artifact checksum and scope. Physical install, upgrade, native backup restore and sharing, notes, timer, notifications, and full bilingual layout remain unverified; the maintainer directed release before these checks.
+See `releases/smart-paper-v2026.10.2.md` for artifact checksum and scope. The user confirmed installation and positive overall experience. Upgrade data retention, native backup restore and sharing, notes, timer, notifications, full bilingual layout, and screen reader behavior remain unverified; the maintainer directed release before these checks.
 
 ## Known Risks And Gaps
 

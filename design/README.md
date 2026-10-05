@@ -12,7 +12,7 @@ The [route stories](studio/src/stories/) have bilingual 390px baselines for all 
 
 The [2026-10-04 baseline refinement](2026-10-04-baseline-story-refinement.md) records route-specific navigation, state sheets, timer and control improvements, plus the remaining Designer and QA approval gates.
 The [Planner preview](studio/src/PlannerPreview.tsx) now exposes each active section's separate minutes, quick adjustments, goal, and note in the populated and sparse bilingual stories.
-The [Calm Planner proposal](2026-10-04-planner-calm-flow.md) has interactive [overview, section, writing, sparse, unsaved, and error stories](studio/src/stories/PlannerCalm.stories.tsx). It proposes one open section at a time, scroll placement, growing writing fields, a full writing view, and explicit save feedback. This is a reviewable proposal, not shipped UI or an approved handoff.
+The [Calm Planner handoff](2026-10-04-planner-calm-flow.md) and its interactive [overview, section, writing, sparse, unsaved, and error stories](studio/src/stories/PlannerCalm.stories.tsx) guided the shipped `2026.10.2` Planner changes. They show one open section at a time, scroll placement, growing writing fields, a full writing view, and explicit save feedback. The stories remain design prototypes; the frontend is the shipped source. The user installed the new Android version and reported a substantially better experience. Physical flow and accessibility checks are still open.
 
 ## Files
 

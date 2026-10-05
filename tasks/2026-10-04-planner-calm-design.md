@@ -1,6 +1,6 @@
 # Task: Calm Planner design proposal
 
-Status: release prepared, publication pending protected-branch approval
+Status: shipped in `smart-paper-v2026.10.2`; physical flow and accessibility review remain
 Created: 2026-10-04
 Updated: 2026-10-05
 
@@ -41,7 +41,7 @@ Make Planner editing feel calm and predictable on a phone. Opening a section sho
 | --- | --- | --- |
 | Source | `npm run typecheck` in `design/studio/` | Passed |
 | Static studio | `npm run build` in `design/studio/` | Passed |
-| Phone interactions | Browser review of last-section scroll, growing note, writing view focus return, and save/error states | Partial pass; remaining review listed above |
+| Phone interactions | Browser review of last-section scroll, growing note, writing view focus return, and save/error states | Passed for reviewed browser states; physical Android and screen reader remain |
 | Built app | Docker lint, TypeScript, 23 tests, and local-data build; 390px browser interaction review | Passed; long-text overflow found and fixed during browser QA |
 
 ## Decisions And Risks
@@ -52,5 +52,4 @@ Make Planner editing feel calm and predictable on a phone. Opening a section sho
 
 ## Outcome / Handoff
 
-The design is implemented in `smart-paper-front/`. Browser QA passed in English and Persian. Physical Android and screen reader checks remain; the requested release will record them as follow-ups.
-Frontend commit `ed2b5a3` and the stable-signed `2026.10.2` APK are prepared. Automatic approval review rejected a direct push to frontend `main`; the team release record and APK are ready locally, and publication awaits explicit protected-branch approval. See [release record](../releases/smart-paper-v2026.10.2.md).
+The design is implemented in frontend commit `ed2b5a3` and shipped in the stable-signed `2026.10.2` APK. Browser QA passed in English and Persian. The user installed the new Android version and reported that its experience was substantially better than before the design-first workflow. This is feedback on the overall experience, not completion of the physical flow checklist. Android upgrade, backup/restore, notifications, full bilingual layout, and screen reader checks remain. See [release record](../releases/smart-paper-v2026.10.2.md).
