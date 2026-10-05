@@ -1,11 +1,12 @@
 # Smart Paper Features
 
-Updated: 2026-10-01. Keep this file short and update it when user-visible features change.
+Updated: 2026-10-05. Keep this file short and update it when user-visible features change.
 
 ## In the Android app
 
 - Plan Saturday-to-Friday weeks with goals and notes.
 - Track ten configurable sections and timed day events.
+- Open one compact section at a time, edit its minutes, goal, and note, and use a full writing view for longer text.
 - Save and reuse full-week templates.
 - Review multi-week summaries.
 - Track a finance goal and income entries.
@@ -19,6 +20,7 @@ Updated: 2026-10-01. Keep this file short and update it when user-visible featur
 
 ## Recent completed work
 
+- Made Planner sections compact and scroll the opened section into view; goals and notes grow as written, with a full writing view and clearer save/retry feedback.
 - Refined Idea Space's bilingual phone layout so writing and saving stay prominent; optional sparks expand on demand and return focus to the editor after selection.
 - Added Idea Space as a separate, bilingual writing area without required titles or categories.
 - Added a self-explanatory introduction and AI response request to selective reports, with scope limits and a reminder that omitted fields are unknown.

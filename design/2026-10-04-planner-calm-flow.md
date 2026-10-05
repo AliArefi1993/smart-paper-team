@@ -1,7 +1,7 @@
 # Design: Calm Planner editing flow
 
-Status: reviewable proposal — not yet approved for implementation
-Updated: 2026-10-04
+Status: implemented in frontend — browser QA passed; physical Android QA pending
+Updated: 2026-10-05
 Owning frontend route/component: `/` — `smart-paper-front/src/components/weekly-planner.tsx`
 Local studio stories: `design/studio/src/stories/PlannerCalm.stories.tsx`
 Design type: proposed change
@@ -41,11 +41,14 @@ The prototype uses illustrative data and local state. It does not replace the cu
 
 ## Implementation handoff and verification
 
-This is a design proposal. Frontend should map it to the existing week/day/section state and save transaction without changing the data model. Before marking ready for implementation, Designer and QA should review the prototype on a phone viewport in both languages, test last-section scroll, long text, keyboard and screen reader behavior, dark mode, unsaved navigation, schedule/template sheets, and Android safe areas. Compare it with the running frontend and record any differences.
+The designer compared the proposal with `smart-paper-front/src/components/weekly-planner.tsx` on 2026-10-05. The shipped screen renders all active section forms for the selected day; section goals use one-line inputs, notes use two-row textareas, and Enter saves from textareas. The proposal keeps the current week/day selection, totals, timed schedule, template sheets, dark theme, and manual save transaction. On a phone, section summaries replace the full stack of forms; only the selected section expands. Section goals become multiline fields. Enter inserts a newline and Ctrl/Cmd+Enter saves. Weekly goal/note and day note also grow with content. The full writing view applies to section goal and note. Existing week-switch and navigation warnings remain.
+
+This handoff is ready for frontend implementation. Frontend should map it to the existing week/day/section state and save transaction without changing the data model. QA must compare the built screen in English and Persian, test the last section, long text, keyboard and focus, dark mode, unsaved navigation, schedule/template sheets, and Android safe areas. Physical Android checks remain a release validation item.
 
 | Check | Result |
 | --- | --- |
 | Interactive Storybook build and type check | Passed locally on 2026-10-04 (`npm run typecheck`, `npm run build`) |
 | Browser interaction review in English and Persian | Partial: 390px EN/FA stories rendered; last section scroll landed 90px below scroller top, long note grew, writing view opened and returned focus, unsaved/error/saving feedback inspected. Keyboard, screen reader, and physical Android review remain. |
-| Running-app visual comparison | Pending |
-| Designer and QA approval | Pending |
+| Current-app source comparison | Completed 2026-10-05; differences and preserved flows documented above |
+| Designer implementation handoff | Ready 2026-10-05 |
+| Built-app QA review | Passed on 2026-10-05 at 390px: last section lands 96px below viewport top in EN/FA; one section opens at a time; long goal/note fields fit without horizontal overflow; Enter inserts a newline; writing view returns focus; saved content reopens; Persian dark mode, template/schedule sheets, and unsaved-week warning remain usable. Physical Android and screen reader review remain. |

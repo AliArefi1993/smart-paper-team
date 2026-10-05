@@ -1,8 +1,8 @@
 # Task: Calm Planner design proposal
 
-Status: design review
+Status: release prepared, publication pending protected-branch approval
 Created: 2026-10-04
-Updated: 2026-10-04
+Updated: 2026-10-05
 
 ## Objective
 
@@ -20,8 +20,9 @@ Make Planner editing feel calm and predictable on a phone. Opening a section sho
 - [x] Open any section with its heading visible; keep long writing readable inline and in a full writing view.
 - [x] Show unsaved, saving, saved, and save-error states.
 - [x] Document proposal scope and update design inventory/status.
-- [ ] Complete Designer and QA review against the running app, including keyboard, screen reader, dark mode, unsaved navigation, sheets, and Android safe areas.
-- [ ] Mark the handoff ready for frontend implementation after review.
+- [x] Designer source comparison and ready handoff.
+- [x] Complete browser QA of the implemented app in EN/FA, including long text, dark mode, unsaved navigation, and sheets.
+- [ ] Complete physical Android and screen reader review.
 
 ## Non-Goals
 
@@ -41,6 +42,7 @@ Make Planner editing feel calm and predictable on a phone. Opening a section sho
 | Source | `npm run typecheck` in `design/studio/` | Passed |
 | Static studio | `npm run build` in `design/studio/` | Passed |
 | Phone interactions | Browser review of last-section scroll, growing note, writing view focus return, and save/error states | Partial pass; remaining review listed above |
+| Built app | Docker lint, TypeScript, 23 tests, and local-data build; 390px browser interaction review | Passed; long-text overflow found and fixed during browser QA |
 
 ## Decisions And Risks
 
@@ -50,4 +52,5 @@ Make Planner editing feel calm and predictable on a phone. Opening a section sho
 
 ## Outcome / Handoff
 
-The proposal is ready to review in the local Storybook studio. Frontend implementation waits for the remaining design and QA checks, then should map the interaction to the existing Planner state and save transaction.
+The design is implemented in `smart-paper-front/`. Browser QA passed in English and Persian. Physical Android and screen reader checks remain; the requested release will record them as follow-ups.
+Frontend commit `ed2b5a3` and the stable-signed `2026.10.2` APK are prepared. Automatic approval review rejected a direct push to frontend `main`; the team release record and APK are ready locally, and publication awaits explicit protected-branch approval. See [release record](../releases/smart-paper-v2026.10.2.md).

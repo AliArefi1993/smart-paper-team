@@ -1,6 +1,6 @@
 # Smart Paper Status
 
-Last updated: 2026-10-04.
+Last updated: 2026-10-05.
 
 This is a present-state snapshot, not a changelog. Shipped history and validation details live in `releases/`; implementation history lives in each repository's Git log.
 
@@ -14,7 +14,7 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 - Product and Designer have repo skills and a `design/` workspace for briefs, local screen stories, implementation handoffs, and bilingual Android review. Figma remains an optional reference.
 - The first design pilot refreshed Idea Space in frontend revision `820692a`: editable English/Persian Figma frames and a writing-first layout with expandable sparks. Local-data lint, type check, 23 tests, and build passed; 390px browser review passed in both languages. Physical Android review remains.
 - Shipped-screen coverage includes a route/state inventory, source-backed flow briefs for all seven routes, and a local React/Storybook design studio with 32 bilingual route/state stories. Designer and QA approved these as structural coverage only on 2026-10-03. The 2026-10-04 refinement improves route navigation, contextual sheets, timer states, control sizing, and example copy; Planner stories now show distinct minutes, goal, and note controls for each active section in English and Persian. Fidelity and complete flow handoffs remain unapproved until running-app comparison and re-review. The earlier atlas and Planner Figma drafts have not been visually checked; Figma Starter tool limits block further screenshots. Designer-ready local stories and a handoff are required before future user-visible frontend implementation. See `design/2026-10-04-baseline-story-refinement.md` and `tasks/2026-10-01-full-app-design-coverage.md`.
-- A separate [Calm Planner design proposal](design/2026-10-04-planner-calm-flow.md) addresses section-opening scroll position, long writing, per-section controls, and explicit save feedback in English/Persian local stories. Storybook type check/build and partial browser interaction review passed. Running-app comparison, Designer/QA approval, and frontend implementation remain.
+- The [Calm Planner design](design/2026-10-04-planner-calm-flow.md) is implemented in frontend commit `ed2b5a3`: compact section summaries, scroll placement, growing writing fields, full writing view, and safer save feedback. Docker lint/type/tests/build and 390px EN/FA browser review passed. The signed `2026.10.2` APK is prepared locally, but GitHub publication is pending explicit approval to push protected `main`; see `releases/smart-paper-v2026.10.2.md`. Physical Android and screen reader review remain.
 
 ## Repository State
 
@@ -38,7 +38,7 @@ Run `scripts/project-context.sh` for current branches, revisions, working-tree c
 - Backend: Python, Django 6.0.4, SQLite, `planner` and `finance` apps, committed migrations, Docker/Compose, Gunicorn startup path.
 - Frontend: Next.js 16.2.4, React 19.2.4, TypeScript, Tailwind CSS 4, Capacitor 8.
 - Frontend routes: planner, ideas, timer, finance, summaries, export/import, and settings.
-- Android release: `versionCode 18`, `versionName 2026.10.1`; stable-signed APKs must continue using the existing ignored local signing material.
+- Latest published Android release: `versionCode 18`, `versionName 2026.10.1`. The prepared `2026.10.2` build is code 19 and uses the same stable signing certificate.
 - Team `smart-paper-v*` tags publish GitHub Releases when the matching release record and APK are committed.
 
 ## Latest Verified Release Checks
@@ -51,6 +51,8 @@ The `smart-paper-v2026.10.1` build passed on 2026-10-01:
 - Local browser check covered Idea Space capture and Persian layout.
 
 See `releases/smart-paper-v2026.10.1.md` for artifact checksum and scope. Physical install, upgrade, native backup restore and sharing, notes, timer, notifications, and full bilingual layout remain unverified; the maintainer directed release before these checks.
+
+The prepared `2026.10.2` build passed frontend lint, TypeScript, 23 tests, local static export, signed Android assembly, certificate/version checks, and 390px Planner browser QA in EN/FA. Backend 33 tests and migration check passed. Its artifact and checksum are in `releases/smart-paper-v2026.10.2.md`; GitHub publication is pending protected-branch approval.
 
 ## Known Risks And Gaps
 

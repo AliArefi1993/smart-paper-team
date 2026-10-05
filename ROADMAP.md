@@ -34,7 +34,7 @@ This roadmap is based on repository inspection only. Speculative ideas are marke
 
 - Review repository hygiene for `node_modules-blocked-*` directories in `smart-paper-front/`.
 - Make API error handling more structured for frontend display.
-- Polish configurable section UX after real use: compact planner layout with many active sections, hidden-section-with-data visibility, and optional separate English/Persian labels.
+- Polish configurable section UX after real use: assess ten active sections, hidden-section-with-data visibility, and optional separate English/Persian labels.
 - Add accessibility review for forms, focus states, keyboard flows, and RTL/LTR behavior.
 - Validate Android local morning notifications on a real device, including permission denial, app restart, and device reboot behavior.
 - Consider trusted-proxy client address handling or user-account-based throttling if Smart Paper becomes a multi-user or internet-exposed app.
