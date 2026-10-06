@@ -1,6 +1,6 @@
 # Smart Paper Features
 
-Updated: 2026-10-05. Keep this file short and update it when user-visible features change.
+Updated: 2026-10-06. Keep this file short and update it when user-visible features change.
 
 ## In the Android app
 
@@ -21,6 +21,7 @@ Updated: 2026-10-05. Keep this file short and update it when user-visible featur
 
 ## Recent completed work
 
+- Fixed the remaining white hover surfaces in Idea Space and pale Timer hourglass glass in dark mode after Designer coverage review.
 - Extended the Planner's dark appearance to all routes and kept the choice across navigation and reloads.
 - Made Planner sections compact and scroll the opened section into view; goals and notes grow as written, with a full writing view and clearer save/retry feedback.
 - Refined Idea Space's bilingual phone layout so writing and saving stay prominent; optional sparks expand on demand and return focus to the editor after selection.
