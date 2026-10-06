@@ -44,6 +44,7 @@ For a small, repository-local task, do not read product, roadmap, architecture, 
 
 ## Chat And Token Budget
 
+- Keep user-facing progress messages brief. Skip step-by-step narration; update only for a material finding, change in direction, blocker, or work lasting over a minute. Keep the final result concise while reporting validation and any remaining issue.
 - Continue the current chat while pursuing the same unfinished objective or reviewing its result.
 - For an unrelated objective, recommend a fresh chat in this project; its context comes from `STATUS.md`, the relevant task file, and narrow code reads, not a copied transcript.
 - If the same objective continues but the chat grows slow or its context indicator is low, suggest Codex's compact action before starting over. Use a side chat for a short tangent when available.
