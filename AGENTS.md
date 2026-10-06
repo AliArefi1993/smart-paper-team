@@ -54,6 +54,7 @@ For a small, repository-local task, do not read product, roadmap, architecture, 
 
 - For each requested task, use subagents when a bounded, independent workstream or specialist review would improve speed, coverage, or token use. Do not spawn one for a trivial command or a tightly sequential task.
 - Prefer the `routine` agent in `.codex/agents/routine.toml` (GPT-6 Luna) for scoped Git and local Docker work, repository checks, first-pass failure triage, release preflight, documentation checks, and QA checklists. Give it named inputs, an owning repository when applicable, and an expected result.
+- When implementation has settled acceptance criteria, a bounded module, and known validation, prefer `terra_implementer` in `.codex/agents/terra_implementer.toml` (GPT-5.6 Terra) if that model is available in the current client. This applies to clear backend, frontend, or team-repo work; user-visible frontend work still requires a ready design handoff. If Terra is unavailable, use an available implementation agent. The main agent checks its work and handles integration.
 - Use the appropriate specialist agent for implementation, design, architecture, security, or consequential review. The main agent owns integration, verifies delegated results, and remains responsible for approvals and final decisions.
 - This is standing project guidance; the user need not request delegation or Luna again in each new chat.
 

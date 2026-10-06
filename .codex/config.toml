@@ -46,3 +46,7 @@ config_file = "agents/devops.toml"
 [agents.routine]
 description = "Luna agent for scoped Git and Docker work, repository checks, first-pass failure triage, release preflight, documentation checks, and QA checklists."
 config_file = "agents/routine.toml"
+
+[agents.terra_implementer]
+description = "Terra agent for a clearly specified, bounded implementation in one owning repository with defined validation."
+config_file = "agents/terra_implementer.toml"
