@@ -15,7 +15,7 @@ description = "Product designer for repo-native screen stories, bilingual Androi
 config_file = "agents/designer.toml"
 
 [agents.personal_systems]
-description = "Advises Product and Designer on coherent personal planning, focus, finance, and idea workflows."
+description = "Read-only specialist who reports personal-workflow observations and ideas to Product and Designer."
 config_file = "agents/personal_systems.toml"
 
 [agents.backend]
