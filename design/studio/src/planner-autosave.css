@@ -1,0 +1,151 @@
+.as-proposal {
+  --bg: #f7f8f5;
+  --surface: #fff;
+  --ink: #172b29;
+  --muted: #536660;
+  --border: #d9e4de;
+  --primary: #0f766e;
+  --primary-ink: #fff;
+  --error: #9f1239;
+  --error-bg: #fff1f2;
+  box-sizing: border-box;
+  margin: 20px auto;
+  padding: 16px;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Arial, Vazirmatn, sans-serif;
+  line-height: 1.55;
+}
+.as-proposal.dark {
+  --bg: #101b1b;
+  --surface: #1b2b29;
+  --ink: #eef5f1;
+  --muted: #b6c8c2;
+  --border: #3b5550;
+  --primary: #72dbcb;
+  --primary-ink: #092522;
+  --error: #ffb4c4;
+  --error-bg: #482833;
+}
+.as-proposal * {
+  box-sizing: border-box;
+}
+.as-proposal h1 {
+  font-size: 26px;
+  margin: 8px 0;
+}
+.as-proposal h2 {
+  font-size: 21px;
+  margin: 0;
+}
+.as-proposal small,
+.as-hint {
+  color: var(--muted);
+  font-size: 13px;
+}
+.as-proposal section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 18px;
+  margin-block: 16px;
+}
+.as-proposal label {
+  display: block;
+  font-weight: 600;
+}
+.as-proposal textarea,
+.as-proposal input {
+  width: 100%;
+  font: inherit;
+  color: inherit;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  margin-top: 8px;
+  resize: vertical;
+}
+.as-proposal button {
+  min-height: 48px;
+  padding: 10px 16px;
+  white-space: normal;
+  font: inherit;
+  line-height: 1.35;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  color: inherit;
+}
+.as-proposal button:disabled {
+  opacity: 0.65;
+}
+.as-proposal :focus-visible {
+  outline: 3px solid #f5c66f;
+  outline-offset: 3px;
+}
+.as-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.as-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-block: 12px;
+  font-size: 14px;
+  min-height: 48px;
+  flex-wrap: wrap;
+}
+.as-status button {
+  margin-inline-start: auto;
+}
+.as-error {
+  color: var(--error);
+  background: var(--error-bg);
+  padding: 12px;
+  border-radius: 12px;
+}
+.as-proposal .as-primary {
+  background: var(--primary);
+  color: var(--primary-ink);
+}
+.as-proposal footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+.as-proposal details {
+  margin-top: 24px;
+  border-top: 1px dashed var(--border);
+  padding-top: 12px;
+}
+.as-proposal details button {
+  margin: 4px;
+}
+.as-proposal header {
+  background: var(--surface);
+  color: var(--ink);
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  display: block;
+}
+.as-proposal[lang="fa"] {
+  font-family: Vazirmatn, Arial, sans-serif;
+}
+.as-proposal p {
+  color: inherit;
+}
+.as-proposal label {
+  font-weight: 400;
+}
+.as-proposal textarea {
+  font-weight: 400;
+}

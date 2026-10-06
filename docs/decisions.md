@@ -59,6 +59,12 @@ This file records durable choices that constrain future work. It is intentionall
 - **Why:** The repo record keeps design intent available to every agent and tied to implementation; Figma supports editable frames and structured design context for code handoff.
 - **Consequence:** A Figma frame alone is not a complete specification. Frontend and QA compare the running English/Persian Android UI with the handoff. If Figma is unavailable, save a reviewable repo artifact and mark the editable frame pending.
 
+### D-010 — Automatically persist Android Planner edits, retain deliberate record commands
+
+- **Decision:** Android/local-data Planner accepted edits save synchronously with truthful saved/failure feedback and explicit Retry. Django remains manual. Schedule drafts, templates, Ideas, Finance, timer duration application, Settings and file/restore commands remain deliberate.
+- **Why:** The maintainer requested fewer poorly placed Save controls; Planner has ordinary editable state and duplicate routine Save affordances. Other commands create records, reset sessions, validate batches or affect privacy/permissions.
+- **Consequence:** Keep week identity and latest edits safe; failure must not claim saved or silently discard text. Retain failed text across SPA return, without promising recovery from reload/process termination when storage fails. New autosave proposals require their own scope and design. See [handoff](../design/2026-10-06-save-controls-design.md).
+
 ## Adding Or Changing A Decision
 
 Add an entry only when the choice is costly to reverse, crosses repository boundaries, defines a product constraint, or is likely to be debated again. Include the decision, reason, and practical consequence. If superseded, keep the old entry and point it to the replacement.

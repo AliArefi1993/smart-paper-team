@@ -4,7 +4,7 @@ Updated: 2026-10-06. Keep this file short and update it when user-visible featur
 
 ## In the Android app
 
-- Plan Saturday-to-Friday weeks with goals and notes.
+- Plan Saturday-to-Friday weeks with goals and notes that save automatically on the device, with Retry if saving fails.
 - Track ten configurable sections and timed day events.
 - Open one compact section at a time, edit its minutes, goal, and note, and use a full writing view for longer text.
 - Save and reuse full-week templates.
@@ -20,6 +20,8 @@ Updated: 2026-10-06. Keep this file short and update it when user-visible featur
 - Capture freeform ideas, expand optional writing sparks when wanted, revisit an older thought each day, branch from notes, and search or edit them. Notes are included in JSON backups.
 
 ## Recent completed work
+
+- Replaced routine Planner Save buttons with automatic local saving, compact device-save status and navigation-only Next day; schedule actions now say Add event / Apply changes. Explicit commands on other pages remain deliberate.
 
 - Aligned Planner dark colors with the shared green palette used on the other pages, including nested editors and the mobile save bar.
 

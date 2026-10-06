@@ -2,16 +2,16 @@
 
 Smart Paper is a personal weekly planning, progress tracking, finance tracking, and data export application. Its primary release target is a downloadable Android APK that stores each person's data on their own phone.
 
-The current shipped baseline is Android `2026.10.4` (frontend `ab37ee8`, local-data mode). Product and design priorities are phone use in English and Persian, preserving local records, and reliable existing flows. Browser and Storybook checks support Android work; native Android behavior requires separate evidence. The Django/hosted-web path is secondary and paused until needed.
+The current shipped baseline is Android `2026.10.5` (frontend `45d4130`, local-data mode). Product and design priorities are phone use in English and Persian, preserving local records, and reliable existing flows. Browser and Storybook checks support Android work; native Android behavior requires separate evidence. The Django/hosted-web path is secondary and paused until needed.
 
 ## What It Currently Does
 
 - Provides a Saturday-to-Friday weekly planner.
 - Tracks a weekly goal and weekly note.
 - Tracks seven day plans per week.
-- Lets the user minimize individual day details or all seven days while keeping summaries visible; reopening preserves draft fields and the explicit week-save flow.
+- Lets the user minimize individual day details or all seven days while keeping summaries visible; reopening preserves fields. Android/local-data Planner edits save automatically; Django mode retains manual week saving.
 - Splits each day into configurable planner sections.
-- Shows section summaries before editing; one section opens at a time with its duration, goal, and note. Long writing expands inline or opens a full writing view, while the week still uses an explicit save action.
+- Shows section summaries before editing; one section opens at a time with its duration, goal, and note. Long writing expands inline or opens a full writing view, with automatic week persistence in Android/local-data mode and an explicit save action in Django mode.
 - Provides 10 stable planner section slots; the first four default to Main, Second, Learning, and Exercise, while slots 5-10 are hidden until activated.
 - Lets the user rename planner sections and activate/hide section slots from Settings.
 - Records minutes, goals, and notes for each day section.
@@ -42,7 +42,7 @@ The current shipped baseline is Android `2026.10.4` (frontend `ab37ee8`, local-d
 - Choose the current, previous, or future week and record weekly goals/notes.
 - Enter daily section goals, notes, and duration minutes.
 - Add, edit, or delete exact-time day schedule entries.
-- Save the week and review total planned/tracked minutes by category.
+- Edit the Android plan with automatic device saving and review planned/tracked minutes by category. Failed writes retain visible edits and offer Retry; Django mode retains Save week.
 - Open Settings to rename section slots, choose active sections, and enable a morning plan notification.
 - Open Focus Timer to run focus and rest sessions, pause or reset them, and explicitly start each next phase.
 - Open Idea Space to capture an unfinished thought, use an optional spark, or grow a thought that returns from earlier writing.
