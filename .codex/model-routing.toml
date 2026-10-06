@@ -5,7 +5,7 @@
 
 [category.routine]
 model = "gpt-6-luna"
-reasoning_effort = "low"
+reasoning_effort = "medium"
 use_for = "Documented commands, repository checks, first-pass triage, release preflight, and checklist drafting."
 
 [category.scoped_implementation]
