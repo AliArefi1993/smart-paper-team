@@ -1,7 +1,7 @@
 # Design: App-wide dark mode
 
-Status: ready for implementation
-Updated: 2026-10-05
+Status: implemented; bounded runtime review passed
+Updated: 2026-10-06
 Owning frontend routes/components: `/`, `/ideas`, `/timer`, `/summaries`, `/finance`, `/export` (including AI report), `/settings`; shared appearance state and `LanguageToggle`
 Local studio story links: [all dark proposals](studio/src/stories/DarkMode.stories.tsx); [summaries populated](studio/src/stories/DarkMode.stories.tsx#L26), [summaries empty](studio/src/stories/DarkMode.stories.tsx#L27), [report selection](studio/src/stories/DarkMode.stories.tsx#L29), [import replace](studio/src/stories/DarkMode.stories.tsx#L31), [finance locked](studio/src/stories/DarkMode.stories.tsx#L33), [ideas empty](studio/src/stories/DarkMode.stories.tsx#L35), [timer running](studio/src/stories/DarkMode.stories.tsx#L36), [settings](studio/src/stories/DarkMode.stories.tsx#L37), [wide examples](studio/src/stories/DarkMode.stories.tsx#L39)
 Design type: proposed change
@@ -9,7 +9,7 @@ Design type: proposed change
 ## Problem and evidence
 
 - User report: Dark Mode appears only in Planner; Summaries and reports stay light. This is direct usability feedback, not a completed device audit.
-- Current source confirms Planner owns `themeMode` locally in `weekly-planner.tsx`; each other route renders a `sp-page` root. `globals.css` defines `sp-page` as light and has no app-wide dark palette. AI report lives within Export. Planner's dark choice is lost on navigation/remount.
+- At the initial review, source confirmed Planner owned `themeMode` locally in `weekly-planner.tsx`; each other route renders a `sp-page` root. `globals.css` defines `sp-page` as light and has no app-wide dark palette. AI report lives within Export. Planner's dark choice was lost on navigation/remount.
 - The prior product contract described “optional dark planner mode”; this request expands the behavior to all seven routes. The dark story is a proposal, while existing light stories remain baselines.
 
 ## Outcome and scope
@@ -42,5 +42,5 @@ Design type: proposed change
 | --- | --- | --- |
 | Story type check and build | `npm run typecheck` and `npm run build` in `design/studio` | Passed 2026-10-05 |
 | Source comparison | Planner local theme and six `sp-page` roots inspected; AI report nested in Export | Confirmed current mismatch |
-| Running UI comparison | Local Next preview attempted; native SWC and `lightningcss.darwin-arm64.node` are missing in this checkout | Pending; design is source-backed, visual QA must follow implementation |
-| Phone/wide EN/FA and interaction states | Dedicated bilingual phone stories and wide Summaries/report stories added | Structural coverage; visual/device review pending |
+| Running UI comparison | Frontend `37b91ec` actual local-data build; resumed EN/FA dark-page review | Passed bounded runtime scope; exact route/state evidence and remaining import/native limitations in [coverage audit](2026-10-06-dark-mode-coverage-audit.md) |
+| Phone/wide EN/FA and interaction states | Studio coverage plus actual phone route review and selected wide checks | Bounded browser review passed; physical Android remains unverified |

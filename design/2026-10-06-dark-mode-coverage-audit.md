@@ -1,10 +1,10 @@
 # Design: Dark mode coverage gaps
 
-Status: ready for implementation
+Status: implemented; bounded actual-application comparison passed
 Updated: 2026-10-06
 Owning frontend components: `idea-space.tsx`, `focus-timer.tsx`, `globals.css`; studio correction: `ScreenPreview.tsx`, `styles.css`
 Local studio stories: [CurrentLeaks](http://localhost:6006/?path=/story/fixes-dark-coverage-gaps--current-leaks), [FixedPhone](http://localhost:6006/?path=/story/fixes-dark-coverage-gaps--fixed-phone), [FixedWide](http://localhost:6006/?path=/story/fixes-dark-coverage-gaps--fixed-wide), [LightRegression](http://localhost:6006/?path=/story/fixes-dark-coverage-gaps--light-regression); [editable source](studio/src/stories/DarkCoverage.stories.tsx)
-Design type: proposed coverage fix; shared studio correction
+Design type: implemented coverage fix; shared studio correction
 
 ## Problem and evidence
 
@@ -35,7 +35,7 @@ The excerpt stories show dark current/fixed phone and wide layouts plus light re
 
 - `globals.css`: cover `.sp-page [class~="hover:bg-white/70"]:hover` under `html.sp-dark` using the existing dark hover surface.
 - `focus-timer.tsx`: identify glass body and frame cap paths with semantic classes; dark-only CSS changes fill/stroke. Preserve light literals and sand geometry/color.
-- Open decisions: none. Designer decision: ready for these coverage fixes, after source review and bilingual excerpt inspection. Running application comparison remains required after implementation; this does not validate a full app or Android build.
+- Open decisions: none. Designer decision: coverage fixes match the handoff and pass the bounded bilingual application comparison below. Native controls and physical Android checks remain separate.
 
 ## Verification
 
@@ -47,7 +47,8 @@ The excerpt stories show dark current/fixed phone and wide layouts plus light re
 | Targeted contrast | sRGB calculation: `#72dbcb` on hover `#30443f` 6.28:1; SVG outline on glass 6.97:1 and panel 8.92:1 | Passed text/graphic contrast targets |
 | Studio validation | `npm run typecheck`; `npm run build` | Passed 2026-10-06; existing bundle-size advisory only |
 | Frontend implementation source | Designer reviewed `0186476` hover selector and SVG class diff against this handoff | Matches handoff; light colors/gold sand preserved. Committed and pushed. |
-| Actual application / Android | Source-backed excerpt is not the application; no production screen/runtime comparison performed by this Designer review | Pending implementation comparison; native date/select popups, Android keyboard and touch remain device checks |
+| Actual application | Local-data production build `37b91ec` at http://127.0.0.1:3010/; exact route/state evidence below | Bounded EN/FA dark-surface comparison passed 2026-10-06; no additional application light-surface defect found in inspected states |
+| Native / Android | Browser comparison does not render native file/date/select popups or establish device behavior | Physical Android keyboard, touch, TalkBack and native-control checks remain separate |
 
 ## Studio correction verification
 
@@ -62,4 +63,23 @@ The application-only audit above did not validate the original studio designs. T
 | Light regression | [Planner populated](http://localhost:6006/?path=/story/shipped-baselines-planner--populated); [screenshot](evidence/2026-10-06-studio-dark/planner-light.png) | EN/FA original four card tints, white fields, dark ink and light canvas retained; no frame overflow. Dark selectors and SVG classes do not replace light literals. |
 | Studio validation | `npm run typecheck`; `npm run build`; `git diff --check` | Passed 2026-10-06; existing bundle-size advisory only. |
 
-Application comparison and physical Android checks remain pending; these studio results do not resolve those gates.
+These studio results are separate from the actual application evidence below.
+
+## Actual application comparison
+
+Designer reviewed the running local-data production build `37b91ec` on 2026-10-06 at http://127.0.0.1:3010/. The scope is visible dark surfaces, readable controls and feedback, English/Persian direction, and overflow at 390px phone plus relevant 1280px wide layouts. Disposable preview data was used. No external AI provider, share, production data or APK action was invoked.
+
+| Route | Exact runtime language/state coverage | Evidence / result |
+| --- | --- | --- |
+| Summaries | EN and FA phone populated cards, empty weeks and 1-month filter; FA wide populated view | [EN filtered](evidence/2026-10-06-app-dark/summaries-en-filtered.png), [FA filtered](evidence/2026-10-06-app-dark/summaries-fa-filtered.png), [EN empty weeks](evidence/2026-10-06-app-dark/summaries-en-empty-visible.png), [FA empty weeks](evidence/2026-10-06-app-dark/summaries-fa-empty-visible.png), [FA wide](evidence/2026-10-06-app-dark/summaries-fa-wide.png). Cards, details, totals and filter controls remain dark and readable. |
+| Export / AI report | FA phone expanded deterministic report, dates/checkboxes/status and finance opt-in lock warning; EN phone wrong-PIN error; EN wide expanded report and export/import controls. Import merge/replace/file-picker controls visible in both languages | [FA report](evidence/2026-10-06-app-dark/report-fa-preview.png), [FA finance lock](evidence/2026-10-06-app-dark/report-fa-finance-locked.png), [EN PIN error](evidence/2026-10-06-app-dark/export-en-pin-error.png), [EN wide report](evidence/2026-10-06-app-dark/report-en-wide-preview.png). Report text, disabled/lock/error surfaces and inputs readable. Existing deterministic report content is English in both UI languages. |
+| Finance | EN and FA phone locked and populated views, goal settings, saved-income history and entry editor; FA income-added success feedback | [EN lock](evidence/2026-10-06-app-dark/finance-en-locked.png), [FA lock](evidence/2026-10-06-app-dark/finance-fa-locked.png), [EN populated](evidence/2026-10-06-app-dark/finance-en-populated-settings.png), [FA populated](evidence/2026-10-06-app-dark/finance-fa-populated-settings.png), [EN editor](evidence/2026-10-06-app-dark/finance-en-entry-edit.png), [FA editor](evidence/2026-10-06-app-dark/finance-fa-entry-edit.png). Cards, amber notice, fields, notes and actions readable. Closed date input inspected; native picker excluded. |
+| Idea Space | EN and FA phone expanded optional sparks, empty composer, populated thought and long FA text editor; actual expander hover in both languages and clear-spark hover in FA | [EN sparks](evidence/2026-10-06-app-dark/ideas-en-sparks.png), [FA sparks](evidence/2026-10-06-app-dark/ideas-fa-sparks.png), [EN editor](evidence/2026-10-06-app-dark/ideas-en-editor.png), [FA editor](evidence/2026-10-06-app-dark/ideas-fa-editor.png), [FA clear hover](evidence/2026-10-06-app-dark/ideas-fa-clear-hover.png). Actual hover background `rgb(48, 68, 63)` and ink `rgb(114, 219, 203)` match handoff; EN clear-action hover is source-backed by the same selector, not separately invoked. |
+| Timer | FA phone running panel/hourglass and numeric session settings; EN phone paused panel, settings and field focus; EN wide panel/settings | [FA panel](evidence/2026-10-06-app-dark/timer-fa-panel.png), [EN settings](evidence/2026-10-06-app-dark/timer-en-settings.png), [EN wide](evidence/2026-10-06-app-dark/timer-en-wide.png). SVG glass computed fill `rgb(36, 62, 57)` and frame stroke `rgb(114, 219, 203)`; gold sand retained. Timer deadline/background behavior is outside this surface review. |
+| Settings | EN and FA phone active/inactive section controls and unchanged-save success feedback; FA inactive notification/time-field focus; FA wide reload | [EN feedback](evidence/2026-10-06-app-dark/settings-en-feedback.png), [FA feedback](evidence/2026-10-06-app-dark/settings-fa-feedback.png), [FA notification](evidence/2026-10-06-app-dark/settings-fa-notification.png), [FA wide reload](evidence/2026-10-06-app-dark/settings-fa-wide-reload.png). Controls/feedback readable and stored dark theme survives navigation/reload. Native picker and Android notification dispatch excluded. |
+
+Inspected visible route states had `html.sp-dark`, no horizontal document overflow, and no opaque near-white panel/background leak in the targeted viewport audit. The Planner runtime comparison is recorded in [its task](../tasks/2026-10-06-planner-day-minimization.md); its separate slate palette is intentional. No further application patch is required by this bounded review.
+
+### Limits
+
+Import success/error feedback remains **source-backed only**: the browser file-chooser interaction stalled before a file could be supplied, so import/merge/replace execution and resulting feedback were not runtime tested. No external generated AI report was requested; the visible deterministic preview was checked in both languages. Screenshots and DOM checks establish the named browser surfaces, not exhaustive feature QA, native popup appearance, physical Android/TalkBack behavior or a release gate. Earlier Docker lint/types/27 tests/build passed for `37b91ec`; this review changed documentation/evidence only.

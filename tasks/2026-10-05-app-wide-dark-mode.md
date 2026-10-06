@@ -1,6 +1,6 @@
 # Task: App-wide dark mode
 
-Status: implemented; full route visual verification pending
+Status: complete; bounded bilingual browser visual review passed
 Created: 2026-10-05
 Updated: 2026-10-06
 
@@ -19,7 +19,7 @@ Make the Planner dark mode apply consistently across every app route, including 
 ## Acceptance Criteria
 
 - [x] Selecting dark mode in Planner is stored for all routes and reloads; selecting light uses the same shared preference.
-- [ ] Summaries, reports, finance, timer, ideas, settings, and export surfaces, controls, and feedback pass visual review in English and Persian.
+- [x] Summaries, reports, finance, timer, ideas, settings, and export pass bounded English/Persian browser dark-surface review. Exact state coverage and import/native limits are recorded in the audit.
 - [x] Production build passes in the preferred validation environment.
 - [x] Durable docs describe the app-wide behavior.
 
@@ -36,9 +36,9 @@ Make the Planner dark mode apply consistently across every app route, including 
 | Frontend lint, types, 23 tests | Host commands with existing dependencies | Passed 2026-10-05 |
 | CSS syntax | PostCSS parse | Passed 2026-10-05 |
 | Production build | Current frontend local-data build in Docker | Passed 2026-10-06 |
-| English/Persian route review | Real build available at http://127.0.0.1:3010/; Planner theme/language draft retention checked | Full other-route visual comparison pending; Designer follow-up interrupted by usage limit |
+| English/Persian route review | Actual local-data build `37b91ec` at http://127.0.0.1:3010/; 390px phone and relevant 1280px wide views; screenshots and precise matrix in [coverage audit](../design/2026-10-06-dark-mode-coverage-audit.md#actual-application-comparison) | Passed bounded dark-surface review 2026-10-06: all six non-Planner routes covered in EN/FA, theme retained across navigation/reload, no inspected light panel leak or horizontal overflow. Import result feedback remains source-only; native/device checks excluded. |
 | Focused light-surface source audit | All seven routes, nested Planner sheets, form/feedback states, report preview, shared controls and SVG | Two gaps: Idea Space white hover and Timer pale SVG glass; existing language selector and gradient are covered |
-| Coverage fix design preview | Dedicated EN/FA phone/wide excerpts; light regression; studio typecheck/build; targeted contrast | Passed 2026-10-06; source-backed excerpt, actual application comparison remains pending |
+| Coverage fix design preview | Dedicated EN/FA phone/wide excerpts; light regression; studio typecheck/build; targeted contrast | Passed 2026-10-06; excerpt evidence is separate from completed actual-application comparison |
 | Coverage fix source review | Designer checked shared hover selector and dark-only SVG classes against ready handoff; `git diff --check` | Passed; both gaps covered, light SVG/gold sand preserved |
 | Coverage fix application checks | Current frontend Docker lint/types/27 tests/build | Passed 2026-10-06 |
 | Original studio design correction | Exact PlannerThemeContinuity EN/FA 390px phone/680px wide screenshots and computed colors; all 14 other dark exports surface audit; Timer screenshot; light Planner regression | Passed 2026-10-06. All four Planner card variants, fields, quick add, week rail and shared Timer SVG covered with existing dark roles. Original light palette retained; screenshots and scope in coverage audit. |
@@ -48,9 +48,10 @@ Make the Planner dark mode apply consistently across every app route, including 
 
 - Design review preceded frontend edits under workspace workflow.
 - Shared theme uses local storage and an early document class to preserve the choice across navigation and first paint. Existing route utility colors are mapped to semantic dark roles in shared CSS.
-- Coverage fix decisions: use existing dark hover `#30443f` for Idea Space `hover:bg-white/70`; use existing `--primary-soft`/`--primary` for Timer glass/frame in dark only and retain gold sand/light rendering. Implemented in `0186476`; running UI verification remains.
+- Coverage fix decisions: use existing dark hover `#30443f` for Idea Space `hover:bg-white/70`; use existing `--primary-soft`/`--primary` for Timer glass/frame in dark only and retain gold sand/light rendering. Implemented in `0186476`; actual hover/SVG colors verified in build `37b91ec`.
 - Studio correction reuses its existing dark palette. Shared preview dark CSS explicitly covers later Planner light declarations and uses semantic Timer SVG classes; the proposal board follows the dark canvas. Designer reviewed running Storybook and stored screenshots. No application code changed for this correction.
+- Browser file chooser stalled before import execution; import success/error feedback remains source-backed only. No external AI provider call, production data operation, APK, native popup or physical Android/TalkBack validation was performed.
 
 ## Outcome / Handoff
 
-Frontend revisions `6d56f31` (app-wide preference) and `0186476` (two remaining coverage gaps) were committed and pushed to `main`. Designer source audit and excerpt review are complete. Current frontend Docker lint/types/27 tests/build passed. Complete the remaining bilingual route visual comparison against the running build; the follow-up Designer agent reached its usage limit before reporting this gate. Physical Android review remains a separate release check.
+Frontend revisions `6d56f31` (app-wide preference) and `0186476` (two remaining coverage gaps) were committed and pushed to `main`. The bounded actual-browser visual gate is complete against `37b91ec`, with exact EN/FA states and screenshots in the coverage audit. No additional light-surface defect was found in the inspected states, so no application fix was needed. Docker lint/types/27 tests/build passed. Import-result feedback remains source-backed only due the file-chooser limitation; physical Android/native review remains a separate release check.

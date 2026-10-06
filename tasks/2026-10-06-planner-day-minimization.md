@@ -51,6 +51,6 @@ Backend/data changes, Android release, and production changes are outside this t
 
 ## Outcome / Handoff
 
-Designer handoff is ready. The user explicitly made implementation after recommended, ready designs an automatic workflow step. Frontend `37b91ec` implements the handoff and retains manual-save guarantees. Docker checks, independent review and targeted Designer runtime comparison passed. The six-route dark-surface follow-up was interrupted by an agent usage limit; no additional coverage is claimed. [Open the proposal](http://localhost:6006/?path=/story/proposals-planner-day-minimization--selected-day).
+Designer handoff is ready. The user explicitly made implementation after recommended, ready designs an automatic workflow step. Frontend `37b91ec` implements the handoff and retains manual-save guarantees. Docker checks, independent review and targeted Designer runtime comparison passed. The separate dark-surface follow-up resumed and passed its bounded English/Persian runtime review; its exact scope and import file-chooser limitation are recorded in the dark-mode task. [Open the proposal](http://localhost:6006/?path=/story/proposals-planner-day-minimization--selected-day).
 
 [Open the actual application preview](http://127.0.0.1:3010/). This frontend change is ready for the next APK; no release was made.
