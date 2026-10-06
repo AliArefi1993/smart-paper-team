@@ -1,18 +1,17 @@
 # Task: Review Planner day minimization
 
-Status: design ready for user review and implementation; frontend implementation pending
+Status: implemented and verified; physical Android checks pending
 Created: 2026-10-06
 Updated: 2026-10-06
 
 ## Objective
 
-Assess the user's request to minimize individual Planner days and all seven days, and provide an editable bilingual design proposal grounded in the current Planner.
+Implement individual Planner day minimization and a minimize-all action after the Designer's recommendation and ready bilingual handoff.
 
 ## Context
 
 - Product: quiet weekly scanning and safe manual-save editing in `PRODUCT.md`.
-- Owner of this change: team `design/` and this task document only.
-- Future application owner: `smart-paper-front/src/components/weekly-planner.tsx`.
+- Owners: team design/task memory and frontend `src/components/weekly-planner.tsx`.
 - [Design handoff](../design/2026-10-06-planner-day-minimization.md); [Calm Planner reference](../design/2026-10-04-planner-calm-flow.md).
 
 ## Acceptance Criteria
@@ -21,17 +20,18 @@ Assess the user's request to minimize individual Planner days and all seven days
 - [x] Interactive phone/wide English/Persian light/dark proposal covers individual and all-day collapse and reopening.
 - [x] Hidden drafts and global Save feedback stay available; accessibility and state decisions are specified.
 - [x] Studio type check/build and targeted browser review pass.
-- [ ] Frontend implements the ready design and compares a running build with it, if implementation is requested.
+- [x] Frontend implements the ready design and compares a running build with it.
+- [x] Collapse/reopen preserves drafts and save behavior, works in both languages/themes, and meets the handoff's breakpoint/focus rules.
 
 ## Non-Goals
 
-Application code, backend/data changes, Android release, and production changes are outside this design review.
+Backend/data changes, Android release, and production changes are outside this task.
 
 ## Plan
 
 1. Inspect source, product and Calm Planner reference.
 2. Build and review the disclosure proposal in the repo studio.
-3. Save recommendation and implementation acceptance criteria for user review.
+3. Implement the ready recommendation and verify the application against the handoff.
 
 ## Verification
 
@@ -39,14 +39,18 @@ Application code, backend/data changes, Android release, and production changes 
 | --- | --- | --- |
 | Studio | `npm run typecheck`, `npm run build` | Passed |
 | Browser | 390px EN/FA paired frames, 360px viewport, wide light/dark; draft restore, Persian Enter, independent collapse, retry | Passed targeted prototype checks |
-| Application comparison | Source inspected; running app unavailable due to local build environment | Pending built-app QA |
+| Frontend validation | Docker lint, TypeScript, 27 tests including four expansion tests, local-data production build; diff check | Passed 2026-10-06 |
+| Independent review | Calendar-order fallback corrected and regression tested; final review of fallback/focus/grid changes | No remaining findings |
+| Application comparison | Real local-data build: EN/FA 360/390px and wide; individual/bulk minimize, current rail reopen, hidden-draft save, long Friday note, Enter/Space, language/theme retention, resize all-closed retention, unsaved week warning | Passed targeted Designer runtime checks |
 
 ## Decisions And Risks
 
 - Recommend the request: it extends the scan-first Calm Planner design while keeping day summaries and direct reopening.
 - Keep selected day distinct from expansion; rail reopens even the selected day. Phone keeps at most one open body, wide supports independent bodies, and all may close.
-- Collapse is UI state, never a save/discard action. Built-app, physical Android and TalkBack checks remain.
+- Collapse is UI state, never a save/discard action. Physical Android, keyboard/safe areas and TalkBack checks remain.
 
 ## Outcome / Handoff
 
-Designer handoff is ready for implementation and the prototype is ready for user review. [Open the proposal](http://localhost:6006/?path=/story/proposals-planner-day-minimization--selected-day). No application files were changed by this task. Next action is user review or frontend implementation against the handoff; retain the application's existing manual-save guarantees.
+Designer handoff is ready. The user explicitly made implementation after recommended, ready designs an automatic workflow step. Frontend `37b91ec` implements the handoff and retains manual-save guarantees. Docker checks, independent review and targeted Designer runtime comparison passed. The six-route dark-surface follow-up was interrupted by an agent usage limit; no additional coverage is claimed. [Open the proposal](http://localhost:6006/?path=/story/proposals-planner-day-minimization--selected-day).
+
+[Open the actual application preview](http://127.0.0.1:3010/). This frontend change is ready for the next APK; no release was made.

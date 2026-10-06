@@ -81,6 +81,8 @@ For any task that changes a user-visible screen, interaction, copy, or flow, Des
 
 The repository files are durable project memory. Agents should inspect the repositories and docs rather than relying only on conversation context.
 
+Design completion is an intermediate step for requested changes. When Designer recommends the change and marks its handoff ready for implementation, automatically continue through frontend implementation, testing, review, fixes, verification, documentation, and scoped commit/push. Do not stop at the design artifact or ask whether to implement it. Follow an explicit user limit such as design-only or review-only when given. If Designer rejects the change or a required design decision remains unresolved, explain that finding before implementing dependent work. The existing safety approval boundaries still apply.
+
 For multi-step, cross-repository, migration, or release work, create or update a task document from `tasks/TEMPLATE.md`. Keep it concise and evidence-based. Small local fixes do not require one.
 
 ## Product Boundaries

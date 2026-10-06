@@ -7,6 +7,7 @@ Smart Paper is a personal weekly planning, progress tracking, finance tracking, 
 - Provides a Saturday-to-Friday weekly planner.
 - Tracks a weekly goal and weekly note.
 - Tracks seven day plans per week.
+- Lets the user minimize individual day details or all seven days while keeping summaries visible; reopening preserves draft fields and the explicit week-save flow.
 - Splits each day into configurable planner sections.
 - Shows section summaries before editing; one section opens at a time with its duration, goal, and note. Long writing expands inline or opens a full writing view, while the week still uses an explicit save action.
 - Provides 10 stable planner section slots; the first four default to Main, Second, Learning, and Exercise, while slots 5-10 are hidden until activated.

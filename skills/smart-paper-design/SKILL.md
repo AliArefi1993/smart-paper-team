@@ -15,4 +15,6 @@ Save one handoff under `design/` using `design/TEMPLATE.md`. Include flow and hi
 
 For a requested user-visible implementation task, finish this handoff and mark it `ready for implementation` before Frontend changes code. Existing shipped screens may be documented as `baseline` without implying a redesign; mark proposed departures explicitly. A design is not ready while a required language, flow state, or interaction decision is unresolved.
 
+For requested changes, a recommended, ready handoff automatically continues to frontend implementation and the remaining engineering workflow. Do not end the task at the proposal or ask whether implementation should follow. Respect an explicit design-only/review-only scope, unresolved required decisions, and the workspace safety boundaries.
+
 Before calling a design ready, run the studio type check and build, inspect its phone and wide stories with realistic long English and Persian text, and check empty, loading, error, success, and destructive states when applicable. Check contrast, visible focus, labels, touch targets, and non-color state cues. Compare the implemented screen with the handoff in a running preview or screenshots; record differences and actual verification in the design record. Story code is design context; frontend code and tests remain authoritative.
