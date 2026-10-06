@@ -1,11 +1,12 @@
 # Smart Paper Status
 
-Last updated: 2026-10-05.
+Last updated: 2026-10-06.
 
 This is a present-state snapshot, not a changelog. Shipped history and validation details live in `releases/`; implementation history lives in each repository's Git log.
 
 ## Current Focus
 
+- Designer recommends individual day minimization and a “Minimize all days” control. The [bilingual interactive proposal](design/2026-10-06-planner-day-minimization.md) is ready for implementation; studio typecheck/build and targeted phone/wide light/dark review passed. Application implementation is pending; see `tasks/2026-10-06-planner-day-minimization.md`.
 - Android-first APK validation remains active; `2026.09.8` was released at maintainer direction before physical-phone checks. See `tasks/2026-09-30-ai-report-handoff.md`.
 - Latest release: `smart-paper-v2026.10.2` (2026-10-05), Calm Planner editing.
 - Latest team tag: `smart-paper-v2026.10.2`.
