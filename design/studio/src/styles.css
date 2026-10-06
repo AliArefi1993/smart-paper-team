@@ -831,6 +831,62 @@ button.btn:focus-visible,
   grid-column: 1 / -1;
 }
 
+/* Keep the shared Planner rules covered after their light baseline declarations. */
+.theme-dark .planner-section,
+.theme-dark .planner-week-rail > *,
+.theme-dark .planner-label input,
+.theme-dark .planner-label textarea,
+.theme-dark .planner-quick-add button {
+  background: #1b2b29;
+  color: var(--ink);
+  border-color: var(--line);
+}
+.theme-dark .planner-section {
+  box-shadow: none;
+}
+.theme-dark .planner-week-rail strong {
+  background: var(--teal);
+  color: #092522;
+}
+.theme-dark .planner-label {
+  color: var(--ink);
+}
+.theme-dark input::placeholder,
+.theme-dark textarea::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+.theme-dark .planner-quick-add button:hover {
+  background: var(--teal-soft);
+  border-color: var(--teal);
+}
+.phone.theme-dark :focus-visible {
+  outline: 3px solid #f2c578;
+  outline-offset: 2px;
+}
+.theme-dark .hourglass-glass {
+  fill: var(--teal-soft);
+  stroke: var(--teal);
+}
+.theme-dark .hourglass-frame {
+  stroke: var(--teal);
+}
+.theme-dark .circle {
+  border-color: var(--line);
+  border-top-color: var(--teal);
+}
+.studio-board-dark {
+  background: #101b1b;
+  color: #eef5f1;
+}
+.studio-board-dark .studio-heading p,
+.studio-board-dark .studio-note {
+  color: #b6c8c2;
+}
+.studio-board-dark .studio-frame-label {
+  color: #72dbcb;
+}
+
 .calm-board {
   max-width: none;
   min-height: 100vh;

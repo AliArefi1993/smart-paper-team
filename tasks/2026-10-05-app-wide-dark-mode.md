@@ -14,6 +14,7 @@ Make the Planner dark mode apply consistently across every app route, including 
 - Reported bug: the Planner is dark, but other routes remain light.
 - Design: [ready bilingual handoff](../design/2026-10-05-app-wide-dark-mode.md) and linked studio stories.
 - Coverage review: [2026-10-06 focused audit and ready fix handoff](../design/2026-10-06-dark-mode-coverage-audit.md). User clarified the request to light remnants, not a palette redesign.
+- Studio correction: the user's exact `PlannerThemeContinuity` screenshot revealed light section cards and fields in the original designs. The prior application-only source audit missed these studio leaks. Shared studio coverage is now corrected and verified; this is distinct from application build/visual verification.
 
 ## Acceptance Criteria
 
@@ -40,12 +41,15 @@ Make the Planner dark mode apply consistently across every app route, including 
 | Coverage fix design preview | Dedicated EN/FA phone/wide excerpts; light regression; studio typecheck/build; targeted contrast | Passed 2026-10-06; source-backed excerpt, actual application comparison remains pending |
 | Coverage fix source review | Designer checked shared hover selector and dark-only SVG classes against ready handoff; `git diff --check` | Passed; both gaps covered, light SVG/gold sand preserved |
 | Coverage fix application checks | Docker frontend lint/types/tests/build command | Blocked 2026-10-06: Docker daemon unavailable |
+| Original studio design correction | Exact PlannerThemeContinuity EN/FA 390px phone/680px wide screenshots and computed colors; all 14 other dark exports surface audit; Timer screenshot; light Planner regression | Passed 2026-10-06. All four Planner card variants, fields, quick add, week rail and shared Timer SVG covered with existing dark roles. Original light palette retained; screenshots and scope in coverage audit. |
+| Studio correction validation | `npm run typecheck`; `npm run build`; `git diff --check` | Passed 2026-10-06; existing bundle-size advisory only |
 
 ## Decisions And Risks
 
 - Design review preceded frontend edits under workspace workflow.
 - Shared theme uses local storage and an early document class to preserve the choice across navigation and first paint. Existing route utility colors are mapped to semantic dark roles in shared CSS.
 - Coverage fix decisions: use existing dark hover `#30443f` for Idea Space `hover:bg-white/70`; use existing `--primary-soft`/`--primary` for Timer glass/frame in dark only and retain gold sand/light rendering. Implemented in `0186476`; running UI verification remains.
+- Studio correction reuses its existing dark palette. Shared preview dark CSS explicitly covers later Planner light declarations and uses semantic Timer SVG classes; the proposal board follows the dark canvas. Designer reviewed running Storybook and stored screenshots. No application code changed for this correction.
 
 ## Outcome / Handoff
 

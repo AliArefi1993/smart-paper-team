@@ -6,6 +6,7 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 
 ## Current Focus
 
+- The screenshot-reported light cards/fields in the dark Planner Storybook preview are corrected, along with week controls, Timer illustration, and story canvas. Designer checked the exact EN/FA phone/wide story, all app-wide dark exports, and the light Planner baseline; studio typecheck/build passed. [Coverage audit and screenshots](design/2026-10-06-dark-mode-coverage-audit.md) distinguish this studio fix from application verification.
 - Designer recommends individual day minimization and a “Minimize all days” control. The [bilingual interactive proposal](design/2026-10-06-planner-day-minimization.md) is ready for implementation; studio typecheck/build and targeted phone/wide light/dark review passed. Application implementation is pending; see `tasks/2026-10-06-planner-day-minimization.md`.
 - Android-first APK validation remains active; `2026.09.8` was released at maintainer direction before physical-phone checks. See `tasks/2026-09-30-ai-report-handoff.md`.
 - Latest release: `smart-paper-v2026.10.2` (2026-10-05), Calm Planner editing.

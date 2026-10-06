@@ -72,6 +72,7 @@ function VariantScene({
         <div className="hourglass">
           <svg viewBox="0 0 160 190" aria-hidden="true">
             <path
+              className="hourglass-glass"
               d="M24 20 H136 Q130 63 85 94 H75 Q30 63 24 20 Z M75 96 H85 Q130 127 136 170 H24 Q30 127 75 96 Z"
               fill="#e7f4ef"
               stroke="#0f766e"
@@ -101,6 +102,7 @@ function VariantScene({
               }
             />
             <path
+              className="hourglass-frame"
               d="M15 18 H145 M15 172 H145"
               stroke="#125b53"
               strokeWidth="8"
@@ -206,7 +208,7 @@ function Phone({
     route === "/timer"
       ? copy.content.replace(
           /<div class="circle">.*?<\/div>/,
-          `<div class="hourglass"><svg viewBox="0 0 160 190" aria-hidden="true"><path d="M24 20 H136 Q130 63 85 94 H75 Q30 63 24 20 Z M75 96 H85 Q130 127 136 170 H24 Q30 127 75 96 Z" fill="#e7f4ef" stroke="#0f766e" stroke-width="5" stroke-linejoin="round"/><path d="M15 18 H145 M15 172 H145" stroke="#125b53" stroke-width="8" stroke-linecap="round"/></svg><span class="num">25:00</span></div>`,
+          `<div class="hourglass"><svg viewBox="0 0 160 190" aria-hidden="true"><path class="hourglass-glass" d="M24 20 H136 Q130 63 85 94 H75 Q30 63 24 20 Z M75 96 H85 Q130 127 136 170 H24 Q30 127 75 96 Z" fill="#e7f4ef" stroke="#0f766e" stroke-width="5" stroke-linejoin="round"/><path class="hourglass-frame" d="M15 18 H145 M15 172 H145" stroke="#125b53" stroke-width="8" stroke-linecap="round"/></svg><span class="num">25:00</span></div>`,
         )
       : copy.content
   ).replace(
@@ -286,7 +288,7 @@ export function ScreenPreview({
   if (!page) return null;
   const languages: Language[] = language === "both" ? ["en", "fa"] : [language];
   return (
-    <main className="studio-board">
+    <main className={`studio-board ${theme === "dark" ? "studio-board-dark" : ""}`}>
       <div className="studio-heading">
         <h1>
           {page.name} ·{" "}
