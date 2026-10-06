@@ -69,6 +69,7 @@ For a small, repository-local task, do not read product, roadmap, architecture, 
 - Do not run destructive Git commands unless the user explicitly asks for them.
 - Keep commits scoped to the repository that owns the changed files.
 - After completing and validating requested changes, create a scoped commit and push it to the current branch automatically. Include only files belonging to the task; leave unrelated user changes untouched. If a push fails, report the failure and keep the local commit.
+- After validated requested user-visible Android changes, automatically release when build prerequisites pass under the maintainer’s standing authorization (2026-10-06). Physical-device and screen-reader checks are recorded follow-ups and must not hold publication. Documentation-only changes do not require an APK.
 - For Android releases, follow `docs/release-workflow.md`: build a stable-signed APK, commit the APK and release record to the team repo, push `main`, then push the `smart-paper-v*` team tag so GitHub Releases publish automatically.
 - Normal scoped commits, pushes, and release tags are allowed when they complete the requested work; human approval is still required for destructive Git, production deploys, production data changes, or secret exposure.
 

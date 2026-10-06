@@ -2,7 +2,7 @@
 
 This workspace uses the root team repository as the durable release memory.
 The backend and frontend remain independent Git repositories.
-Run this checklist when the user requests a release. Routine validated changes are committed and pushed under `AGENTS.md`; they do not create a release tag by themselves.
+The maintainer gave standing authorization on 2026-10-06 to release Android after requested user-visible changes are implemented and validated. Continue automatically through the signed APK build and documented publication steps when release prerequisites pass. Do not request another release confirmation or wait for physical-device checks; the maintainer installs released builds and reports issues. Documentation-only work does not need a new APK.
 
 ## When To Create A Tag
 
@@ -12,7 +12,7 @@ Create a release tag after one of these points:
 - Several small improvements are complete and validated together.
 - A working Android local-data build should be preserved as an installable version.
 
-Do not tag while any required repository has uncommitted work.
+Commit release-related work in each owning repository before tagging. Keep unrelated user edits outside the release; block only when they affect the release build or provenance.
 Do not tag failed or partially validated work.
 
 ## Tag Naming
@@ -77,7 +77,7 @@ npx tsc --noEmit
 npm run build
 ```
 
-For a downloadable Android APK, also run `npm test` and the local-data build. Before tagging, test the signed APK on a physical phone: save and reopen planner/finance data; export JSON to a destination outside the app and restore it; install the new APK over the old one and confirm data remains; check English/Persian layout, offline use, and notification permission/restart behavior. Keep the tag pending if these checks are incomplete, unless the maintainer explicitly directs publication with the checks outstanding. Record that exception and continue validation after publication.
+For a downloadable Android APK, also run `npm test` and the local-data build. Recent passing checks on unchanged source may be reused; verify the newly built APK signature, version and packaged local-data assets for each release. Under the maintainer’s standing direction, physical-phone and screen-reader checks are follow-ups, not publication gates. Record them as unverified when not run; do not imply installation proves them. Optional follow-up checks include upgrade/data retention, backup export/restore, English/Persian layout, offline use, notifications and TalkBack. Automated failures, invalid signing/version, or unresolved critical/high implementation findings still block release. Existing safety boundaries for production deployments, data and irreversible operations remain.
 
 3. For Android local-data releases, build the stable-signed APK:
 
