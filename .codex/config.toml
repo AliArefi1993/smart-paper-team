@@ -14,6 +14,10 @@ config_file = "agents/architect.toml"
 description = "Product designer for repo-native screen stories, bilingual Android UX, accessibility, and saved design handoffs."
 config_file = "agents/designer.toml"
 
+[agents.personal_systems]
+description = "Advises Product and Designer on coherent personal planning, focus, finance, and idea workflows."
+config_file = "agents/personal_systems.toml"
+
 [agents.backend]
 description = "Senior backend engineer focused on the Django backend in smart-paper/."
 config_file = "agents/backend.toml"
