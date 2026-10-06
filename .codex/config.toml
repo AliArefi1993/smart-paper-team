@@ -1,7 +1,6 @@
 [agents]
 enabled = true
 max_concurrent_threads_per_session = 3
-default_subagent_reasoning_effort = "medium"
 
 [agents.product]
 description = "Product manager for evidence-based Android-first discovery and design-ready briefs. Must not modify application code."
@@ -44,9 +43,9 @@ description = "DevOps/SRE engineer for Docker, CI/CD, deployment configuration, 
 config_file = "agents/devops.toml"
 
 [agents.routine]
-description = "Luna agent for scoped Git and Docker work, repository checks, first-pass failure triage, release preflight, documentation checks, and QA checklists."
+description = "Routine category agent for scoped Git and Docker work, repository checks, first-pass failure triage, release preflight, documentation checks, and QA checklists."
 config_file = "agents/routine.toml"
 
-[agents.terra_implementer]
-description = "Terra agent for a clearly specified, bounded implementation in one owning repository with defined validation."
-config_file = "agents/terra_implementer.toml"
+[agents.scoped_implementer]
+description = "Scoped implementation category agent for a clearly specified change in one owning repository with defined validation."
+config_file = "agents/scoped_implementer.toml"

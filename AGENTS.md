@@ -53,10 +53,10 @@ For a small, repository-local task, do not read product, roadmap, architecture, 
 ## Subagent Delegation
 
 - For each requested task, use subagents when a bounded, independent workstream or specialist review would improve speed, coverage, or token use. Do not spawn one for a trivial command or a tightly sequential task.
-- Prefer the `routine` agent in `.codex/agents/routine.toml` (GPT-6 Luna) for scoped Git and local Docker work, repository checks, first-pass failure triage, release preflight, documentation checks, and QA checklists. Give it named inputs, an owning repository when applicable, and an expected result.
-- When implementation has settled acceptance criteria, a bounded module, and known validation, prefer `terra_implementer` in `.codex/agents/terra_implementer.toml` (GPT-5.6 Terra) if that model is available in the current client. This applies to clear backend, frontend, or team-repo work; user-visible frontend work still requires a ready design handoff. If Terra is unavailable, use an available implementation agent. The main agent checks its work and handles integration.
-- Use the appropriate specialist agent for implementation, design, architecture, security, or consequential review. The main agent owns integration, verifies delegated results, and remains responsible for approvals and final decisions.
-- This is standing project guidance; the user need not request delegation or Luna again in each new chat.
+- Choose one task category from `.codex/model-routing.toml` before model-dependent delegation: `routine`, `scoped_implementation`, `complex_implementation`, `product_design`, or `critical_review`. Read its current model and reasoning effort there and pass them explicitly when the client supports overrides. Do not copy model IDs into agent definitions or other project docs. If a selected model is unavailable, use a suitable available model for that run and report the substitution.
+- For `routine`, prefer the `routine` agent with named inputs and an expected result. For `scoped_implementation`, prefer `scoped_implementer` with an owning repository, bounded module, acceptance criteria, and validation. User-visible frontend work still requires a ready design handoff.
+- For `complex_implementation`, `product_design`, and `critical_review`, use the appropriate specialist agent. The main agent owns integration, verifies delegated results, and remains responsible for approvals and final decisions.
+- This is standing project guidance; the user need not request delegation or a model category again in each new chat.
 
 ## Git Rules
 
