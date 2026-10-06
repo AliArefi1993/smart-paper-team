@@ -42,3 +42,7 @@ config_file = "agents/security.toml"
 [agents.devops]
 description = "DevOps/SRE engineer for Docker, CI/CD, deployment configuration, health checks, observability, rollback, and production readiness."
 config_file = "agents/devops.toml"
+
+[agents.routine]
+description = "Luna agent for scoped Git housekeeping and documented local Docker commands."
+config_file = "agents/routine.toml"
