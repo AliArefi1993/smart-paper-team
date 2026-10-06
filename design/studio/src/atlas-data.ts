@@ -23,7 +23,7 @@ export const pages: ScreenData[] = [
     path: "/",
     desc: "Week selection, daily sections, schedule and reusable full-week templates.",
     states:
-      "week loading/error · sparse and populated day · unsaved navigation · schedule add/edit/delete sheet · template save/apply/delete sheet · dark mode",
+      "week loading/error · sparse and populated day · unsaved navigation · schedule add/edit/delete sheet · template save/apply/delete sheet · day minimization (dedicated reference) · dark mode",
     en: {
       title: "This week",
       lede: "Plan one day at a time",
@@ -78,12 +78,12 @@ export const pages: ScreenData[] = [
     en: {
       title: "Week summaries",
       lede: "Review the pattern across weeks",
-      content: `<div class="box"><h4>Month range</h4><div class="grid2"><div class="field">From month</div><div class="field">To month</div></div><p>☑ Show empty weeks</p></div><div class="box soft"><div class="row"><h4>This week</h4><span class="pill on">Current</span></div><p>Goal · Make time for learning</p><div class="divider"></div><div class="row"><span>Main</span><b>4 h 30 min</b></div><div class="row"><span>Learning</span><b>2 h 10 min</b></div><p>View daily details</p></div><div class="box"><h4>Previous week</h4><p>Weekly note and section totals</p></div>`,
+      content: `<div class="box"><h4>Months to show</h4><label class="studio-input"><span>Recent months</span><select aria-label="Months to show"><option>1 month</option><option selected>3 months</option><option>6 months</option><option>12 months</option></select></label><p>☑ Show empty weeks</p></div><div class="box soft"><div class="row"><h4>This week</h4><span class="pill on">Current</span></div><p>Goal · Make time for learning</p><div class="divider"></div><div class="row"><span>Main</span><b>4 h 30 min</b></div><div class="row"><span>Learning</span><b>2 h 10 min</b></div><p>View daily details</p></div><div class="box"><h4>Previous week</h4><p>Weekly note and section totals</p></div>`,
     },
     fa: {
       title: "خلاصه هفته‌ها",
       lede: "الگوی هفته‌ها را مرور کنید",
-      content: `<div class="box"><h4>بازه ماه‌ها</h4><div class="grid2"><div class="field">از ماه</div><div class="field">تا ماه</div></div><p>☑ نمایش هفته‌های خالی</p></div><div class="box soft"><div class="row"><h4>این هفته</h4><span class="pill on">جاری</span></div><p>هدف · زمانی برای یادگیری</p><div class="divider"></div><div class="row"><span>اصلی</span><b>۴ ساعت و ۳۰ دقیقه</b></div><div class="row"><span>یادگیری</span><b>۲ ساعت و ۱۰ دقیقه</b></div><p>دیدن جزئیات روزانه</p></div><div class="box"><h4>هفته پیش</h4><p>یادداشت هفته و مجموع بخش‌ها</p></div>`,
+      content: `<div class="box"><h4>تعداد ماه‌های نمایش</h4><label class="studio-input"><span>ماه‌های اخیر</span><select aria-label="تعداد ماه‌های نمایش"><option>۱ ماه</option><option selected>۳ ماه</option><option>۶ ماه</option><option>۱۲ ماه</option></select></label><p>☑ نمایش هفته‌های خالی</p></div><div class="box soft"><div class="row"><h4>این هفته</h4><span class="pill on">جاری</span></div><p>هدف · زمانی برای یادگیری</p><div class="divider"></div><div class="row"><span>اصلی</span><b>۴ ساعت و ۳۰ دقیقه</b></div><div class="row"><span>یادگیری</span><b>۲ ساعت و ۱۰ دقیقه</b></div><p>دیدن جزئیات روزانه</p></div><div class="box"><h4>هفته پیش</h4><p>یادداشت هفته و مجموع بخش‌ها</p></div>`,
     },
   },
   {
@@ -91,7 +91,7 @@ export const pages: ScreenData[] = [
     path: "/finance",
     desc: "Local PIN screen lock, annual goal, income history and editing.",
     states:
-      "locked/wrong PIN · unlocked empty/populated · goal edit · income add/edit/delete · validation · session expiry · loading/error",
+      "locked/wrong PIN · unlocked empty/populated · goal edit · income add/edit/delete · validation · local screen lock · loading/error",
     en: {
       title: "Finance",
       lede: "Track the year’s income goal",

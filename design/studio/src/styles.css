@@ -185,7 +185,7 @@ button.btn {
   font-family: inherit;
 }
 button.btn:focus-visible,
-.studio-input input:focus-visible {
+:is(.studio-input input, .studio-input select):focus-visible {
   outline: 3px solid #d69a54;
   outline-offset: 2px;
 }
@@ -433,7 +433,7 @@ button.btn:focus-visible,
   font-size: 13px;
   font-weight: 700;
 }
-.studio-input input {
+:is(.studio-input input, .studio-input select) {
   min-height: 44px;
   width: 100%;
   border: 1px solid #b6c9bf;
@@ -571,7 +571,7 @@ button.btn:focus-visible,
 .theme-dark .nav,
 .theme-dark .bar,
 .theme-dark .field,
-.theme-dark .studio-input input,
+.theme-dark :is(.studio-input input, .studio-input select),
 .theme-dark .timer-phase {
   background: #1b2b29;
   color: var(--ink);

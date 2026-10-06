@@ -325,9 +325,10 @@ function Week({
                                   "No time entries yet",
                                   "هنوز برنامه زمان‌دار ندارد",
                                 )
-                              : c(
-                                  "09:00–09:45 · Draft review",
-                                  "09:00–09:45 · مرور پیش‌نویس",
+                              : (
+                                  <>
+                                    <bdi dir="ltr">09:00–09:45</bdi> · {c("Draft review", "مرور پیش‌نویس")}
+                                  </>
                                 )}
                           </p>
                         </div>
@@ -482,11 +483,16 @@ export function PlannerDayCollapse(props: PlannerDayCollapseProps) {
   return (
     <main className="dc-board">
       <div className="dc-board-intro">
-        <h1>Planner · day minimization proposal</h1>
+        <h1>Planner · shipped day minimization reference</h1>
         <p>
-          Editable design proposal. Each day keeps its summary; minimized days
-          retain every draft. Illustrative local state; Save demonstrates
-          feedback only.
+          Shipped interaction reference (2026.10.4 baseline). Each day keeps its
+          summary; minimized days retain drafts. Illustrative local state; Save
+          demonstrates feedback only. Week text, navigation, full writing, and
+          schedule editing remain in the app and original Calm handoff.
+          <br />
+          مرجع تعامل منتشرشده با محتوای نمایشی؛ جمع کردن روزها پیش‌نویس را نگه
+          می‌دارد. ذخیره فقط بازخورد نمایشی دارد. متن هفته، پیمایش، نمای کامل
+          نوشتن و ویرایش برنامه زمان‌دار در برنامه و راهنمای اصلی باقی می‌مانند.
         </p>
       </div>
       <div className={`dc-pair dc-pair-${props.width}`}>

@@ -142,7 +142,15 @@ function VariantScene({
           {spec.fields.map((field) => (
             <label className="studio-input" key={field.en}>
               <span>{field[language]}</span>
-              <input
+              {field.en === "Months to show" ? (
+                <select aria-label={field[language]} defaultValue="3">
+                  {[1, 3, 6, 12].map(months => (
+                    <option key={months} value={months}>
+                      {language === "fa" ? `${new Intl.NumberFormat("fa-IR").format(months)} ماه` : `${months} ${months === 1 ? "month" : "months"}`}
+                    </option>
+                  ))}
+                </select>
+              ) : <input
                 type={
                   field.en === "PIN"
                     ? "password"
@@ -153,7 +161,7 @@ function VariantScene({
                         : "text"
                 }
                 aria-label={field[language]}
-              />
+              />}
             </label>
           ))}
         </div>
@@ -220,7 +228,7 @@ function Phone({
     <div>
       <div className="studio-frame-label">
         {language === "fa" ? "فارسی · راست‌به‌چپ" : "English · left-to-right"} ·{" "}
-        {width === "phone" ? "390px phone" : "wide"} · {theme} proposal
+        {width === "phone" ? "390px phone" : "wide"} · {theme} · {language === "fa" ? "مرجع ساختاری" : "structural reference"}
       </div>
       <div
         className={`phone ${width === "wide" ? "wide" : ""} ${isDialog ? "has-dialog" : ""} ${theme === "dark" ? "theme-dark" : ""}`}
@@ -295,8 +303,9 @@ export function ScreenPreview({
           {variant === "baseline" ? "populated baseline" : variant}
         </h1>
         <p>
-          {page.desc} These are editable design prototypes with illustrative
-          sample data, not running app screens or approved redesigns.
+          {page.desc} Android local-data structural references with illustrative sample data.
+          Planner interaction references live in the Calm and day minimization
+          stories. These sketches are not exact app screens.
         </p>
       </div>
       <div className={`studio-pair ${width === "wide" ? "wide" : ""}`}>

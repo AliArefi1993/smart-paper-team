@@ -637,9 +637,14 @@ export function PlannerCalm({ language, start }: PlannerCalmProps) {
         ))}
       </div>
       <p className="calm-disclaimer">
-        Interactive design proposal with illustrative content. The Save button
-        demonstrates feedback; it does not persist app data. Review against the
-        running Planner before implementation.
+        Shipped interaction reference (2026.10.2), retained with illustrative
+        content. The Save button demonstrates feedback without persisting data.
+        Current day disclosure and dark roles are covered by the day minimization
+        stories; this original reference is not a complete current app screen.
+        <br />
+        مرجع تعامل منتشرشده با محتوای نمایشی؛ ذخیره فقط بازخورد را نشان می‌دهد
+        و داده‌ای ثبت نمی‌کند. جمع کردن روزها و رنگ‌های تیره در نمونه‌های
+        مربوط به جمع کردن روزها قرار دارند.
       </p>
     </main>
   );

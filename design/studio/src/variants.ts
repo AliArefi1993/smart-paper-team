@@ -124,8 +124,8 @@ export const variants: VariantSpec[] = [
       fa: "ویرایش یا شاخه‌دادن به یک فکر",
     },
     message: {
-      en: "Editing a note from today. Your changes stay on this device.",
-      fa: "در حال ویرایش یادداشت امروز. تغییرات روی همین دستگاه می‌مانند.",
+      en: "Editing a note from today. Choose Save to keep changes on this device. Unsaved edits are not recovered after reload.",
+      fa: "در حال ویرایش یادداشت امروز. برای نگه‌داشتن تغییرات روی این دستگاه، ذخیره را بزنید. ویرایش ذخیره‌نشده پس از بارگذاری دوباره بازیابی نمی‌شود.",
     },
     fields: [{ en: "Thought text", fa: "متن فکر" }],
     actions: [
@@ -211,10 +211,7 @@ export const variants: VariantSpec[] = [
       en: "No weeks are available in this range. Choose a wider range.",
       fa: "هفته‌ای در این بازه وجود ندارد. بازه بزرگ‌تری انتخاب کنید.",
     },
-    fields: [
-      { en: "From month", fa: "از ماه" },
-      { en: "To month", fa: "تا ماه" },
-    ],
+    fields: [{ en: "Months to show", fa: "تعداد ماه‌های نمایش" }],
   },
   {
     route: "/summaries",

@@ -2,6 +2,8 @@
 
 Smart Paper is a personal weekly planning, progress tracking, finance tracking, and data export application. Its primary release target is a downloadable Android APK that stores each person's data on their own phone.
 
+The current shipped baseline is Android `2026.10.4` (frontend `ab37ee8`, local-data mode). Product and design priorities are phone use in English and Persian, preserving local records, and reliable existing flows. Browser and Storybook checks support Android work; native Android behavior requires separate evidence. The Django/hosted-web path is secondary and paused until needed.
+
 ## What It Currently Does
 
 - Provides a Saturday-to-Friday weekly planner.
@@ -31,7 +33,7 @@ Smart Paper is a personal weekly planning, progress tracking, finance tracking, 
 
 ## Likely Target Users
 
-- The intended use is one person's planner and finance record per device. The first distribution goal is a signed Android APK for other people to download.
+- The intended use is one person's planner, ideas, and finance record per device, distributed as a signed Android APK.
 - Persian language support is intended for bilingual English/Persian personal use.
 - Backup and restore safety is a release priority because phone data is stored locally.
 
@@ -45,10 +47,10 @@ Smart Paper is a personal weekly planning, progress tracking, finance tracking, 
 - Open Focus Timer to run focus and rest sessions, pause or reset them, and explicitly start each next phase.
 - Open Idea Space to capture an unfinished thought, use an optional spark, or grow a thought that returns from earlier writing.
 - Open summaries to review recent weeks and hide or show empty weeks.
-- Unlock Finance with a PIN, set a finance goal, and add/edit/delete income records.
-- Open Export, unlock finance, preview aggregate data, download/share a backup or report file, or import a JSON backup.
+- Unlock Finance with a PIN screen lock on Android, set a finance goal, and add/edit/delete income records.
+- Open Export to create or restore a JSON backup and export records; use the separate selective AI report flow to preview and share chosen fields. Report finance fields start off and require unlock; the full Markdown export button is backend-mode only.
 - Choose report fields and dates before sharing with an AI app; select ChatGPT in the device chooser when available or attach the saved report there manually.
-- Build an Android local-data version that uses browser/device storage instead of the backend API.
+- Use the installed Android app offline with local device storage; preserve records across upgrades and transfer them with JSON backup/restore.
 
 ## Major Implemented Capabilities
 

@@ -2,7 +2,12 @@
 
 This roadmap is based on repository inspection only. Speculative ideas are marked as ideas, not committed product work.
 
-## Current Goal: Downloadable Android APK
+## Current Goal: Confidence In The Shipped Android App
+
+Android `2026.10.4` is shipped (frontend `ab37ee8`). The next improvement cycle reviews and refactors the existing design coverage, compares it with the implemented app, and records concrete Android follow-ups. Do not expand product scope before this baseline is clear. See [the product review](design/2026-10-06-android-product-review.md).
+
+- Reconcile the seven-route studio inventory and handoffs with the shipped Planner changes, shared appearance, and local-data behavior. Distinguish illustrative stories, implemented designs, browser comparisons, and unverified native states.
+- Prioritize observed design/implementation mismatches by effect on local data, task completion, and bilingual phone use. A user-visible fix requires a ready Designer handoff and targeted QA.
 
 - Prove JSON backup and restore on a phone, including failed and cancelled imports.
 - Validate install and upgrade on a physical phone without losing saved data.
@@ -11,17 +16,17 @@ This roadmap is based on repository inspection only. Speculative ideas are marke
 - Test the focus/rest timer on a phone, including app suspension and reopening after a session completes.
 - Test Idea Space capture, editing, branching, search, keyboard behavior, backup/restore, and upgrade on a phone in English and Persian.
 - Validate the compact template sheet and current-week auto-centering on a phone in both languages.
-- Publish only a stable-signed release APK with a matching record and checksum.
-- Add focused local-data regression tests and repeatable frontend lint/type/build checks.
+- Continue stable-signed APK publication with matching records and checksums after validated user-visible changes; physical-device/TalkBack checks remain recorded follow-ups under standing maintainer direction.
+- Extend the existing focused local-data tests only for demonstrated gaps; lint/type/27 tests/local-data build already pass at the shipped baseline.
 - Review production dependency advisories for the static Android build before wider sharing.
 
-## After Android Release
+## Next, After Baseline Review
 
 - Add frontend automated tests around primary user flows: weekly planner save/load, finance unlock/add/edit/delete, export/import, language switching.
 - Add frontend automated tests around configurable planner sections: settings save/load, hide/activate behavior, planner save/load with custom labels, summaries, and local export/import.
 - Add frontend automated tests around timed schedule entries: add/edit/delete, sorting, local storage normalization, and export/import round trip.
 - Validate week-template usage after release; consider optional daily and section-level template defaults if they prove useful.
-- Use team-level release records and Git tags after mature changes, including Android local-data version metadata for each tagged release.
+- Needs confirmation: use a small plan → focus → review routine with existing screens and optional idea capture. Gather phone-use evidence before proposing cross-route shortcuts or automation; Finance remains an optional separate workflow.
 
 ## Paused Until Backend Or Hosted Web Is Needed
 

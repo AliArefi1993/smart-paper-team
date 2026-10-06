@@ -2,7 +2,9 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { PlannerCalm } from "../PlannerCalm";
 
 const meta = {
-  title: "Proposals/Planner calm flow",
+  // Stable ID preserves links in the original shipped handoffs.
+  id: "proposals-planner-calm-flow",
+  title: "Shipped interaction references/Planner calm flow",
   component: PlannerCalm,
   args: { language: "both", start: "overview" },
   argTypes: {

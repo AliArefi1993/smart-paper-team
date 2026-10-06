@@ -2,7 +2,9 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { PlannerDayCollapse } from "../PlannerDayCollapse";
 
 const meta = {
-  title: "Proposals/Planner day minimization",
+  // Stable ID preserves links in the original shipped handoffs.
+  id: "proposals-planner-day-minimization",
+  title: "Shipped interaction references/Planner day minimization",
   component: PlannerDayCollapse,
   args: { language: "both", width: "phone", theme: "light", start: "selected" },
   argTypes: {

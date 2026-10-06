@@ -23,7 +23,7 @@ function Excerpt({ language, width, theme, coverage }: Omit<DarkCoverageProps, "
   return <section className={`dc-frame dc-${theme} dc-${width}`} dir={language === "fa" ? "rtl" : "ltr"} lang={language}>
     <header className="dc-meta">
       <strong>{c("Dark coverage excerpts", "نمونه‌های پوشش حالت تیره")}</strong>
-      <p>{c("Source-backed excerpts; example content. Not a running app screenshot.", "نمونه بر اساس کد با محتوای نمایشی؛ تصویر برنامهٔ اجراشده نیست.")}</p>
+      <p>{c("Source-backed excerpts; example content. The old-leak option is historical, before the shipped fix.", "نمونه بر اساس کد با محتوای نمایشی؛ گزینهٔ مشکل قدیمی مربوط به پیش از اصلاح منتشرشده است.")}</p>
       <label><input type="checkbox" checked={hover} onChange={event => setHover(event.target.checked)} />{c("Hold hover state for review", "نمایش حالت اشاره برای بررسی")}</label>
     </header>
     <div className="dc-panels">

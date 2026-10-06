@@ -14,7 +14,11 @@ const meta = {
 } satisfies Meta<typeof DarkCoverage>;
 export default meta;
 type Story = StoryObj<typeof meta>;
-export const CurrentLeaks: Story = { args: { coverage: "current" } };
+// Preserve the original export/URL used by historical handoffs.
+export const CurrentLeaks: Story = {
+  name: "Historical leaks (before shipped fix)",
+  args: { coverage: "current" },
+};
 export const FixedPhone: Story = {};
 export const FixedWide: Story = { args: { width: "wide" } };
 export const LightRegression: Story = { args: { theme: "light" } };

@@ -6,6 +6,8 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 
 ## Current Focus
 
+- Android `2026.10.4` is the primary shipped product. Product, Designer, personal systems and independent QA reviewed the current baseline; see [audit task](tasks/2026-10-06-android-product-design-audit.md). Design references now distinguish shipped interactions, structural sketches and historical issues; studio typecheck/build and bounded EN/FA phone review passed. QA freshly inspected all seven routes read-only in Persian/dark; complete native/full-flow acceptance remains open. Idea Space unsaved-writing displacement and branch/edit draft-context recovery are the leading source-confirmed follow-up; no application fix is claimed. Native Android checks remain distinct from browser/studio evidence.
+
 - The user installed2026.10.3 and prefers the green dark colors on other routes. Planner now shares those roles in frontend `ab37ee8`, including nested editors, mobile save bar and shared language control. Ready Designer handoff, Docker lint/types/27 tests/build, independent review with shadow fix and bounded EN/FA phone/wide/light regression passed; see `tasks/2026-10-06-planner-shared-dark-palette.md`.
 
 - The screenshot-reported light cards/fields in the dark Planner Storybook preview are corrected, along with week controls, Timer illustration, and story canvas. Designer checked the exact EN/FA phone/wide story, all app-wide dark exports, and the light Planner baseline; studio typecheck/build passed. [Coverage audit and screenshots](design/2026-10-06-dark-mode-coverage-audit.md) distinguish this studio fix from application verification.

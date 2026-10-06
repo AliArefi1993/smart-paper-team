@@ -14,6 +14,10 @@ The [2026-10-04 baseline refinement](2026-10-04-baseline-story-refinement.md) re
 The [Planner preview](studio/src/PlannerPreview.tsx) now exposes each active section's separate minutes, quick adjustments, goal, and note in the populated and sparse bilingual stories.
 The [Calm Planner handoff](2026-10-04-planner-calm-flow.md) and its interactive [overview, section, writing, sparse, unsaved, and error stories](studio/src/stories/PlannerCalm.stories.tsx) guided the shipped `2026.10.2` Planner changes. They show one open section at a time, scroll placement, growing writing fields, a full writing view, and explicit save feedback. The stories remain design prototypes; the frontend is the shipped source. The user installed the new Android version and reported a substantially better experience. Physical flow and accessibility checks are still open.
 
+## Current Android review baseline
+
+Release `2026.10.4`, frontend `ab37ee8`, is the current reference. [The Android design review](2026-10-06-android-design-review.md) explains which stories represent shipped interactions, older structural sketches, or historical fixes. Storybook groups shipped Calm/day-minimization/dark references together; their stable `proposals-*` IDs preserve older handoff links. Use [day minimization](studio/src/stories/PlannerDayCollapse.stories.tsx) for current phone disclosure and [shared dark palette](2026-10-06-planner-shared-dark-palette.md) for colors.
+
 ## Files
 
 - `foundations.md`: current interface foundations and design constraints.

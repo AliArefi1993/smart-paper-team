@@ -2,7 +2,9 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { ScreenPreview } from "../ScreenPreview";
 
 const meta = {
-  title: "Proposals/App-wide dark mode",
+  // Stable ID preserves links in the original shipped handoffs.
+  id: "proposals-app-wide-dark-mode",
+  title: "Shipped interaction references/App-wide dark mode",
   component: ScreenPreview,
   args: {
     route: "/summaries",

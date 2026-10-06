@@ -32,6 +32,7 @@
   --dc-muted: #536660;
   --dc-line: #d9e4de;
   --dc-accent: #0f766e;
+  --dc-accent-ink: #ffffff;
   --dc-selected: #e7f4ef;
   --dc-dirty: #835511;
   --dc-error: #b42318;
@@ -52,7 +53,8 @@
   --dc-muted: #b6c8c2;
   --dc-line: #3b5550;
   --dc-accent: #72dbcb;
-  --dc-selected: #243e38;
+  --dc-accent-ink: #092522;
+  --dc-selected: #243e39;
   --dc-dirty: #f2cf8c;
   --dc-error: #ffb4a9;
 }
@@ -351,9 +353,9 @@
   max-width: 60%;
 }
 .dc-device .dc-primary {
-  background: #0f766e;
-  border-color: #0f766e;
-  color: white;
+  background: var(--dc-accent);
+  border-color: var(--dc-accent);
+  color: var(--dc-accent-ink);
   font-size: 13px;
   font-weight: 700;
   flex: none;
