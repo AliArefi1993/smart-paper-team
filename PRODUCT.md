@@ -23,7 +23,7 @@ Smart Paper is a personal weekly planning, progress tracking, finance tracking, 
 - Imports Smart Paper JSON backups in merge/upsert or replace mode.
 - Gives Android JSON backups dated filenames and shows the chosen file's week and income counts before replace confirmation.
 - Supports English and Persian UI text.
-- Offers a saved Light/Dark appearance choice across Planner, Idea Space, Timer, Summaries, Finance, Export/AI report, and Settings.
+- Offers a saved Light/Dark appearance choice across Planner, Idea Space, Timer, Summaries, Finance, Export/AI report, and Settings, using shared green-toned dark roles including Planner.
 - Supports a local browser-storage mode for Android/static export builds.
 - Supports opt-in Android local morning plan notifications.
 - Provides a focus/rest timer with editable session lengths, an hourglass display, and a countdown that resumes accurately after app navigation or suspension.

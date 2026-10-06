@@ -6,11 +6,13 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 
 ## Current Focus
 
+- The user installed2026.10.3 and prefers the green dark colors on other routes. Planner now shares those roles in frontend `ab37ee8`, including nested editors, mobile save bar and shared language control. Ready Designer handoff, Docker lint/types/27 tests/build, independent review with shadow fix and bounded EN/FA phone/wide/light regression passed; see `tasks/2026-10-06-planner-shared-dark-palette.md`.
+
 - The screenshot-reported light cards/fields in the dark Planner Storybook preview are corrected, along with week controls, Timer illustration, and story canvas. Designer checked the exact EN/FA phone/wide story, all app-wide dark exports, and the light Planner baseline; studio typecheck/build passed. [Coverage audit and screenshots](design/2026-10-06-dark-mode-coverage-audit.md) distinguish this studio fix from application verification.
 - Individual day minimization and “Minimize all days” are implemented in frontend `37b91ec` after the [ready bilingual design](design/2026-10-06-planner-day-minimization.md). Docker lint/types/27 tests/build, independent review and targeted EN/FA phone/wide running-app checks passed. Drafts and manual-save behavior survive collapse, resize and language/theme changes; physical Android/TalkBack checks remain; see `tasks/2026-10-06-planner-day-minimization.md`.
 - Standing maintainer direction: automatically publish Android after validated user-visible changes and signed build checks. Physical-device/TalkBack checks are recorded follow-ups and do not hold release; the maintainer installs releases and reports issues. See `docs/release-workflow.md`.
-- Latest release: `smart-paper-v2026.10.3` (2026-10-06), app-wide dark mode and Planner day minimization.
-- Latest team tag: `smart-paper-v2026.10.3`.
+- Latest release: `smart-paper-v2026.10.4` (2026-10-06), Planner dark palette aligned with the shared green-toned pages.
+- Latest team tag: `smart-paper-v2026.10.4`.
 - Local browser QA covered report filtering, finance opt-in, backup download, Persian controls, and sharing fallback. Next priority is Android-runtime QA of install/upgrade, native sharing, restore, offline behavior, notifications, and layout. Backend feature work is paused; see `ROADMAP.md` and decision D-007.
 - Idea Space is included in the `2026.10.1` Android release: local notes, writing sparks, daily rediscovery, branches, search, and JSON backup support. Automated and browser checks passed; physical Android QA remains.
 - Product and Designer have repo skills and a `design/` workspace for briefs, local screen stories, implementation handoffs, and bilingual Android review. Figma remains an optional reference.
@@ -41,19 +43,19 @@ Run `scripts/project-context.sh` for current branches, revisions, working-tree c
 - Backend: Python, Django 6.0.4, SQLite, `planner` and `finance` apps, committed migrations, Docker/Compose, Gunicorn startup path.
 - Frontend: Next.js 16.2.4, React 19.2.4, TypeScript, Tailwind CSS 4, Capacitor 8.
 - Frontend routes: planner, ideas, timer, finance, summaries, export/import, and settings.
-- Latest Android release: `versionCode 20`, `versionName 2026.10.3`, using the stable signing certificate.
+- Latest Android release: `versionCode 21`, `versionName 2026.10.4`, using the stable signing certificate.
 - Team `smart-paper-v*` tags publish GitHub Releases when the matching release record and APK are committed.
 
 ## Latest Verified Release Checks
 
-The `smart-paper-v2026.10.3` release checks passed on 2026-10-06:
+The `smart-paper-v2026.10.4` release checks passed on2026-10-06:
 
 - Backend unchanged at68c789b; reused previous33-test/migration evidence.
-- Frontend130ddf3: Docker lint, TypeScript and27 tests passed on unchanged app source37b91ec; fresh local-data production build passed with the Android version bump.
-- Stable-signed Android release build, signature and code20/name2026.10.3 passed; all136 exported web files match packaged assets.
-- Targeted Planner EN/FA phone/wide runtime checks and six-route dark-surface review passed; no unresolved implementation review findings.
+- Frontend `ab37ee8`: Docker lint, TypeScript,27 tests and local-data production build passed. Final signed-build export includes reviewed shadow correction.
+- Stable-signed Android release build, signature and code21/name2026.10.4 passed; all136 exported web files match packaged assets.
+- EN/FA390px phone and1280px wide palette comparisons, English nested editors and EN/FA light regression passed. No unresolved review findings.
 
-See `releases/smart-paper-v2026.10.3.md` for artifact checksum and scope. Physical-device and TalkBack checks remain unverified follow-ups under standing maintainer direction. Browser import execution feedback was not verified because the file chooser stalled.
+See `releases/smart-paper-v2026.10.4.md` for checksum and scope. Device/TalkBack checks remain unverified follow-ups under standing maintainer direction. This color update did not change Planner data or interaction handlers.
 
 ## Known Risks And Gaps
 

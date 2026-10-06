@@ -21,6 +21,8 @@ Updated: 2026-10-06. Keep this file short and update it when user-visible featur
 
 ## Recent completed work
 
+- Aligned Planner dark colors with the shared green palette used on the other pages, including nested editors and the mobile save bar.
+
 - Implemented individual day minimization and “Minimize all days” in Android2026.10.3, preserving drafts and keeping the week overview visible.
 - Fixed the remaining white hover surfaces in Idea Space and pale Timer hourglass glass in dark mode after Designer coverage review.
 - Extended the Planner's dark appearance to all routes and kept the choice across navigation and reloads.
