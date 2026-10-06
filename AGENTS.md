@@ -50,6 +50,13 @@ For a small, repository-local task, do not read product, roadmap, architecture, 
 - At a meaningful task boundary, leave only the essential result, remaining blocker, and next action in the relevant task/status files. Do not append conversation summaries or preload unrelated history.
 - Do not start new chats or scheduled context checks automatically; suggest them only when useful and let the user choose.
 
+## Subagent Delegation
+
+- For each requested task, use subagents when a bounded, independent workstream or specialist review would improve speed, coverage, or token use. Do not spawn one for a trivial command or a tightly sequential task.
+- Prefer the `routine` agent in `.codex/agents/routine.toml` (GPT-6 Luna) for scoped Git and local Docker work, repository checks, first-pass failure triage, release preflight, documentation checks, and QA checklists. Give it named inputs, an owning repository when applicable, and an expected result.
+- Use the appropriate specialist agent for implementation, design, architecture, security, or consequential review. The main agent owns integration, verifies delegated results, and remains responsible for approvals and final decisions.
+- This is standing project guidance; the user need not request delegation or Luna again in each new chat.
+
 ## Git Rules
 
 - Inspect Git status separately in the root workspace, `smart-paper/`, and `smart-paper-front/` before and after meaningful work.
