@@ -25,5 +25,5 @@ use_for = "Product framing, bilingual interaction design, accessibility, and des
 
 [category.critical_review]
 model = "gpt-6.1-sol"
-reasoning_effort = "high"
+reasoning_effort = "medium"
 use_for = "Independent security, architecture, release-risk, or high-impact correctness review."
