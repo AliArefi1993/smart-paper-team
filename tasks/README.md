@@ -4,6 +4,7 @@ Task documents preserve the intent and verification context of meaningful work s
 
 ## Future Work
 
+- [Lightweight project home page and roadmap cleanup](2026-10-08-project-home-roadmap.md): planned documentation task; no separate site or tracking system.
 - [GitHub Actions CI and Android build/release automation](2026-10-07-github-actions-ci-android-builds.md): planned infrastructure work; reduce local test/build load.
 - [Smart Paper Android launcher icon](2026-10-07-android-launcher-icon.md): important planned design task; installed app icon.
 - [Finance optional and hidden by default](2026-10-07-finance-optional-default-hidden.md): planned; preserve data, pause feature expansion.
