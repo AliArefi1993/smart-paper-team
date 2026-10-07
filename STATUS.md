@@ -6,7 +6,7 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 
 ## Current Focus
 
-- Android/local-data is the primary product; backend feature work is paused. Android `2026.10.6` / frontend `37f3d2a` closes the approved audit findings: Ideas writing protection/context recovery, Settings end-of-form Save and Finance deletion confirmation. See [implementation task](tasks/2026-10-06-audit-followups.md).
+- Latest published release: [Android 2026.10.6](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.6), verified non-draft APK with matching size/SHA-256. Android/local-data is the primary product; backend feature work is paused. Android `2026.10.6` / frontend `37f3d2a` closes the approved audit findings: Ideas writing protection/context recovery, Settings end-of-form Save and Finance deletion confirmation. See [implementation task](tasks/2026-10-06-audit-followups.md).
 - Planner local autosave, green Light/Dark surfaces and day minimization remain shipped. Ideas auto-recovers unfinished writing; publishing a saved thought remains deliberate.
 - Product/Designer/personal systems/QA assessment and editable bilingual studio handoffs guide changes; structural stories do not certify native Android behavior.
 - Standing maintainer direction: publish stable-signed Android releases after validated user-visible changes. Physical keyboard/lifecycle, upgrade/data retention, native notifications/sharing and TalkBack remain recorded follow-ups, not publication gates.

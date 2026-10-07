@@ -1,6 +1,6 @@
 # Task: Implement actionable Android audit follow-ups
 
-Status: complete; publication verification follows tag push
+Status: complete; published and verified
 Created: 2026-10-06
 Updated: 2026-10-07
 
@@ -49,4 +49,4 @@ Close the prior Product/Designer/personal-systems/QA audit's implementation gaps
 
 Implemented approved Ideas writing protection/contextual recovery, end-of-form Settings batch Save and Finance confirmation/commit targets. Frontend `37f3d2a` pushed; backend `68c789b` unchanged. The contextual draft uses an explicit marker so all legacy prose, including checklist/JSON text, recovers verbatim; malformed marked drafts remain untouched. Prepared receipts reconcile saved notes after failed cleanup without duplicates. Missing/stale origin and storage failures have automated helper/source evidence; browser fault injection and those runtime scenarios remain unexecuted.
 
-Stable-signed Android `2026.10.6`, versionCode 23, APK and release record are committed for coordinated tag publication. Physical Android keyboard/lifecycle/TalkBack/upgrade checks remain follow-ups; source/desktop evidence does not certify them.
+Stable-signed Android `2026.10.6`, versionCode 23, APK and release record committed in team `2b2432f`; all three coordinated tags pushed. GitHub API verified the [public release](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.6), non-draft status, matching APK size and SHA-256. All three worktrees were clean after publication. Physical Android keyboard/lifecycle/TalkBack/upgrade checks remain follow-ups; source/desktop evidence does not certify them.
