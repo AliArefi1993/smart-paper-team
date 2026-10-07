@@ -21,6 +21,8 @@ Android `2026.10.6` / versionCode 23 implements the bounded audit follow-ups: Id
 
 ## Next, After Baseline Review
 
+- Planned evaluation: [Lightweight batching and release cadence](tasks/2026-10-08-batching-release-cadence.md), deciding whether/how to reduce repeated coordination, tests/builds and releases. Current workflow remains in force until a decision is made.
+
 - Planned: [Lightweight project home page and roadmap cleanup](tasks/2026-10-08-project-home-roadmap.md), making current features, future tasks, priorities and releases easier to browse through existing Markdown files.
 
 - Planned: [GitHub Actions CI and Android build/release automation](tasks/2026-10-07-github-actions-ci-android-builds.md), moving tests and APK builds to hosted runners to reduce local load. Extend existing release publishing; secure signing and exact-source provenance are prerequisites.
