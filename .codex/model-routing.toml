@@ -6,12 +6,12 @@
 [category.routine]
 model = "gpt-6-luna"
 reasoning_effort = "medium"
-use_for = "Documented commands, repository checks, first-pass triage, release preflight, and checklist drafting; task-owned process cleanup; scoped validated commits/pushes; and authorized version bumps, builds/signing, tags, and publication after validated handoff."
+use_for = "Clear documented commands, narrow searches, factual documentation updates, repository checks, test execution, first-pass failure summaries, checklist drafting, task-owned process cleanup, scoped validated commits/pushes, and authorized release mechanics after validated handoff."
 
 [category.scoped_implementation]
-model = "gpt-6.1-sol"
+model = "gpt-6-luna"
 reasoning_effort = "low"
-use_for = "Clear acceptance criteria, a bounded module, and known validation in one owning repository."
+use_for = "Mechanical code changes with a ready specification, clear acceptance criteria, a bounded module, and known validation in one owning repository."
 
 [category.complex_implementation]
 model = "gpt-6.1-sol"
