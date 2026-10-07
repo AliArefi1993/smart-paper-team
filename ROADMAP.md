@@ -4,10 +4,8 @@ This roadmap is based on repository inspection only. Speculative ideas are marke
 
 ## Current Goal: Confidence In The Shipped Android App
 
-Android `2026.10.5` is shipped (frontend `45d4130`). The seven-route product/design/QA baseline audit is complete with structural-reference limits and Android follow-ups recorded. Local Planner autosave addresses the maintainer’s save-control feedback; see [save-controls task](tasks/2026-10-06-save-controls-autosave.md).
+Android `2026.10.6` / versionCode 23 implements the bounded audit follow-ups: Ideas writing protection/contextual recovery, end-of-form Settings Save and Finance deletion confirmation/commit targets. See the [task](tasks/2026-10-06-audit-followups.md) and [release record](releases/smart-paper-v2026.10.6.md) for bounded QA, revision and publication status. The seven-route audit remains a structural reference with native follow-ups.
 
-- Next bounded design: protect Idea Space unsaved writing and recover edit/branch context; existing high/medium source-confirmed risks are not fixed by Planner autosave. See [QA audit](design/2026-10-06-android-qa-review.md).
-- Review Settings save placement at the end of its long phone form; retain explicit notification consent and batch validation. Finance action styling is a separate visual candidate.
 - Prioritize observed design/implementation mismatches by effect on local data, task completion, and bilingual phone use. A user-visible fix requires a ready Designer handoff and targeted QA.
 
 - Prove JSON backup and restore on a phone, including failed and cancelled imports.
@@ -18,7 +16,7 @@ Android `2026.10.5` is shipped (frontend `45d4130`). The seven-route product/des
 - Test Idea Space capture, editing, branching, search, keyboard behavior, backup/restore, and upgrade on a phone in English and Persian.
 - Validate the compact template sheet and current-week auto-centering on a phone in both languages.
 - Continue stable-signed APK publication with matching records and checksums after validated user-visible changes; physical-device/TalkBack checks remain recorded follow-ups under standing maintainer direction.
-- Extend the existing focused local-data tests only for demonstrated gaps; lint/type/30 tests/local-data build already pass at the shipped baseline.
+- Extend focused local-data tests for demonstrated gaps; current checks are recorded in the release record.
 - Review production dependency advisories for the static Android build before wider sharing.
 
 ## Next, After Baseline Review

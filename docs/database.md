@@ -37,9 +37,16 @@ The finance session unlock gates finance and export/import endpoints; it is not 
 - Android is the primary release target. Django storage is paused unless a server or sync use case is chosen.
 - Cross-stack data changes must review Django models/migrations, serializers/views, frontend types and adapters, local-store normalization, and import/export compatibility.
 
+## Idea Draft Recovery
+
+- `src/lib/idea-draft.ts` uses the existing `smart-paper.local.idea-draft` key for one unfinished new/edit/branch draft, including its source snapshot and optional commit receipt. It is separate from saved Idea Space records.
+- The `smart-paper.idea-draft.v1` prefix plus newline identifies a version-1 JSON envelope. Unmarked legacy text, including JSON-like prose and checklists, remains a new-note draft verbatim. Invalid marked envelopes fail without overwriting stored writing.
+- Receipts reconcile successful note writes after cleanup failure, preventing duplicate publication on retry/recovery. Missing sources or changed edit baselines block silent mutation; explicit Keep as new thought saves independently. Storage failures may retain session memory, but cannot guarantee recovery after reload/process termination.
+
 ## Backup Contract
 
 - Local-data JSON backup schema: `schema_version: 5`, adding `idea_notes` with stable IDs, body, creation/update timestamps, and an optional parent ID. Older local backups remain importable; replace with an older backup clears Idea Space notes, while merge preserves existing notes.
+- Unfinished drafts, source snapshots and commit receipts are excluded from backups/reports; contextual recovery does not change local schema 5 or saved-note fields.
 - Django JSON backup schema remains `schema_version: 4`.
 - Backend contract: `smart-paper/planner/export_views.py`.
 - Local-data contract: `smart-paper-front/src/lib/local-store.ts` and `smart-paper-front/src/lib/export-format.ts`.

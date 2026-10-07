@@ -1,6 +1,6 @@
 # Smart Paper Features
 
-Updated: 2026-10-06. Keep this file short and update it when user-visible features change.
+Updated: 2026-10-07. Keep this file short and update it when user-visible features change.
 
 ## In the Android app
 
@@ -9,17 +9,19 @@ Updated: 2026-10-06. Keep this file short and update it when user-visible featur
 - Open one compact section at a time, edit its minutes, goal, and note, and use a full writing view for longer text.
 - Save and reuse full-week templates.
 - Review multi-week summaries.
-- Track a finance goal and income entries.
+- Track a finance goal and income entries, with confirmation before deletion.
 - Use English or Persian.
 - Choose a saved Light or Dark appearance across every app page, including summaries and reports.
 - Export JSON backups and readable CSV, Excel, or Markdown files.
 - Create a selective Markdown AI report by field and date range, preview its text, and share it using the phone's app chooser. The file explains itself and asks the AI for a grounded first response.
 - Import a JSON backup by merge or replace.
-- Set an optional morning plan notification.
+- Set an optional morning plan notification and explicitly save validated Settings from the header or end of the form.
 - Run focus and rest countdowns with configurable lengths and an hourglass display; a session stays accurate after navigation or app suspension.
-- Capture freeform ideas, expand optional writing sparks when wanted, revisit an older thought each day, branch from notes, and search or edit them. Notes are included in JSON backups.
+- Capture freeform ideas, expand optional writing sparks when wanted, revisit an older thought each day, branch from notes, and search or edit them. Notes are included in JSON backups. Contextual new/edit/branch drafts recover separately, protect dirty writing, and retain missing/changed-source writing with Keep as new thought. Drafts are excluded from backups.
 
 ## Recent completed work
+
+- Implemented Ideas writing protection/contextual recovery, safe retry after note-save cleanup failure, end-of-form Settings Save, and Finance deletion confirmation/larger commit targets for [Android2026.10.6 / code23](releases/smart-paper-v2026.10.6.md). Runtime QA and publication status are tracked in that record.
 
 - Replaced routine Planner Save buttons with automatic local saving, compact device-save status and navigation-only Next day; schedule actions now say Add event / Apply changes. Explicit commands on other pages remain deliberate.
 

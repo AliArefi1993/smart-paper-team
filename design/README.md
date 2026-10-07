@@ -16,9 +16,11 @@ The [Calm Planner handoff](2026-10-04-planner-calm-flow.md) and its interactive 
 
 ## Current Android review baseline
 
-Release `2026.10.4`, frontend `ab37ee8`, is the current reference. [The Android design review](2026-10-06-android-design-review.md) explains which stories represent shipped interactions, older structural sketches, or historical fixes. Storybook groups shipped Calm/day-minimization/dark references together; their stable `proposals-*` IDs preserve older handoff links. Use [day minimization](studio/src/stories/PlannerDayCollapse.stories.tsx) for current phone disclosure and [shared dark palette](2026-10-06-planner-shared-dark-palette.md) for colors.
+The current implementation is Android `2026.10.6` / code23; the [release record](../releases/smart-paper-v2026.10.6.md) owns revision, verification and publication status. The earlier `2026.10.4` audit remains a historical reference. [The Android design review](2026-10-06-android-design-review.md) explains which stories represent shipped interactions, older structural sketches, or historical fixes. Storybook groups shipped Calm/day-minimization/dark references together; their stable `proposals-*` IDs preserve older handoff links. Use [day minimization](studio/src/stories/PlannerDayCollapse.stories.tsx) for current phone disclosure and [shared dark palette](2026-10-06-planner-shared-dark-palette.md) for colors.
 
 The [save-controls handoff](2026-10-06-save-controls-design.md) replaces routine Android Planner Save actions with automatic device saving, compact status/Retry and navigation-only Next day. Its [proposal stories](studio/src/stories/PlannerAutosave.stories.tsx) cover bilingual phone/wide and failure states. Existing manual-save references remain historical interaction context; Django retains manual saving.
+
+The ready [audit-followups handoff](2026-10-06-audit-followups-design.md) and [editable bilingual stories](studio/src/stories/AuditFollowups.stories.tsx) cover Ideas displacement/recovery/conflict/failure, Finance delete confirmation and retained commit targets, and end-of-form Settings Save. These changes are implemented; [current QA](2026-10-06-audit-followups-qa.md) remains separate from studio evidence and native checks.
 
 ## Files
 

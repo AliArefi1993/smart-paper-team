@@ -60,3 +60,7 @@ Product and Designer recommend local Planner autosave only; retained actions on 
 Automatic edits persist synchronously; failed text is retained across SPA return, Retry stores the latest snapshot, and explicit week/page departure is blocked during failure. No recovery promise after reload/process kill when storage fails. Independent review fixed Retry keyboard/live status and notification ordering; final checks passed.
 
 Remaining verification: browser fault-UI injection, complete template confirmation execution, physical Android keyboard/lifecycle/notifications/TalkBack and representative large-history typing latency. These are documented follow-ups, not passed checks. Separate next design: Idea Space writing continuity and Settings save placement; autosave does not fix those existing gaps.
+
+## Follow-up resolution
+
+The Ideas continuity, Settings save-placement and Finance confirmation/commit-target follow-ups are implemented for [Android2026.10.6 / code23](../releases/smart-paper-v2026.10.6.md) through the [audit-followups task](2026-10-06-audit-followups.md) and [ready handoff](../design/2026-10-06-audit-followups-design.md). Current runtime QA and release verification are tracked there; the earlier evidence and native follow-ups above remain historical and are not new pass claims.

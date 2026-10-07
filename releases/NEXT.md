@@ -1,5 +1,5 @@
 # Next Smart Paper Release
 
-Status: no next release is scoped. Latest record: `releases/smart-paper-v2026.10.5.md`.
+No next release scoped. Latest: [2026.10.6](smart-paper-v2026.10.6.md), Android versionCode 23.
 
-Prepare signed Android releases automatically after validated requested user-visible changes under `docs/release-workflow.md`; physical checks are follow-ups.
+Prioritize maintainer phone feedback and the physical Android/TalkBack follow-ups in ROADMAP; no speculative integration work is approved.

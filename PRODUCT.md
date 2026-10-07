@@ -2,7 +2,7 @@
 
 Smart Paper is a personal weekly planning, progress tracking, finance tracking, and data export application. Its primary release target is a downloadable Android APK that stores each person's data on their own phone.
 
-The current shipped baseline is Android `2026.10.5` (frontend `45d4130`, local-data mode). Product and design priorities are phone use in English and Persian, preserving local records, and reliable existing flows. Browser and Storybook checks support Android work; native Android behavior requires separate evidence. The Django/hosted-web path is secondary and paused until needed.
+The current implementation targets Android `2026.10.6` / versionCode 23 (local-data mode); see the [release record](releases/smart-paper-v2026.10.6.md) for source revision, validation and publication status. Product and design priorities are phone use in English and Persian, preserving local records, and reliable existing flows. Browser and Storybook checks support Android work; native Android behavior requires separate evidence. The Django/hosted-web path is secondary and paused until needed.
 
 ## What It Currently Does
 
@@ -13,12 +13,12 @@ The current shipped baseline is Android `2026.10.5` (frontend `45d4130`, local-d
 - Splits each day into configurable planner sections.
 - Shows section summaries before editing; one section opens at a time with its duration, goal, and note. Long writing expands inline or opens a full writing view, with automatic week persistence in Android/local-data mode and an explicit save action in Django mode.
 - Provides 10 stable planner section slots; the first four default to Main, Second, Learning, and Exercise, while slots 5-10 are hidden until activated.
-- Lets the user rename planner sections and activate/hide section slots from Settings.
+- Lets the user rename planner sections and activate/hide section slots from Settings, then explicitly save the validated batch from the header or end of the full form.
 - Records minutes, goals, and notes for each day section.
 - Records day-level timed schedule entries such as `18:00-19:00 Meeting`.
 - Shows week totals by active section and total visible minutes.
 - Shows multi-week summaries with filters for empty weeks and selectable month ranges.
-- Tracks a finance goal and income entries.
+- Tracks a finance goal and income entries, with confirmation before deleting income and larger named save/add controls.
 - Protects finance data behind a PIN/session unlock when using the Django backend.
 - Exports planner and finance data as JSON, CSV, Excel, and Markdown for AI review.
 - Lets Android users create a separate Markdown AI report with selected fields and an inclusive date range, review its text, and share it through the device chooser. The report explains its scope and asks the receiving AI for a grounded first response. Finance fields start off and require the finance unlock.
@@ -29,7 +29,7 @@ The current shipped baseline is Android `2026.10.5` (frontend `45d4130`, local-d
 - Supports a local browser-storage mode for Android/static export builds.
 - Supports opt-in Android local morning plan notifications.
 - Provides a focus/rest timer with editable session lengths, an hourglass display, and a countdown that resumes accurately after app navigation or suspension.
-- Provides a separate Android Idea Space for freeform notes with expandable optional writing sparks, daily rediscovery, branching, editing, search, and local JSON backup/restore.
+- Provides a separate Android Idea Space for freeform notes with expandable optional writing sparks, daily rediscovery, branching, editing, search, and local JSON backup/restore. Dirty writing is protected before Edit, Branch or Cancel; one contextual new/edit/branch draft recovers when device storage succeeds. Missing or changed source notes retain writing and offer explicit Keep as new thought. Drafts remain unfinished writing outside backups/reports; saving a note is deliberate. Storage failures distinguish draft recovery, note saving and cleanup, with retry and session-only fallback when storage fails.
 
 ## Likely Target Users
 

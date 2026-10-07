@@ -1,29 +1,15 @@
 # Smart Paper Status
 
-Last updated: 2026-10-06.
+Last updated: 2026-10-07.
 
 This is a present-state snapshot, not a changelog. Shipped history and validation details live in `releases/`; implementation history lives in each repository's Git log.
 
 ## Current Focus
 
-- Android `2026.10.5` / frontend `45d4130` replaces routine Planner Save controls with automatic device saving, compact status/Retry and navigation-only Next day. Schedule actions now say Add event / Apply changes. Product/Designer reviewed all seven pages; other commands remain deliberate. Docker lint/types/30 tests/local build, independent review, bounded EN/FA phone/wide persistence QA and stable-signed APK checks passed. See [task](tasks/2026-10-06-save-controls-autosave.md).
-
-- Android/local-data is the primary product. Product, Designer, personal systems and independent QA reviewed the current baseline; see [audit task](tasks/2026-10-06-android-product-design-audit.md). Design references now distinguish shipped interactions, structural sketches and historical issues; studio typecheck/build and bounded EN/FA phone review passed. QA freshly inspected all seven routes read-only in Persian/dark; complete native/full-flow acceptance remains open. Idea Space unsaved-writing displacement and branch/edit draft-context recovery are the leading source-confirmed follow-up; no application fix is claimed. Native Android checks remain distinct from browser/studio evidence.
-
-- The user installed2026.10.3 and prefers the green dark colors on other routes. Planner now shares those roles in frontend `ab37ee8`, including nested editors, mobile save bar and shared language control. Ready Designer handoff, Docker lint/types/27 tests/build, independent review with shadow fix and bounded EN/FA phone/wide/light regression passed; see `tasks/2026-10-06-planner-shared-dark-palette.md`.
-
-- The screenshot-reported light cards/fields in the dark Planner Storybook preview are corrected, along with week controls, Timer illustration, and story canvas. Designer checked the exact EN/FA phone/wide story, all app-wide dark exports, and the light Planner baseline; studio typecheck/build passed. [Coverage audit and screenshots](design/2026-10-06-dark-mode-coverage-audit.md) distinguish this studio fix from application verification.
-- Individual day minimization and “Minimize all days” are implemented in frontend `37b91ec` after the [ready bilingual design](design/2026-10-06-planner-day-minimization.md). Docker lint/types/27 tests/build, independent review and targeted EN/FA phone/wide running-app checks passed. Drafts and manual-save behavior survive collapse, resize and language/theme changes; physical Android/TalkBack checks remain; see `tasks/2026-10-06-planner-day-minimization.md`.
-- Standing maintainer direction: automatically publish Android after validated user-visible changes and signed build checks. Physical-device/TalkBack checks are recorded follow-ups and do not hold release; the maintainer installs releases and reports issues. See `docs/release-workflow.md`.
-- Latest release: `smart-paper-v2026.10.5` (2026-10-06), local Planner autosave and simpler save controls.
-- Latest team tag: `smart-paper-v2026.10.5`.
-- Local browser QA covered report filtering, finance opt-in, backup download, Persian controls, and sharing fallback. Next priority is Android-runtime QA of install/upgrade, native sharing, restore, offline behavior, notifications, and layout. Backend feature work is paused; see `ROADMAP.md` and decision D-007.
-- Idea Space is included in the `2026.10.1` Android release: local notes, writing sparks, daily rediscovery, branches, search, and JSON backup support. Automated and browser checks passed; physical Android QA remains.
-- Product and Designer have repo skills and a `design/` workspace for briefs, local screen stories, implementation handoffs, and bilingual Android review. Figma remains an optional reference.
-- The first design pilot refreshed Idea Space in frontend revision `820692a`: editable English/Persian Figma frames and a writing-first layout with expandable sparks. Local-data lint, type check, 23 tests, and build passed; 390px browser review passed in both languages. Physical Android review remains.
-- Shipped-screen coverage includes a route/state inventory, source-backed flow briefs for all seven routes, and a local React/Storybook design studio with 32 bilingual route/state stories. Designer and QA approved these as structural coverage only on 2026-10-03. The 2026-10-04 refinement improves route navigation, contextual sheets, timer states, control sizing, and example copy; Planner stories now show distinct minutes, goal, and note controls for each active section in English and Persian. Fidelity and complete flow handoffs remain unapproved until running-app comparison and re-review. The earlier atlas and Planner Figma drafts have not been visually checked; Figma Starter tool limits block further screenshots. Designer-ready local stories and a handoff are required before future user-visible frontend implementation. See `design/2026-10-04-baseline-story-refinement.md` and `tasks/2026-10-01-full-app-design-coverage.md`.
-- The [Calm Planner design](design/2026-10-04-planner-calm-flow.md) is included in `2026.10.2`: compact section summaries, scroll placement, growing writing fields, full writing view, and safer save feedback. The user installed the release and reported a substantially better experience after the design-first workflow. Docker lint/type/tests/build and 390px EN/FA browser review passed. Physical flow and screen reader checks remain; see `releases/smart-paper-v2026.10.2.md`.
-- App-wide Light/Dark is implemented in frontend `6d56f31`; remaining light Idea Space hover and Timer SVG glass surfaces are fixed in `0186476`. Designer audited all seven routes and nested controls, reviewed the patch, and checked bilingual phone/wide/light-regression excerpts. Studio typecheck/build passed. The current frontend passes Docker lint/types/27 tests/local-data production build. Targeted Planner runtime comparison and the resumed Designer dark-surface review of Summaries, Export/report, Finance, Ideas, Timer and Settings passed in English/Persian phone layouts with selected wide checks. No new light-surface gap was found. Import execution feedback could not be verified because the browser file chooser stalled; physical Android/native popup checks remain. See [coverage audit](design/2026-10-06-dark-mode-coverage-audit.md) and `tasks/2026-10-05-app-wide-dark-mode.md`.
+- Android/local-data is the primary product; backend feature work is paused. Android `2026.10.6` / frontend `37f3d2a` closes the approved audit findings: Ideas writing protection/context recovery, Settings end-of-form Save and Finance deletion confirmation. See [implementation task](tasks/2026-10-06-audit-followups.md).
+- Planner local autosave, green Light/Dark surfaces and day minimization remain shipped. Ideas auto-recovers unfinished writing; publishing a saved thought remains deliberate.
+- Product/Designer/personal systems/QA assessment and editable bilingual studio handoffs guide changes; structural stories do not certify native Android behavior.
+- Standing maintainer direction: publish stable-signed Android releases after validated user-visible changes. Physical keyboard/lifecycle, upgrade/data retention, native notifications/sharing and TalkBack remain recorded follow-ups, not publication gates.
 
 ## Repository State
 
@@ -47,20 +33,14 @@ Run `scripts/project-context.sh` for current branches, revisions, working-tree c
 - Backend: Python, Django 6.0.4, SQLite, `planner` and `finance` apps, committed migrations, Docker/Compose, Gunicorn startup path.
 - Frontend: Next.js 16.2.4, React 19.2.4, TypeScript, Tailwind CSS 4, Capacitor 8.
 - Frontend routes: planner, ideas, timer, finance, summaries, export/import, and settings.
-- Latest Android release: `versionCode 22`, `versionName 2026.10.5`, using the stable signing certificate.
+- Latest Android release: `versionCode 23`, `versionName 2026.10.6`, using the stable signing certificate.
 - Team `smart-paper-v*` tags publish GitHub Releases when the matching release record and APK are committed.
 
-## Latest Verified Release Checks
+## Latest Verified Checks
 
-The `smart-paper-v2026.10.5` release checks passed on 2026-10-06:
+Frontend `37f3d2a` passes Docker lint, TypeScript, all 37 tests and local-data production build. Independent review found no unresolved blockers. Studio typecheck/build and bounded EN/FA structural review passed. Backend remains `68c789b`; prior 33-test/no-migration evidence reused.
 
-- Backend unchanged at `68c789b`; reused previous 33-test/migration evidence.
-- Frontend `45d4130`: frozen-source Docker lint, TypeScript, 30 tests and local-data build passed. No unresolved review findings.
-- Studio typecheck/build and bounded EN/FA phone/wide proposal review passed.
-- Disposable browser QA passed rapid edits/reload, week isolation, immediate Summaries read-back, full writing, and schedule blank-title/cancel/add/edit-label checks in bounded EN/FA phone/wide layouts. Failure UI injection, complete template confirmation and backend runtime were not executed; owner failure/retry tests and source checks passed.
-- Stable-signed Android release, certificate and code22/name2026.10.5 passed; all136 exported web files match packaged assets.
-
-See `releases/smart-paper-v2026.10.5.md` for checksum and exact scope. Physical Android/TalkBack, native notifications and large-history typing latency remain follow-ups. Failed writing survives SPA return in module memory, not reload/process termination when storage fails.
+Stable-signed APK certificate/version checks and all136 packaged asset comparisons passed. Bounded desktop Chrome Ideas/Settings persistence and EN/FA Finance cancellation checks passed; phone geometry/fault injection remain unexecuted. Release and runtime evidence are recorded in [2026.10.6 release](releases/smart-paper-v2026.10.6.md) and [QA](design/2026-10-06-audit-followups-qa.md). Physical Android/TalkBack remains unverified. Failed writing survives SPA return in session memory, but cannot be guaranteed after reload/process termination when device storage fails.
 
 ## Known Risks And Gaps
 
