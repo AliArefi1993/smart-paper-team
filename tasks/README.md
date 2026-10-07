@@ -7,6 +7,7 @@ Task documents preserve the intent and verification context of meaningful work s
 Use [ROADMAP.md](../ROADMAP.md) as the shared list of future work. Save a linked `planned` task here when an idea has enough agreed detail to preserve. A planned task does not authorize starting implementation immediately.
 
 - [Local problem reporting and optional diagnostics](2026-10-07-local-feedback-diagnostics.md): agreed direction; implementation not started.
+- [AI report Open ChatGPT handoff](2026-10-07-ai-report-chatgpt-handoff.md): reported problem; investigation and implementation not started.
 
 ## When To Create One
 

@@ -11,7 +11,7 @@ Android `2026.10.6` / versionCode 23 implements the bounded audit follow-ups: Id
 - Prove JSON backup and restore on a phone, including failed and cancelled imports.
 - Validate install and upgrade on a physical phone without losing saved data.
 - Test planner, templates, finance, export/restore, English/Persian layout, offline use, and notification behavior on a phone.
-- Test selective AI report sharing to ChatGPT through Android's chooser and the save-then-attach fallback on a phone.
+- Investigate and fix the maintainer-reported **Open ChatGPT** problem in the AI report before relying on it for a Planner shortcut; test Android chooser and save-then-attach fallback on a phone. See the [future task](tasks/2026-10-07-ai-report-chatgpt-handoff.md).
 - Test the focus/rest timer on a phone, including app suspension and reopening after a session completes.
 - Test Idea Space capture, editing, branching, search, keyboard behavior, backup/restore, and upgrade on a phone in English and Persian.
 - Validate the compact template sheet and current-week auto-centering on a phone in both languages.
