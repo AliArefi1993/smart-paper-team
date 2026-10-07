@@ -8,8 +8,7 @@ Android `2026.10.6` / versionCode 23 implements the bounded audit follow-ups: Id
 
 - Prioritize observed design/implementation mismatches by effect on local data, task completion, and bilingual phone use. A user-visible fix requires a ready Designer handoff and targeted QA.
 
-- Prove JSON backup and restore on a phone, including failed and cancelled imports.
-- Validate install and upgrade on a physical phone without losing saved data.
+- [Validate Android data safety on a real phone](tasks/2026-10-08-android-data-safety-validation.md): upgrades, backup/restore, failed/cancelled imports, low storage and interruption recovery; consolidates existing readiness follow-ups.
 - Test planner, templates, finance, export/restore, English/Persian layout, offline use, and notification behavior on a phone.
 - Investigate and fix the maintainer-reported **Open ChatGPT** problem in the AI report before relying on it for a Planner shortcut; test Android chooser and save-then-attach fallback on a phone. See the [future task](tasks/2026-10-07-ai-report-chatgpt-handoff.md).
 - Test the focus/rest timer on a phone, including app suspension and reopening after a session completes.
@@ -20,6 +19,9 @@ Android `2026.10.6` / versionCode 23 implements the bounded audit follow-ups: Id
 - Review production dependency advisories for the static Android build before wider sharing.
 
 ## Next, After Baseline Review
+
+- Planned: [Privacy and local-data protection review](tasks/2026-10-08-privacy-local-data-review.md), documenting actual storage/sharing boundaries and proportionate improvements.
+- Planned: [Lightweight feedback triage](tasks/2026-10-08-feedback-triage-workflow.md), turning voluntary reports into reproduced, prioritized and verified tasks.
 
 - Planned evaluation: [Periodic team reviews](tasks/2026-10-08-periodic-team-reviews.md) covering QA, independent feature proposals, necessary refactoring, new/updated agent skills and similar-app/technology research, with lightweight triggers and effort limits. No recurring jobs or new rules are enabled yet.
 
@@ -57,7 +59,7 @@ Android `2026.10.6` / versionCode 23 implements the bounded audit follow-ups: Id
 - Review repository hygiene for `node_modules-blocked-*` directories in `smart-paper-front/`.
 - Make API error handling more structured for frontend display.
 - Polish configurable section UX after real use: assess ten active sections, hidden-section-with-data visibility, and optional separate English/Persian labels.
-- Add accessibility review for forms, focus states, keyboard flows, and RTL/LTR behavior.
+- [Android accessibility and Persian usability review](tasks/2026-10-08-accessibility-persian-phone-review.md): TalkBack, text scaling, touch targets, keyboard behavior and RTL/LTR on primary flows.
 - Validate Android local morning notifications on a real device, including permission denial, app restart, and device reboot behavior.
 - Consider trusted-proxy client address handling or user-account-based throttling if Smart Paper becomes a multi-user or internet-exposed app.
 - Consider a native completion notification only if phone use shows a need for an alert while the app is in the background.

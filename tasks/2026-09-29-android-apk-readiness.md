@@ -1,10 +1,12 @@
 # Task: Android APK readiness
 
-Status: in progress
+Status: follow-up transferred; historical implementation evidence retained
 Created: 2026-09-29
-Updated: 2026-09-30
+Updated: 2026-10-08
 
 ## Objective
+
+Outstanding phone data-safety checks are now owned by [Android data-safety validation](2026-10-08-android-data-safety-validation.md). This record retains historical implementation/checklist evidence; its old pre-publication constraints are superseded by the current [release workflow](../docs/release-workflow.md).
 
 Make the local-data Android app the primary product and improve data safety before sharing a signed APK with others.
 

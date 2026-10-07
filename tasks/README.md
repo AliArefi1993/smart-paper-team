@@ -4,6 +4,10 @@ Task documents preserve the intent and verification context of meaningful work s
 
 ## Future Work
 
+- [Android data safety on a real phone](2026-10-08-android-data-safety-validation.md): consolidates outstanding readiness checks; upgrades, restore and failure recovery.
+- [Privacy and local-data protection](2026-10-08-privacy-local-data-review.md): bounded security/privacy assessment.
+- [Android accessibility and Persian usability](2026-10-08-accessibility-persian-phone-review.md): primary-flow phone/TalkBack review.
+- [Lightweight feedback triage](2026-10-08-feedback-triage-workflow.md): reproduce, prioritize and close voluntary reports.
 - [Define periodic team reviews](2026-10-08-periodic-team-reviews.md): future decision task for QA, independent ideas, necessary refactoring, agent skill updates and similar-app/technology research.
 - [Evaluate lightweight batching and release cadence](2026-10-08-batching-release-cadence.md): future decision task; current workflow unchanged.
 - [Lightweight project home page and roadmap cleanup](2026-10-08-project-home-roadmap.md): planned documentation task; no separate site or tracking system.
