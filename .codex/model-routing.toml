@@ -6,7 +6,7 @@
 [category.routine]
 model = "gpt-6-luna"
 reasoning_effort = "medium"
-use_for = "Documented commands, repository checks, first-pass triage, release preflight, and checklist drafting."
+use_for = "Documented commands, repository checks, first-pass triage, release preflight, and checklist drafting; task-owned process cleanup; scoped validated commits/pushes; and authorized version bumps, builds/signing, tags, and publication after validated handoff."
 
 [category.scoped_implementation]
 model = "gpt-6.1-sol"

@@ -47,7 +47,7 @@ description = "DevOps/SRE engineer for Docker, CI/CD, deployment configuration, 
 config_file = "agents/devops.toml"
 
 [agents.routine]
-description = "Routine category agent for scoped Git and Docker work, repository checks, first-pass failure triage, release preflight, documentation checks, and QA checklists."
+description = "Routine category agent for mechanical task closeout, verified process cleanup, scoped commit/push, authorized validated release execution, repository checks, first-pass failure triage, documentation checks, and QA checklists."
 config_file = "agents/routine.toml"
 
 [agents.scoped_implementer]

@@ -4,6 +4,8 @@ This workspace uses the root team repository as the durable release memory.
 The backend and frontend remain independent Git repositories.
 The maintainer gave standing authorization on 2026-10-06 to release Android after requested user-visible changes are implemented and validated. Continue automatically through the signed APK build and documented publication steps when release prerequisites pass. Do not request another release confirmation or wait for physical-device checks; the maintainer installs released builds and reports issues. Documentation-only work does not need a new APK.
 
+The lead retains acceptance, scope, and release go/no-go decisions. After a validated parent handoff, the routine closeout owner executes the documented version bump, build/sign, scoped commits and pushes, tags, and publication under this standing authorization. Release preflight is advisory and does not authorize publication. Before final closeout, agents send the assigned routine owner an inventory of every started background process with command, PID/tool session/container ID, ports, working directory, purpose, whether it remains needed, and no secrets. Routine stops only verified task-owned processes after consumers finish, tries graceful shutdown first, verifies shutdown, and reports unclear ownership. Shared reused daemons, user services, and volumes are preserved.
+
 ## When To Create A Tag
 
 Create a release tag after one of these points:
@@ -143,6 +145,8 @@ git push origin smart-paper-vYYYY.MM.N
 The team repository has `.github/workflows/publish-release.yml`.
 
 When a `smart-paper-v*` tag is pushed in the team repository, GitHub Actions automatically creates or updates the GitHub Release and uploads the matching APK asset.
+
+As final release closeout, confirm the GitHub Release is published with the expected downloadable APK asset, download or otherwise inspect that asset and verify its SHA-256 against the committed artifact, then report the result. Also report the final branch, revision, and working-tree state for the team, backend, and frontend repositories.
 
 The workflow expects both files to already exist in the tagged team commit:
 
