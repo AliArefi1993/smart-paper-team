@@ -2,6 +2,12 @@
 
 Task documents preserve the intent and verification context of meaningful work so a future agent can continue without reconstructing the conversation.
 
+## Future Work
+
+Use [ROADMAP.md](../ROADMAP.md) as the shared list of future work. Save a linked `planned` task here when an idea has enough agreed detail to preserve. A planned task does not authorize starting implementation immediately.
+
+- [Local problem reporting and optional diagnostics](2026-10-07-local-feedback-diagnostics.md): agreed direction; implementation not started.
+
 ## When To Create One
 
 Create a task document for work that is cross-repository, spans multiple sessions, changes data/contracts, prepares a release, or has several acceptance criteria. Do not create one for a tiny local fix with obvious scope.
