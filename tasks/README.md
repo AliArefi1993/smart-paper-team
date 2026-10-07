@@ -4,6 +4,10 @@ Task documents preserve the intent and verification context of meaningful work s
 
 ## Future Work
 
+- [Finance optional and hidden by default](2026-10-07-finance-optional-default-hidden.md): planned; preserve data, pause feature expansion.
+- [Timer optional and hidden by default](2026-10-07-timer-optional-default-hidden.md): planned; no Planner integration.
+- [Idea Space connected-thoughts refactor](2026-10-07-idea-space-connected-thoughts-refactor.md): planned; relationship model and interaction require discovery.
+
 Use [ROADMAP.md](../ROADMAP.md) as the shared list of future work. Save a linked `planned` task here when an idea has enough agreed detail to preserve. A planned task does not authorize starting implementation immediately.
 
 - [Local problem reporting and optional diagnostics](2026-10-07-local-feedback-diagnostics.md): agreed direction; implementation not started.

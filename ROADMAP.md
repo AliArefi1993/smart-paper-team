@@ -21,6 +21,10 @@ Android `2026.10.6` / versionCode 23 implements the bounded audit follow-ups: Id
 
 ## Next, After Baseline Review
 
+- Planned: [Finance optional and hidden by default](tasks/2026-10-07-finance-optional-default-hidden.md); preserve existing records and pause feature expansion.
+- Planned: [Timer optional and hidden by default](tasks/2026-10-07-timer-optional-default-hidden.md); pause expansion and keep it independent of Planner.
+- Planned: [Idea Space connected-thoughts refactor](tasks/2026-10-07-idea-space-connected-thoughts-refactor.md); clarify and navigate relationships before expanding writing tools. Interaction/model needs Product/Designer discovery.
+
 - Planned: Planner **Review this week with AI** shortcut, reusing the existing selective report with the viewed week's dates preselected. Resolve the reported ChatGPT handoff issue before relying on that path. See the [future task](tasks/2026-10-07-planner-ai-review-shortcut.md); implementation is not started.
 
 - Planned: accessible Android **Report a problem**, with optional local crash/error diagnostics and basic usage analytics, preview/delete controls, and voluntary file sharing through Android/email. No server or automatic uploads. See the [future task](tasks/2026-10-07-local-feedback-diagnostics.md); implementation is not started.
@@ -29,7 +33,7 @@ Android `2026.10.6` / versionCode 23 implements the bounded audit follow-ups: Id
 - Add frontend automated tests around configurable planner sections: settings save/load, hide/activate behavior, planner save/load with custom labels, summaries, and local export/import.
 - Add frontend automated tests around timed schedule entries: add/edit/delete, sorting, local storage normalization, and export/import round trip.
 - Validate week-template usage after release; consider optional daily and section-level template defaults if they prove useful.
-- Needs confirmation: use a small plan → focus → review routine with existing screens and optional idea capture. Gather phone-use evidence before proposing cross-route shortcuts or automation; Finance remains an optional separate workflow.
+- Prioritize Planner usability; Timer-to-Planner integration is not planned under the maintainer's current direction. Idea Space relationship discovery and optional Finance/Timer visibility are tracked separately above.
 
 ## Paused Until Backend Or Hosted Web Is Needed
 
