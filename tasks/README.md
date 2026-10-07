@@ -8,6 +8,7 @@ Use [ROADMAP.md](../ROADMAP.md) as the shared list of future work. Save a linked
 
 - [Local problem reporting and optional diagnostics](2026-10-07-local-feedback-diagnostics.md): agreed direction; implementation not started.
 - [AI report Open ChatGPT handoff](2026-10-07-ai-report-chatgpt-handoff.md): reported problem; investigation and implementation not started.
+- [Planner Review this week with AI shortcut](2026-10-07-planner-ai-review-shortcut.md): planned; reuses selective reporting and depends on reliable sharing.
 
 ## When To Create One
 
