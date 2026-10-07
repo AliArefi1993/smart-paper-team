@@ -21,6 +21,8 @@ Android `2026.10.6` / versionCode 23 implements the bounded audit follow-ups: Id
 
 ## Next, After Baseline Review
 
+- Planned: [GitHub Actions CI and Android build/release automation](tasks/2026-10-07-github-actions-ci-android-builds.md), moving tests and APK builds to hosted runners to reduce local load. Extend existing release publishing; secure signing and exact-source provenance are prerequisites.
+
 - Planned: [Design and install a Smart Paper Android launcher icon](tasks/2026-10-07-android-launcher-icon.md); important visual identity task covering the installed home-screen/app-drawer icon, not a full brand redesign.
 
 - Planned: [Finance optional and hidden by default](tasks/2026-10-07-finance-optional-default-hidden.md); preserve existing records and pause feature expansion.
