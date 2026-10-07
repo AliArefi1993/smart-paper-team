@@ -4,6 +4,7 @@ Task documents preserve the intent and verification context of meaningful work s
 
 ## Future Work
 
+- [Smart Paper Android launcher icon](2026-10-07-android-launcher-icon.md): important planned design task; installed app icon.
 - [Finance optional and hidden by default](2026-10-07-finance-optional-default-hidden.md): planned; preserve data, pause feature expansion.
 - [Timer optional and hidden by default](2026-10-07-timer-optional-default-hidden.md): planned; no Planner integration.
 - [Idea Space connected-thoughts refactor](2026-10-07-idea-space-connected-thoughts-refactor.md): planned; relationship model and interaction require discovery.
