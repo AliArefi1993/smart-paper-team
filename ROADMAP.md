@@ -21,6 +21,8 @@ Android `2026.10.6` / versionCode 23 implements the bounded audit follow-ups: Id
 
 ## Next, After Baseline Review
 
+- Planned evaluation: [Periodic QA, independent feature proposals and necessary refactoring reviews](tasks/2026-10-08-periodic-team-reviews.md), defining lightweight triggers, ownership and effort limits. No recurring jobs or new rules are enabled yet.
+
 - Planned evaluation: [Lightweight batching and release cadence](tasks/2026-10-08-batching-release-cadence.md), deciding whether/how to reduce repeated coordination, tests/builds and releases. Current workflow remains in force until a decision is made.
 
 - Planned: [Lightweight project home page and roadmap cleanup](tasks/2026-10-08-project-home-roadmap.md), making current features, future tasks, priorities and releases easier to browse through existing Markdown files.
