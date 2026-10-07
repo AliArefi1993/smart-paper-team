@@ -4,6 +4,7 @@ Task documents preserve the intent and verification context of meaningful work s
 
 ## Future Work
 
+- [Review and improve Android notifications](2026-10-08-android-notification-review.md): reliability, permissions, timing, usefulness and bilingual behavior; improvements require scoping.
 - [Android data safety on a real phone](2026-10-08-android-data-safety-validation.md): consolidates outstanding readiness checks; upgrades, restore and failure recovery.
 - [Privacy and local-data protection](2026-10-08-privacy-local-data-review.md): bounded security/privacy assessment.
 - [Android accessibility and Persian usability](2026-10-08-accessibility-persian-phone-review.md): primary-flow phone/TalkBack review.
