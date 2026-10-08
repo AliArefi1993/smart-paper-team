@@ -8,7 +8,7 @@ Use synthetic records on a spare device. Keep an externally readable JSON backup
 
 ## Record before execution
 
-Record device model/Android/WebView version, installed and candidate APK versionCode/versionName, frontend revision, certificate SHA-256, APK checksum, backup filename/checksum and fixture values. Validated candidate for publication: 2026.10.7 / code 24 / frontend `036d2c5`; APK SHA-256 `8554c574d60b3e8ec7c33d9026d7c8eac0b9a4c033297ce90097377d2ea59a2f`; stable certificate: `59912e191b4588996b4f3641c9b3609e77fa75aa6695be789ece1a0325faf2a5`. Confirm publication before using it as an installed baseline. Use a verified higher-version candidate for upgrade; do not modify personal records to test.
+Record device model/Android/WebView version, installed and candidate APK versionCode/versionName, frontend revision, certificate SHA-256, APK checksum, backup filename/checksum and fixture values. Published baseline: 2026.10.7 / code 24 / frontend `036d2c5`; APK SHA-256 `8554c574d60b3e8ec7c33d9026d7c8eac0b9a4c033297ce90097377d2ea59a2f`; stable certificate: `59912e191b4588996b4f3641c9b3609e77fa75aa6695be789ece1a0325faf2a5`. Use a verified higher-version candidate for upgrade; do not modify personal records to test.
 
 ## Synthetic fixture
 

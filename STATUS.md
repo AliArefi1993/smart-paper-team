@@ -6,7 +6,7 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 
 ## Current Focus
 
-- Latest published release: [Android 2026.10.6](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.6), verified non-draft APK with matching size/SHA-256. Validated stable-signed candidate `2026.10.7` / code24 is ready for coordinated publication. Android/local-data is the primary product; backend feature work is paused. Frontend `036d2c5` preserves saved templates absent from a Merge backup while keeping Replace behavior. See [release record](releases/smart-paper-v2026.10.7.md) and [implementation task](tasks/2026-10-08-template-merge-safety.md).
+- Latest published release: [Android 2026.10.7](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.7), verified non-draft APK with matching size/SHA-256. Android/local-data is the primary product; backend feature work is paused. Frontend `036d2c5` preserves saved templates absent from a Merge backup while keeping Replace behavior. See [release record](releases/smart-paper-v2026.10.7.md) and [implementation task](tasks/2026-10-08-template-merge-safety.md).
 - Planner local autosave, green Light/Dark surfaces and day minimization remain shipped. Ideas auto-recovers unfinished writing; publishing a saved thought remains deliberate.
 - Product/Designer/personal systems/QA assessment and editable bilingual studio handoffs guide changes; structural stories do not certify native Android behavior.
 - Standing maintainer direction: publish stable-signed Android releases after validated user-visible changes. Physical keyboard/lifecycle, upgrade/data retention, native notifications/sharing and TalkBack remain recorded follow-ups, not publication gates.
@@ -34,14 +34,14 @@ Run `scripts/project-context.sh` for current branches, revisions, working-tree c
 - Backend: Python, Django 6.0.4, SQLite, `planner` and `finance` apps, committed migrations, Docker/Compose, Gunicorn startup path.
 - Frontend: Next.js 16.2.4, React 19.2.4, TypeScript, Tailwind CSS 4, Capacitor 8.
 - Frontend routes: planner, ideas, timer, finance, summaries, export/import, and settings.
-- Latest Android release: `versionCode 23`, `versionName 2026.10.6`; validated next candidate is code24/name2026.10.7 with the stable signing certificate.
+- Latest Android release: `versionCode 24`, `versionName 2026.10.7`, using the stable signing certificate.
 - Team `smart-paper-v*` tags publish GitHub Releases when the matching release record and APK are committed.
 
 ## Latest Verified Checks
 
 Frontend `036d2c5` passes Docker lint, TypeScript and all 52 tests. Independent review found no unresolved blockers. Studio typecheck/build and bounded EN/FA structural review passed with the documented environment limitation. Backend remains `68c789b`; prior 33-test/no-migration evidence reused.
 
-Stable-signed Android `2026.10.7` code24 candidate build passed; certificate and version were verified, and all 136 exported files byte-match APK assets. Team tag and GitHub publication verification remain pending. npm install reported 21 advisories (1 low, 4 moderate, 14 high, 2 critical); no clean audit is claimed. Template Merge adapter and five-key rollback coverage passed. Physical Android/TalkBack and the broader upgrade/restore data-safety matrix remain unverified follow-ups. See [2026.10.7 release](releases/smart-paper-v2026.10.7.md).
+Stable-signed Android `2026.10.7` code24 build passed; certificate and version were verified, and all 136 exported files byte-match APK assets. The public, non-draft GitHub release asset matches the committed APK size and SHA-256. npm install reported 21 advisories (1 low, 4 moderate, 14 high, 2 critical); no clean audit is claimed. Template Merge adapter and five-key rollback coverage passed. Physical Android/TalkBack and the broader upgrade/restore data-safety matrix remain unverified follow-ups. See [2026.10.7 release](releases/smart-paper-v2026.10.7.md).
 
 ## Known Risks And Gaps
 

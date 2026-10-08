@@ -12,7 +12,7 @@ Prevent default Merge import from deleting saved week templates that are absent 
 
 - Discovered by independent review during [data-safety validation](2026-10-08-android-data-safety-validation.md).
 - Owner: `smart-paper-front/`; team owns handoff and release records.
-- `importLocalExportPayload` currently assigns incoming templates wholesale for both merge and replace, contradicting the existing merge promise.
+- Pre-fix review found that `importLocalExportPayload` assigned incoming templates wholesale for both Merge and Replace, contradicting the existing Merge promise. The adapter now preserves saved IDs absent from the incoming collection.
 - Maintainer authorized backlog prioritization and execution on 2026-10-08. Data preservation takes priority over new features and the unreproduced ChatGPT handoff issue.
 
 ## Acceptance Criteria
@@ -23,7 +23,7 @@ Prevent default Merge import from deleting saved week templates that are absent 
 - [x] Actual adapter regression tests cover those cases and persisted results.
 - [x] Five-key write/rollback and schema-compatibility tests pass.
 - [x] Designer handoff ready; independent final review has no unresolved critical/high finding.
-- [ ] Relevant checks, documentation and stable-signed Android release complete.
+- [x] Relevant checks, documentation and stable-signed Android release complete.
 
 ## Non-Goals
 
@@ -45,7 +45,7 @@ New import controls/copy, different conflict UI, backend parity, crash-atomic st
 | Independent final review | Actual production diff, adapter tests and phone matrix | No blocking findings; exact Replace collection retained |
 | Design | Ready handoff; studio typecheck/build and bounded EN/FA phone/wide outcome review | Passed with documented studio environment limitations |
 | Stable-signed release | `scripts/build-android-release-docker.sh`; `apksigner`; APK version and packaged assets | Passed; versionCode 24/name 2026.10.7, stable certificate, all 136 exported files byte-match; two zero-byte Cordova bridge shims also packaged. `npm ci` reported 21 advisories; no clean audit claimed. |
-| Publication | Coordinated commits/tags and GitHub Release asset verification | Pending tag push |
+| Publication | Coordinated commits/tags and GitHub Release asset verification | Passed; non-draft public asset matches committed APK size and SHA-256 |
 | Physical Android | No `adb` available in workspace | Unexecuted follow-up |
 
 ## Decisions And Risks
@@ -56,4 +56,4 @@ New import controls/copy, different conflict UI, backend parity, crash-atomic st
 
 ## Outcome / Handoff
 
-[Designer handoff](../design/2026-10-08-template-merge-safety.md) is ready. The adapter now preserves unrelated template IDs during Merge; focused pre-fix adapter tests reproduced both data-loss cases. Docker lint/TypeScript/all 52 tests passed on final source; independent final review has no blockers. The stable-signed 2026.10.7/code24 APK and release record are prepared; coordinated commits/tags and GitHub asset verification are pending. Physical Android and TalkBack checks remain unverified follow-ups.
+[Designer handoff](../design/2026-10-08-template-merge-safety.md) is ready. The adapter now preserves unrelated template IDs during Merge; focused pre-fix adapter tests reproduced both data-loss cases. Docker lint/TypeScript/all 52 tests passed on final source; independent final review has no blockers. The stable-signed 2026.10.7/code24 APK was published and its public asset verified against the committed artifact. Frontend `036d2c5`, backend `68c789b` and team `64c7911` carry the coordinated tag. Physical Android and TalkBack checks remain unverified follow-ups.

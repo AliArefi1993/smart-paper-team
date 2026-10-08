@@ -1,7 +1,7 @@
 # Smart Paper Release: smart-paper-v2026.10.7
 
 Date: 2026-10-08
-Status: validated stable-signed Android release.
+Status: published stable-signed release; GitHub Release asset verified against the committed APK.
 
 ## Scope
 
@@ -17,11 +17,13 @@ Status: validated stable-signed Android release.
 | Tag (all three repositories) | `smart-paper-v2026.10.7` |
 | Frontend | `036d2c5` |
 | Backend | `68c789b` unchanged |
-| Team | Release artifact/record/design/docs and frontend pointer commit |
+| Team | `64c7911` release artifact/record/design/docs and frontend pointer commit |
 | Android | versionCode 24; versionName `2026.10.7`; local-data mode |
 | APK | `releases/artifacts/SmartPaper-local-2026.10.7-release.apk` |
 | SHA-256 / size | `8554c574d60b3e8ec7c33d9026d7c8eac0b9a4c033297ce90097377d2ea59a2f` / 4,413,128 bytes |
 | Certificate SHA-256 | Stable `59912e191b4588996b4f3641c9b3609e77fa75aa6695be789ece1a0325faf2a5` |
+
+The `smart-paper-v2026.10.7` annotated tag was pushed to the backend, frontend and team repositories; the team tag was pushed last to trigger publication. GitHub reports the release as non-draft, published 2026-10-08, with the expected APK asset at 4,413,128 bytes. The downloaded public asset SHA-256 matches the committed APK.
 
 ## Verification
 

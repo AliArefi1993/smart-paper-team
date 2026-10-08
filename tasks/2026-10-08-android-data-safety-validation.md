@@ -42,7 +42,7 @@ Establish actual-device evidence that upgrades, backups and interrupted/failed o
 | --- | --- | --- |
 | Scope | Maintainer authorized final backlog additions on 2026-10-08 | Saved as planned |
 | Initial local baseline | Docker Node 24, frontend tests on 2026-10-08 | 37 passed |
-| Discovered Merge issue | Independent review of template assignment in local-store.ts | High data-loss finding; fixed and validated for [2026.10.7](../releases/smart-paper-v2026.10.7.md) |
+| Discovered Merge issue | Independent review of template assignment in local-store.ts | High data-loss finding; fixed and released in [2026.10.7](../releases/smart-paper-v2026.10.7.md) |
 | Final local checks | Docker lint, TypeScript, all 52 tests, independent review and stable-signed release build | Passed; see [template merge task](2026-10-08-template-merge-safety.md) and release record |
 | Phone execution | No ADB executable available in workspace PATH | Not run |
 | Fixtures and matrix | [Execution matrix](2026-10-08-data-safety-phone-matrix.md) | Prepared; device fields pending |
@@ -55,4 +55,4 @@ Establish actual-device evidence that upgrades, backups and interrupted/failed o
 
 ## Outcome / Handoff
 
-The discovered template Merge data-loss issue is fixed and validated for [2026.10.7](../releases/smart-paper-v2026.10.7.md). The broader phone checks remain open. Use the [prepared matrix](2026-10-08-data-safety-phone-matrix.md) on a spare device. Automated checks do not establish upgrade retention or crash atomicity.
+The discovered template Merge data-loss issue is fixed and released in [2026.10.7](../releases/smart-paper-v2026.10.7.md). The broader phone checks remain open. Use the [prepared matrix](2026-10-08-data-safety-phone-matrix.md) on a spare device. Automated checks do not establish upgrade retention or crash atomicity.
