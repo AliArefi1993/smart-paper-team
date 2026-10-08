@@ -2,7 +2,7 @@
 
 Smart Paper is a personal weekly planning, progress tracking, finance tracking, and data export application. Its primary release target is a downloadable Android APK that stores each person's data on their own phone.
 
-The current implementation targets Android `2026.10.7` / versionCode 24 (local-data mode); see the [release record](releases/smart-paper-v2026.10.7.md) for source revision and validation. Product and design priorities are phone use in English and Persian, preserving local records, and reliable existing flows. Browser and Storybook checks support Android work; native Android behavior requires separate evidence. The Django/hosted-web path is secondary and paused until needed.
+The current validated release candidate targets Android `2026.10.8` / versionCode 25 (local-data mode); see the [release record](releases/smart-paper-v2026.10.8.md) for source revision and validation. Product and design priorities are phone use in English and Persian, preserving local records, and reliable existing flows. Browser and Storybook checks support Android work; native Android behavior requires separate evidence. The Django/hosted-web path is secondary and paused until needed.
 
 ## What It Currently Does
 
@@ -21,7 +21,7 @@ The current implementation targets Android `2026.10.7` / versionCode 24 (local-d
 - Tracks a finance goal and income entries, with confirmation before deleting income and larger named save/add controls.
 - Protects finance data behind a PIN/session unlock when using the Django backend.
 - Exports planner and finance data as JSON, CSV, Excel, and Markdown for AI review.
-- Lets Android users create a separate Markdown AI report with selected fields and an inclusive date range, review its text, and share it through the device chooser. The report explains its scope and asks the receiving AI for a grounded first response. Finance fields start off and require the finance unlock.
+- Lets Android users create a separate Markdown AI report with selected fields and an inclusive date range, review its text, copy it deliberately to the device clipboard or share its file through the device chooser. Manual text selection remains available when clipboard access fails. The report explains its scope and asks the receiving AI for a grounded first response. Finance fields start off and require the finance unlock.
 - Imports Smart Paper JSON backups in merge/upsert or replace mode. Local Merge preserves unrelated saved week templates and updates matching IDs from the incoming backup; an empty or omitted template collection deletes nothing. Replace uses only the incoming collection.
 - Gives Android JSON backups dated filenames and shows the chosen file's week and income counts before replace confirmation.
 - Supports English and Persian UI text.
@@ -49,7 +49,7 @@ The current implementation targets Android `2026.10.7` / versionCode 24 (local-d
 - Open summaries to review recent weeks and hide or show empty weeks.
 - Unlock Finance with a PIN screen lock on Android, set a finance goal, and add/edit/delete income records.
 - Open Export to create or restore a JSON backup and export records; use the separate selective AI report flow to preview and share chosen fields. Report finance fields start off and require unlock; the full Markdown export button is backend-mode only.
-- Choose report fields and dates before sharing with an AI app; select ChatGPT in the device chooser when available or attach the saved report there manually.
+- Choose report fields and dates, then copy the report and manually open ChatGPT to paste, review and send; file sharing through the device chooser remains available when a compatible recipient appears. Smart Paper does not open ChatGPT, attach or send automatically. If source data changed, review the refreshed preview before choosing a transfer action again. Finance authorization is checked on every Copy, Share and manual-selection action.
 - Use the installed Android app offline with local device storage; preserve records across upgrades and transfer them with JSON backup/restore.
 
 ## Major Implemented Capabilities

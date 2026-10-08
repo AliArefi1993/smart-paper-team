@@ -4,15 +4,15 @@ This roadmap is based on repository inspection only. Speculative ideas are marke
 
 ## Current Goal: Confidence In The Shipped Android App
 
-Android `2026.10.7` / versionCode 24 includes the bounded local Merge template-preservation fix. See the [task](tasks/2026-10-08-template-merge-safety.md) and [release record](releases/smart-paper-v2026.10.7.md) for validation and artifact evidence. The seven-route audit remains a structural reference with native follow-ups.
+Android `2026.10.7` / versionCode 24 is the latest published release. The validated `2026.10.8` / code25 candidate corrects the AI report handoff; see its [task](tasks/2026-10-07-ai-report-chatgpt-handoff.md) and [release record](releases/smart-paper-v2026.10.8.md) for evidence and remaining native follow-ups. The seven-route audit remains a structural reference with native follow-ups.
 
 - Prioritize observed design/implementation mismatches by effect on local data, task completion, and bilingual phone use. A user-visible fix requires a ready Designer handoff and targeted QA.
 
-Completed 2026-10-08: [fixed template loss during Merge import](tasks/2026-10-08-template-merge-safety.md) with related storage-failure tests in one bounded validation/release cycle. Continue phone data-safety evidence when a test device is available; investigate the reported ChatGPT handoff next once reproduction details are known. Keep new feature implementation sequential; independent reviews and preparation may overlap.
+Completed 2026-10-08: [fixed template loss during Merge import](tasks/2026-10-08-template-merge-safety.md) with related storage-failure tests in one bounded validation/release cycle. Continue phone data-safety evidence when a test device is available; complete the [confirmed ChatGPT handoff correction](tasks/2026-10-07-ai-report-chatgpt-handoff.md) next: copy/manual transfer and truthful file-sharing feedback. Keep new feature implementation sequential; independent reviews and preparation may overlap.
 
 - [Validate Android data safety on a real phone](tasks/2026-10-08-android-data-safety-validation.md): upgrades, backup/restore, failed/cancelled imports, low storage and interruption recovery; consolidates existing readiness follow-ups.
 - Test planner, templates, finance, export/restore, English/Persian layout, offline use, and notification behavior on a phone.
-- Investigate and fix the maintainer-reported **Open ChatGPT** problem in the AI report before relying on it for a Planner shortcut; test Android chooser and save-then-attach fallback on a phone. See the [future task](tasks/2026-10-07-ai-report-chatgpt-handoff.md).
+- Validated release candidate: [AI report handoff correction](tasks/2026-10-07-ai-report-chatgpt-handoff.md). The navigation-only URL is replaced by Copy report, file sharing and manual selection, with source/finance rechecks. Phone clipboard/paste, chooser/recipient acceptance and TalkBack remain follow-ups before relying on a recipient-specific path.
 - Test the focus/rest timer on a phone, including app suspension and reopening after a session completes.
 - Test Idea Space capture, editing, branching, search, keyboard behavior, backup/restore, and upgrade on a phone in English and Persian.
 - Validate the compact template sheet and current-week auto-centering on a phone in both languages.

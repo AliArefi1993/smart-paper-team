@@ -13,13 +13,15 @@ Updated: 2026-10-08. Keep this file short and update it when user-visible featur
 - Use English or Persian.
 - Choose a saved Light or Dark appearance across every app page, including summaries and reports.
 - Export JSON backups and readable CSV, Excel, or Markdown files.
-- Create a selective Markdown AI report by field and date range, preview its text, and share it using the phone's app chooser. The file explains itself and asks the AI for a grounded first response.
+- Create a selective Markdown AI report by field and date range, preview its text, then copy it for manual pasting or share its file using the phone's app chooser. Manual text selection is available when copying fails; changed source data requires reviewing the refreshed preview. The file explains itself and asks the AI for a grounded first response.
 - Import a JSON backup by merge or replace.
 - Set an optional morning plan notification and explicitly save validated Settings from the header or end of the form.
 - Run focus and rest countdowns with configurable lengths and an hourglass display; a session stays accurate after navigation or app suspension.
 - Capture freeform ideas, expand optional writing sparks when wanted, revisit an older thought each day, branch from notes, and search or edit them. Notes are included in JSON backups. Contextual new/edit/branch drafts recover separately, protect dirty writing, and retain missing/changed-source writing with Keep as new thought. Drafts are excluded from backups.
 
 ## Recent completed work
+
+- Replaced the report's misleading Open ChatGPT URL with explicit Copy report text, Share report file and manual selection. Transfers recheck source/finance access and preserve the reviewed content; recipient delivery remains a phone follow-up. [Handoff task](tasks/2026-10-07-ai-report-chatgpt-handoff.md) tracks validation and publication.
 
 - Corrected local JSON Merge import to preserve unrelated saved week templates, including empty/partial incoming collections; matching IDs update from the backup. Actual-adapter and five-key rollback tests cover the fix; Android release verification is tracked in [template merge safety](tasks/2026-10-08-template-merge-safety.md).
 
