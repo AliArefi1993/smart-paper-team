@@ -1,6 +1,6 @@
 # Task: Validate Android data safety on a real phone
 
-Status: planned
+Status: in progress; phone execution pending
 Created: 2026-10-08
 Updated: 2026-10-08
 
@@ -27,7 +27,7 @@ Establish actual-device evidence that upgrades, backups and interrupted/failed o
 
 ## Non-Goals
 
-- Executing reviews/tests, changing app code or publishing a release during this backlog-recording request.
+- New product features or changes unrelated to observed data-safety findings.
 - New servers, telemetry uploads or a separate tracking system.
 
 ## Plan
@@ -41,7 +41,11 @@ Establish actual-device evidence that upgrades, backups and interrupted/failed o
 | Check | Command or evidence | Result |
 | --- | --- | --- |
 | Scope | Maintainer authorized final backlog additions on 2026-10-08 | Saved as planned |
-| Review/validation | Deferred until task starts | Not run |
+| Initial local baseline | Docker Node 24, frontend tests on 2026-10-08 | 37 passed |
+| Discovered Merge issue | Independent review of template assignment in local-store.ts | High data-loss finding; fixed and validated for [2026.10.7](../releases/smart-paper-v2026.10.7.md) |
+| Final local checks | Docker lint, TypeScript, all 52 tests, independent review and stable-signed release build | Passed; see [template merge task](2026-10-08-template-merge-safety.md) and release record |
+| Phone execution | No ADB executable available in workspace PATH | Not run |
+| Fixtures and matrix | [Execution matrix](2026-10-08-data-safety-phone-matrix.md) | Prepared; device fields pending |
 
 ## Decisions And Risks
 
@@ -51,4 +55,4 @@ Establish actual-device evidence that upgrades, backups and interrupted/failed o
 
 ## Outcome / Handoff
 
-Future work only; no app changes or QA executed. When selected, follow the bounded plan and preserve the current release/safety rules.
+The discovered template Merge data-loss issue is fixed and validated for [2026.10.7](../releases/smart-paper-v2026.10.7.md). The broader phone checks remain open. Use the [prepared matrix](2026-10-08-data-safety-phone-matrix.md) on a spare device. Automated checks do not establish upgrade retention or crash atomicity.

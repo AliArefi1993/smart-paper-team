@@ -1,6 +1,6 @@
 # Smart Paper Features
 
-Updated: 2026-10-07. Keep this file short and update it when user-visible features change.
+Updated: 2026-10-08. Keep this file short and update it when user-visible features change.
 
 ## In the Android app
 
@@ -20,6 +20,8 @@ Updated: 2026-10-07. Keep this file short and update it when user-visible featur
 - Capture freeform ideas, expand optional writing sparks when wanted, revisit an older thought each day, branch from notes, and search or edit them. Notes are included in JSON backups. Contextual new/edit/branch drafts recover separately, protect dirty writing, and retain missing/changed-source writing with Keep as new thought. Drafts are excluded from backups.
 
 ## Recent completed work
+
+- Corrected local JSON Merge import to preserve unrelated saved week templates, including empty/partial incoming collections; matching IDs update from the backup. Actual-adapter and five-key rollback tests cover the fix; Android release verification is tracked in [template merge safety](tasks/2026-10-08-template-merge-safety.md).
 
 - Implemented Ideas writing protection/contextual recovery, safe retry after note-save cleanup failure, end-of-form Settings Save, and Finance deletion confirmation/larger commit targets for [Android2026.10.6 / code23](releases/smart-paper-v2026.10.6.md). Runtime QA and publication status are tracked in that record.
 

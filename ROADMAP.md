@@ -4,9 +4,11 @@ This roadmap is based on repository inspection only. Speculative ideas are marke
 
 ## Current Goal: Confidence In The Shipped Android App
 
-Android `2026.10.6` / versionCode 23 implements the bounded audit follow-ups: Ideas writing protection/contextual recovery, end-of-form Settings Save and Finance deletion confirmation/commit targets. See the [task](tasks/2026-10-06-audit-followups.md) and [release record](releases/smart-paper-v2026.10.6.md) for bounded QA, revision and publication status. The seven-route audit remains a structural reference with native follow-ups.
+Android `2026.10.7` / versionCode 24 includes the bounded local Merge template-preservation fix. See the [task](tasks/2026-10-08-template-merge-safety.md) and [release record](releases/smart-paper-v2026.10.7.md) for validation and artifact evidence. The seven-route audit remains a structural reference with native follow-ups.
 
 - Prioritize observed design/implementation mismatches by effect on local data, task completion, and bilingual phone use. A user-visible fix requires a ready Designer handoff and targeted QA.
+
+Completed 2026-10-08: [fixed template loss during Merge import](tasks/2026-10-08-template-merge-safety.md) with related storage-failure tests in one bounded validation/release cycle. Continue phone data-safety evidence when a test device is available; investigate the reported ChatGPT handoff next once reproduction details are known. Keep new feature implementation sequential; independent reviews and preparation may overlap.
 
 - [Validate Android data safety on a real phone](tasks/2026-10-08-android-data-safety-validation.md): upgrades, backup/restore, failed/cancelled imports, low storage and interruption recovery; consolidates existing readiness follow-ups.
 - Test planner, templates, finance, export/restore, English/Persian layout, offline use, and notification behavior on a phone.
@@ -25,7 +27,7 @@ Android `2026.10.6` / versionCode 23 implements the bounded audit follow-ups: Id
 
 - Planned evaluation: [Periodic team reviews](tasks/2026-10-08-periodic-team-reviews.md) covering QA, independent feature proposals, necessary refactoring, new/updated agent skills and similar-app/technology research, with lightweight triggers and effort limits. No recurring jobs or new rules are enabled yet.
 
-- Planned evaluation: [Lightweight batching and release cadence](tasks/2026-10-08-batching-release-cadence.md), deciding whether/how to reduce repeated coordination, tests/builds and releases. Current workflow remains in force until a decision is made.
+- Assessed: [Lightweight batching and release cadence](tasks/2026-10-08-batching-release-cadence.md), bounded related work and eligible unchanged-source evidence reuse adopted for this run; release cadence and standing authorization remain unchanged.
 
 - Planned: [Lightweight project home page and roadmap cleanup](tasks/2026-10-08-project-home-roadmap.md), making current features, future tasks, priorities and releases easier to browse through existing Markdown files.
 

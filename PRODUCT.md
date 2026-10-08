@@ -2,7 +2,7 @@
 
 Smart Paper is a personal weekly planning, progress tracking, finance tracking, and data export application. Its primary release target is a downloadable Android APK that stores each person's data on their own phone.
 
-The current implementation targets Android `2026.10.6` / versionCode 23 (local-data mode); see the [release record](releases/smart-paper-v2026.10.6.md) for source revision, validation and publication status. Product and design priorities are phone use in English and Persian, preserving local records, and reliable existing flows. Browser and Storybook checks support Android work; native Android behavior requires separate evidence. The Django/hosted-web path is secondary and paused until needed.
+The current implementation targets Android `2026.10.7` / versionCode 24 (local-data mode); see the [release record](releases/smart-paper-v2026.10.7.md) for source revision and validation. Product and design priorities are phone use in English and Persian, preserving local records, and reliable existing flows. Browser and Storybook checks support Android work; native Android behavior requires separate evidence. The Django/hosted-web path is secondary and paused until needed.
 
 ## What It Currently Does
 
@@ -22,7 +22,7 @@ The current implementation targets Android `2026.10.6` / versionCode 23 (local-d
 - Protects finance data behind a PIN/session unlock when using the Django backend.
 - Exports planner and finance data as JSON, CSV, Excel, and Markdown for AI review.
 - Lets Android users create a separate Markdown AI report with selected fields and an inclusive date range, review its text, and share it through the device chooser. The report explains its scope and asks the receiving AI for a grounded first response. Finance fields start off and require the finance unlock.
-- Imports Smart Paper JSON backups in merge/upsert or replace mode.
+- Imports Smart Paper JSON backups in merge/upsert or replace mode. Local Merge preserves unrelated saved week templates and updates matching IDs from the incoming backup; an empty or omitted template collection deletes nothing. Replace uses only the incoming collection.
 - Gives Android JSON backups dated filenames and shows the chosen file's week and income counts before replace confirmation.
 - Supports English and Persian UI text.
 - Offers a saved Light/Dark appearance choice across Planner, Idea Space, Timer, Summaries, Finance, Export/AI report, and Settings, using shared green-toned dark roles including Planner.
