@@ -65,7 +65,7 @@ Completed 2026-10-08: [fixed template loss during Merge import](tasks/2026-10-08
 - Make API error handling more structured for frontend display.
 - Polish configurable section UX after real use: assess ten active sections, hidden-section-with-data visibility, and optional separate English/Persian labels.
 - [Android accessibility and Persian usability review](tasks/2026-10-08-accessibility-persian-phone-review.md): TalkBack, text scaling, touch targets, keyboard behavior and RTL/LTR on primary flows.
-- [Review and improve Android notifications](tasks/2026-10-08-android-notification-review.md): verify existing morning reminders on a real device, then scope useful improvements based on evidence.
+- [Review and improve Android notifications](tasks/2026-10-08-android-notification-review.md): verify existing morning reminders on a real device; improve notification design/UX, bilingual messages, and the place and timing of the notification-permission request based on evidence.
 - Consider trusted-proxy client address handling or user-account-based throttling if Smart Paper becomes a multi-user or internet-exposed app.
 - Consider a native completion notification only if phone use shows a need for an alert while the app is in the background.
 
