@@ -8,7 +8,7 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 
 - [Finance session expiry fix](tasks/2026-10-09-finance-session-expiry.md) shipped in Android 2026.10.11/code 28 after exact-source CI, protected signing, independent Security review and public checksum verification. No migration or backend change. Native lifecycle/TalkBack remains unverified.
 
-- [Privacy/local-data assessment](docs/privacy-local-data-review.md) completed at frontend `38f19c1` on 2026-10-09: no high/critical finding established in bounded source/configuration review. Prioritized follow-ups are finance expiry display, explicit Android backup policy and reminder-preview disclosure. No app behavior changed; device/runtime evidence remains unverified.
+- [Privacy/local-data assessment](docs/privacy-local-data-review.md) completed against frontend `38f19c1` on 2026-10-09: no high/critical finding established in bounded source/configuration review. Finance expiry display was fixed in 2026.10.11; explicit Android backup policy and reminder-preview disclosure remain follow-ups. The assessment itself changed no app behavior; device/runtime evidence remains unverified.
 
 - Hosted stable-build workflow at frontend `625cfe0` passed a protected signing run after explicit maintainer approval in chat. Run `37905792035` built source `625cfe02204191269459093fdfa66aa3755bba62`; independent verification accepted its downloaded APK signature, version, identity, and checksum. Environment reviewer/main-only/no-bypass protections are verified. Maintainer-reported secrets remain in GitHub and were not read. See the [setup guide](smart-paper-front/.github/STABLE-BUILDS.md). Publication remains a separate team tag workflow.
 

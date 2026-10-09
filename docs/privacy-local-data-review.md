@@ -25,7 +25,7 @@ Threats considered: casual access to an unlocked phone, sensitive notification p
 
 ## Ranked findings and bounded follow-up scopes
 
-These are assessment priorities, not implemented fixes. Severity assumes deliberate local use; no broad hosted or multi-user assessment was performed.
+These were assessment priorities at the reviewed source revision. The finance-expiry finding was fixed in Android 2026.10.11; explicit OS backup policy and notification disclosure remain follow-ups. Severity assumes deliberate local use; no broad hosted or multi-user assessment was performed.
 
 1. **Medium: finance remains rendered after unlock expiry. High value, low–medium effort.** [FinanceView](../smart-paper-front/src/components/finance-view.tsx#L78) polls using the full one-hour TTL and lacks focus/visibility rechecks. Mounting near expiry can leave stale finance visible almost another hour; suspended timers add uncertainty. Store reads/mutations still enforce expiry. Next implementation: bounded polling or remaining-expiry scheduling, recheck on focus/resume, and clear sensitive rendered/edit state on expiry. Cover near-expiry mounting, suspended return and stale asynchronous responses. Reuse [ExportView checks](../smart-paper-front/src/components/export-view.tsx#L78). Designer must define bilingual locked/unsaved-edit states before implementation; an immediate-lock action is a separate decision.
 
