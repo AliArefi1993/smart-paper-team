@@ -10,9 +10,11 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 
 - Latest published release: [Android 2026.10.10](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.10), code 27. Hosted frontend source `38f19c1a6a151fce04a02c951a06dab6ae9a1f76`, signing, Security review, publisher and anonymous public APK download/checksum verification passed. No application behavior or data migration changed. See the [release task](tasks/2026-10-09-hosted-signed-release.md) and [release record](releases/smart-paper-v2026.10.10.md).
 
+- Maintainer standing authorization dated 2026-10-09 permits the agent-operated release flow without per-run user permission requests during the pre-user phase. Lead acceptance, release go/no-go, technical gates, and GitHub environment protections remain required. Revisit when real users start using the app or the maintainer revokes authorization. See [decision D-011](docs/decisions.md).
+
 - User-requested [stable release pipeline check](tasks/2026-10-09-release-pipeline-check.md) passed: hosted frontend `fada7d8`, fresh stable APK, Security review, tag publisher and public download/checksum. Android 2026.10.9/code 26 is published; application behavior remains as shipped in 2026.10.8.
 
-- [Secret-free frontend CI, isolated verification APKs, and hosted stable signing](tasks/2026-10-07-github-actions-ci-android-builds.md) are live. Frontend `625cfe0` passed automatic verification and the protected stable signing run; a separate failing-test branch confirmed the gate; release revision remains `fada7d8`. Existing team publication remains separate.
+- [Secret-free frontend CI, isolated verification APKs, and hosted stable signing](tasks/2026-10-07-github-actions-ci-android-builds.md) are live. Frontend `625cfe0` passed automatic verification and the protected stable signing run; a separate failing-test branch confirmed the gate. The latest released revision is frontend `38f19c1`. Existing team publication remains separate.
 
 - Android/local-data is the primary product; backend feature work is paused. The frontend now uses deliberate copy, file-share, and manual-selection paths for AI reports. See [2026.10.9 release record](releases/smart-paper-v2026.10.9.md) and [implementation task](tasks/2026-10-07-ai-report-chatgpt-handoff.md).
 - Planner local autosave, green Light/Dark surfaces and day minimization remain shipped. Ideas auto-recovers unfinished writing; publishing a saved thought remains deliberate.

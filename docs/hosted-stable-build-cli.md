@@ -1,10 +1,10 @@
 # Hosted stable-build command line
 
-This helper dispatches, inspects, and explicitly approves the frontend repository's `stable-build.yml` workflow. It never reads or prints credentials, calls secret endpoints, edits protection rules, creates tags, or publishes releases. The agent runs `approve` only after explicit maintainer approval in chat.
+This helper dispatches, inspects, and submits the protected-environment approval for the frontend repository's `stable-build.yml` workflow. It never reads or prints credentials, calls secret endpoints, edits protection rules, creates tags, or publishes releases. Under the maintainer's 2026-10-09 standing authorization, the agent may run it for an eligible validated Android change or explicit release request without asking for per-run user permission. The lead retains release go/no-go.
 
 ## Authenticate once
 
-Run this command yourself in a private terminal and complete GitHub's interactive sign-in. Do not paste an authentication token into chat or the command line:
+The maintainer completes GitHub's interactive sign-in once in a private terminal when the existing CLI session is absent or expired. Eligible release runs reuse the authenticated `AliArefi1993` review identity; no per-run login or permission request is needed. Do not paste an authentication token into chat or the command line:
 
 ```sh
 gh auth login --hostname github.com --git-protocol https --web
@@ -39,14 +39,14 @@ python3 scripts/hosted-stable-build.py status RUN_ID --expected-sha FULL_40_CHAR
 
 Status checks that the run belongs to `stable-build.yml`, is a `workflow_dispatch` on `main` at the exact expected SHA, and that `stable-signing` has the required reviewer, no self-review prevention, no administrator bypass, and only the `main` branch policy. It prints the workflow URL and compact job states.
 
-## Explicit approval
+## Submit the protected approval
 
-Status is read-only. The agent performs dispatch only after the user requests/approves that action, and performs approval only after explicit approval in the current chat. After reviewing the exact run URL, source commit, version, workflow and signing helper changes, and confirming the unsigned build job succeeded, invoke approval explicitly:
+Status is read-only. For an eligible validated change or explicit release request, proceed under standing maintainer authorization after the lead accepts the scope and gives release go-ahead. Before approval, verify the exact run URL, source commit and version against the approved changes, review workflow/signing-helper changes, and confirm the unsigned build job succeeded. Then invoke the approval command:
 
 ```sh
 python3 scripts/hosted-stable-build.py approve RUN_ID --expected-sha FULL_40_CHARACTER_SHA
 ```
 
-Approval requires `gh auth status` to resolve through the API as `AliArefi1993`, the unsigned candidate job to have completed successfully, and GitHub to report that this account can approve the pending `stable-signing` deployment. The environment protection settings are rechecked immediately before approval. No approval is inferred from dispatch or status inspection.
+Approval requires the authenticated GitHub API identity to be `AliArefi1993`, the unsigned candidate job to have completed successfully, and GitHub to report that this account can approve the pending `stable-signing` deployment. The helper rechecks the exact source and environment protections immediately before submission. This submits the required GitHub reviewer decision under the existing review identity; it does not bypass GitHub protection. The standing authorization is not a scheduler or unattended signing permission and does not cover production/database changes, destructive Git operations, or credential handling. Revisit it when real users begin using the app or the maintainer revokes it; no date-based expiry applies.
 
-After signing succeeds, download and verify the final artifact as described in the frontend setup guide. Release publication remains a separate tag-triggered step under the existing maintainer authorization: commit the verified APK and release record to the team repository, then publish through the authorized `smart-paper-v*` tag workflow. This helper never tags or publishes.
+After signing succeeds, download and verify the final artifact as described in the frontend setup guide. Under the standing release authorization and lead go-ahead, commit the exact verified APK, original provenance, and release record to the team repository. Push annotated frontend and backend tags, then the team tag last; verify the published non-draft release and anonymously download/checksum the public APK. This helper itself never tags or publishes.

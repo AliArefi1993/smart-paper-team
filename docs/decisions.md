@@ -65,6 +65,12 @@ This file records durable choices that constrain future work. It is intentionall
 - **Why:** The maintainer requested fewer poorly placed Save controls; Planner has ordinary editable state and duplicate routine Save affordances. Other commands create records, reset sessions, validate batches or affect privacy/permissions.
 - **Consequence:** Keep week identity and latest edits safe; failure must not claim saved or silently discard text. Retain failed text across SPA return, without promising recovery from reload/process termination when storage fails. New autosave proposals require their own scope and design. See [handoff](../design/2026-10-06-save-controls-design.md).
 
+### D-011 — Use standing maintainer authorization for eligible Android releases
+
+- **Decision (2026-10-09):** During the current pre-user phase, the agent may complete eligible validated Android releases without requesting per-run user permission: dispatch and verify the exact hosted source, submit the required protected-environment approval with the existing authenticated review identity, verify and commit the exact APK/provenance, publish annotated tags in frontend/backend/team order, and verify the public download.
+- **Why:** The maintainer explicitly authorized this agent-operated release flow to avoid repeated approval requests while preserving the existing signed-release process.
+- **Consequence:** Lead acceptance, specialist review, release go/no-go, exact-SHA/build/provenance checks, and GitHub reviewer/main-only/no-bypass protections remain required. This is not unattended signing or a scheduled job. Documentation-only work does not create an APK release. Revisit when real users begin using the app or the maintainer revokes authorization; there is no date-triggered expiry. Destructive Git, production deployment/data, and credential safety boundaries remain unchanged.
+
 ## Adding Or Changing A Decision
 
 Add an entry only when the choice is costly to reverse, crosses repository boundaries, defines a product constraint, or is likely to be debated again. Include the decision, reason, and practical consequence. If superseded, keep the old entry and point it to the replacement.
