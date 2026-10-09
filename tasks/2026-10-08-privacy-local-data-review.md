@@ -1,52 +1,54 @@
 # Task: Review privacy and local-data protection
 
-Status: planned
+Status: complete
 Created: 2026-10-08
-Updated: 2026-10-08
+Updated: 2026-10-09
 
 ## Objective
 
-Create an accurate account of what Smart Paper stores and shares, assess realistic local-data risks and recommend proportionate improvements without assuming offline storage is encrypted.
+Document actual Android/local-data storage and sharing boundaries, assess realistic risks, and rank proportionate improvements without promising encryption.
 
 ## Context
 
-- Owning repositories: team coordination memory; `smart-paper-front/` for any later Android implementation.
-- Roadmap: [ROADMAP.md](../ROADMAP.md); current capabilities/risks: [STATUS.md](../STATUS.md).
-- Product contract: [PRODUCT.md](../PRODUCT.md). Related future work: [local feedback/diagnostics](2026-10-07-local-feedback-diagnostics.md).
+- Owning repository: team coordination memory; frontend assessment at `38f19c1a6a151fce04a02c951a06dab6ae9a1f76` (Android 2026.10.10/code 27).
+- [Roadmap](../ROADMAP.md), [status](../STATUS.md), [review report](../docs/privacy-local-data-review.md).
+- Related future work: [local diagnostics](2026-10-07-local-feedback-diagnostics.md), [phone data safety](2026-10-08-android-data-safety-validation.md).
 
 ## Acceptance Criteria
 
-- [ ] Security reviews local app storage, Android backup configuration, exported files, selective sharing and finance screen-lock behavior against actual code/configuration.
-- [ ] Document what remains on-device, what can leave only through user actions, and existing protection limits; distinguish proposed diagnostics from implemented behavior.
-- [ ] Assess privacy leaks through errors/logs, exported files and future diagnostic/report attachments without collecting real personal data.
-- [ ] Rank justified improvements by risk/value/effort; evaluate encryption and key recovery only if warranted rather than promising or implementing it by default.
-- [ ] Identify any misleading privacy/PIN copy and provide a design-ready scope for necessary clarification; preserve backup and recovery usability.
-- [ ] Record evidence, severity, remaining gaps and bounded follow-up tasks; do not claim unexecuted checks passed.
+- [x] Security reviews storage, Android backup configuration, exported files, selective sharing and finance screen lock against code/configuration.
+- [x] Document on-device data, deliberate transfers, platform backup eligibility and protection limits; distinguish future diagnostics from shipped behavior.
+- [x] Assess errors/logs, exported files and future diagnostic attachments using source and synthetic scenarios only.
+- [x] Rank improvements by risk/value/effort; evaluate encryption and key recovery proportionately.
+- [x] Identify misleading privacy/PIN copy and provide design-ready clarification scopes while preserving recovery usability.
+- [x] Record evidence, severity, remaining gaps and bounded follow-ups; claim only executed checks.
 
 ## Non-Goals
 
-- Executing reviews/tests, changing app code or publishing a release during this backlog-recording request.
-- New servers, telemetry uploads or a separate tracking system.
+- App implementation, new telemetry/servers, cryptographic redesign or APK publication during this assessment.
+- Device/OEM backup certification, legal compliance certification or collection of personal app data.
 
 ## Plan
 
-1. Perform a bounded read-only Security review with explicit local/offline threat assumptions.
-2. Produce a concise data-flow/protection summary and prioritized findings.
-3. Decide scoped fixes with the lead/maintainer and update durable contracts after validated changes.
+1. Bounded read-only Security review of local Android source/configuration.
+2. Lead acceptance and concise report with ranked implementation scopes.
+3. Validate documentation links/diff, update task/status/roadmap and scoped commit/push.
 
 ## Verification
 
-| Check | Command or evidence | Result |
+| Check | Evidence | Result |
 | --- | --- | --- |
-| Scope | Maintainer authorized final backlog additions on 2026-10-08 | Saved as planned |
-| Review/validation | Deferred until task starts | Not run |
+| Repository baseline | `scripts/project-context.sh`; separate Git status in all three repositories | Clean; team `fdd9e96`, backend `68c789b`, frontend `38f19c1` |
+| Security source/configuration review | Bounded independent specialist review, accepted by lead; report includes exact source references | Passed; no high/critical established |
+| Documentation | `git diff --check`; 34 report/task relative links and `#L` anchors resolved; Security accepted final report with no blockers | Passed |
+| Android runtime/backup/recipient delivery | No device execution in this task | Not run |
 
 ## Decisions And Risks
 
-- Design: not applicable to the technical assessment; privacy/settings copy changes require design.
-- No legal/compliance certification or cryptographic redesign is implied. The existing Android PIN is a screen lock, not encryption.
-- Any future user-visible fixes require a ready bilingual Designer handoff, relevant checks/review and the existing release workflow.
+- Design: not applicable to the assessment. User-visible fixes require a ready bilingual Designer/studio handoff before frontend implementation.
+- Standing release authorization applies to later validated app changes; this documentation-only review requires no APK.
+- Existing PIN and JSON encryption warnings are accurate; no replacement encryption promise is justified.
 
 ## Outcome / Handoff
 
-Future work only; no app changes or QA executed. When selected, follow the bounded plan and preserve the current release/safety rules.
+Completed source/configuration assessment with six ranked findings and bounded follow-up scopes in the report. Highest-value next implementation: finance expiry rechecks and clearing stale rendered data; Designer handoff required. OS backup policy and notification disclosure follow. Existing bilingual PIN/JSON warnings are accurate. No frontend/backend files changed; no APK required. Device/transfer tests remain explicit follow-ups.

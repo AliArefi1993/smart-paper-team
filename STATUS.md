@@ -6,6 +6,8 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 
 ## Current Focus
 
+- [Privacy/local-data assessment](docs/privacy-local-data-review.md) completed at frontend `38f19c1` on 2026-10-09: no high/critical finding established in bounded source/configuration review. Prioritized follow-ups are finance expiry display, explicit Android backup policy and reminder-preview disclosure. No app behavior changed; device/runtime evidence remains unverified.
+
 - Hosted stable-build workflow at frontend `625cfe0` passed a protected signing run after explicit maintainer approval in chat. Run `37905792035` built source `625cfe02204191269459093fdfa66aa3755bba62`; independent verification accepted its downloaded APK signature, version, identity, and checksum. Environment reviewer/main-only/no-bypass protections are verified. Maintainer-reported secrets remain in GitHub and were not read. See the [setup guide](smart-paper-front/.github/STABLE-BUILDS.md). Publication remains a separate team tag workflow.
 
 - Latest published release: [Android 2026.10.10](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.10), code 27. Hosted frontend source `38f19c1a6a151fce04a02c951a06dab6ae9a1f76`, signing, Security review, publisher and anonymous public APK download/checksum verification passed. No application behavior or data migration changed. See the [release task](tasks/2026-10-09-hosted-signed-release.md) and [release record](releases/smart-paper-v2026.10.10.md).
@@ -65,7 +67,7 @@ Stable-signed Android `2026.10.9` code 26 build passed; certificate and version 
 - Idea Space capture, editing, branching, keyboard behavior, backup/restore, and upgrade still need physical Android checks.
 - Production environment and deployment documentation remain incomplete for any future hosted backend.
 - Old `node_modules-blocked-*` directories in the frontend need a repository-hygiene decision.
-- Local finance data is not encrypted; its client-side PIN is a screen lock only.
+- Local finance data is not encrypted; its client-side PIN is a screen lock only. Finance can remain rendered after unlock expiry until a delayed session poll; Android backup is enabled without explicit extraction rules and reminders include event titles. [Privacy assessment](docs/privacy-local-data-review.md) records severities and bounded fixes; actual backup/notification behavior remains untested.
 - The 2026.10.9 `npm ci` output reported 21 dependency advisories; this is not a clean audit, and prior static Android applicability assessments remain documented in release records.
 
 ## Context Pointers
