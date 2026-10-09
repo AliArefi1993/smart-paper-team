@@ -6,6 +6,8 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 
 ## Current Focus
 
+- [Secret-free frontend CI and isolated verification APKs](tasks/2026-10-07-github-actions-ci-android-builds.md) are live at frontend `4ffd09f`. Hosted checks, APK verification/upload and a deliberate failed-test gate passed; DevOps/Security accepted. Stable remote signing/publication remains a later stage.
+
 - Latest published release: [Android 2026.10.8](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.8), verified non-draft APK with matching size/SHA-256. Android/local-data is the primary product; backend feature work is paused. The frontend now uses deliberate copy, file-share, and manual-selection paths for AI reports. See [release record](releases/smart-paper-v2026.10.8.md) and [implementation task](tasks/2026-10-07-ai-report-chatgpt-handoff.md).
 - Planner local autosave, green Light/Dark surfaces and day minimization remain shipped. Ideas auto-recovers unfinished writing; publishing a saved thought remains deliberate.
 - Product/Designer/personal systems/QA assessment and editable bilingual studio handoffs guide changes; structural stories do not certify native Android behavior.
@@ -39,7 +41,7 @@ Run `scripts/project-context.sh` for current branches, revisions, working-tree c
 
 ## Latest Verified Checks
 
-Frontend `efc027e` passes Docker lint, TypeScript and all 57 tests. Independent review found no unresolved blockers. Bilingual studio checks and production EN/FA Light/Dark review passed for the recorded cases. Backend remains `68c789b`; prior 33-test/no-migration evidence reused.
+Frontend `4ffd09f` passes hosted lint, TypeScript, all 57 tests, local-data production build, Android assembly, APK identity/signature/version/assets/provenance checks, cache save and verification artifact upload. The separate failing-test branch confirmed downstream build/upload skips and zero artifacts. Independent archive download/extraction and account-specific billing usage remain unverified (public API rate limit exhausted). Earlier frontend `efc027e` passed Docker lint, TypeScript and all 57 tests. Independent review found no unresolved blockers. Bilingual studio checks and production EN/FA Light/Dark review passed for the recorded cases. Backend remains `68c789b`; prior 33-test/no-migration evidence reused.
 
 Stable-signed Android `2026.10.8` code25 build passed; certificate and version were verified, and all 136 exported files byte-match APK assets. The public, non-draft GitHub release asset matches the committed APK size (4,415,348 bytes) and SHA-256 (`f7efe78aae7af2b4f353aa27810bf160c382927c5055560895a837056343594c`). npm install reported 21 advisories (1 low, 4 moderate, 14 high, 2 critical); no clean audit is claimed. Physical Android clipboard/chooser/recipient delivery, TalkBack and the broader upgrade/restore data-safety matrix remain unverified follow-ups. See [2026.10.8 release](releases/smart-paper-v2026.10.8.md).
 
@@ -48,7 +50,7 @@ Stable-signed Android `2026.10.8` code25 build passed; certificate and version w
 - Backend production settings are unsafe defaults: hard-coded `SECRET_KEY`, `DEBUG = True`, and empty `ALLOWED_HOSTS`.
 - JSON mutation endpoints use `csrf_exempt`; planner APIs have no authentication. This is accepted only for the current private/single-user boundary.
 - Finance uses a shared PIN/session gate, not user accounts.
-- No CI, broad frontend integration suite, backend lint, or backend type-check configuration is present.
+- Frontend secret-free CI is verified. Stable remote signing/publication, broad frontend integration coverage, backend lint and backend type-check configuration remain absent; fork/cancellation/cache-hit/device and account-usage checks remain recorded follow-ups.
 - Android notifications and full-week template UX still need physical-device checks in English and Persian.
 - Idea Space capture, editing, branching, keyboard behavior, backup/restore, and upgrade still need physical Android checks.
 - Production environment and deployment documentation remain incomplete for any future hosted backend.

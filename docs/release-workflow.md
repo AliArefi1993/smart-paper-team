@@ -6,6 +6,14 @@ The maintainer gave standing authorization on 2026-10-06 to release Android afte
 
 The lead retains acceptance, scope, and release go/no-go decisions. After a validated parent handoff, the routine closeout owner executes the documented version bump, build/sign, scoped commits and pushes, tags, and publication under this standing authorization. Release preflight is advisory and does not authorize publication. Before final closeout, agents send the assigned routine owner an inventory of every started background process with command, PID/tool session/container ID, ports, working directory, purpose, whether it remains needed, and no secrets. Routine stops only verified task-owned processes after consumers finish, tries graceful shutdown first, verifies shutdown, and reports unclear ownership. Shared reused daemons, user services, and volumes are preserved.
 
+## Verification Builds In GitHub Actions
+
+[Secret-free frontend CI](../smart-paper-front/.github/CI.md) runs in the frontend repository; see the [verified hosted run](https://github.com/AliArefi1993/smart-paper-front/actions/runs/37895850672). Verification APKs are a separate testing channel; they do not change this stable release workflow, its signing identity, release records or tag publisher. Never upload a verification APK as a stable release asset.
+
+The verification package must have a separate application ID and a visible verification label. Its data is separate from the stable app. Keep the installed stable app and its data; do not uninstall it to try a verification build. Runner-generated debug certificates are temporary and do not provide stable upgrade continuity between verification builds. Use only artifacts from source and contributors you trust.
+
+CI covers automated checks and packaging. Physical-device, accessibility and recipient-app checks still require the recorded follow-ups. The design studio belongs to the team repository and retains its own Docker typecheck/build checks; frontend CI cannot validate uncommitted or independent studio changes.
+
 ## When To Create A Tag
 
 Create a release tag after one of these points:

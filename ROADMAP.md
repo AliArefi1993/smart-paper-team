@@ -8,7 +8,7 @@ Android `2026.10.8` / versionCode 25 is the latest published release. The publis
 
 - Prioritize observed design/implementation mismatches by effect on local data, task completion, and bilingual phone use. A user-visible fix requires a ready Designer handoff and targeted QA.
 
-Completed 2026-10-08: [fixed template loss during Merge import](tasks/2026-10-08-template-merge-safety.md) with related storage-failure tests in one bounded validation/release cycle. Continue phone data-safety evidence when a test device is available; complete the [confirmed ChatGPT handoff correction](tasks/2026-10-07-ai-report-chatgpt-handoff.md) next: copy/manual transfer and truthful file-sharing feedback. Keep new feature implementation sequential; independent reviews and preparation may overlap.
+Completed 2026-10-08: [fixed template loss during Merge import](tasks/2026-10-08-template-merge-safety.md) with related storage-failure tests in one bounded validation/release cycle. Continue phone data-safety evidence when a test device is available; the [ChatGPT handoff correction](tasks/2026-10-07-ai-report-chatgpt-handoff.md) is now published with copy/manual transfer and truthful file-sharing feedback. Keep new feature implementation sequential; independent reviews and preparation may overlap.
 
 - [Validate Android data safety on a real phone](tasks/2026-10-08-android-data-safety-validation.md): upgrades, backup/restore, failed/cancelled imports, low storage and interruption recovery; consolidates existing readiness follow-ups.
 - Test planner, templates, finance, export/restore, English/Persian layout, offline use, and notification behavior on a phone.
@@ -31,7 +31,7 @@ Completed 2026-10-08: [fixed template loss during Merge import](tasks/2026-10-08
 
 - Planned: [Lightweight project home page and roadmap cleanup](tasks/2026-10-08-project-home-roadmap.md), making current features, future tasks, priorities and releases easier to browse through existing Markdown files.
 
-- Planned: [GitHub Actions CI and Android build/release automation](tasks/2026-10-07-github-actions-ci-android-builds.md), moving tests and APK builds to hosted runners to reduce local load. Extend existing release publishing; secure signing and exact-source provenance are prerequisites.
+- First stage shipped: [GitHub Actions CI and Android builds](tasks/2026-10-07-github-actions-ci-android-builds.md), with hosted frontend checks, isolated verification APK artifacts and verified success/failed-test gates. Next: trusted signing/publication review; independent download and account-usage checks remain follow-ups.
 
 - Planned: [Design and install a Smart Paper Android launcher icon](tasks/2026-10-07-android-launcher-icon.md); important visual identity task covering the installed home-screen/app-drawer icon, not a full brand redesign.
 
