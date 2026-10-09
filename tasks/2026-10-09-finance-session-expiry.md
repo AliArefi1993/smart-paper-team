@@ -41,7 +41,7 @@ Prevent previously rendered finance data remaining visible for almost an extra h
 | Check | Evidence | Result |
 | --- | --- | --- |
 | Baseline | `scripts/project-context.sh` and separate repository status | Clean |
-| Design | Designer handoff and EN/FA studio states, existing copy retained, lock focus and PIN naming scoped | Ready; studio checks passed, rebuilt QA pending |
+| Design | Designer handoff and EN/FA studio states, existing copy retained, lock focus and PIN naming scoped | Passed; ready handoff, Docker studio checks and rebuilt bilingual acceptance |
 | Automated checks and targeted QA | Isolated Docker npm ci/lint/TypeScript/npm test/local-data build; all 66 tests passed | Passed; existing 21 dependency advisories remain |
 | Independent review | Security source review found and reproduced a microtask publication race; post-await guards plus regression added and re-review accepted | Source and fixed race regression accepted; signed APK/provenance also independently accepted |
 | Production browser QA | Synthetic data on isolated loopback8766; focus/visibility expiry, all drafts/PIN/status cleared, focus recovery, wrong-PIN and saved321 record recovery; foreground unlocked at 27.9s, locked by 37.0s observation; helper verifies 30s interval | Passed; synthetic events, no Android runtime guarantee |
@@ -61,4 +61,4 @@ Prevent previously rendered finance data remaining visible for almost an extra h
 
 Frontend source `052be41c465669b2a3a18342fd443f96a8fc3c5b` is committed/pushed; Android code 28/name 2026.10.11 is published as [Smart Paper v2026.10.11](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.11). The exact hosted artifact passed independent Security verification and its anonymous public download matches the committed APK byte-for-byte. Team release commit `f85ed4f158e44fd2142a9ac1fe22f8b9245685a6` contains the release record, APK and original provenance. Frontend/backend/team annotated tags target their validated release commits. Task-owned preview/studio servers were stopped and ports verified clear.
 
-Lead accepted the bounded change and authorized publication after exact-source CI, candidate verification, protected signing and independent Security review passed. No backend changes or migration. Standing authorization covered the agent-operated release flow.
+Exact-source CI, candidate verification, protected signing and independent Security review passed; the release was published under standing authorization. Backend unchanged; no migration.
