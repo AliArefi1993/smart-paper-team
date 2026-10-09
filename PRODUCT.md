@@ -2,7 +2,7 @@
 
 Smart Paper is a personal weekly planning, progress tracking, finance tracking, and data export application. Its primary release target is a downloadable Android APK that stores each person's data on their own phone.
 
-The current release targets Android `2026.10.8` / versionCode 25 (local-data mode); see the [release record](releases/smart-paper-v2026.10.8.md) for source revision and validation. Product and design priorities are phone use in English and Persian, preserving local records, and reliable existing flows. Browser and Storybook checks support Android work; native Android behavior requires separate evidence. The Django/hosted-web path is secondary and paused until needed.
+The current release targets Android `2026.10.10` / versionCode 27 (local-data mode); see the [release record](releases/smart-paper-v2026.10.10.md) for source revision and validation. Product and design priorities are phone use in English and Persian, preserving local records, and reliable existing flows. Browser and Storybook checks support Android work; native Android behavior requires separate evidence. The Django/hosted-web path is secondary and paused until needed.
 
 ## What It Currently Does
 
@@ -47,7 +47,7 @@ The current release targets Android `2026.10.8` / versionCode 25 (local-data mod
 - Open Focus Timer to run focus and rest sessions, pause or reset them, and explicitly start each next phase.
 - Open Idea Space to capture an unfinished thought, use an optional spark, or grow a thought that returns from earlier writing.
 - Open summaries to review recent weeks and hide or show empty weeks.
-- Unlock Finance with a PIN screen lock on Android, set a finance goal, and add/edit/delete income records.
+- Unlock Finance with a PIN screen lock on Android, set a finance goal, and add/edit/delete income records. Finance rechecks the session every 30 seconds while timers run and on focus/return to visible state. Confirmed expiry clears displayed records and unsaved goal/add/edit fields; re-unlock reloads saved records. Suspended timers may be delayed; the PIN does not encrypt storage.
 - Open Export to create or restore a JSON backup and export records; use the separate selective AI report flow to preview and share chosen fields. Report finance fields start off and require unlock; the full Markdown export button is backend-mode only.
 - Choose report fields and dates, then copy the report and manually open ChatGPT to paste, review and send; file sharing through the device chooser remains available when a compatible recipient appears. Smart Paper does not open ChatGPT, attach or send automatically. If source data changed, review the refreshed preview before choosing a transfer action again. Finance authorization is checked on every Copy, Share and manual-selection action.
 - Use the installed Android app offline with local device storage; preserve records across upgrades and transfer them with JSON backup/restore.

@@ -130,4 +130,5 @@ See `docs/database.md` for entity relationships, persistence ownership, and sche
 - CSRF exemptions are used on JSON mutation endpoints.
 - No background processing, observability, health checks, or CI/CD configuration was found.
 - Morning plan reminders are local device notifications, not server push notifications.
+- Finance view session checks use 30-second active polling and focus/visible events. Confirmed expiry clears sensitive UI/drafts and invalidates outstanding request generations; payload publication revalidates authorization and checks the generation synchronously after its final await. Suspended timer execution is not guaranteed. Saved records are unaffected by relocking.
 - Android data is stored in WebView `localStorage`; the local finance PIN does not encrypt it. Off-device JSON backup and tested restore are required before relying on the app as a sole data store.

@@ -1,0 +1,42 @@
+{
+  "source_sha": "052be41c465669b2a3a18342fd443f96a8fc3c5b",
+  "version_code": 28,
+  "version_name": "2026.10.11",
+  "application_id": "com.aliarefi.smartpaper",
+  "debuggable": false,
+  "web_assets_compared": 136,
+  "repository": "AliArefi1993/smart-paper-front",
+  "run_id": "37980511818",
+  "builder_run_attempt": "1",
+  "unsigned_apk_sha256": "65b9a48926a73c985f1479faaf1055899bce8a79f7adf4f11a2ff483d8934b31",
+  "node": "v24.21.0",
+  "java": "openjdk 21.0.12.1 2026-08-18 LTS",
+  "gradle": "8.14.3",
+  "android_sdk": 36,
+  "android_build_tools": "36.0.0",
+  "data_mode": "local",
+  "ci_transformations": [
+    "NEXT_PUBLIC_DATA_MODE=local static export",
+    "Capacitor sync generated Android assets/config",
+    "official Gradle wrapper checksum injected into ephemeral checkout"
+  ],
+  "checks": [
+    "lint",
+    "typescript",
+    "tests",
+    "local-data production build",
+    "capacitor sync",
+    "assembleRelease unsigned",
+    "unsigned APK/assets verification",
+    "pinned stable signature",
+    "stable identity/version/nondebug",
+    "signed APK/assets/payload verification"
+  ],
+  "certificate_sha256": "59912e191b4588996b4f3641c9b3609e77fa75aa6695be789ece1a0325faf2a5",
+  "apk_sha256": "83e19d56c73159fa8bd9ba834d4b01838756ba8e9c224f43a0980dc19f743e52",
+  "candidate_artifact_id": "11639999103",
+  "candidate_archive_sha256": "b40edd3cfc278e505599707d6523e5e6df78808825f5d6c26174a1c49d569706",
+  "signing_run_attempt": "1",
+  "run_url": "https://github.com/AliArefi1993/smart-paper-front/actions/runs/37980511818",
+  "purpose": "Protected manual stable-signed build; publication remains a separate maintainer release decision"
+}

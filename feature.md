@@ -1,6 +1,6 @@
 # Smart Paper Features
 
-Updated: 2026-10-08. Keep this file short and update it when user-visible features change.
+Updated: 2026-10-09. Keep this file short and update it when user-visible features change.
 
 ## In the Android app
 
@@ -20,6 +20,8 @@ Updated: 2026-10-08. Keep this file short and update it when user-visible featur
 - Capture freeform ideas, expand optional writing sparks when wanted, revisit an older thought each day, branch from notes, and search or edit them. Notes are included in JSON backups. Contextual new/edit/branch drafts recover separately, protect dirty writing, and retain missing/changed-source writing with Keep as new thought. Drafts are excluded from backups.
 
 ## Recent completed work
+
+- Finance now rechecks unlock expiry with bounded active polling and focus/resume checks, clears displayed data and unsaved edits, and rejects stale responses. PIN naming and focus recovery improve the lock screen; saved records remain intact. [Task/release evidence](tasks/2026-10-09-finance-session-expiry.md).
 
 - Replaced the report's misleading Open ChatGPT URL with explicit Copy report text, Share report file and manual selection. Transfers recheck source/finance access and preserve the reviewed content; recipient delivery remains a phone follow-up. [Handoff task](tasks/2026-10-07-ai-report-chatgpt-handoff.md) tracks validation and publication.
 
