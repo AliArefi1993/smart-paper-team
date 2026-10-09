@@ -19,11 +19,11 @@ From the team workspace, dispatch the current `main` commit only when its full S
 ```sh
 python3 scripts/hosted-stable-build.py start \
   --expected-sha FULL_40_CHARACTER_SHA \
-  --version-code 26 \
-  --version-name 2026.10.9
+  --version-code 27 \
+  --version-name 2026.10.10
 ```
 
-Use the version committed to frontend `main`; the values above match the currently recorded `main` version. The helper checks the current full `main` SHA before dispatch. GitHub's dispatch API does not return a run ID, and `main` could advance before GitHub starts the run, so the separate exact-SHA check is mandatory. Retrieve recent runs with:
+The example matches the 2026.10.10 release; always use the version committed to frontend `main` before dispatching a later build. The helper checks the current full `main` SHA before dispatch. GitHub's dispatch API does not return a run ID, and `main` could advance before GitHub starts the run, so the separate exact-SHA check is mandatory. Retrieve recent runs with:
 
 ```sh
 gh run list --repo AliArefi1993/smart-paper-front \

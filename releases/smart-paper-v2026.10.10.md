@@ -1,7 +1,7 @@
 # Smart Paper Release: smart-paper-v2026.10.10
 
 Date: 2026-10-09
-Status: Hosted stable APK verified; approved for tag publication.
+Status: Published; anonymous public APK download matches the committed stable artifact.
 
 ## Scope
 
@@ -13,10 +13,11 @@ Status: Hosted stable APK verified; approved for tag publication.
 
 | Field | Value |
 | --- | --- |
-| Planned tag | `smart-paper-v2026.10.10` (not yet created) |
+| Tag (all three repositories) | `smart-paper-v2026.10.10` |
 | Frontend source | `38f19c1a6a151fce04a02c951a06dab6ae9a1f76` |
-| Backend | `68c789b` unchanged |
-| Team root | Release record and artifacts committed before the team tag |
+| Frontend tag target | `38f19c1` |
+| Backend tag target | `68c789b` unchanged |
+| Team root tag target | `67e24d0` |
 | Android | versionCode 27; versionName `2026.10.10`; app ID `com.aliarefi.smartpaper`; local-data mode |
 | APK | `releases/artifacts/SmartPaper-local-2026.10.10-release.apk` |
 | Provenance | `releases/artifacts/SmartPaper-local-2026.10.10-provenance.json` |
@@ -37,7 +38,7 @@ Status: Hosted stable APK verified; approved for tag publication.
 
 ## Publication
 
-Publication uses the existing team tag workflow and the exact committed APK bytes. Final public download evidence is recorded in the release task. No local rebuild was used.
+The [GitHub Release](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.10) was published by [publisher run 37922107371](https://github.com/AliArefi1993/smart-paper-team/actions/runs/37922107371). The public asset `SmartPaper-local-2026.10.10-release.apk` (asset ID `624735317`) was downloaded anonymously; it is 4,469,135 bytes and matches the committed artifact byte-for-byte with SHA-256 `e1c3946eb8a9150c9de648992a1353d38345faf6b9022c2adbb30fccc3269c46`. No local rebuild was used.
 
 ## Follow-Ups
 
