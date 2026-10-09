@@ -6,6 +6,8 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 
 ## Current Focus
 
+- User-requested [stable release pipeline check](tasks/2026-10-09-release-pipeline-check.md): Android2026.10.9/code26 candidate and hosted frontend `fada7d8` checks passed; Security accepted. Publication/download verification is next.
+
 - [Secret-free frontend CI and isolated verification APKs](tasks/2026-10-07-github-actions-ci-android-builds.md) are live at frontend `4ffd09f`. Hosted checks, APK verification/upload and a deliberate failed-test gate passed; DevOps/Security accepted. Stable remote signing/publication remains a later stage.
 
 - Latest published release: [Android 2026.10.8](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.8), verified non-draft APK with matching size/SHA-256. Android/local-data is the primary product; backend feature work is paused. The frontend now uses deliberate copy, file-share, and manual-selection paths for AI reports. See [release record](releases/smart-paper-v2026.10.8.md) and [implementation task](tasks/2026-10-07-ai-report-chatgpt-handoff.md).
