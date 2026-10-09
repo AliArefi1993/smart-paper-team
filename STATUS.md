@@ -6,7 +6,7 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 
 ## Current Focus
 
-- Hosted stable-build workflow is implemented at frontend `625cfe0` with DevOps/Security acceptance, static/failure checks and passing automatic verification CI. Maintainer setup and an approved real signing run are pending; see the [setup guide](smart-paper-front/.github/STABLE-BUILDS.md). Existing local stable signing and team tag publication remain available.
+- Hosted stable-build workflow is implemented at frontend `625cfe0` with DevOps/Security acceptance, static/failure checks and passing automatic verification CI. Environment reviewer/main-only/no-bypass protections are verified; maintainer reports secrets saved. First hosted run `37905792035` passed the unsigned build and awaits approval. CLI authentication and a successful signing run remain pending; see the [setup guide](smart-paper-front/.github/STABLE-BUILDS.md). Existing local stable signing and team tag publication remain available.
 
 - User-requested [stable release pipeline check](tasks/2026-10-09-release-pipeline-check.md) passed: hosted frontend `fada7d8`, fresh stable APK, Security review, tag publisher and public download/checksum. Android 2026.10.9/code 26 is published; application behavior remains as shipped in 2026.10.8.
 
