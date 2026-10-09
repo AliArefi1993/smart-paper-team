@@ -4,7 +4,7 @@ This roadmap is based on repository inspection only. Speculative ideas are marke
 
 ## Current Goal: Confidence In The Shipped Android App
 
-Android `2026.10.8` / versionCode 25 is the latest published release. The published release corrects the AI report handoff; see its [task](tasks/2026-10-07-ai-report-chatgpt-handoff.md) and [release record](releases/smart-paper-v2026.10.8.md) for evidence and remaining native follow-ups. The seven-route audit remains a structural reference with native follow-ups.
+Android `2026.10.9` / versionCode 26 is the latest published release; the [pipeline check](tasks/2026-10-09-release-pipeline-check.md) passed hosted checks, local stable signing and public publication/download verification. Its application behavior includes the published AI report handoff correction; see its [task](tasks/2026-10-07-ai-report-chatgpt-handoff.md) and [release record](releases/smart-paper-v2026.10.8.md) for evidence and remaining native follow-ups. The seven-route audit remains a structural reference with native follow-ups.
 
 - Prioritize observed design/implementation mismatches by effect on local data, task completion, and bilingual phone use. A user-visible fix requires a ready Designer handoff and targeted QA.
 
