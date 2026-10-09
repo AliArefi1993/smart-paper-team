@@ -4,7 +4,7 @@ This roadmap is based on repository inspection only. Speculative ideas are marke
 
 ## Current Goal: Confidence In The Shipped Android App
 
-Android `2026.10.10` / versionCode 27 is the latest published release; the [hosted release](tasks/2026-10-09-hosted-signed-release.md) passed hosted checks, protected stable signing and public publication/download verification. Its application behavior includes the published AI report handoff correction; see its [task](tasks/2026-10-07-ai-report-chatgpt-handoff.md) and [release record](releases/smart-paper-v2026.10.8.md) for evidence and remaining native follow-ups. The seven-route audit remains a structural reference with native follow-ups.
+Android `2026.10.11` / versionCode 28 is the latest published release; the [release record](releases/smart-paper-v2026.10.11.md) documents exact-source CI, protected signing and public checksum verification. Finance session expiry now clears displayed data and unsaved edits promptly while preserving saved records; see the [task](tasks/2026-10-09-finance-session-expiry.md). The seven-route audit remains a structural reference with native follow-ups.
 
 - Prioritize observed design/implementation mismatches by effect on local data, task completion, and bilingual phone use. A user-visible fix requires a ready Designer handoff and targeted QA.
 
@@ -25,7 +25,7 @@ Completed 2026-10-08: [fixed template loss during Merge import](tasks/2026-10-08
 - Planned: [Phone landscape layout review and fixes](tasks/2026-10-09-phone-landscape-layout.md), addressing the maintainer's report that the app looks wrong after rotating the phone; reproduce affected screens and fix confirmed issues.
 - Planned: [Planner bottom-area simplification](tasks/2026-10-09-planner-bottom-area.md), reviewing removal of the fixed bottom area now that Planner autosaves and the area reportedly only contains Next day; preserve discoverable day navigation and save feedback.
 
-- Completed: [Privacy and local-data protection review](tasks/2026-10-08-privacy-local-data-review.md). [Ranked findings and bounded scopes](docs/privacy-local-data-review.md): finance expiry rechecks/clearing stale display are validated with [release underway](tasks/2026-10-09-finance-session-expiry.md); explicit OS backup policy and notification-preview disclosure are next. Share-cache retention, CSV text safety and import limits follow; app behavior is unchanged. User-visible fixes require Designer handoffs and validated Android releases.
+- Completed: [Privacy and local-data protection review](tasks/2026-10-08-privacy-local-data-review.md). [Ranked findings and bounded scopes](docs/privacy-local-data-review.md): finance expiry rechecks/clearing stale display shipped in [Android 2026.10.11](releases/smart-paper-v2026.10.11.md); explicit OS backup policy and notification-preview disclosure remain next. Share-cache retention, CSV text safety and import limits follow. User-visible fixes require Designer handoffs and validated Android releases.
 - Planned: [Lightweight feedback triage](tasks/2026-10-08-feedback-triage-workflow.md), turning voluntary reports into reproduced, prioritized and verified tasks.
 
 - Planned evaluation: [Periodic team reviews](tasks/2026-10-08-periodic-team-reviews.md) covering QA, independent feature proposals, necessary refactoring, new/updated agent skills and similar-app/technology research, with lightweight triggers and effort limits. No recurring jobs or new rules are enabled yet.

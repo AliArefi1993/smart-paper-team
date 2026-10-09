@@ -1,6 +1,6 @@
 # Task: Relock Finance promptly after session expiry
 
-Status: release in progress
+Status: complete; Android 2026.10.11 published
 Created: 2026-10-09
 Updated: 2026-10-09
 
@@ -22,7 +22,7 @@ Prevent previously rendered finance data remaining visible for almost an extra h
 - [x] Expiry clears rendered finance, add/edit/goal fields, pending PIN/success state and shows truthful EN/FA locked recovery; saved records remain untouched.
 - [x] Late loads/mutation/session results cannot restore data or overwrite a newer lock/unlock lifecycle.
 - [x] Relevant tests, lint, TypeScript, local build, targeted QA and independent sensitive-change review pass.
-- [ ] Eligible exact-source stable Android release is independently verified, published and public checksum checked; durable memory updated.
+- [x] Eligible exact-source stable Android release is independently verified, published and public checksum checked; durable memory updated.
 
 ## Non-Goals
 
@@ -43,10 +43,10 @@ Prevent previously rendered finance data remaining visible for almost an extra h
 | Baseline | `scripts/project-context.sh` and separate repository status | Clean |
 | Design | Designer handoff and EN/FA studio states, existing copy retained, lock focus and PIN naming scoped | Ready; studio checks passed, rebuilt QA pending |
 | Automated checks and targeted QA | Isolated Docker npm ci/lint/TypeScript/npm test/local-data build; all 66 tests passed | Passed; existing 21 dependency advisories remain |
-| Independent review | Security source review found and reproduced a microtask publication race; post-await guards plus regression added and re-review accepted | Source and fixed race regression accepted; signed artifact pending |
+| Independent review | Security source review found and reproduced a microtask publication race; post-await guards plus regression added and re-review accepted | Source and fixed race regression accepted; signed APK/provenance also independently accepted |
 | Production browser QA | Synthetic data on isolated loopback8766; focus/visibility expiry, all drafts/PIN/status cleared, focus recovery, wrong-PIN and saved321 record recovery; foreground unlocked at 27.9s, locked by 37.0s observation; helper verifies 30s interval | Passed; synthetic events, no Android runtime guarantee |
 | Designer rebuilt acceptance | EN/FA Light/Dark at 390px and EN/FA wrapping at 360px | Passed; [EN expiry screenshot](../design/evidence/2026-10-09-finance-session-expiry/en-expired.png) |
-| Stable release/publication | Exact-SHA hosted run, signed APK and public download | Pending |
+| Stable release/publication | Frontend CI run 37980072688; hosted stable run 37980511818; [public team release](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.11), publisher run 37982644853 | Passed; anonymous APK SHA-256 `83e19d56c73159fa8bd9ba834d4b01838756ba8e9c224f43a0980dc19f743e52`, 4,469,135 bytes |
 
 ## Decisions And Risks
 
@@ -59,6 +59,6 @@ Prevent previously rendered finance data remaining visible for almost an extra h
 
 ## Outcome / Handoff
 
-Frontend source `052be41c465669b2a3a18342fd443f96a8fc3c5b` is committed/pushed; Android code 28/name 2026.10.11. [Automatic CI run](https://github.com/AliArefi1993/smart-paper-front/actions/runs/37980072688) is underway. Task-owned preview/studio servers were stopped and ports verified clear.
+Frontend source `052be41c465669b2a3a18342fd443f96a8fc3c5b` is committed/pushed; Android code 28/name 2026.10.11 is published as [Smart Paper v2026.10.11](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.11). The exact hosted artifact passed independent Security verification and its anonymous public download matches the committed APK byte-for-byte. Team release commit `f85ed4f158e44fd2142a9ac1fe22f8b9245685a6` contains the release record, APK and original provenance. Frontend/backend/team annotated tags target their validated release commits. Task-owned preview/studio servers were stopped and ports verified clear.
 
-Lead accepts the bounded change: automated checks, synthetic production browser QA, Designer acceptance and independent sensitive-source re-review passed. Go for exact-source hosted release after source commit; unsigned candidate/CI/environment and signed-artifact gates remain required. No backend changes or migration. Standing authorization requires no per-run user approval.
+Lead accepted the bounded change and authorized publication after exact-source CI, candidate verification, protected signing and independent Security review passed. No backend changes or migration. Standing authorization covered the agent-operated release flow.
