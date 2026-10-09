@@ -14,6 +14,16 @@ The verification package must have a separate application ID and a visible verif
 
 CI covers automated checks and packaging. Physical-device, accessibility and recipient-app checks still require the recorded follow-ups. The design studio belongs to the team repository and retains its own Docker typecheck/build checks; frontend CI cannot validate uncommitted or independent studio changes.
 
+## Hosted Stable Build Setup
+
+A manual **Hosted stable-signed APK** workflow is implemented in the frontend repository; follow its [exact setup guide](../smart-paper-front/.github/STABLE-BUILDS.md). DevOps/Security review, official actionlint and failure/cleanup fixtures passed. Real hosted signing is pending maintainer configuration and an approved run; it is not yet verified.
+
+The main-only workflow freezes the dispatched source SHA and committed version. A secret-free runner checks/builds an unsigned candidate; a fresh protected `stable-signing` runner signs the immutable same-run artifact. Credentials reach only direct apksigner execution, not npm/Gradle. No verification caches are reused. The key is held in restricted runner-temp storage and removed; only the APK/checksum/provenance are final artifacts.
+
+Configure environment protection before adding its four secrets. The maintainer enters the existing key/passwords privately in GitHub; the agent does not read or upload them. Require a maintainer reviewer, select Branch `main` only, disable administrator bypass, and allow self-review for the sole maintainer. Each approval must check the exact source SHA, version and signing-helper/workflow changes.
+
+A first test uses current code26/name2026.10.9 without replacing the published APK. For later authorized releases, increment the version first, build that committed revision, download and independently verify the hosted stable artifact, then commit and publish **those exact bytes** through the existing team tag publisher. Record source SHA/run/candidate and final checksums. Do not rebuild locally after validating a hosted artifact for publication. Keep the local stable Docker fallback until remote signing is verified.
+
 ## When To Create A Tag
 
 Create a release tag after one of these points:

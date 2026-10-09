@@ -31,7 +31,7 @@ Completed 2026-10-08: [fixed template loss during Merge import](tasks/2026-10-08
 
 - Planned: [Lightweight project home page and roadmap cleanup](tasks/2026-10-08-project-home-roadmap.md), making current features, future tasks, priorities and releases easier to browse through existing Markdown files.
 
-- First stage shipped: [GitHub Actions CI and Android builds](tasks/2026-10-07-github-actions-ci-android-builds.md), with hosted frontend checks, isolated verification APK artifacts and verified success/failed-test gates. Next: trusted signing/publication review; independent download and account-usage checks remain follow-ups.
+- First stage shipped: [GitHub Actions CI and Android builds](tasks/2026-10-07-github-actions-ci-android-builds.md), with hosted frontend checks, isolated verification APK artifacts and verified success/failed-test gates. Protected hosted stable-build workflow is implemented and reviewed; maintainer environment/secret setup and an approved signing run are next. Existing team tag publication remains separate; account-usage checks remain follow-ups.
 
 - Planned: [Design and install a Smart Paper Android launcher icon](tasks/2026-10-07-android-launcher-icon.md); important visual identity task covering the installed home-screen/app-drawer icon, not a full brand redesign.
 

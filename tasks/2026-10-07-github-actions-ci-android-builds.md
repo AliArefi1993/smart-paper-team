@@ -1,6 +1,6 @@
 # Task: Move tests and Android APK builds to GitHub Actions
 
-Status: verification stage complete — stable signing/publication planned
+Status: hosted stable-build implementation ready; maintainer setup/real signing run pending
 Created: 2026-10-07
 Updated: 2026-10-09
 
@@ -76,4 +76,9 @@ First stage completed at frontend `4ffd09f`: secret-free frontend CI, isolated v
 
 Independent archive extraction/download, a fork PR, cancellation, cache-hit rerun, physical install and account-specific billing usage are unverified follow-ups. The artifact exists and in-run APK verification passed; API rate limiting prevented independent download checking. Studio checks remain in the owning team repository.
 
-Next stage: review trusted signing-key custody and release orchestration before configuring secrets or automating stable builds/publication. Retain the current local stable release fallback and existing committed-APK publisher until that transition is explicitly reviewed.
+User selected hosted stable signed builds on 2026-10-09. DevOps implemented a main-only manual workflow with exact-source APK verification; Security accepted it before maintainer configuration. Environment `stable-signing` is designed to hold four signing secrets and require explicit maintainer approval/main-only deployment; the maintainer must configure it before adding secrets. The agent does not read or upload private keys. No verification cache reuse or cross-repository write token is introduced.
+
+Preserve the existing team publisher: download and independently verify the hosted stable artifact, then commit that exact APK with its record and tag. Do not rebuild a different APK locally for that release. GitHub secret setup and a real hosted signing run remain pending; no successful stable hosted run is claimed.
+
+
+Hosted workflow implementation: frontend `625cfe0`; manual main-only exact-SHA/version inputs, secret-free unsigned builder and separate protected direct-apksigner job; immutable same-run artifact ID/digest, pinned stable certificate and complete payload/assets verification. Final artifact includes APK/checksum/provenance; signing key stays outside caches/artifacts with restricted permissions and cleanup. Actionlint, syntax, source/version/run/checksum/certificate/debug/assets/payload rejection and missing-secret/cleanup fixtures passed; Security accepted. See [setup instructions](../smart-paper-front/.github/STABLE-BUILDS.md). Automatic verification CI [37902689933](https://github.com/AliArefi1993/smart-paper-front/actions/runs/37902689933) passed all checks and verification artifact upload. No secrets were read/uploaded and no hosted stable run was dispatched. Real signing/protected-environment checks remain unverified until the maintainer completes setup and approves the exact source.

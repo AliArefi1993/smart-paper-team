@@ -6,9 +6,11 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 
 ## Current Focus
 
+- Hosted stable-build workflow is implemented at frontend `625cfe0` with DevOps/Security acceptance, static/failure checks and passing automatic verification CI. Maintainer setup and an approved real signing run are pending; see the [setup guide](smart-paper-front/.github/STABLE-BUILDS.md). Existing local stable signing and team tag publication remain available.
+
 - User-requested [stable release pipeline check](tasks/2026-10-09-release-pipeline-check.md) passed: hosted frontend `fada7d8`, fresh stable APK, Security review, tag publisher and public download/checksum. Android 2026.10.9/code 26 is published; application behavior remains as shipped in 2026.10.8.
 
-- [Secret-free frontend CI and isolated verification APKs](tasks/2026-10-07-github-actions-ci-android-builds.md) are live; release revision `fada7d8` passed. Hosted checks, APK verification/upload and a deliberate failed-test gate passed; DevOps/Security accepted. Stable remote signing/publication remains a later stage.
+- [Secret-free frontend CI and isolated verification APKs](tasks/2026-10-07-github-actions-ci-android-builds.md) are live; current frontend `625cfe0` passed automatic verification; release revision remains `fada7d8`. Hosted checks, APK verification/upload and a deliberate failed-test gate passed; DevOps/Security accepted. Protected hosted signing setup is now pending; existing team publication remains separate.
 
 - Latest published release: [Android 2026.10.9](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.9), verified non-draft APK with matching size/SHA-256. Android/local-data is the primary product; backend feature work is paused. The frontend now uses deliberate copy, file-share, and manual-selection paths for AI reports. See [release record](releases/smart-paper-v2026.10.9.md) and [implementation task](tasks/2026-10-07-ai-report-chatgpt-handoff.md).
 - Planner local autosave, green Light/Dark surfaces and day minimization remain shipped. Ideas auto-recovers unfinished writing; publishing a saved thought remains deliberate.
@@ -43,7 +45,7 @@ Run `scripts/project-context.sh` for current branches, revisions, working-tree c
 
 ## Latest Verified Checks
 
-Frontend `fada7d8` passes hosted lint, TypeScript, all 57 tests, local-data production build, Android assembly, APK identity/signature/version/assets/provenance checks, cache save and verification artifact upload. The separate failing-test branch confirmed downstream build/upload skips and zero artifacts. Independent CI verification-archive download/extraction and account-specific billing usage remain unverified; stable release APK download was verified separately below. Earlier frontend `efc027e` passed Docker lint, TypeScript and all 57 tests. Independent review found no unresolved blockers. Bilingual studio checks and production EN/FA Light/Dark review passed for the recorded cases. Backend remains `68c789b`; prior 33-test/no-migration evidence reused.
+Frontend `625cfe0` passes hosted lint, TypeScript, all 57 tests, local-data production build, Android assembly, APK identity/signature/version/assets/provenance checks, cache save and verification artifact upload. The separate failing-test branch confirmed downstream build/upload skips and zero artifacts. Independent CI verification-archive download/extraction and account-specific billing usage remain unverified; stable release APK download was verified separately below. Earlier frontend `efc027e` passed Docker lint, TypeScript and all 57 tests. Independent review found no unresolved blockers. Bilingual studio checks and production EN/FA Light/Dark review passed for the recorded cases. Backend remains `68c789b`; prior 33-test/no-migration evidence reused.
 
 Stable-signed Android `2026.10.9` code 26 build passed; certificate and version were verified, and all 136 exported files byte-match APK assets. The public, non-draft GitHub release asset matches the committed APK size (4,415,512 bytes) and SHA-256 (`5cc4ea722748a505ca39a4e37ed2bb4059003d3cab9e3d39e5cd122b69688d94`). npm install reported 21 advisories (1 low, 4 moderate, 14 high, 2 critical); no clean audit is claimed. Physical Android clipboard/chooser/recipient delivery, TalkBack and the broader upgrade/restore data-safety matrix remain unverified follow-ups. See [2026.10.9 release](releases/smart-paper-v2026.10.9.md).
 
@@ -52,7 +54,7 @@ Stable-signed Android `2026.10.9` code 26 build passed; certificate and version 
 - Backend production settings are unsafe defaults: hard-coded `SECRET_KEY`, `DEBUG = True`, and empty `ALLOWED_HOSTS`.
 - JSON mutation endpoints use `csrf_exempt`; planner APIs have no authentication. This is accepted only for the current private/single-user boundary.
 - Finance uses a shared PIN/session gate, not user accounts.
-- Frontend secret-free CI is verified. Stable remote signing/publication, broad frontend integration coverage, backend lint and backend type-check configuration remain absent; fork/cancellation/cache-hit/device and account-usage checks remain recorded follow-ups.
+- Frontend secret-free CI is verified. Hosted stable signing execution/environment protection verification, broad frontend integration coverage, backend lint and backend type-check configuration remain absent; fork/cancellation/cache-hit/device and account-usage checks remain recorded follow-ups.
 - Android notifications and full-week template UX still need physical-device checks in English and Persian.
 - Idea Space capture, editing, branching, keyboard behavior, backup/restore, and upgrade still need physical Android checks.
 - Production environment and deployment documentation remain incomplete for any future hosted backend.
