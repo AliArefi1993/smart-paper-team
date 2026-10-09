@@ -39,6 +39,7 @@ Completed 2026-10-08: [fixed template loss during Merge import](tasks/2026-10-08
 - Planned: [Design and install a Smart Paper Android launcher icon](tasks/2026-10-07-android-launcher-icon.md); important visual identity task covering the installed home-screen/app-drawer icon, not a full brand redesign.
 
 - Planned: [Finance optional and hidden by default](tasks/2026-10-07-finance-optional-default-hidden.md); preserve existing records and pause feature expansion.
+- Planned: [Change the Finance PIN](tasks/2026-10-09-finance-change-pin.md), giving users a discoverable place to replace the default/current Finance PIN while preserving their records.
 - Planned: [Timer optional and hidden by default](tasks/2026-10-07-timer-optional-default-hidden.md); pause expansion and keep it independent of Planner.
 - Planned: [Idea Space connected-thoughts refactor](tasks/2026-10-07-idea-space-connected-thoughts-refactor.md); clarify and navigate relationships before expanding writing tools. Interaction/model needs Product/Designer discovery.
 
