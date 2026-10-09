@@ -1,8 +1,8 @@
 # Task: Make the AI report ChatGPT handoff reliable
 
-Status: implemented and reviewed; release candidate validated, publication pending
+Status: released; native Android and recipient-specific follow-ups remain
 Created: 2026-10-07
-Updated: 2026-10-08
+Updated: 2026-10-09
 
 ## Objective
 
@@ -26,7 +26,7 @@ Investigate and resolve the maintainer-reported problem with **Open ChatGPT** in
 - [ ] Handle missing ChatGPT, cancellation and sharing failure without losing the report or changing planner records.
 - [x] Preserve field/date selection, preview, and finance-off-by-default boundaries. No backend, account connection or embedded AI is introduced.
 - [ ] Verify relevant English/Persian and accessibility states, automated checks and Android phone handoff behavior; record any unexecuted native checks explicitly.
-- [ ] Update documentation and follow the normal validated Android release workflow when implemented.
+- [x] Update documentation and follow the normal validated Android release workflow when implemented.
 
 ## Non-Goals
 
@@ -53,7 +53,7 @@ Investigate and resolve the maintainer-reported problem with **Open ChatGPT** in
 | Review/fix | Formatter import, stale fallback preview, native cancellation, test fixtures | Findings corrected; final independent review has no blockers |
 | Actual browser QA | [Bounded QA](../design/2026-10-08-ai-report-handoff-qa.md): exact copy, manual selection, refreshed-preview second click, clipboard denial, cancellation, finance expiry, invalid/empty range; production Light/Dark comparison in EN/FA | Passed recorded desktop/responsive cases; native recipient behavior remains unverified |
 | Signed Android candidate | `scripts/build-android-release-docker.sh`, `apksigner`, aapt, exported-asset comparison | Passed; code25/name2026.10.8, stable certificate, all 136 exported files byte-match; two zero-byte Cordova bridge shims also packaged. `npm ci` reported 21 advisories; no clean audit claimed. |
-| Publication | Coordinated commits/tags and GitHub asset verification | Pending team commit/tag and public asset verification |
+| Publication | Team commit `7187a7d`, coordinated v2026.10.8 tags; [public release](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.8) | Non-draft; downloaded asset size/SHA-256 match committed APK |
 | Physical Android | Clipboard, chooser/recipient, app versions and TalkBack | Unexecuted follow-ups |
 
 ## Decisions And Risks
@@ -65,4 +65,4 @@ Investigate and resolve the maintainer-reported problem with **Open ChatGPT** in
 
 ## Outcome / Handoff
 
-Current user evidence resolves the missing-attachment symptom: navigation never carried the report. Product/Designer approved a minimal bilingual file/copy/manual handoff; implementation, automated checks, bounded interaction QA, production Light/Dark comparison, independent review, and signed build/package checks passed. Coordinated commits, tags and GitHub asset verification remain before publication. Phone app-to-site routing, installed versions and recipient delivery remain unverified; do not claim a native attachment path is certified.
+Current user evidence resolves the missing-attachment symptom: navigation never carried the report. Product/Designer approved a minimal bilingual file/copy/manual handoff; implementation, automated checks, bounded interaction QA, production Light/Dark comparison, independent review, and signed build/package checks passed. Coordinated commits/tags are pushed and the public non-draft release asset matches the committed APK. Phone app-to-site routing, installed versions and recipient delivery remain unverified; do not claim a native attachment path is certified.

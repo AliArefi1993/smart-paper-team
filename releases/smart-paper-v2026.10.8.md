@@ -1,7 +1,7 @@
 # Smart Paper Release: smart-paper-v2026.10.8
 
 Date: 2026-10-08
-Status: validated stable-signed Android release; publication follows the coordinated team tag.
+Status: Published non-draft GitHub release; public APK download verified against the committed artifact on 2026-10-09.
 
 ## Scope
 
@@ -17,11 +17,15 @@ Status: validated stable-signed Android release; publication follows the coordin
 | Tag (all three repositories) | `smart-paper-v2026.10.8` |
 | Frontend | `efc027e` |
 | Backend | `68c789b` unchanged |
-| Team | Release artifact/record/handoff/docs and frontend pointer commit |
+| Team | `7187a7d` release commit; coordinated tag pushed |
 | Android | versionCode 25; versionName `2026.10.8`; local-data mode |
 | APK | `releases/artifacts/SmartPaper-local-2026.10.8-release.apk` |
 | SHA-256 / size | `f7efe78aae7af2b4f353aa27810bf160c382927c5055560895a837056343594c` / 4,415,348 bytes |
 | Certificate SHA-256 | Stable `59912e191b4588996b4f3641c9b3609e77fa75aa6695be789ece1a0325faf2a5` |
+
+## Publication
+
+[GitHub release](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.8) was created by workflow run [37806215527](https://github.com/AliArefi1993/smart-paper-team/actions/runs/37806215527). It is non-draft. Downloaded public APK size (4,415,348 bytes) and SHA-256 (`f7efe78aae7af2b4f353aa27810bf160c382927c5055560895a837056343594c`) match the committed artifact.
 
 ## Verification
 
