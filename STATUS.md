@@ -1,10 +1,12 @@
 # Smart Paper Status
 
-Last updated: 2026-10-09.
+Last updated: 2026-10-10.
 
 This is a present-state snapshot, not a changelog. Shipped history and validation details live in `releases/`; implementation history lives in each repository's Git log.
 
 ## Current Focus
+
+- [Phone landscape review](tasks/2026-10-09-phone-landscape-layout.md) reproduced a clipped Planner event editor at short heights. Ready bilingual design preceded a bounded height/scroll fix; targeted browser QA, independent source review, lint, TypeScript and 66 tests passed. Seven-route EN/FA browser review passed bounded acceptance; Exact-source CI and protected signing passed for frontend `deaad89`; independent artifact review accepted Android 2026.10.13/code 30. Publication/public download verification remain in progress. Native rotation/keyboard/TalkBack remain follow-ups.
 
 - [Planner bottom-area simplification](tasks/2026-10-09-planner-bottom-area.md) shipped in Android 2026.10.12/code 29 after exact-source CI, protected signing, independent Security review and anonymous public checksum verification. Local mode uses inline save status/Retry and in-flow day navigation; Django manual-save behavior is unchanged. Native keyboard, rotation and TalkBack remain unverified.
 

@@ -22,7 +22,7 @@ Completed 2026-10-08: [fixed template loss during Merge import](tasks/2026-10-08
 
 ## Next, After Baseline Review
 
-- Planned: [Phone landscape layout review and fixes](tasks/2026-10-09-phone-landscape-layout.md), addressing the maintainer's report that the app looks wrong after rotating the phone; reproduce affected screens and fix confirmed issues.
+- Validated, release in progress: [Phone landscape review and fix](tasks/2026-10-09-phone-landscape-layout.md). The event sheet clipped its heading/actions at short heights; a bounded scrolling panel fixes the confirmed issue. Seven-route EN/FA browser review found no additional visible clipping. Physical Android rotation/keyboard/TalkBack remain follow-ups.
 
 - Completed: [Privacy and local-data protection review](tasks/2026-10-08-privacy-local-data-review.md). [Ranked findings and bounded scopes](docs/privacy-local-data-review.md): finance expiry rechecks/clearing stale display shipped in [Android 2026.10.11](releases/smart-paper-v2026.10.11.md); explicit OS backup policy and notification-preview disclosure remain next. Share-cache retention, CSV text safety and import limits follow. User-visible fixes require Designer handoffs and validated Android releases.
 - Planned: [Lightweight feedback triage](tasks/2026-10-08-feedback-triage-workflow.md), turning voluntary reports into reproduced, prioritized and verified tasks.
