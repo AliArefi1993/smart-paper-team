@@ -4,7 +4,7 @@ This roadmap is based on repository inspection only. Speculative ideas are marke
 
 ## Current Goal: Confidence In The Shipped Android App
 
-Android `2026.10.12` / versionCode 29 is the latest published release; the [release record](releases/smart-paper-v2026.10.12.md) documents exact-source CI, protected signing and public checksum verification. The Planner fixed bottom area was removed in local-data mode while preserving inline save feedback and reachable day navigation; see the [task](tasks/2026-10-09-planner-bottom-area.md). Finance session expiry continues to clear displayed data and unsaved edits promptly while preserving saved records; see its [task](tasks/2026-10-09-finance-session-expiry.md). The seven-route audit remains a structural reference with native follow-ups.
+Android `2026.10.13` / versionCode 30 is the latest published release; the [release record](releases/smart-paper-v2026.10.13.md) documents exact-source CI, protected signing and public checksum verification. The Planner fixed bottom area was removed in local-data mode while preserving inline save feedback and reachable day navigation; see the [task](tasks/2026-10-09-planner-bottom-area.md). Finance session expiry continues to clear displayed data and unsaved edits promptly while preserving saved records; see its [task](tasks/2026-10-09-finance-session-expiry.md). The seven-route audit remains a structural reference with native follow-ups.
 
 - Prioritize observed design/implementation mismatches by effect on local data, task completion, and bilingual phone use. A user-visible fix requires a ready Designer handoff and targeted QA.
 
@@ -22,7 +22,7 @@ Completed 2026-10-08: [fixed template loss during Merge import](tasks/2026-10-08
 
 ## Next, After Baseline Review
 
-- Validated, release in progress: [Phone landscape review and fix](tasks/2026-10-09-phone-landscape-layout.md). The event sheet clipped its heading/actions at short heights; a bounded scrolling panel fixes the confirmed issue. Seven-route EN/FA browser review found no additional visible clipping. Physical Android rotation/keyboard/TalkBack remain follow-ups.
+- Shipped in Android 2026.10.13: [Phone landscape review and fix](tasks/2026-10-09-phone-landscape-layout.md). The event sheet clipped its heading/actions at short heights; a bounded scrolling panel fixes the confirmed issue. Seven-route EN/FA browser review found no additional visible clipping. Physical Android rotation/keyboard/TalkBack remain follow-ups.
 
 - Completed: [Privacy and local-data protection review](tasks/2026-10-08-privacy-local-data-review.md). [Ranked findings and bounded scopes](docs/privacy-local-data-review.md): finance expiry rechecks/clearing stale display shipped in [Android 2026.10.11](releases/smart-paper-v2026.10.11.md); explicit OS backup policy and notification-preview disclosure remain next. Share-cache retention, CSV text safety and import limits follow. User-visible fixes require Designer handoffs and validated Android releases.
 - Planned: [Lightweight feedback triage](tasks/2026-10-08-feedback-triage-workflow.md), turning voluntary reports into reproduced, prioritized and verified tasks.

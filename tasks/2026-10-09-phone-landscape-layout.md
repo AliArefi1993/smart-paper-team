@@ -1,6 +1,6 @@
 # Task: Review and fix phone landscape layout
 
-Status: in progress
+Status: complete
 Created: 2026-10-09
 Updated: 2026-10-10
 
@@ -20,7 +20,7 @@ Investigate the maintainer's report that Smart Paper does not look right when th
 - [x] Confirmed issues are fixed: content and controls remain reachable without unintended clipping, overlap, or obstructive fixed areas in landscape.
 - [x] Browser resize preserves current input, saved data, and usable navigation; native rotation remains a device follow-up.
 - [x] Designer saves a ready handoff and editable English/Persian studio stories before frontend changes; portrait layout remains usable.
-- [ ] Targeted checks, independent review, documentation, and the validated Android release workflow are completed if fixes are implemented; record physical-device follow-ups explicitly.
+- [x] Targeted checks, independent review, documentation, and the validated Android release workflow are completed if fixes are implemented; record physical-device follow-ups explicitly.
 
 ## Non-Goals
 
@@ -49,6 +49,7 @@ Investigate the maintainer's report that Smart Paper does not look right when th
 | Exact-source automatic CI | [Run 38076385159](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38076385159), deaad89e3083d270fa74d7988c2ab99162cab674 | Passed, including isolated APK verification/upload |
 | Hosted stable build | [Run 38076417837](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38076417837), exact source deaad89e3083d270fa74d7988c2ab99162cab674 | Candidate and protected signing passed; independent downloaded APK review accepted |
 | Signed artifact | Final artifact 11679541147, SHA-256 3189b69e5e79f6afd50dafbde7852f3fd4f925f77e23769ea22bc6c4a041d1d3 | Independent Security accepted: v2/v3 single pinned signer, identity/version/non-debug, checksum/size/source/run; compiled fix present |
+| Publication | [Release 2026.10.13](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.13), publisher run 38077418620, public asset 628732627 | Passed; anonymous download byte-match, size 4,469,135 and SHA-256 match |
 | Task-owned preview cleanup | Routine gracefully stopped exact studio/preview containers after Designer/QA finished | Verified stopped; shared Docker daemon preserved |
 
 ## Decisions And Risks
@@ -61,4 +62,4 @@ Investigate the maintainer's report that Smart Paper does not look right when th
 
 ## Outcome / Handoff
 
-Review authorized 2026-10-10. The event editor clipped its heading and actions at short landscape heights in English/Persian. Ready Designer handoff preceded a one-line schedule-panel height/scroll fix. Production QA and independent source review passed. Exact-source CI, protected signing and independent signed APK verification passed; publication/public-download validation is in progress.
+Review authorized 2026-10-10. The event editor clipped its heading and actions at short landscape heights in English/Persian. Ready Designer handoff preceded a one-line schedule-panel height/scroll fix. Production QA and independent source review passed. Exact-source CI, protected signing and independent signed APK verification passed; Android 2026.10.13/code 30 is published; anonymous public APK byte-matches the verified committed artifact. Frontend source deaad89e3083d270fa74d7988c2ab99162cab674; backend unchanged. Native phone checks and the documented residual width metric remain follow-ups.

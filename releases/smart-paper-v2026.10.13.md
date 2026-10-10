@@ -2,7 +2,7 @@
 
 Date: 2026-10-10
 
-Status: Awaiting publication.
+Status: Published; anonymous public APK download matches the committed stable artifact.
 
 ## Scope
 
@@ -15,7 +15,7 @@ Status: Awaiting publication.
 | Field | Value |
 | --- | --- |
 | Release tag | `smart-paper-v2026.10.13` |
-| Team root target | Pending final team release commit. |
+| Team root target | `74f9696b7d547177c2cd77da4c3c0152151cf378` |
 | Backend | `68c789b707239ef5451f98f7f6ce49d7c9b8a8c2` (unchanged) |
 | Frontend source | `deaad89e3083d270fa74d7988c2ab99162cab674` |
 | Android | versionCode 30; versionName `2026.10.13`; app ID `com.aliarefi.smartpaper`; local-data mode |
@@ -48,8 +48,12 @@ Status: Awaiting publication.
 
 - Planner event creation and editing now keep all form fields and actions reachable on short landscape screens by scrolling inside the sheet.
 
+## Publication
+
+The [GitHub Release](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.13) was published by [publisher run 38077418620](https://github.com/AliArefi1993/smart-paper-team/actions/runs/38077418620). Anonymous asset `628732627`, `SmartPaper-local-2026.10.13-release.apk`, was downloaded and matches the committed artifact byte-for-byte: 4,469,135 bytes and SHA-256 `3189b69e5e79f6afd50dafbde7852f3fd4f925f77e23769ea22bc6c4a041d1d3`. No local rebuild was used.
+
 ## Known Follow-Ups
 
 - Physical Android keyboard, rotation, safe-area and TalkBack behavior remain unverified.
 - Template use/delete confirmation completion remains unverified because native browser confirmation handling timed out during QA; no template defect is claimed.
-- The hydrated English Planner at 740×360 has a document width metric of 766 from a visually hidden Friday summary label; QA found no additional visible clipping or unreachable controls.
+- The hydrated English Planner at 740×360 has a document width metric of 766; the visually hidden Friday summary may contribute (unproven). QA found no additional visible clipping or unreachable controls.
