@@ -16,7 +16,7 @@ Provide a clear, low-maintenance project home page where the maintainer can find
 
 ## Acceptance Criteria
 
-- [ ] README provides an obvious project home page with concise links to current features, roadmap, future-task index and latest release/APK; preserve essential workspace/repository guidance.
+- [x] README provides an obvious project home page with concise links to current features, roadmap, future-task index and latest release/APK; preserve essential workspace/repository guidance.
 - [ ] ROADMAP distinguishes Now (active), Next (explicitly ordered queue), Later (agreed but not next), Ideas (unconfirmed) and Paused (deliberately deferred).
 - [ ] Confirm priority order with the maintainer; do not treat file dates, list insertion order or saved plans as an approved implementation sequence. Do not invent deadlines.
 - [ ] Roadmap entries show short outcomes, status and dependencies with links to detailed task records; avoid copying acceptance criteria into several places.
@@ -28,7 +28,6 @@ Provide a clear, low-maintenance project home page where the maintainer can find
 
 ## Non-Goals
 
-- Performing the cleanup during this task-recording request.
 - New website, server, dashboard application, GitHub Projects/Issues synchronization or another tracking system.
 - Application changes, an APK release or starting/reprioritizing product implementation automatically.
 
@@ -44,7 +43,8 @@ Provide a clear, low-maintenance project home page where the maintainer can find
 | Check | Command or evidence | Result |
 | --- | --- | --- |
 | Scope | Maintainer discussion on 2026-10-08 | Approved direction recorded as planned |
-| Task-index state/link review | 2026-10-10, this bounded documentation update | `tasks/README.md` now groups all dated task records by active follow-up, planned/future, and completed/assessed state; broader README/ROADMAP cleanup and priority confirmation remain outstanding |
+| Task-index state/link review | 2026-10-10, this bounded documentation update | `tasks/README.md` now groups all dated task records by active follow-up, planned/future, and completed/assessed state; ROADMAP cleanup and priority confirmation remain outstanding |
+| README navigation and local links | 2026-10-10, this bounded documentation update | Added project-home links and clickable workspace-map paths; latest APK path and release record confirmed locally. Markdown link/path check and `git diff --check` passed. |
 
 ## Decisions And Risks
 
@@ -54,4 +54,4 @@ Provide a clear, low-maintenance project home page where the maintainer can find
 
 ## Outcome / Handoff
 
-Future task remains open. The task index was refreshed on 2026-10-10 with dated task records grouped by state; this does not complete the broader Markdown cleanup or priority confirmation. No project home page redesign has been implemented yet.
+Future task remains open. README navigation and task-index grouping are complete. ROADMAP ordering confirmation remains outstanding, along with roadmap categorization/metadata, feature-source separation, and maintenance guidance.

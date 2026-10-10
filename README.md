@@ -2,23 +2,32 @@
 
 This repository coordinates the Smart Paper product. It stores durable project context, release records, and agent configuration; application code lives in two independent Git repositories.
 
+## Project Home
+
+- [Current status](STATUS.md)
+- [Shipped capabilities](feature.md)
+- [Prioritized roadmap](ROADMAP.md)
+- [Prepared task index](tasks/README.md)
+- [Release history](releases/README.md)
+- Latest Android release: [2026.10.14 release record](releases/smart-paper-v2026.10.14.md) · [download APK](https://github.com/AliArefi1993/smart-paper-team/releases/download/smart-paper-v2026.10.14/SmartPaper-local-2026.10.14-release.apk)
+
 ## Workspace Map
 
 | Path | Purpose |
 | --- | --- |
 | `smart-paper/` | Django backend repository |
 | `smart-paper-front/` | Next.js frontend and Capacitor Android repository |
-| `STATUS.md` | concise current-state snapshot |
-| `PRODUCT.md` | implemented product behavior and boundaries |
-| `feature.md` | short feature list and recent completed work |
-| `ROADMAP.md` | prioritized future work |
-| `docs/architecture.md` | cross-stack architecture and contracts |
-| `docs/database.md` | persistence model and data ownership |
-| `docs/decisions.md` | durable decisions and their reasons |
-| `tasks/` | context for active and completed multi-step work |
-| `design/` | product design briefs, interface foundations, and implementation handoffs |
-| `skills/` | reusable Product and Designer workflows |
-| `releases/` | shipped release records and APK artifacts |
+| [`STATUS.md`](STATUS.md) | concise current-state snapshot |
+| [`PRODUCT.md`](PRODUCT.md) | implemented product behavior and boundaries |
+| [`feature.md`](feature.md) | short feature list and recent completed work |
+| [`ROADMAP.md`](ROADMAP.md) | prioritized future work |
+| [`docs/architecture.md`](docs/architecture.md) | cross-stack architecture and contracts |
+| [`docs/database.md`](docs/database.md) | persistence model and data ownership |
+| [`docs/decisions.md`](docs/decisions.md) | durable decisions and their reasons |
+| [`tasks/`](tasks/README.md) | context for active and completed multi-step work |
+| [`design/`](design/) | product design briefs, interface foundations, and implementation handoffs |
+| [`skills/`](skills/) | reusable Product and Designer workflows |
+| [`releases/`](releases/README.md) | shipped release records and APK artifacts |
 
 ## Fast Start
 
