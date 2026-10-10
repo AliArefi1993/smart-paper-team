@@ -21,6 +21,8 @@ Updated: 2026-10-09. Keep this file short and update it when user-visible featur
 
 ## Recent completed work
 
+- Simplified the local Planner bottom area: removed the fixed bar and reserved gap, kept Next day reachable in the week overview and active day, and moved save status/Retry inline. Django's manual-save footer is unchanged. Shipped in [Android 2026.10.12](releases/smart-paper-v2026.10.12.md); see the [task](tasks/2026-10-09-planner-bottom-area.md).
+
 - Finance now rechecks unlock expiry with bounded active polling and focus/resume checks, clears displayed data and unsaved edits, and rejects stale responses. PIN naming and focus recovery improve the lock screen; saved records remain intact. Shipped in [Android 2026.10.11](releases/smart-paper-v2026.10.11.md); see the [task](tasks/2026-10-09-finance-session-expiry.md).
 
 - Replaced the report's misleading Open ChatGPT URL with explicit Copy report text, Share report file and manual selection. Transfers recheck source/finance access and preserve the reviewed content; recipient delivery remains a phone follow-up. [Handoff task](tasks/2026-10-07-ai-report-chatgpt-handoff.md) tracks validation and publication.

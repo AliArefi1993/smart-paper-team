@@ -2,7 +2,7 @@
 
 Smart Paper is a personal weekly planning, progress tracking, finance tracking, and data export application. Its primary release target is a downloadable Android APK that stores each person's data on their own phone.
 
-The current release targets Android `2026.10.11` / versionCode 28 (local-data mode); see the [release record](releases/smart-paper-v2026.10.11.md) for source revision and validation. Product and design priorities are phone use in English and Persian, preserving local records, and reliable existing flows. Browser and Storybook checks support Android work; native Android behavior requires separate evidence. The Django/hosted-web path is secondary and paused until needed.
+The current release targets Android `2026.10.12` / versionCode 29 (local-data mode); see the [release record](releases/smart-paper-v2026.10.12.md) for source revision and validation. Product and design priorities are phone use in English and Persian, preserving local records, and reliable existing flows. Browser and Storybook checks support Android work; native Android behavior requires separate evidence. The Django/hosted-web path is secondary and paused until needed.
 
 ## What It Currently Does
 
@@ -10,6 +10,7 @@ The current release targets Android `2026.10.11` / versionCode 28 (local-data mo
 - Tracks a weekly goal and weekly note.
 - Tracks seven day plans per week.
 - Lets the user minimize individual day details or all seven days while keeping summaries visible; reopening preserves fields. Android/local-data Planner edits save automatically; Django mode retains manual week saving.
+- In Android/local-data mode, keeps Planner Next day in the flow instead of a fixed bottom bar, with save status and Retry inline; Django mode retains its manual-save footer.
 - Splits each day into configurable planner sections.
 - Shows section summaries before editing; one section opens at a time with its duration, goal, and note. Long writing expands inline or opens a full writing view, with automatic week persistence in Android/local-data mode and an explicit save action in Django mode.
 - Provides 10 stable planner section slots; the first four default to Main, Second, Learning, and Exercise, while slots 5-10 are hidden until activated.

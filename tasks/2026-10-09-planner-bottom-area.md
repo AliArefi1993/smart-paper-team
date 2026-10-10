@@ -1,6 +1,6 @@
 # Task: Simplify the Planner fixed bottom area
 
-Status: publication pending
+Status: shipped
 Created: 2026-10-09
 Updated: 2026-10-09
 
@@ -21,7 +21,7 @@ Review removing the Planner's fixed bottom area to recover useful screen space. 
 - [x] A ready design handoff and editable English/Persian studio stories cover portrait, landscape, and keyboard-open states before frontend implementation.
 - [x] The selected treatment reduces unnecessary fixed screen space and keeps day navigation discoverable and reachable, including the final day of a week.
 - [x] Autosave, pending edits, save-error feedback, and data preservation during day navigation continue to work.
-- [ ] Targeted checks, independent review, documentation, and the validated Android release workflow are completed if implemented; record physical-device follow-ups explicitly.
+- [x] Targeted checks, independent review, documentation, and the validated Android release workflow are completed; physical-device follow-ups are recorded.
 
 ## Non-Goals
 
@@ -44,7 +44,7 @@ Review removing the Planner's fixed bottom area to recover useful screen space. 
 | Design | Ready handoff, EN/FA portrait/landscape/short-height/wide prototypes and error day-end review; isolated Docker studio install/typecheck/build | Passed; native keyboard not simulated |
 | Frontend checks/review | Independent source review accepted mode/active-day controls, unchanged storage/departure guards, Django footer and single live save region; isolated Docker lint/typecheck/66 tests/local build | Passed; 21 existing dependency advisories |
 | Production QA | Rotation/notes/Next/Friday/Retry/failed-write guards in synthetic browser fixture | Passed; edits persist through rotation/reload, inline/minimized navigation, Friday disabled and failed-save recovery; EN/FA Light/Dark screenshots |
-| Android release | Exact-source CI, protected signing, independent APK review | Passed; team tag publisher and anonymous public checksum verification pending |
+| Android release | Exact-source CI, protected signing, independent APK review, tag publisher and anonymous checksum | Passed; see [release record](../releases/smart-paper-v2026.10.12.md) |
 
 ## Decisions And Risks
 
@@ -56,4 +56,4 @@ Review removing the Planner's fixed bottom area to recover useful screen space. 
 
 ## Outcome / Handoff
 
-Implemented and verified; Designer, source review and production-browser acceptance passed. The exact signed artifact passed independent Security review; team tag publication and public checksum verification remain. Synthetic failure injection was served from a temporary QA origin, not added to application assets.
+Shipped in [Android 2026.10.12](../releases/smart-paper-v2026.10.12.md); Designer, independent source/artifact review, production-browser acceptance, and anonymous public checksum verification passed. Synthetic failure injection was served from a temporary QA origin, not added to application assets.
