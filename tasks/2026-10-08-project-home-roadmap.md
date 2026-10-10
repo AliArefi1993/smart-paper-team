@@ -2,7 +2,7 @@
 
 Status: planned
 Created: 2026-10-08
-Updated: 2026-10-08
+Updated: 2026-10-10
 
 ## Objective
 
@@ -20,7 +20,7 @@ Provide a clear, low-maintenance project home page where the maintainer can find
 - [ ] ROADMAP distinguishes Now (active), Next (explicitly ordered queue), Later (agreed but not next), Ideas (unconfirmed) and Paused (deliberately deferred).
 - [ ] Confirm priority order with the maintainer; do not treat file dates, list insertion order or saved plans as an approved implementation sequence. Do not invent deadlines.
 - [ ] Roadmap entries show short outcomes, status and dependencies with links to detailed task records; avoid copying acceptance criteria into several places.
-- [ ] Task index clearly exposes planned work and distinguishes it from active/completed work, without requiring a search through all task files.
+- [x] Task index clearly exposes planned work and distinguishes it from active/completed work, without requiring a search through all task files.
 - [ ] Existing feature.md remains the shipped-capability source; planned changes are visibly separate from current behavior.
 - [ ] Existing plans, known risks and deferred physical-device checks are preserved or linked during reorganization; completed history stays in task/release records.
 - [ ] Markdown reads clearly on GitHub and locally, with valid relative links and compact tables where helpful.
@@ -44,7 +44,7 @@ Provide a clear, low-maintenance project home page where the maintainer can find
 | Check | Command or evidence | Result |
 | --- | --- | --- |
 | Scope | Maintainer discussion on 2026-10-08 | Approved direction recorded as planned |
-| Cleanup/link review | Deferred until task starts | Not run |
+| Task-index state/link review | 2026-10-10, this bounded documentation update | `tasks/README.md` now groups all dated task records by active follow-up, planned/future, and completed/assessed state; broader README/ROADMAP cleanup and priority confirmation remain outstanding |
 
 ## Decisions And Risks
 
@@ -54,4 +54,4 @@ Provide a clear, low-maintenance project home page where the maintainer can find
 
 ## Outcome / Handoff
 
-Future task saved only. When selected, confirm priority order and perform the bounded Markdown cleanup. No project home page redesign has been implemented yet.
+Future task remains open. The task index was refreshed on 2026-10-10 with dated task records grouped by state; this does not complete the broader Markdown cleanup or priority confirmation. No project home page redesign has been implemented yet.
