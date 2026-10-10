@@ -1,8 +1,8 @@
 # Task: Define lightweight problem-report triage
 
-Status: planned
+Status: complete
 Created: 2026-10-08
-Updated: 2026-10-08
+Updated: 2026-10-10
 
 ## Objective
 
@@ -16,18 +16,18 @@ Ensure reports from the maintainer and voluntary testers lead to reproducible, p
 
 ## Acceptance Criteria
 
-- [ ] Define a short report template: app version, expected/actual behavior, reproduction, impact and optional diagnostics.
-- [ ] Define simple states (needs information, reproduced, planned, in progress, verified/closed) and severity rules; data loss/security/blocked primary flows receive prompt assessment.
-- [ ] Deduplicate reports and link each actionable issue to its existing/new task and relevant release.
-- [ ] Validate diagnoses from evidence; reproduce safely with synthetic fixtures and separate user observations from confirmed causes.
-- [ ] Handle submitted attachments and sender information privately; never commit raw personal reports or publish diagnostic/user content in the public repository.
-- [ ] Define an owner and minimal closure evidence, with any reporter reply requiring explicit messaging authorization.
-- [ ] Use existing task/status/release files for sanitized findings; no assumed inbox access, automated email ingestion or new metrics burden.
-- [ ] Record evidence, severity, remaining gaps and bounded follow-up tasks; do not claim unexecuted checks passed.
+- [x] Define a short report template: app version, expected/actual behavior, reproduction, impact and optional diagnostics.
+- [x] Define simple states and severity rules; data loss/security/blocked primary flows receive prompt assessment.
+- [x] Define deduplication and task/release linking.
+- [x] Define evidence-based diagnosis and synthetic-fixture reproduction, separating observation from confirmed cause.
+- [x] Define private handling of attachments/sender information and prohibit committing raw reports or publishing diagnostic/user content.
+- [x] Assign maintainer triage ownership and require explicit authorization for reporter replies; define closure evidence.
+- [x] Keep findings sanitized and within existing task/status/release files; no assumed inbox access, automated ingestion or metrics.
+- [x] Record evidence, severity, gaps and bounded follow-up without claiming unexecuted checks.
 
 ## Non-Goals
 
-- Executing reviews/tests, changing app code or publishing a release during this backlog-recording request.
+- App changes, Android release work, and handling live reports during this documentation task.
 - New servers, telemetry uploads or a separate tracking system.
 
 ## Plan
@@ -40,15 +40,17 @@ Ensure reports from the maintainer and voluntary testers lead to reproducible, p
 
 | Check | Command or evidence | Result |
 | --- | --- | --- |
-| Scope | Maintainer authorized final backlog additions on 2026-10-08 | Saved as planned |
-| Review/validation | Deferred until task starts | Not run |
+| Documentation | [Triage convention](../docs/feedback-triage.md) covers intake, states, severity, privacy, ownership, deduplication and closure | Complete |
+| Synthetic walkthrough | Illustrative report, duplicate and insufficient-information cases in the convention | Complete; no user report accessed |
+| Links and scope | Checked referenced task/status/roadmap paths and confirmed documentation-only scope | Passed |
+| Markdown structure | Inspected headings, checklist state, code fence and table delimiters in changed Markdown | Passed |
 
 ## Decisions And Risks
 
 - Design: not applicable to internal triage documentation; reporter-facing app changes need design.
-- Voluntary reports are incomplete and do not represent all users. No external messaging or access to users' mail is authorized by this task.
+- Voluntary reports are incomplete and do not represent all users. No external messaging or access to users' mail was used or authorized by this task.
 - Any future user-visible fixes require a ready bilingual Designer handoff, relevant checks/review and the existing release workflow.
 
 ## Outcome / Handoff
 
-Future work only; no app changes or QA executed. When selected, follow the bounded plan and preserve the current release/safety rules.
+Completed documentation-only convention and synthetic walkthrough. No app changes, live reports, user inboxes, external messaging, QA execution or release work were involved. Design: not applicable. No background processes were started.

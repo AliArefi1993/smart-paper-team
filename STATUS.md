@@ -6,6 +6,8 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 
 ## Current Focus
 
+- [Lightweight feedback triage](tasks/2026-10-08-feedback-triage-workflow.md) completed as documentation only: sanitized intake, severity/state rules, duplicate handling, privacy boundaries and closure evidence are in [docs/feedback-triage.md](docs/feedback-triage.md). No app behavior or live reports were involved.
+
 - [Explicit Android backup policy](tasks/2026-10-10-android-backup-policy.md) shipped in Android `2026.10.14`/code 31 at frontend `d899f2c`: cloud backup excluded, supported device transfer permitted, Finance unlock kept only in runtime memory, and EN/FA recovery disclosure added. Docker lint/TypeScript/70 tests/local-data build, Designer/studio and bounded browser QA passed. Exact-source CI, protected signing, independent compiled APK/Security review and public anonymous checksum verification passed. Actual OS/OEM migration remains unverified.
 
 - [Phone landscape review](tasks/2026-10-09-phone-landscape-layout.md) shipped in Android 2026.10.13/code 30. The Planner event editor now stays inside short viewports and scrolls internally; bilingual browser QA, seven-route layout review, lint, TypeScript, 66 tests, production build, exact-source CI, protected signing, independent Security artifact verification and anonymous public APK checksum verification passed. Native rotation/keyboard/safe-area/TalkBack remain follow-ups; no additional visible clipping was reproduced.
