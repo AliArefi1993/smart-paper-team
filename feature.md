@@ -21,7 +21,7 @@ Updated: 2026-10-10. Keep this file short and update it when user-visible featur
 
 ## Recent completed work
 
-- Implemented explicit Android cloud-backup exclusion and supported device transfer, with bilingual Export recovery guidance. Finance authorization stays in memory and relocks after full reload/restart while saved records remain intact. Automated, browser and compiled APK checks passed; publication is tracked in [Android 2026.10.14](releases/smart-paper-v2026.10.14.md). Actual device/OEM migration remains unverified.
+- Shipped explicit Android cloud-backup exclusion and supported device transfer, with bilingual Export recovery guidance. Finance authorization stays in memory and relocks after full reload/restart while saved records remain intact. Automated, browser and compiled APK checks passed; see [Android 2026.10.14](releases/smart-paper-v2026.10.14.md). Actual device/OEM migration remains unverified.
 
 - Corrected the Planner event editor for short landscape screens: its fields and actions scroll inside a viewport-bounded sheet. Bilingual browser QA passed; shipped in [Android 2026.10.13](releases/smart-paper-v2026.10.13.md).
 

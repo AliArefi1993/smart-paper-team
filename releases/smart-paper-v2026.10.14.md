@@ -2,7 +2,7 @@
 
 Date: 2026-10-10
 
-Status: Awaiting publication; lead-approved artifact is prepared.
+Status: Published; anonymous public APK download matches the committed stable artifact.
 
 ## Scope
 
@@ -16,7 +16,7 @@ Status: Awaiting publication; lead-approved artifact is prepared.
 | Field | Value |
 | --- | --- |
 | Release tag | `smart-paper-v2026.10.14` |
-| Team root target | Pending final team release commit. |
+| Team root target | `76778a88a23d69fd1fa7ecb61542ce6328740265` |
 | Backend | `68c789b707239ef5451f98f7f6ce49d7c9b8a8c2` (unchanged) |
 | Frontend source | `d899f2c9d66879bf899e09d3f8945412b6b6967b` |
 | Android | versionCode 31; versionName `2026.10.14`; app ID `com.aliarefi.smartpaper`; local-data mode |
@@ -51,7 +51,7 @@ Status: Awaiting publication; lead-approved artifact is prepared.
 
 ## Publication
 
-Publication is pending the scoped team commit, same-version tags, and tag publisher run. The public release asset and anonymous checksum have not yet been verified.
+The [GitHub Release](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.14) was published by [publisher run 38079292472](https://github.com/AliArefi1993/smart-paper-team/actions/runs/38079292472). Tags target team `76778a88a23d69fd1fa7ecb61542ce6328740265`, backend `68c789b707239ef5451f98f7f6ce49d7c9b8a8c2`, and frontend `d899f2c9d66879bf899e09d3f8945412b6b6967b`. Anonymous asset `628788827`, `SmartPaper-local-2026.10.14-release.apk`, was downloaded and matches the committed artifact byte-for-byte: 4,473,495 bytes and SHA-256 `24caacb6ead7bc953b45b2d4716bd39df9146093c664a38e3f5fb1dcba63c82b`.
 
 ## Known Follow-Ups
 

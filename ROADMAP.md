@@ -4,7 +4,7 @@ This roadmap is based on repository inspection only. Speculative ideas are marke
 
 ## Current Goal: Confidence In The Shipped Android App
 
-Android `2026.10.13` / versionCode 30 is the latest published release; the [release record](releases/smart-paper-v2026.10.13.md) documents exact-source CI, protected signing and public checksum verification. The Planner fixed bottom area was removed in local-data mode while preserving inline save feedback and reachable day navigation; see the [task](tasks/2026-10-09-planner-bottom-area.md). Finance session expiry continues to clear displayed data and unsaved edits promptly while preserving saved records; see its [task](tasks/2026-10-09-finance-session-expiry.md). The seven-route audit remains a structural reference with native follow-ups.
+Android `2026.10.14` / versionCode 31 is the latest published release; the [release record](releases/smart-paper-v2026.10.14.md) documents exact-source CI, protected signing, independent artifact review and public checksum verification. Android cloud backup is excluded while supported device transfer remains allowed; actual OS/OEM behavior remains a physical-device follow-up. The Planner fixed bottom area was removed in local-data mode while preserving inline save feedback and reachable day navigation; see the [task](tasks/2026-10-09-planner-bottom-area.md). Finance session expiry continues to clear displayed data and unsaved edits promptly while preserving saved records; see its [task](tasks/2026-10-09-finance-session-expiry.md). The seven-route audit remains a structural reference with native follow-ups.
 
 - Prioritize observed design/implementation mismatches by effect on local data, task completion, and bilingual phone use. A user-visible fix requires a ready Designer handoff and targeted QA.
 
@@ -22,7 +22,7 @@ Completed 2026-10-08: [fixed template loss during Merge import](tasks/2026-10-08
 
 ## Next, After Baseline Review
 
-- Validated for Android `2026.10.14`, publication pending: [explicit Android backup policy](tasks/2026-10-10-android-backup-policy.md). Cloud backup excluded, supported device transfer permitted, Finance unlock resets after full reload/restart, and bilingual Export recovery guidance added. Compiled APK/Security and bounded QA passed; actual cloud/migration/OEM behavior remains a phone data-safety follow-up.
+- Shipped in Android `2026.10.14`: [explicit Android backup policy](tasks/2026-10-10-android-backup-policy.md). Cloud backup is excluded, supported device transfer is permitted, Finance unlock resets after full reload/restart, and bilingual Export recovery guidance is available. Compiled APK/Security and bounded QA passed; actual cloud/migration/OEM behavior remains a phone data-safety follow-up.
 
 - Shipped in Android 2026.10.13: [Phone landscape review and fix](tasks/2026-10-09-phone-landscape-layout.md). The event sheet clipped its heading/actions at short heights; a bounded scrolling panel fixes the confirmed issue. Seven-route EN/FA browser review found no additional visible clipping. Physical Android rotation/keyboard/TalkBack remain follow-ups.
 
