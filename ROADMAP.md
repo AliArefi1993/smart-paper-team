@@ -46,6 +46,8 @@ Completed 2026-10-08: [fixed template loss during Merge import](tasks/2026-10-08
 
 - Planned: accessible Android **Report a problem**, with optional local crash/error diagnostics and basic usage analytics, preview/delete controls, and voluntary file sharing through Android/email. No server or automatic uploads. See the [future task](tasks/2026-10-07-local-feedback-diagnostics.md); implementation is not started.
 
+- Planned evaluation: [Microsoft Clarity for Android UX diagnostics](tasks/2026-10-10-microsoft-clarity-evaluation.md), checking packaged Capacitor 8 compatibility, synthetic-data replay usefulness, privacy, and failure coverage against planned voluntary local diagnostics. No hosted telemetry is adopted; implementation is not started.
+
 - Add frontend automated tests around primary user flows: weekly planner save/load, finance unlock/add/edit/delete, export/import, language switching.
 - Add frontend automated tests around configurable planner sections: settings save/load, hide/activate behavior, planner save/load with custom labels, summaries, and local export/import.
 - Add frontend automated tests around timed schedule entries: add/edit/delete, sorting, local storage normalization, and export/import round trip.
