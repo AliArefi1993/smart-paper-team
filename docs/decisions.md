@@ -71,6 +71,12 @@ This file records durable choices that constrain future work. It is intentionall
 - **Why:** The maintainer explicitly authorized this agent-operated release flow to avoid repeated approval requests while preserving the existing signed-release process.
 - **Consequence:** Lead acceptance, specialist review, release go/no-go, exact-SHA/build/provenance checks, and GitHub reviewer/main-only/no-bypass protections remain required. This is not unattended signing or a scheduled job. Documentation-only work does not create an APK release. Revisit when real users begin using the app or the maintainer revokes authorization; there is no date-triggered expiry. Destructive Git, production deployment/data, and credential safety boundaries remain unchanged.
 
+### D-012 — Exclude Android cloud backup while permitting supported device transfer
+
+- **Decision (2026-10-10):** The maintainer selected explicit cloud-backup exclusion and supported Android device-to-device migration. API 24–27 excludes OS backup because it lacks the selective transfer flag; later versions use applicable legacy/current rules. Finance authorization lives only in runtime memory and resets after full reload/restart, including migrated installations.
+- **Why:** Preserve a phone replacement path while narrowing cloud eligibility and preventing restored unlock deadlines from granting Finance access.
+- **Consequence:** Keep verified external JSON backups as the deliberate recovery path. Do not promise OEM migration success, encryption or deletion of historical cloud snapshots. Persisting authorization across restarts requires a separately reviewed non-backup-bound identity mechanism. See [policy](android-backup-policy.md) and [task](../tasks/2026-10-10-android-backup-policy.md).
+
 ## Adding Or Changing A Decision
 
 Add an entry only when the choice is costly to reverse, crosses repository boundaries, defines a product constraint, or is likely to be debated again. Include the decision, reason, and practical consequence. If superseded, keep the old entry and point it to the replacement.

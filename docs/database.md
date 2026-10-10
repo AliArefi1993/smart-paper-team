@@ -52,6 +52,7 @@ The finance session unlock gates finance and export/import endpoints; it is not 
 - Local-data contract: `smart-paper-front/src/lib/local-store.ts` and `smart-paper-front/src/lib/export-format.ts`.
 - Import supports merge/upsert and destructive replace behavior. Local template Merge preserves saved IDs absent from the backup and uses the complete incoming record for matching IDs; empty/omitted incoming templates preserve the saved collection. Replace uses the incoming collection, or clears templates when it is omitted. Template IDs are local identities; collisions across independently created installations remain possible. Treat replace-mode changes as data-safety work.
 - Android JSON backups are not encrypted. Save and verify a copy outside the app.
+- OS extraction is separate from JSON: cloud backup is excluded and supported device transfer is permitted by version-specific Android rules. Finance unlock is runtime memory only, never restored from the legacy stored deadline; saved records and JSON schema are unchanged. See [Android backup policy](android-backup-policy.md).
 
 ## Migration Rules
 

@@ -97,7 +97,7 @@ See `docs/database.md` for entity relationships, persistence ownership, and sche
   - `LanguageToggle`
 - State management: React `useState`, `useEffect`, `useMemo`; no external state library found.
 - Internationalization: custom `src/lib/i18n.ts` and `useLanguage`, persisted in localStorage.
-- Local data mode: `src/lib/local-store.ts` implements planner, planner section settings, finance, export/import, and finance unlock behavior in browser storage. `src/lib/idea-notes.ts` owns Idea Space records; local JSON backup/import includes them. Backend mode currently shows Idea Space as unavailable.
+- Local data mode: `src/lib/local-store.ts` implements planner, planner section settings, finance and export/import in browser storage. Finance authorization uses a module-memory one-hour deadline, starts locked on full runtime recreation and ignores legacy persisted unlock deadlines. `src/lib/idea-notes.ts` owns Idea Space records; local JSON backup/import includes them. Backend mode currently shows Idea Space as unavailable.
 - `src/lib/idea-draft.ts` owns a separate contextual new/edit/branch draft, source snapshot and commit receipt. A marked envelope at the existing draft key distinguishes structured recovery from legacy prose. Commits reread saved notes and reconcile receipts before cleanup/retry; missing sources and stale edits require explicit Keep as new thought. Failed draft writes retain session memory across SPA return, without a reload/process-termination guarantee. Drafts do not enter backups or reports.
 - Settings retains explicit validated batch saving, reachable before and after the full form; Finance retains deliberate commits and confirms income deletion.
 - Selective AI reports are generated in the frontend from an allowlisted Markdown projection. Android local mode reads planner records without a finance unlock; finance fields require the existing unlock. Date filtering applies to day records and income entries, while full JSON backups retain their separate restore schema. `ai-report-transfer.ts` rereads the selected source and compares its formatted contents with the reviewed preview before Copy, Share or manual selection; changed data refreshes the preview and requires another deliberate action. Finance authorization remains in the source adapter. Explicit clipboard copying is local to the device; sharing invokes the existing file chooser/download helper. Neither path certifies recipient attachment or sends a message.
@@ -112,6 +112,7 @@ See `docs/database.md` for entity relationships, persistence ownership, and sche
 - `xlsx` is used by the frontend for client-side Excel export in local mode.
 - `@capacitor/local-notifications` is used for opt-in Android local morning plan reminders.
 - Capacitor Android is configured for a local static build.
+- Android OS backup rules exclude cloud application-data backup and permit supported device-to-device migration. API 24–27 excludes both; API 28–30 requires the device-transfer flag; API 31+ uses separate cloud/transfer rules. External JSON recovery remains required; actual OEM transfer is unverified. See [policy](android-backup-policy.md).
 
 ## Deployment
 

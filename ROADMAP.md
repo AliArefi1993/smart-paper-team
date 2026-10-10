@@ -22,9 +22,11 @@ Completed 2026-10-08: [fixed template loss during Merge import](tasks/2026-10-08
 
 ## Next, After Baseline Review
 
+- Validated for Android `2026.10.14`, publication pending: [explicit Android backup policy](tasks/2026-10-10-android-backup-policy.md). Cloud backup excluded, supported device transfer permitted, Finance unlock resets after full reload/restart, and bilingual Export recovery guidance added. Compiled APK/Security and bounded QA passed; actual cloud/migration/OEM behavior remains a phone data-safety follow-up.
+
 - Shipped in Android 2026.10.13: [Phone landscape review and fix](tasks/2026-10-09-phone-landscape-layout.md). The event sheet clipped its heading/actions at short heights; a bounded scrolling panel fixes the confirmed issue. Seven-route EN/FA browser review found no additional visible clipping. Physical Android rotation/keyboard/TalkBack remain follow-ups.
 
-- Completed: [Privacy and local-data protection review](tasks/2026-10-08-privacy-local-data-review.md). [Ranked findings and bounded scopes](docs/privacy-local-data-review.md): finance expiry rechecks/clearing stale display shipped in [Android 2026.10.11](releases/smart-paper-v2026.10.11.md); explicit OS backup policy and notification-preview disclosure remain next. Share-cache retention, CSV text safety and import limits follow. User-visible fixes require Designer handoffs and validated Android releases.
+- Completed: [Privacy and local-data protection review](tasks/2026-10-08-privacy-local-data-review.md). [Ranked findings and bounded scopes](docs/privacy-local-data-review.md): finance expiry rechecks/clearing stale display shipped in [Android 2026.10.11](releases/smart-paper-v2026.10.11.md); explicit OS backup policy is validated in the task above. Notification-preview disclosure remains next; share-cache retention, CSV text safety and import limits follow. User-visible fixes require Designer handoffs and validated Android releases.
 - Planned: [Lightweight feedback triage](tasks/2026-10-08-feedback-triage-workflow.md), turning voluntary reports into reproduced, prioritized and verified tasks.
 
 - Planned evaluation: [Periodic team reviews](tasks/2026-10-08-periodic-team-reviews.md) covering QA, independent feature proposals, necessary refactoring, new/updated agent skills and similar-app/technology research, with lightweight triggers and effort limits. No recurring jobs or new rules are enabled yet.

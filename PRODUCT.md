@@ -74,4 +74,5 @@ The current release targets Android `2026.10.12` / versionCode 29 (local-data mo
 - No production infrastructure beyond Docker/Docker Compose configuration was found.
 - No broad frontend integration or end-to-end test suite is implemented.
 - The Android PIN is only a screen lock; local finance data and JSON backups are not encrypted.
+- Android cloud application-data backup is excluded; device-to-device migration is permitted where supported (API 28+), with OS/OEM behavior unverified. Keep a verified JSON backup outside the app before changing phones or uninstalling. Finance unlock expires within one hour in the current runtime and resets after full reload/restart; copied legacy unlock state is ignored. See [backup policy](docs/android-backup-policy.md).
 - Idea Space currently stores notes only in Android/local-data mode; the Django backend does not store them.
