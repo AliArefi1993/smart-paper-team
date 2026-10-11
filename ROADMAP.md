@@ -18,7 +18,7 @@ Completed 2026-10-08: [fixed template loss during Merge import](tasks/2026-10-08
 - Validate the compact template sheet and current-week auto-centering on a phone in both languages.
 - Continue stable-signed APK publication with matching records and checksums after validated user-visible changes; physical-device/TalkBack checks remain recorded follow-ups under standing maintainer direction.
 - Extend focused local-data tests for demonstrated gaps; current checks are recorded in the release record.
-- Assessed: [production dependency advisories for the static Android build](tasks/2026-10-11-android-dependency-advisories.md). [Current report](docs/android-dependency-advisories.md) records 7 flagged packages and no demonstrated static APK exploit; SheetJS ReDoS writer reachability remains unresolved. Follow up with a bounded framework/build-tool refresh and maintained spreadsheet-writer evaluation before wider sharing; remediation is not complete.
+- Assessed: [production dependency advisories for the static Android build](tasks/2026-10-11-android-dependency-advisories.md). [Current report](docs/android-dependency-advisories.md) records 7 flagged packages and no demonstrated static APK exploit; SheetJS ReDoS writer reachability remains unresolved. The [spreadsheet-writer evaluation](tasks/2026-10-11-spreadsheet-writer-evaluation.md) recommends an official pinned SheetJS candidate with focused export regression checks. Follow up with the writer upgrade and a bounded framework/build-tool refresh before wider sharing; remediation is not complete.
 
 ## Next, After Baseline Review
 

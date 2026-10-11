@@ -39,7 +39,7 @@ SheetJS vendor records: [prototype pollution](https://cdn.sheetjs.com/advisories
 ## Recommended follow-up
 
 1. Prepare a bounded framework/build-tool upgrade and lock refresh. The current audit recommends Next 16.4.0; treat that as a candidate, verify supported versions when implementation starts, align `eslint-config-next`, and review transitive locks. Do not apply `npm audit fix --force`. Validate lint, TypeScript, local tests/static build and exact-source Android release gates.
-2. Evaluate a maintained SheetJS release at least 0.20.2 from its official distribution or replace the writer. npm reports no automatic fix for the public `xlsx` dependency. Preserve bilingual sheet text, numeric/text cell behavior and exports; add focused writer regression coverage when changing it.
+2. The [completed writer evaluation](spreadsheet-writer-evaluation.md) recommends official pinned SheetJS CE 0.20.3 as the smallest candidate. Implement and validate that upgrade, or evaluate the replacement fallback if it fails compatibility checks. npm reports no automatic fix for the public `xlsx` dependency. Preserve bilingual sheet text, numeric/text cell behavior and exports; add focused writer regression coverage when changing it.
 3. Reassess before any hosted Next deployment, untrusted build-input processing or workbook-import feature. Re-run the production audit after remediation and add full build/native coverage before claiming broader supply-chain assurance.
 
 These are proposed remediation scopes, not completed fixes or an approved product queue. No background audit processes remain. Physical-device, privacy and data-safety follow-ups remain in their existing tasks.
