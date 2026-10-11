@@ -37,6 +37,8 @@ Completed 2026-10-08: [fixed template loss during Merge import](tasks/2026-10-08
 
 - Shipped: [GitHub Actions CI and Android builds](tasks/2026-10-07-github-actions-ci-android-builds.md), including hosted frontend checks, isolated verification APK artifacts, verified success/failed-test gates, and a Security-accepted protected stable signing run. Existing team tag publication remains separate; independent CI archive download, fork/cancellation/cache-hit, physical-device, and account-usage checks remain follow-ups.
 
+- Planned evaluation: [CI coverage and local test policy](tasks/2026-10-11-ci-local-test-policy.md), inventorying hosted coverage and triggers, then recommending risk-based local versus CI checks and when exact-commit CI can serve as reusable validation. No policy or workflow change is adopted yet; backend remains paused and release gates stay in force.
+
 - Planned: [Design and install a Smart Paper Android launcher icon](tasks/2026-10-07-android-launcher-icon.md); important visual identity task covering the installed home-screen/app-drawer icon, not a full brand redesign.
 
 - Planned: [Finance optional and hidden by default](tasks/2026-10-07-finance-optional-default-hidden.md); preserve existing records and pause feature expansion.
