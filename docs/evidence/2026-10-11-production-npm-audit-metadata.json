@@ -1,0 +1,22 @@
+{
+  "checked_at_utc": "2026-10-11T18:23:53.659831+00:00",
+  "command": "npm audit --omit=dev --json",
+  "environment": "Host Node/npm; Docker node:24-bookworm attempted but Docker daemon unavailable; isolated temporary copies of package manifests; no npm install/ci",
+  "npm_version": "11.6.2",
+  "node_version": "v25.2.1",
+  "frontend_head": "d899f2c9d66879bf899e09d3f8945412b6b6967b",
+  "lock_sha256": "b274dd978de0c66753e2ffb3b629b6d1ba1047ffcb42fe7abc2a57e8f6f8df89",
+  "audit_sha256": "957b1e44d39bec9d56812b0b2bdb18a7d2363a3afb96c4fa4fa14feae538b940",
+  "audit_expected_exit_code": 1,
+  "package_findings": {
+    "info": 0,
+    "low": 0,
+    "moderate": 1,
+    "high": 5,
+    "critical": 1,
+    "total": 7
+  },
+  "unique_advisories": 44,
+  "no_application_mutations": true,
+  "no_background_processes_remaining": true
+}

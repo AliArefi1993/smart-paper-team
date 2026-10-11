@@ -1,10 +1,12 @@
 # Smart Paper Status
 
-Last updated: 2026-10-10.
+Last updated: 2026-10-11.
 
 This is a present-state snapshot, not a changelog. Shipped history and validation details live in `releases/`; implementation history lives in each repository's Git log.
 
 ## Current Focus
+
+- [Production dependency assessment](tasks/2026-10-11-android-dependency-advisories.md) completed against frontend `d899f2c`: fresh production npm audit flags 7 packages (1 critical, 5 high, 1 moderate). Independent Security source review found no demonstrated exploit in current static Android paths; SheetJS ReDoS writer reachability remains unproven. [Report and captured evidence](docs/android-dependency-advisories.md) recommend framework/build-tool refresh and maintained spreadsheet writer evaluation. No dependency remediation or APK change.
 
 - [Lightweight feedback triage](tasks/2026-10-08-feedback-triage-workflow.md) completed as documentation only: sanitized intake, severity/state rules, duplicate handling, privacy boundaries and closure evidence are in [docs/feedback-triage.md](docs/feedback-triage.md). No app behavior or live reports were involved.
 
@@ -76,7 +78,7 @@ Older release verification details and the transient Maven failure are recorded 
 - Production environment and deployment documentation remain incomplete for any future hosted backend.
 - Old `node_modules-blocked-*` directories in the frontend need a repository-hygiene decision.
 - Local finance data is not encrypted; its client-side PIN is a screen lock only. Finance expiry UI was fixed in 2026.10.11; frontend `d899f2c` adds runtime-only unlock and explicit cloud exclusion/supported device transfer rules. [Backup policy](docs/android-backup-policy.md) records legacy limits and unverified OS/OEM behavior. Reminders still include event titles; [privacy assessment](docs/privacy-local-data-review.md) records remaining notification/exposure scopes.
-- The 2026.10.9 `npm ci` output reported 21 dependency advisories; this is not a clean audit, and prior static Android applicability assessments remain documented in release records.
+- The 2026-10-11 [production dependency assessment](docs/android-dependency-advisories.md) flags 7 packages (1 critical, 5 high, 1 moderate); no clean audit or remediation is claimed. SheetJS ReDoS writer reachability is unresolved; framework/build-tool refresh and spreadsheet-writer evaluation remain. Historical 21 full-install advisories are a different scope/time. Native/build-wide dependency coverage remains unassessed.
 
 ## Context Pointers
 

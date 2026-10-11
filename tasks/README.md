@@ -30,6 +30,7 @@ These records preserve candidate work, not an approved sequence. Use [ROADMAP.md
 
 These records cover shipped work, completed documentation, or bounded assessments. Their task-specific outcomes and any still-open device follow-ups remain in the linked documents.
 
+- [Android production dependency advisories](2026-10-11-android-dependency-advisories.md) — current production audit and static-path assessment; remediation remains follow-up.
 - [Android APK readiness](2026-09-29-android-apk-readiness.md) — historical implementation; phone follow-up transferred.
 - [Android launch position](2026-09-30-android-launch-position.md)
 - [Android mobile layout hotfix](2026-09-30-android-mobile-layout-hotfix.md)
