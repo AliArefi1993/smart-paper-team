@@ -52,7 +52,7 @@ Completed 2026-10-08: [fixed template loss during Merge import](tasks/2026-10-08
 
 - Add frontend automated tests around primary user flows: weekly planner save/load, finance unlock/add/edit/delete, export/import, language switching.
 - Add frontend automated tests around configurable planner sections: settings save/load, hide/activate behavior, planner save/load with custom labels, summaries, and local export/import.
-- Add frontend automated tests around timed schedule entries: add/edit/delete, sorting, local storage normalization, and export/import round trip.
+- Completed: [timed schedule regression coverage](tasks/2026-10-11-local-schedule-regression.md) for add/edit/delete persistence, sorting, stored/import normalization and serialized JSON Merge/Replace round trips, including Persian text and section linkage. This is storage-level coverage; phone interaction remains a follow-up.
 - Validate week-template usage after release; consider optional daily and section-level template defaults if they prove useful.
 - Prioritize Planner usability; Timer-to-Planner integration is not planned under the maintainer's current direction. Idea Space relationship discovery and optional Finance/Timer visibility are tracked separately above.
 
