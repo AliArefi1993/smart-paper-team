@@ -41,7 +41,7 @@ Dependency installation or remediation, app behavior changes, APK release, bench
 | Vendor evidence | Linked official installation, writer/utilities and advisory notices; ExcelJS maintainer README | Official 0.20.3 candidate; ReDoS fixed in >=0.20.2; replacement requires different adapter |
 | Independent Security review | Specialist source/vendor and report review | No unresolved material finding after ID correction and Finance-gate test addition |
 | Documentation validation | Relative Markdown targets in the six task files; `git diff --check` | All local targets exist; diff check passed (2026-10-11) |
-| Scoped closeout | Root coordination Git | Commit and push recorded after validation |
+| Scoped closeout | Root coordination Git | Commit `881ece39d525ea58c64ce01b3a4805e58b44b421` pushed to `origin/main` (2026-10-11) |
 
 ## Decisions And Risks
 
