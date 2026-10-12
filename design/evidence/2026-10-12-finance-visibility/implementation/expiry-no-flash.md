@@ -1,0 +1,29 @@
+- complementary "Finance browser QA controls":
+  - strong: Browser-only Finance expiry QA
+  - button "Advance Finance clock 61 minutes" [disabled]
+  - button "Finish expiry witness before deliberate PIN unlock"
+  - status: "Baseline income witnessed: yes. Clock advanced: 61 minutes. Expiry witness: armed. Post-expiry marker appearances: 0."
+- main:
+  - heading "Finance" [level=1]
+  - paragraph: Path To Goal
+  - text: Language
+  - combobox "Language":
+    - option "English" [selected]
+    - option "Persian"
+  - group "Appearance":
+    - button "Light" [pressed]
+    - button "Dark Mode"
+  - link "Planner":
+    - /url: /
+  - link "Summaries":
+    - /url: /summaries
+  - link "Export":
+    - /url: /export
+  - heading "Finance Is Locked" [level=2]
+  - paragraph: Enter PIN
+  - paragraph: On Android, the PIN only hides this screen. Finance data is not encrypted. Finance locks again when the app reloads or restarts, including after a device transfer.
+  - paragraph: "Default PIN: 1234."
+  - textbox "Finance PIN":
+    - /placeholder: Enter PIN
+  - button "Unlock"
+- alert

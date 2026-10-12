@@ -35,6 +35,7 @@ The finance session unlock gates finance and export/import endpoints; it is not 
 - Backend mode persists Django models in SQLite and exposes JSON endpoints.
 - Local-data mode persists planner, template, section, finance, settings, and Idea Space records in browser `localStorage` for static/Android use. Idea Space currently has no Django model.
 - Android is the primary release target. Django storage is paused unless a server or sync use case is chosen.
+- `smart-paper.local.finance-visibility` stores the device-local `visible`/`hidden` preference, separately from Finance records and runtime authorization. Explicit choice wins; first initialization falls back to Finance-key presence (including empty/damaged records), otherwise hidden, and persists that choice before import can change the data key. Recoverable storage failures retain the effective runtime choice without claiming persistence. The preference is excluded from JSON schema 5 and imports leave it unchanged.
 - Cross-stack data changes must review Django models/migrations, serializers/views, frontend types and adapters, local-store normalization, and import/export compatibility.
 
 ## Idea Draft Recovery

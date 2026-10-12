@@ -19,7 +19,7 @@ The current published release targets Android `2026.10.18` / versionCode 35 (loc
 - Records day-level timed schedule entries such as `18:00-19:00 Meeting`.
 - Shows week totals by active section and total visible minutes.
 - Shows multi-week summaries with filters for empty weeks and selectable month ranges.
-- Tracks a finance goal and income entries, with confirmation before deleting income and larger named save/add controls.
+- Tracks a finance goal and income entries, with confirmation before deleting income and larger named save/add controls. Android Finance is optional: new installations start hidden; a separate Settings checkbox saves visibility immediately without saving other Settings drafts. Existing installations with a saved Finance key retain visibility until explicitly changed. Hiding preserves records and unlock-gated backup/export access; the visibility choice stays on this device and outside JSON backups.
 - Protects finance data behind a PIN/session unlock when using the Django backend.
 - Exports planner and finance data as JSON, CSV, Excel, and Markdown for AI review.
 - Lets Android users create a separate Markdown AI report with selected fields and an inclusive date range, review its text, copy it deliberately to the device clipboard or share its file through the device chooser. Manual text selection remains available when clipboard access fails. The report explains its scope and asks the receiving AI for a grounded first response. Finance fields start off and require the finance unlock.

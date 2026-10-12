@@ -61,7 +61,7 @@ This file records durable choices that constrain future work. It is intentionall
 
 ### D-010 — Automatically persist Android Planner edits, retain deliberate record commands
 
-- **Decision:** Android/local-data Planner accepted edits save synchronously with truthful saved/failure feedback and explicit Retry. Django remains manual. Schedule drafts, templates, Ideas, Finance, timer duration application, Settings and file/restore commands remain deliberate.
+- **Decision:** Android/local-data Planner accepted edits save synchronously with truthful saved/failure feedback and explicit Retry. Django remains manual. Schedule drafts, templates, Ideas, Finance, timer duration application, Settings batches and file/restore commands remain deliberate. The local Finance visibility checkbox is a separately approved immediate-save preference (D-015).
 - **Why:** The maintainer requested fewer poorly placed Save controls; Planner has ordinary editable state and duplicate routine Save affordances. Other commands create records, reset sessions, validate batches or affect privacy/permissions.
 - **Consequence:** Keep week identity and latest edits safe; failure must not claim saved or silently discard text. Retain failed text across SPA return, without promising recovery from reload/process termination when storage fails. New autosave proposals require their own scope and design. See [handoff](../design/2026-10-06-save-controls-design.md).
 
@@ -88,6 +88,12 @@ This file records durable choices that constrain future work. It is intentionall
 - **Decision (2026-10-12):** Keep Focus Timer in default navigation; cancel the proposal to make it optional and hidden by default.
 - **Why:** The maintainer considers the existing Timer useful to keep in the app.
 - **Consequence:** Remove Timer visibility work from the active backlog. This does not add Timer-to-Planner integration. See the [cancelled task](../tasks/2026-10-07-timer-optional-default-hidden.md).
+
+### D-015 — Keep Finance visibility separate from records and authorization
+
+- **Decision (2026-10-12):** New Android installations start with Finance hidden. Explicit device-local choice wins; existing installations without a choice retain visible Finance when the Finance storage key exists, even if its contents are empty or damaged. Persist the initial choice before import can alter key presence.
+- **Why:** Preserve existing users' access while keeping Finance optional for new users, without treating hidden data as deleted or changing the PIN boundary.
+- **Consequence:** Settings saves this preference immediately and independently of its other drafts. Hide never deletes Finance or changes backup inclusion; enabling grants no authorization. JSON schema 5 excludes the preference and import preserves it. Read/write failures retain a recoverable effective state without claiming durable success. Backend parity stays paused. See the [Finance handoff](../design/2026-10-12-finance-visibility.md).
 
 ## Adding Or Changing A Decision
 

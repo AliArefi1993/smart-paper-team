@@ -9,7 +9,7 @@ Updated: 2026-10-12. Keep this file short and update it when user-visible featur
 - Open one compact section at a time, edit its minutes, goal, and note, and use a full writing view for longer text.
 - Save and reuse full-week templates.
 - Review multi-week summaries.
-- Track a finance goal and income entries, with confirmation before deletion.
+- Enable optional Finance in Settings to track a goal and income entries, with confirmation before deletion. New installations start hidden; existing saved Finance remains available. Hiding preserves records, PIN protection and backup/export access.
 - Use English or Persian.
 - Choose a saved Light or Dark appearance across every app page, including summaries and reports.
 - Export JSON backups and readable CSV, Excel, or Markdown files.
