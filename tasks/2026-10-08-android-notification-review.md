@@ -15,7 +15,7 @@ Include the maintainer's 2026-10-09 request for better notification design and U
 - Owning implementation repository: `smart-paper-front/`; coordination/design evidence belongs in the team repository.
 - Current behavior: [PRODUCT.md](../PRODUCT.md); native notification checks remain outstanding in [STATUS.md](../STATUS.md).
 - Consolidates the existing [roadmap](../ROADMAP.md) morning-notification validation item; historical phone checklists remain references.
-- [Timer visibility task](2026-10-07-timer-optional-default-hidden.md) pauses timer expansion; timer completion alarms are not included by implication.
+- Timer remains available in default navigation; the [visibility proposal](2026-10-07-timer-optional-default-hidden.md) was cancelled. Timer completion alarms remain outside this review's scope.
 
 ## Acceptance Criteria
 

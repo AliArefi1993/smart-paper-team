@@ -2,7 +2,7 @@
 
 Smart Paper is a personal weekly planning, progress tracking, finance tracking, and data export application. Its primary release target is a downloadable Android APK that stores each person's data on their own phone.
 
-The current release targets Android `2026.10.12` / versionCode 29 (local-data mode); see the [release record](releases/smart-paper-v2026.10.12.md) for source revision and validation. Product and design priorities are phone use in English and Persian, preserving local records, and reliable existing flows. Browser and Storybook checks support Android work; native Android behavior requires separate evidence. The Django/hosted-web path is secondary and paused until needed.
+The current release targets Android `2026.10.12` / versionCode 29 (local-data mode); see the [release record](releases/smart-paper-v2026.10.12.md) for source revision and validation. Product and design priorities are phone use in English and Persian, preserving local records, and reliable existing flows. Browser and Storybook checks support Android work; native Android behavior requires separate evidence. The current focus is an Android app that works without internet. No server is available; Django/backend and hosted-web work remain paused until a server-backed use case is explicitly chosen.
 
 ## What It Currently Does
 
@@ -29,7 +29,7 @@ The current release targets Android `2026.10.12` / versionCode 29 (local-data mo
 - Offers a saved Light/Dark appearance choice across Planner, Idea Space, Timer, Summaries, Finance, Export/AI report, and Settings, using shared green-toned dark roles including Planner.
 - Supports a local browser-storage mode for Android/static export builds.
 - Supports opt-in Android local morning plan notifications.
-- Provides a focus/rest timer with editable session lengths, a natural sand hourglass with falling grains while running (still on pause, suppressed for reduced motion), and a countdown that resumes accurately after app navigation or suspension.
+- Keeps Focus Timer available in default navigation; the proposal to hide it by default was cancelled on 2026-10-12. Provides a focus/rest timer with editable session lengths, a natural sand hourglass with falling grains while running (still on pause, suppressed for reduced motion), and a countdown that resumes accurately after app navigation or suspension.
 - Provides a separate Android Idea Space for freeform notes with expandable optional writing sparks, daily rediscovery, branching, editing, search, and local JSON backup/restore. Dirty writing is protected before Edit, Branch or Cancel; one contextual new/edit/branch draft recovers when device storage succeeds. Missing or changed source notes retain writing and offer explicit Keep as new thought. Drafts remain unfinished writing outside backups/reports; saving a note is deliberate. Storage failures distinguish draft recovery, note saving and cleanup, with retry and session-only fallback when storage fails.
 
 ## Likely Target Users

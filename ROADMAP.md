@@ -4,6 +4,8 @@ This roadmap is based on repository inspection only. Speculative ideas are marke
 
 ## Current Goal: Confidence In The Shipped Android App
 
+Current direction (2026-10-12): focus on the Android app working without internet. No server is available, so backend and hosted-web work remain paused. Keep Timer available in default navigation; making it optional or hidden by default is cancelled.
+
 Android `2026.10.16` / versionCode 33 is published; the [release record](releases/smart-paper-v2026.10.16.md) documents exact-source CI, protected signing, independent artifact review and anonymous public APK verification. Android cloud backup is excluded while supported device transfer remains allowed; actual OS/OEM behavior remains a physical-device follow-up. The Planner fixed bottom area was removed in local-data mode while preserving inline save feedback and reachable day navigation; see the [task](tasks/2026-10-09-planner-bottom-area.md). Finance session expiry continues to clear displayed data and unsaved edits promptly while preserving saved records; see its [task](tasks/2026-10-09-finance-session-expiry.md). The seven-route audit remains a structural reference with native follow-ups.
 
 - Prioritize observed design/implementation mismatches by effect on local data, task completion, and bilingual phone use. A user-visible fix requires a ready Designer handoff and targeted QA.
@@ -43,7 +45,6 @@ Completed 2026-10-08: [fixed template loss during Merge import](tasks/2026-10-08
 
 - Planned: [Finance optional and hidden by default](tasks/2026-10-07-finance-optional-default-hidden.md); preserve existing records and pause feature expansion.
 - Planned: [Change the Finance PIN](tasks/2026-10-09-finance-change-pin.md), giving users a discoverable place to replace the default/current Finance PIN while preserving their records.
-- Planned: [Timer optional and hidden by default](tasks/2026-10-07-timer-optional-default-hidden.md); pause expansion and keep it independent of Planner.
 - Planned: [Idea Space connected-thoughts refactor](tasks/2026-10-07-idea-space-connected-thoughts-refactor.md); clarify and navigate relationships before expanding writing tools. Interaction/model needs Product/Designer discovery.
 
 - Planned: Planner **Review this week with AI** shortcut, reusing the existing selective report with the viewed week's dates preselected. Resolve the reported ChatGPT handoff issue before relying on that path. See the [future task](tasks/2026-10-07-planner-ai-review-shortcut.md); implementation is not started.
@@ -58,7 +59,7 @@ Completed 2026-10-08: [fixed template loss during Merge import](tasks/2026-10-08
 - Add frontend automated tests around configurable planner sections: settings save/load, hide/activate behavior, planner save/load with custom labels, summaries, and local export/import.
 - Completed: [timed schedule regression coverage](tasks/2026-10-11-local-schedule-regression.md) for add/edit/delete persistence, sorting, stored/import normalization and serialized JSON Merge/Replace round trips, including Persian text and section linkage. This is storage-level coverage; phone interaction remains a follow-up.
 - Validate week-template usage after release; consider optional daily and section-level template defaults if they prove useful.
-- Prioritize Planner usability; Timer-to-Planner integration is not planned under the maintainer's current direction. Idea Space relationship discovery and optional Finance/Timer visibility are tracked separately above.
+- Prioritize Planner usability; Timer-to-Planner integration is not planned under the maintainer's current direction. Idea Space relationship discovery and optional Finance visibility are tracked separately above. Timer remains available by default.
 
 ## Paused Until Backend Or Hosted Web Is Needed
 

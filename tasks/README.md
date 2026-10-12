@@ -23,7 +23,10 @@ These records preserve candidate work, not an approved sequence. Use [ROADMAP.md
 - [Microsoft Clarity evaluation](2026-10-10-microsoft-clarity-evaluation.md)
 - [Periodic team reviews](2026-10-08-periodic-team-reviews.md)
 - [Planner Review this week with AI shortcut](2026-10-07-planner-ai-review-shortcut.md)
-- [Timer optional and hidden by default](2026-10-07-timer-optional-default-hidden.md)
+
+## Cancelled
+
+- [Timer optional and hidden by default](2026-10-07-timer-optional-default-hidden.md) — cancelled on 2026-10-12; keep Timer available by default.
 
 ## Completed / Assessed
 

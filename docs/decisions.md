@@ -44,7 +44,7 @@ This file records durable choices that constrain future work. It is intentionall
 ### D-007 — Make the downloadable Android APK the primary product
 
 - **Decision:** Focus new product work on the local-data Capacitor Android app in `smart-paper-front/`. Keep Django and backend-mode web code available but pause their feature roadmap.
-- **Why:** The current product runs on a phone without a server, and the first distribution goal is a signed APK for others to download.
+- **Why:** The current product runs on a phone without a server, and the first distribution goal is a signed APK for others to download. Reconfirmed on 2026-10-12: no server is available and the current focus is app use without internet.
 - **Consequence:** Android changes do not require parallel backend features. Revisit backend parity when a server, sync, or web use case is chosen. Prioritize local data safety, phone usability, and signed upgrade testing.
 
 ### D-008 — Use semantic, low-noise visual cues
@@ -82,6 +82,12 @@ This file records durable choices that constrain future work. It is intentionall
 - **Decision (2026-10-12):** Follow the [CI/local-test policy](ci-local-test-policy.md): check documentation paths without app tests, use focused local checks for early feedback, and reuse successful named hosted checks on the exact final commit instead of repeating identical local suites.
 - **Why:** Hosted frontend verification already runs clean install, lint, types, tests and the local-data build; repeated checks on unchanged source add little evidence. Concurrent installs can invalidate shared-checkout results.
 - **Consequence:** Record exact source and run identity. Dirty source, failures, offline work and uncovered behavior need their own checks; security review/audits, Designer/studio QA, physical-device follow-ups, protected signing and independent artifact/public-download verification remain separate. Workflow coverage and release gates are unchanged.
+
+### D-014 — Keep Timer available by default
+
+- **Decision (2026-10-12):** Keep Focus Timer in default navigation; cancel the proposal to make it optional and hidden by default.
+- **Why:** The maintainer considers the existing Timer useful to keep in the app.
+- **Consequence:** Remove Timer visibility work from the active backlog. This does not add Timer-to-Planner integration. See the [cancelled task](../tasks/2026-10-07-timer-optional-default-hidden.md).
 
 ## Adding Or Changing A Decision
 
