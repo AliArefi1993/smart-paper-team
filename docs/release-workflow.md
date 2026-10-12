@@ -164,7 +164,7 @@ The team repository has `.github/workflows/publish-release.yml`.
 
 When a `smart-paper-v*` tag is pushed in the team repository, GitHub Actions automatically creates or updates the GitHub Release and uploads the matching APK asset.
 
-As final release closeout, confirm the GitHub Release is published with the expected downloadable APK asset, download or otherwise inspect that asset and verify its SHA-256 against the committed artifact, then report the result. Also report the final branch, revision, and working-tree state for the team, backend, and frontend repositories.
+As final release closeout, confirm the GitHub Release is published with the expected downloadable APK asset, download or otherwise inspect that asset and verify its SHA-256 against the committed artifact, then report the result. Also report the final branch, revision, and working-tree state for the team, backend, and frontend repositories. After public verification, commit the factual final release record and synchronize the GitHub Release notes from that saved file (`gh release edit TAG --repo AliArefi1993/smart-paper-team --notes-file releases/TAG.md`). This replaces pending-publication wording with verified facts; keep the existing release tags unchanged.
 
 The workflow expects both files to already exist in the tagged team commit:
 
