@@ -6,7 +6,7 @@ This file is the source for future-work priority. Shipped behavior belongs in [f
 
 Focus on a useful, reliable Android app that works without internet. Prioritize observed issues affecting local data, task completion and bilingual phone use. Continue stable-signed APK publication after validated user-visible changes. No server is available; Django/backend and hosted-web work remain paused. Keep Timer available by default; the optional/hidden proposal was cancelled in [the task record](tasks/2026-10-07-timer-optional-default-hidden.md).
 
-The maintainer requested sequential backlog work, easiest and most ready first. Track it in [backlog clearance](tasks/2026-10-12-backlog-clearance.md). Project-home cleanup and the read-only frontend hygiene review are complete; the spreadsheet-writer upgrade is next.
+The maintainer requested sequential backlog work, easiest and most ready first. Track it in [backlog clearance](tasks/2026-10-12-backlog-clearance.md). Project-home cleanup and frontend hygiene are complete; the [spreadsheet-writer upgrade](tasks/2026-10-12-spreadsheet-writer-upgrade.md) passed hosted and independent artifact checks, with publication pending.
 
 Open Android evidence remains follow-up work, not blanket release gates:
 
@@ -15,9 +15,8 @@ Open Android evidence remains follow-up work, not blanket release gates:
 
 ## Next — ordered ready work
 
-1. Upgrade the XLSX writer using the bounded candidate, compatibility contract and regression/security checks in the [evaluation](tasks/2026-10-11-spreadsheet-writer-evaluation.md) and [implementation handoff](docs/spreadsheet-writer-evaluation.md).
-2. Perform a bounded framework/build-tool refresh based on the [dependency assessment](tasks/2026-10-11-android-dependency-advisories.md), with exact-scope checks and release evidence.
-3. Take user-visible work through Product and Designer discovery before implementation. Candidates include [Finance visibility](tasks/2026-10-07-finance-optional-default-hidden.md) and [PIN change](tasks/2026-10-09-finance-change-pin.md), [Idea Space relationships](tasks/2026-10-07-idea-space-connected-thoughts-refactor.md), the [Planner AI review shortcut](tasks/2026-10-07-planner-ai-review-shortcut.md), [accessibility/Persian review](tasks/2026-10-08-accessibility-persian-phone-review.md), and evidence-based improvements in the [notification review](tasks/2026-10-08-android-notification-review.md). No order is set among these candidates.
+1. Perform a bounded framework/build-tool refresh based on the [dependency assessment](tasks/2026-10-11-android-dependency-advisories.md), with exact-scope checks and release evidence.
+2. Take user-visible work through Product and Designer discovery before implementation. Candidates include [Finance visibility](tasks/2026-10-07-finance-optional-default-hidden.md) and [PIN change](tasks/2026-10-09-finance-change-pin.md), [Idea Space relationships](tasks/2026-10-07-idea-space-connected-thoughts-refactor.md), the [Planner AI review shortcut](tasks/2026-10-07-planner-ai-review-shortcut.md), [accessibility/Persian review](tasks/2026-10-08-accessibility-persian-phone-review.md), and evidence-based improvements in the [notification review](tasks/2026-10-08-android-notification-review.md). No order is set among these candidates.
 
 ## Later
 

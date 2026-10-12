@@ -2,7 +2,7 @@
 
 Smart Paper is a personal weekly planning, progress tracking, finance tracking, and data export application. Its primary release target is a downloadable Android APK that stores each person's data on their own phone.
 
-The current release targets Android `2026.10.16` / versionCode 33 (local-data mode); see the [release record](releases/smart-paper-v2026.10.16.md) for source revision and validation. Product and design priorities are phone use in English and Persian, preserving local records, and reliable existing flows. Browser and Storybook checks support Android work; native Android behavior requires separate evidence. The current focus is an Android app that works without internet. No server is available; Django/backend and hosted-web work remain paused until a server-backed use case is explicitly chosen.
+The current published release targets Android `2026.10.16` / versionCode 33 (local-data mode); see the [release record](releases/smart-paper-v2026.10.16.md) for source revision and validation. Product and design priorities are phone use in English and Persian, preserving local records, and reliable existing flows. Browser and Storybook checks support Android work; native Android behavior requires separate evidence. The current focus is an Android app that works without internet. No server is available; Django/backend and hosted-web work remain paused until a server-backed use case is explicitly chosen.
 
 ## What It Currently Does
 

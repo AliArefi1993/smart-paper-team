@@ -12,14 +12,14 @@ Work through the maintainer-authorized backlog in sequence, starting with the ea
 
 - Priority source: [ROADMAP.md](../ROADMAP.md).
 - Owning repository varies by step; coordinate in this team repository and keep app changes in their owning repositories.
-- Current Android baseline: [2026.10.16 release record](../releases/smart-paper-v2026.10.16.md).
+- Current Android baseline: [2026.10.17 release record](../releases/smart-paper-v2026.10.17.md).
 - The maintainer authorized the queue and requested no artificial closure of physical-device gaps.
 
 ## Acceptance Criteria
 
 - [x] Complete and validate the project-home/roadmap cleanup as the initial step.
 - [x] Review frontend repository hygiene without deleting or resetting files; record whether any safe cleanup is needed.
-- [ ] Implement the evaluated XLSX writer upgrade with focused compatibility/security regressions and required reviews.
+- [x] Implement the evaluated XLSX writer upgrade with focused compatibility/security regressions and required reviews.
 - [ ] Complete a bounded framework/build-tool refresh with scoped checks and release evidence.
 - [ ] For later user-visible candidates, have Product/Designer define scope and a ready handoff before implementation; no priority order among those candidates is assumed.
 - [ ] Preserve open physical-device evidence until actual device results are recorded.
@@ -46,8 +46,8 @@ Work through the maintainer-authorized backlog in sequence, starting with the ea
 | --- | --- | --- |
 | Initial backlog step | [Project-home cleanup task](2026-10-08-project-home-roadmap.md) | Completed and pushed in team commit `3257063` |
 | Frontend hygiene | `find smart-paper-front -maxdepth 1 -type d -name 'node_modules-blocked-*'`; `git ls-files '*node_modules-blocked-*'`; `.gitignore` and `git check-ignore` | No matching directories or tracked paths; `/node_modules-blocked-*/` ignore rule confirmed; no cleanup needed |
-| XLSX writer upgrade | Evaluation handoff and focused regression/security checks | Not started |
-| Framework refresh | Bounded source and validation record | Not started |
+| XLSX writer upgrade | [Implementation task](2026-10-12-spreadsheet-writer-upgrade.md) | Source and artifact checks complete; tag publication pending |
+| Framework refresh | Bounded source and validation record | Next after writer publication |
 | Physical-device follow-ups | Observed Android device results | Open; do not infer completion |
 
 ## Decisions And Risks
@@ -58,4 +58,4 @@ Work through the maintainer-authorized backlog in sequence, starting with the ea
 
 ## Outcome / Handoff
 
-Project-home cleanup and read-only frontend hygiene review are complete. No top-level `node_modules-blocked-*` directories or tracked paths were present; `.gitignore` contains `/node_modules-blocked-*/` and `git check-ignore` confirmed it. No files were removed. Next is the evaluated spreadsheet-writer upgrade. Backend remains paused and Android device evidence remains open.
+Project-home cleanup, frontend hygiene review and implementation/validation of the evaluated XLSX writer upgrade are complete. Android 2026.10.17 is signed and independently reviewed; team tag publication remains pending. Next is a bounded framework/build-tool refresh. Backend remains paused and Android device evidence remains open.

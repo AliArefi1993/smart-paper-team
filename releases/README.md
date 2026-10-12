@@ -4,7 +4,9 @@ This directory contains prepared release records and tagged Smart Paper releases
 
 ## Latest Release
 
-[Android 2026.10.16](smart-paper-v2026.10.16.md), versionCode 33, passed exact-source CI, protected signing and independent artifact review, then published successfully. The [public APK](https://github.com/AliArefi1993/smart-paper-team/releases/download/smart-paper-v2026.10.16/SmartPaper-local-2026.10.16-release.apk) was anonymously downloaded and matched the committed artifact byte-for-byte: 4,395,446 bytes, SHA-256 `7637204b749689d7209a09b064d97843cc2dadfb4b1acda28d9789350e8ad908`. The signed icon-only 2026.10.15 candidate remains unpublished and is preserved as review evidence.
+[Android 2026.10.16](smart-paper-v2026.10.16.md), versionCode 33, passed exact-source CI, protected signing and independent artifact review, then published successfully. The [public APK](https://github.com/AliArefi1993/smart-paper-team/releases/download/smart-paper-v2026.10.16/SmartPaper-local-2026.10.16-release.apk) was anonymously downloaded and matched the committed artifact byte-for-byte: 4,395,446 bytes, SHA-256 `7637204b749689d7209a09b064d97843cc2dadfb4b1acda28d9789350e8ad908`.
+
+Next signed candidate: [Android 2026.10.17](smart-paper-v2026.10.17.md), versionCode 34. Exact-source CI, protected signing and independent artifact review passed; tag publication and public download verification are pending.
 
 ## Recent Releases
 

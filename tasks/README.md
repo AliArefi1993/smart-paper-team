@@ -5,6 +5,7 @@ Task documents preserve the intent and verification context of meaningful work s
 ## Active Follow-ups
 
 - [Sequential backlog clearance](2026-10-12-backlog-clearance.md): authorized queue and handoff state for readiness-first work.
+- [Offline XLSX writer upgrade](2026-10-12-spreadsheet-writer-upgrade.md): source and signed artifact accepted; team tag publication and anonymous APK verification pending.
 - [Android data safety on a real phone](2026-10-08-android-data-safety-validation.md): broader upgrade, restore and failure-recovery checks remain; the discovered template Merge issue is already fixed and released.
 - [Data-safety phone matrix](2026-10-08-data-safety-phone-matrix.md): prepared cases awaiting physical-device execution.
 

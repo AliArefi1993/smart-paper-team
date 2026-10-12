@@ -8,6 +8,10 @@ Prefer a bounded upgrade to **SheetJS CE 0.20.3 from its official distribution**
 
 The vendor fixes the known ReDoS advisory in 0.20.2 or later. Its [ReDoS notice](https://cdn.sheetjs.com/advisories/CVE-2024-22363) does not exempt writers; do not claim that current export-only use rules out that finding. The separate [prototype-pollution notice](https://cdn.sheetjs.com/advisories/CVE-2023-30533) explicitly exempts export-only workflows. Reachability of ReDoS through the existing writer remains unproven; upgrading avoids depending on an exemption that the vendor has not given.
 
+## Implementation follow-up
+
+The [2026-10-12 upgrade task](../tasks/2026-10-12-spreadsheet-writer-upgrade.md) implemented the vendored 0.20.3 candidate for Android 2026.10.17. The six-sheet contract is preserved, Docker checks and independent Security/code review passed, and the exact hosted artifact is ready; team tag publication remains pending. The evaluation below preserves the original assessment; use the task and release record for implementation and release evidence.
+
 ## Existing contract
 
 [Writer](../smart-paper-front/src/lib/export-format.ts) and [caller](../smart-paper-front/src/lib/export-store.ts) establish:
