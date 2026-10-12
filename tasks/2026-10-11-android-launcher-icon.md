@@ -34,7 +34,7 @@ Replace the installed Android app's generic launcher artwork with a distinctive 
 
 - Designer [handoff](../design/2026-10-11-android-launcher-icon.md) ready; studio typecheck/build and bilingual mask/scale preview checks passed.
 - Source review: no high/critical finding; safe-circle radius <=31.41 vs 33, alpha/dimensions checked at 48/72/96/144/192px, no dangling launcher references; package/manifest/backup/signing/workflows unchanged.
-- Automatic exact-source CI [38164641840](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38164641840) and protected hosted build [38164657390](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38164657390) passed. Routine independently verified pinned v2/v3 signer, package/version and APK hash; final independent review pending.
+- Automatic exact-source CI [38164641840](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38164641840) and protected hosted build [38164657390](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38164657390) passed. Routine and independent Security verified the pinned v2/v3 signer, package/version and APK hash; independent artifact review passed. The coordinated 2026.10.16 APK and anonymous public download also passed; see its release record.
 - Hosted unsigned checks passed: lint, TypeScript, tests, local-data build, assembly and candidate validation on exact source.
 - GitHub account and Docker SDK tools available. No host adb/connected physical device available.
 
