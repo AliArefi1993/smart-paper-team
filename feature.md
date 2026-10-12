@@ -1,6 +1,6 @@
 # Smart Paper Features
 
-Updated: 2026-10-11. Keep this file short and update it when user-visible features change.
+Updated: 2026-10-12. Keep this file short and update it when user-visible features change.
 
 ## In the Android app
 
@@ -26,7 +26,7 @@ Updated: 2026-10-11. Keep this file short and update it when user-visible featur
 
 - Redesigned the Android launcher icon as folded paper/check on teal, with adaptive, round, legacy and Android 13 themed resources. Designer and independent compiled APK review passed; [Android 2026.10.15](releases/smart-paper-v2026.10.15.md) preserves the stable update identity. Physical launcher/install checks remain unverified.
 
-- Implemented the natural sand timer redesign with walnut frame, translucent glass and seven falling grains. Studio checks, frontend lint/types/82 tests/build and independent source review passed; browser QA and release status are in the [task](tasks/2026-10-11-timer-natural-sand.md).
+- Shipped the natural sand timer with walnut frame, translucent glass and seven falling grains in [Android 2026.10.16](releases/smart-paper-v2026.10.16.md). Studio, frontend checks, browser QA and independent compiled artifact review passed; native Android/TalkBack remain unverified. See the [task](tasks/2026-10-11-timer-natural-sand.md).
 
 - Shipped explicit Android cloud-backup exclusion and supported device transfer, with bilingual Export recovery guidance. Finance authorization stays in memory and relocks after full reload/restart while saved records remain intact. Automated, browser and compiled APK checks passed; see [Android 2026.10.14](releases/smart-paper-v2026.10.14.md). Actual device/OEM migration remains unverified.
 

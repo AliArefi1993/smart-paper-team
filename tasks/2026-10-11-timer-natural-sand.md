@@ -1,6 +1,6 @@
 # Task: Natural sand timer design
 
-Status: implemented and accepted; included in published Android 2026.10.16
+Status: shipped in Android 2026.10.16/code33
 Created: 2026-10-11
 Updated: 2026-10-12
 
@@ -20,9 +20,11 @@ Frontend timer component/hourglass styles only; team timer story/handoff/task an
 ## Verification
 Designer handoff ready: `design/2026-10-11-timer-natural-sand.md`. Docker Node 24 studio typecheck/build and rendered phone/wide, English/Persian, light/dark, paused/reduced-motion and endpoint checks passed. Frontend Docker lint, TypeScript, all 82 current tests and local-data production build passed. Independent Reviewer found no actionable issues or high/critical findings. Built-browser English/Persian, light/dark, 360/390/1024px no-overflow, seven running grains, stable paused transforms, resume, completion with no grains, completed reload recovery and deliberate next-phase start passed. Production reduced-motion rule reviewed; studio simulation passed; actual OS preference/native Android/TalkBack unverified.
 
-Task-owned processes: Designer Docker container `sp-timer-design-studio`, session 40719, host port6007, mounted `design/studio`, needed for comparison. Isolated frontend preparation `sp-timer-frontend-prepare`, session72310, named dependency volume `sp-timer-frontend-deps`, no ports. Earlier duplicate preparation container `hungry_cartwright` stopped; unrelated/shared processes preserved.
+Both verified timer preview containers stopped gracefully; no timer-owned process remains. Dependency/build volumes were preserved.
 
-Preparation/check containers completed. Snapshot static preview container `sp-timer-preview`, session58570, localhost3017→3000, working `/preview` from `/private/tmp/sp-timer-preview`, stopped gracefully after QA along with the studio container on 2026-10-12; earlier preview session32490 stopped for route-handler correction. Docker confirms neither timer preview remains running; unrelated processes and volumes preserved.
+Exact-source frontend CI run [38206205739](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38206205739) and protected stable build [38206221167](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38206221167) passed for source `ea05f160320f6a8c7017d6c25d8bf2625fc37e95`, including timer commit `6d3d34e`. The final artifact passed independent signer, version, provenance and compiled-payload review; the [release record](../releases/smart-paper-v2026.10.16.md) contains the full review evidence. A bounded ZIP scan confirmed packaged `sp-timer-hourglass` and `sp-timer-grain` JS/CSS, `sp-timer-sand-fall` CSS and `prefers-reduced-motion` CSS.
+
+Anonymous public APK download matched the committed release artifact byte-for-byte: SHA-256 `7637204b749689d7209a09b064d97843cc2dadfb4b1acda28d9789350e8ad908`, 4,395,446 bytes. Published as [Android 2026.10.16](../releases/smart-paper-v2026.10.16.md). Native timer lifecycle, Android reduced-motion behavior and TalkBack remain unverified.
 
 ## Outcome
-Selected warm mineral sand, walnut frame and clear glass; seven staggered falling grains, frozen on pause, suppressed for reduced motion. Designer accepted production after independently inspecting saved screenshots and matching source. Lead accepts implementation: all visual/behavior gates passed, no high/critical finding. Frontend source committed and pushed as `6d3d34e` (timer only), followed by independent batch-test commit `2513a2a`. Release go granted for this validated timer source after exact-source release checks. A batch owner may include the committed timer in its later validated stable release; do not include uncommitted timer files in the already-signed icon 2026.10.15/code32 artifact.
+Selected warm mineral sand, walnut frame and clear glass; seven staggered falling grains, frozen on pause, suppressed for reduced motion. Designer accepted production after inspecting saved screenshots and matching source. Frontend timer source was committed and pushed as `6d3d34e`; final coordinated release source `ea05f16` shipped as Android 2026.10.16/code33 after exact-source checks and independent artifact review.
