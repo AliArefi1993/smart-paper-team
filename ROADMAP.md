@@ -1,85 +1,48 @@
 # Smart Paper Roadmap
 
-This roadmap is based on repository inspection only. Speculative ideas are marked as ideas, not committed product work.
+This file is the source for future-work priority. Shipped behavior belongs in [feature.md](feature.md); implementation history and evidence stay in the linked task and release records. This roadmap does not imply deadlines or close physical-device follow-ups.
 
-## Current Goal: Confidence In The Shipped Android App
+## Now
 
-Current direction (2026-10-12): focus on the Android app working without internet. No server is available, so backend and hosted-web work remain paused. Keep Timer available in default navigation; making it optional or hidden by default is cancelled.
+Focus on a useful, reliable Android app that works without internet. Prioritize observed issues affecting local data, task completion and bilingual phone use. Continue stable-signed APK publication after validated user-visible changes. No server is available; Django/backend and hosted-web work remain paused. Keep Timer available by default; the optional/hidden proposal was cancelled in [the task record](tasks/2026-10-07-timer-optional-default-hidden.md).
 
-Android `2026.10.16` / versionCode 33 is published; the [release record](releases/smart-paper-v2026.10.16.md) documents exact-source CI, protected signing, independent artifact review and anonymous public APK verification. Android cloud backup is excluded while supported device transfer remains allowed; actual OS/OEM behavior remains a physical-device follow-up. The Planner fixed bottom area was removed in local-data mode while preserving inline save feedback and reachable day navigation; see the [task](tasks/2026-10-09-planner-bottom-area.md). Finance session expiry continues to clear displayed data and unsaved edits promptly while preserving saved records; see its [task](tasks/2026-10-09-finance-session-expiry.md). The seven-route audit remains a structural reference with native follow-ups.
+The maintainer requested sequential backlog work, easiest and most ready first. Track it in [backlog clearance](tasks/2026-10-12-backlog-clearance.md). The project-home cleanup is complete; repository-hygiene review is the next step after acceptance.
 
-- Prioritize observed design/implementation mismatches by effect on local data, task completion, and bilingual phone use. A user-visible fix requires a ready Designer handoff and targeted QA.
+Open Android evidence remains follow-up work, not blanket release gates:
 
-Completed 2026-10-08: [fixed template loss during Merge import](tasks/2026-10-08-template-merge-safety.md) with related storage-failure tests in one bounded validation/release cycle. Continue phone data-safety evidence when a test device is available; the [ChatGPT handoff correction](tasks/2026-10-07-ai-report-chatgpt-handoff.md) is now published with copy/manual transfer and truthful file-sharing feedback. Keep new feature implementation sequential; independent reviews and preparation may overlap.
+- Execute the [data-safety phone matrix](tasks/2026-10-08-data-safety-phone-matrix.md) on a spare device, including upgrade, backup/restore and interruption cases. Keep the broader [data-safety task](tasks/2026-10-08-android-data-safety-validation.md) open until observed results are recorded.
+- Check English/Persian layout, notifications, templates, Timer suspension, Idea Space editing/backup/upgrade, sharing/recipient delivery, launcher rendering, native accessibility and TalkBack on a phone where applicable. See linked completed task/release records and the [notification review](tasks/2026-10-08-android-notification-review.md); do not mark device behavior verified without observation.
 
-- [Validate Android data safety on a real phone](tasks/2026-10-08-android-data-safety-validation.md): upgrades, backup/restore, failed/cancelled imports, low storage and interruption recovery; consolidates existing readiness follow-ups.
-- Test planner, templates, finance, export/restore, English/Persian layout, offline use, and notification behavior on a phone.
-- Shipped: [AI report handoff correction](tasks/2026-10-07-ai-report-chatgpt-handoff.md). The navigation-only URL is replaced by Copy report, file sharing and manual selection, with source/finance rechecks. Phone clipboard/paste, chooser/recipient acceptance and TalkBack remain follow-ups before relying on a recipient-specific path.
-- Test the focus/rest timer on a phone, including app suspension and reopening after a session completes.
-- Test Idea Space capture, editing, branching, search, keyboard behavior, backup/restore, and upgrade on a phone in English and Persian.
-- Validate the compact template sheet and current-week auto-centering on a phone in both languages.
-- Continue stable-signed APK publication with matching records and checksums after validated user-visible changes; physical-device/TalkBack checks remain recorded follow-ups under standing maintainer direction.
-- Extend focused local-data tests for demonstrated gaps; current checks are recorded in the release record.
-- Assessed: [production dependency advisories for the static Android build](tasks/2026-10-11-android-dependency-advisories.md). [Current report](docs/android-dependency-advisories.md) records 7 flagged packages and no demonstrated static APK exploit; SheetJS ReDoS writer reachability remains unresolved. The [spreadsheet-writer evaluation](tasks/2026-10-11-spreadsheet-writer-evaluation.md) recommends an official pinned SheetJS candidate with focused export regression checks. Follow up with the writer upgrade and a bounded framework/build-tool refresh before wider sharing; remediation is not complete.
+## Next — ordered ready work
 
-## Next, After Baseline Review
+1. Review frontend repository hygiene, especially whether any `node_modules-blocked-*` directories need action. Remove only verified disposable task-owned dependency copies; preserve user data and anything with uncertain ownership.
+2. Upgrade the XLSX writer using the bounded candidate, compatibility contract and regression/security checks in the [evaluation](tasks/2026-10-11-spreadsheet-writer-evaluation.md) and [implementation handoff](docs/spreadsheet-writer-evaluation.md).
+3. Perform a bounded framework/build-tool refresh based on the [dependency assessment](tasks/2026-10-11-android-dependency-advisories.md), with exact-scope checks and release evidence.
+4. Take user-visible work through Product and Designer discovery before implementation. Candidates include [Finance visibility](tasks/2026-10-07-finance-optional-default-hidden.md) and [PIN change](tasks/2026-10-09-finance-change-pin.md), [Idea Space relationships](tasks/2026-10-07-idea-space-connected-thoughts-refactor.md), the [Planner AI review shortcut](tasks/2026-10-07-planner-ai-review-shortcut.md), [accessibility/Persian review](tasks/2026-10-08-accessibility-persian-phone-review.md), and evidence-based improvements in the [notification review](tasks/2026-10-08-android-notification-review.md). No order is set among these candidates.
 
-- Shipped in Android `2026.10.14`: [explicit Android backup policy](tasks/2026-10-10-android-backup-policy.md). Cloud backup is excluded, supported device transfer is permitted, Finance unlock resets after full reload/restart, and bilingual Export recovery guidance is available. Compiled APK/Security and bounded QA passed; actual cloud/migration/OEM behavior remains a phone data-safety follow-up.
+## Later
 
-- Shipped in Android 2026.10.13: [Phone landscape review and fix](tasks/2026-10-09-phone-landscape-layout.md). The event sheet clipped its heading/actions at short heights; a bounded scrolling panel fixes the confirmed issue. Seven-route EN/FA browser review found no additional visible clipping. Physical Android rotation/keyboard/TalkBack remain follow-ups.
+- Review project feedback/diagnostics and analytics policy before considering any implementation: [local problem reporting](tasks/2026-10-07-local-feedback-diagnostics.md) and [Clarity evaluation](tasks/2026-10-10-microsoft-clarity-evaluation.md). No hosted telemetry or automatic uploads are adopted.
+- [Periodic team reviews](tasks/2026-10-08-periodic-team-reviews.md) remain a prepared proposal; use only if they help maintain the project without adding process overhead.
+- Validate week-template usage after release and consider daily/section-level defaults only if observed use supports them.
+- Improve configurable-section UX only when actual use shows a problem; review active slots, hidden slots with saved data, and optional separate English/Persian labels.
+- Add frontend integration coverage for primary user flows and configurable-section wiring where risk review supports it; current storage checks do not establish browser or native behavior.
 
-- Completed: [Privacy and local-data protection review](tasks/2026-10-08-privacy-local-data-review.md). [Ranked findings and bounded scopes](docs/privacy-local-data-review.md): finance expiry rechecks/clearing stale display shipped in [Android 2026.10.11](releases/smart-paper-v2026.10.11.md); explicit OS backup policy is validated in the task above. Notification-preview disclosure remains next; share-cache retention, CSV text safety and import limits follow. User-visible fixes require Designer handoffs and validated Android releases.
-- Completed documentation: [Lightweight feedback triage](tasks/2026-10-08-feedback-triage-workflow.md) defines sanitized intake, evidence-based severity, deduplication and closure in the [triage convention](docs/feedback-triage.md).
+## Ideas — needs confirmation
 
-- Planned evaluation: [Periodic team reviews](tasks/2026-10-08-periodic-team-reviews.md) covering QA, independent feature proposals, necessary refactoring, new/updated agent skills and similar-app/technology research, with lightweight triggers and effort limits. No recurring jobs or new rules are enabled yet.
+- Multi-user accounts and per-user data separation if Smart Paper stops being a single-user personal app.
+- Charts/trends for planner or finance progress.
+- Recurring timed events, calendar import/export, or per-event reminder alarms.
+- Structured API errors for frontend display, if backend mode is resumed.
 
-- Assessed: [Lightweight batching and release cadence](tasks/2026-10-08-batching-release-cadence.md), bounded related work and eligible unchanged-source evidence reuse adopted for this run; release cadence and standing authorization remain unchanged.
+## Paused — backend or hosted web
 
-- Planned: [Lightweight project home page and roadmap cleanup](tasks/2026-10-08-project-home-roadmap.md), making current features, future tasks, priorities and releases easier to browse through existing Markdown files.
+Resume only when a server-backed use case is explicitly chosen. No server is currently available.
 
-- Shipped: [GitHub Actions CI and Android builds](tasks/2026-10-07-github-actions-ci-android-builds.md), including hosted frontend checks, isolated verification APK artifacts, verified success/failed-test gates, and a Security-accepted protected stable signing run. Existing team tag publication remains separate; independent CI archive download, fork/cancellation/cache-hit, physical-device, and account-usage checks remain follow-ups.
+- Prepare deployment settings for secrets, debug/hosts, CSRF/CORS and database configuration.
+- Add backend CI, health checks, logging, rollback documentation, linting, formatting and type-checking.
+- Resume backend/local-data parity, import/export regression coverage, and any trusted-proxy or account-based throttling decisions.
 
-- Completed: [CI coverage and local test policy](tasks/2026-10-11-ci-local-test-policy.md): coverage/triggers inventoried and risk-based local checks plus exact-commit hosted evidence reuse accepted. Workflow and release gates are unchanged; backend remains paused.
+## Maintenance
 
-- Implemented and approved: [Android launcher icon](tasks/2026-10-11-android-launcher-icon.md); adaptive, round, legacy and themed artwork is included in the coordinated 2026.10.16 release. Physical launcher/OEM/upgrade checks remain follow-ups.
-
-- Planned: [Finance optional and hidden by default](tasks/2026-10-07-finance-optional-default-hidden.md); preserve existing records and pause feature expansion.
-- Planned: [Change the Finance PIN](tasks/2026-10-09-finance-change-pin.md), giving users a discoverable place to replace the default/current Finance PIN while preserving their records.
-- Planned: [Idea Space connected-thoughts refactor](tasks/2026-10-07-idea-space-connected-thoughts-refactor.md); clarify and navigate relationships before expanding writing tools. Interaction/model needs Product/Designer discovery.
-
-- Planned: Planner **Review this week with AI** shortcut, reusing the existing selective report with the viewed week's dates preselected. Resolve the reported ChatGPT handoff issue before relying on that path. See the [future task](tasks/2026-10-07-planner-ai-review-shortcut.md); implementation is not started.
-
-- Planned: accessible Android **Report a problem**, with optional local crash/error diagnostics and basic usage analytics, preview/delete controls, and voluntary file sharing through Android/email. No server or automatic uploads. See the [future task](tasks/2026-10-07-local-feedback-diagnostics.md); implementation is not started.
-
-- Planned evaluation: [Microsoft Clarity for Android UX diagnostics](tasks/2026-10-10-microsoft-clarity-evaluation.md), checking packaged Capacitor 8 compatibility, synthetic-data replay usefulness, privacy, and failure coverage against planned voluntary local diagnostics. No hosted telemetry is adopted; implementation is not started.
-
-- Completed: [Five sequential confidence tasks](tasks/2026-10-11-five-task-release-batch.md): XLSX ZIP/XML, configurable-section visibility/restore, Finance CRUD/session-denial and seven-day template lifecycle/restore regressions, plus the accepted CI/local-test policy. Browser wiring and native behavior remain separate gaps.
-
-- Add frontend automated tests around primary user flows: weekly planner save/load, finance unlock/add/edit/delete, export/import, language switching.
-- Add frontend automated tests around configurable planner sections: settings save/load, hide/activate behavior, planner save/load with custom labels, summaries, and local export/import.
-- Completed: [timed schedule regression coverage](tasks/2026-10-11-local-schedule-regression.md) for add/edit/delete persistence, sorting, stored/import normalization and serialized JSON Merge/Replace round trips, including Persian text and section linkage. This is storage-level coverage; phone interaction remains a follow-up.
-- Validate week-template usage after release; consider optional daily and section-level template defaults if they prove useful.
-- Prioritize Planner usability; Timer-to-Planner integration is not planned under the maintainer's current direction. Idea Space relationship discovery and optional Finance visibility are tracked separately above. Timer remains available by default.
-
-## Paused Until Backend Or Hosted Web Is Needed
-
-- Prepare backend settings for non-development deployment, including secrets, debug/hosts, CSRF/CORS, and database configuration.
-- Add backend CI, health checks, logging, and rollback documentation.
-- Add backend linting/formatting/type-checking tools if the backend is resumed.
-- Resume backend/local-data parity and backend import/export regression tests when a server or sync is in scope.
-
-## Improvements
-
-- Review repository hygiene for `node_modules-blocked-*` directories in `smart-paper-front/`.
-- Make API error handling more structured for frontend display.
-- Polish configurable section UX after real use: assess ten active sections, hidden-section-with-data visibility, and optional separate English/Persian labels.
-- [Android accessibility and Persian usability review](tasks/2026-10-08-accessibility-persian-phone-review.md): TalkBack, text scaling, touch targets, keyboard behavior and RTL/LTR on primary flows.
-- [Review and improve Android notifications](tasks/2026-10-08-android-notification-review.md): verify existing morning reminders on a real device; improve notification design/UX, bilingual messages, and the place and timing of the notification-permission request based on evidence.
-- Consider trusted-proxy client address handling or user-account-based throttling if Smart Paper becomes a multi-user or internet-exposed app.
-- Consider a native completion notification only if phone use shows a need for an alert while the app is in the background.
-
-## Later / Ideas
-
-- Needs confirmation: multi-user accounts and per-user data separation if Smart Paper stops being a single-user personal app.
-- Needs confirmation: charts/trends for planner and finance progress.
-- Needs confirmation: recurring timed events, calendar import/export, or per-event reminder alarms.
+At task/release closeout, update only the status, priority, dependency and links affected by changed facts. Keep shipped capability descriptions in `feature.md`, task evidence in task records and release verification in release records. Preserve open device gaps until observed evidence closes them; avoid duplicating completed history here.

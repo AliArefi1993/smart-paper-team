@@ -4,6 +4,7 @@ Task documents preserve the intent and verification context of meaningful work s
 
 ## Active Follow-ups
 
+- [Sequential backlog clearance](2026-10-12-backlog-clearance.md): authorized queue and handoff state for readiness-first work.
 - [Android data safety on a real phone](2026-10-08-android-data-safety-validation.md): broader upgrade, restore and failure-recovery checks remain; the discovered template Merge issue is already fixed and released.
 - [Data-safety phone matrix](2026-10-08-data-safety-phone-matrix.md): prepared cases awaiting physical-device execution.
 
@@ -100,3 +101,4 @@ Copy `tasks/TEMPLATE.md`. Keep one document per cohesive outcome.
 - Mark the task `complete`, `blocked`, or `cancelled` when work stops.
 - Completed task documents may remain in `tasks/`; Git history and filename search provide the archive.
 - Update `STATUS.md` only with facts that remain relevant after the task ends.
+- Keep [ROADMAP.md](../ROADMAP.md) as the single source for future-work priority; shipped capability belongs in `feature.md`, and task/release records own evidence.

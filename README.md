@@ -39,6 +39,10 @@ scripts/project-context.sh
 
 Then read `STATUS.md` and only the task-specific document identified in `AGENTS.md`. Application work must also follow the nearest repository-specific `AGENTS.md`.
 
+## Keeping Project Context Current
+
+`feature.md` describes shipped capabilities; `ROADMAP.md` owns future-work priority; task files hold scope and evidence; release records hold shipped verification. At task or release closeout, update only the sources affected by changed facts, link evidence instead of copying it, and leave unexecuted device checks open. Do not add completed history to the roadmap.
+
 ## Repository Safety
 
 The root, backend, and frontend have separate Git histories. Check each independently:
