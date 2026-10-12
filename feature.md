@@ -1,6 +1,6 @@
 # Smart Paper Features
 
-Updated: 2026-10-10. Keep this file short and update it when user-visible features change.
+Updated: 2026-10-11. Keep this file short and update it when user-visible features change.
 
 ## In the Android app
 
@@ -16,10 +16,12 @@ Updated: 2026-10-10. Keep this file short and update it when user-visible featur
 - Create a selective Markdown AI report by field and date range, preview its text, then copy it for manual pasting or share its file using the phone's app chooser. Manual text selection is available when copying fails; changed source data requires reviewing the refreshed preview. The file explains itself and asks the AI for a grounded first response.
 - Import a JSON backup by merge or replace.
 - Set an optional morning plan notification and explicitly save validated Settings from the header or end of the form.
-- Run focus and rest countdowns with configurable lengths and an hourglass display; a session stays accurate after navigation or app suspension.
+- Run focus and rest countdowns with configurable lengths, warm natural sand and visible falling grains; pause freezes the grains and reduced motion suppresses them. A session stays accurate after navigation or app suspension.
 - Capture freeform ideas, expand optional writing sparks when wanted, revisit an older thought each day, branch from notes, and search or edit them. Notes are included in JSON backups. Contextual new/edit/branch drafts recover separately, protect dirty writing, and retain missing/changed-source writing with Keep as new thought. Drafts are excluded from backups.
 
 ## Recent completed work
+
+- Implemented the natural sand timer redesign with walnut frame, translucent glass and seven falling grains. Studio checks, frontend lint/types/82 tests/build and independent source review passed; browser QA and release status are in the [task](tasks/2026-10-11-timer-natural-sand.md).
 
 - Shipped explicit Android cloud-backup exclusion and supported device transfer, with bilingual Export recovery guidance. Finance authorization stays in memory and relocks after full reload/restart while saved records remain intact. Automated, browser and compiled APK checks passed; see [Android 2026.10.14](releases/smart-paper-v2026.10.14.md). Actual device/OEM migration remains unverified.
 

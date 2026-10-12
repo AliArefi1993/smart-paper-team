@@ -6,6 +6,8 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 
 ## Current Focus
 
+- [Natural sand timer redesign](tasks/2026-10-11-timer-natural-sand.md) implements walnut frame, translucent glass, warm mineral sand and seven falling grains; pause freezes motion and reduced-motion CSS suppresses it. Designer studio checks, Docker lint/types/82 tests/local-data build and independent source review passed. Built-browser EN/FA light/dark, 360/390/1024px layout, pause/resume, completion and reload checks passed. Frontend timer commit `6d3d34e` pushed; coordinated stable publication pending; physical Android/TalkBack remain unverified.
+
 - [Timed schedule regression coverage](tasks/2026-10-11-local-schedule-regression.md) adds six local-store tests for persistence, sorting/normalization and serialized JSON Merge/Replace restore with Persian content. Docker Node 24: all 76 tests, lint and TypeScript passed. Tests only; the published APK remains 2026.10.14 and native interaction is unverified.
 
 - [Spreadsheet writer evaluation](tasks/2026-10-11-spreadsheet-writer-evaluation.md) recommends official SheetJS CE 0.20.3 as the smallest API-compatible candidate, with a six-sheet contract and independent XML regression checks in the [handoff](docs/spreadsheet-writer-evaluation.md). Source/vendor evaluation and independent Security review only; no dependency installation, remediation or APK change.

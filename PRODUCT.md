@@ -29,7 +29,7 @@ The current release targets Android `2026.10.12` / versionCode 29 (local-data mo
 - Offers a saved Light/Dark appearance choice across Planner, Idea Space, Timer, Summaries, Finance, Export/AI report, and Settings, using shared green-toned dark roles including Planner.
 - Supports a local browser-storage mode for Android/static export builds.
 - Supports opt-in Android local morning plan notifications.
-- Provides a focus/rest timer with editable session lengths, an hourglass display, and a countdown that resumes accurately after app navigation or suspension.
+- Provides a focus/rest timer with editable session lengths, a natural sand hourglass with falling grains while running (still on pause, suppressed for reduced motion), and a countdown that resumes accurately after app navigation or suspension.
 - Provides a separate Android Idea Space for freeform notes with expandable optional writing sparks, daily rediscovery, branching, editing, search, and local JSON backup/restore. Dirty writing is protected before Edit, Branch or Cancel; one contextual new/edit/branch draft recovers when device storage succeeds. Missing or changed source notes retain writing and offer explicit Keep as new thought. Drafts remain unfinished writing outside backups/reports; saving a note is deliberate. Storage failures distinguish draft recovery, note saving and cleanup, with retry and session-only fallback when storage fails.
 
 ## Likely Target Users
