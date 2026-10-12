@@ -45,6 +45,7 @@ These records cover shipped work, completed documentation, or bounded assessment
 - [Local timed schedule regression tests](2026-10-11-local-schedule-regression.md) — persistence, normalization and bilingual serialized backup/restore coverage; no app behavior change.
 - [Spreadsheet writer evaluation](2026-10-11-spreadsheet-writer-evaluation.md) — official SheetJS candidate and regression handoff; dependency remediation remains follow-up.
 - [Android production dependency advisories](2026-10-11-android-dependency-advisories.md) — current production audit and static-path assessment; remediation remains follow-up.
+- [Frontend repository hygiene review](2026-10-12-frontend-repository-hygiene.md) — no blocked dependency directories or tracked paths found; ignore rule confirmed.
 - [Android APK readiness](2026-09-29-android-apk-readiness.md) — historical implementation; phone follow-up transferred.
 - [Android launch position](2026-09-30-android-launch-position.md)
 - [Android mobile layout hotfix](2026-09-30-android-mobile-layout-hotfix.md)

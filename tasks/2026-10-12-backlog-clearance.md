@@ -18,7 +18,7 @@ Work through the maintainer-authorized backlog in sequence, starting with the ea
 ## Acceptance Criteria
 
 - [x] Complete and validate the project-home/roadmap cleanup as the initial step.
-- [ ] Review frontend repository hygiene without deleting or resetting files; report findings and proposed narrow action.
+- [x] Review frontend repository hygiene without deleting or resetting files; record whether any safe cleanup is needed.
 - [ ] Implement the evaluated XLSX writer upgrade with focused compatibility/security regressions and required reviews.
 - [ ] Complete a bounded framework/build-tool refresh with scoped checks and release evidence.
 - [ ] For later user-visible candidates, have Product/Designer define scope and a ready handoff before implementation; no priority order among those candidates is assumed.
@@ -35,18 +35,17 @@ Work through the maintainer-authorized backlog in sequence, starting with the ea
 ## Plan
 
 1. Complete the project-home and roadmap cleanup; submit for lead acceptance.
-2. Inspect frontend repository hygiene and return findings before any cleanup action.
-3. Upgrade the spreadsheet writer using the completed evaluation and implementation handoff.
-4. Refresh the framework/build tools within a bounded scope.
-5. Take user-visible candidates through Product and Designer discovery, then implement approved ready work sequentially.
-6. Preserve and execute device follow-ups when a suitable test phone is available.
+2. Upgrade the spreadsheet writer using the completed evaluation and implementation handoff.
+3. Refresh the framework/build tools within a bounded scope.
+4. Take user-visible candidates through Product and Designer discovery, then implement approved ready work sequentially.
+5. Preserve and execute device follow-ups when a suitable test phone is available.
 
 ## Verification
 
 | Check | Command or evidence | Result |
 | --- | --- | --- |
-| Initial backlog step | [Project-home cleanup task](2026-10-08-project-home-roadmap.md) | Documentation changes prepared; awaiting lead acceptance |
-| Frontend hygiene | Read-only inspection and findings | Not started |
+| Initial backlog step | [Project-home cleanup task](2026-10-08-project-home-roadmap.md) | Completed and pushed in team commit `3257063` |
+| Frontend hygiene | `find smart-paper-front -maxdepth 1 -type d -name 'node_modules-blocked-*'`; `git ls-files '*node_modules-blocked-*'`; `.gitignore` and `git check-ignore` | No matching directories or tracked paths; `/node_modules-blocked-*/` ignore rule confirmed; no cleanup needed |
 | XLSX writer upgrade | Evaluation handoff and focused regression/security checks | Not started |
 | Framework refresh | Bounded source and validation record | Not started |
 | Physical-device follow-ups | Observed Android device results | Open; do not infer completion |
@@ -59,4 +58,4 @@ Work through the maintainer-authorized backlog in sequence, starting with the ea
 
 ## Outcome / Handoff
 
-Project-home/roadmap cleanup is the initial step and is ready for lead acceptance. Next inspect frontend repository hygiene; preserve any `node_modules-blocked-*` data and report findings before proposing changes. Backend remains paused. Android device evidence remains open.
+Project-home cleanup and read-only frontend hygiene review are complete. No top-level `node_modules-blocked-*` directories or tracked paths were present; `.gitignore` contains `/node_modules-blocked-*/` and `git check-ignore` confirmed it. No files were removed. Next is the evaluated spreadsheet-writer upgrade. Backend remains paused and Android device evidence remains open.
