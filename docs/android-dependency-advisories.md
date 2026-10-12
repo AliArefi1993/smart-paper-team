@@ -10,7 +10,7 @@ This completes the bounded assessment, not dependency remediation. Application c
 
 ## Follow-up status (2026-10-12)
 
-The XLSX writer remediation was implemented with vendored SheetJS CE 0.20.3 for [Android 2026.10.17](../releases/smart-paper-v2026.10.17.md), frontend `41e6b2e4daf4f5d67529a6d0fb97430ae5c90163`; it is publicly released and verified. After the update, the recorded audit reports 20 full-install findings (1 low, 4 moderate, 13 high, 2 critical) and 6 production findings (1 moderate, 4 high, 1 critical). This is not a clean audit and does not establish exploitability or safety; the remaining findings are unrelated dependencies. The historical `xlsx` 0.18.5 entry below describes the 2026-10-11 assessment source.
+The XLSX writer remediation shipped in [Android 2026.10.17](../releases/smart-paper-v2026.10.17.md). The subsequent framework refresh is recorded in [Android 2026.10.18](../releases/smart-paper-v2026.10.18.md), currently signed and independently reviewed with team tag publication pending. After the refresh, `npm audit --omit=dev` reports 0 production findings; the full install reports 8 findings (5 high, 3 moderate, 0 critical). These package counts do not establish whole-APK or native Android safety. Capacitor Android 8.5.1 is under development dependencies and outside the production-only filter; its compiled proxy-navigation guards were independently reviewed. Residual findings are five high packages along `eslint-config-next 16.4.0 → @next/eslint-plugin-next 16.4.0 → fast-glob 3.3.3 → micromatch 4.0.8 → braces 3.0.3` and three moderate packages along `@capacitor/cli 8.5.1 → xcode 3.0.1 → uuid 7.0.3`. Security found no demonstrated runtime exploit path in the reviewed scope. The announced October 14 disclosure remains unpublished; future affected ranges and fixes are unknown. The historical `xlsx` 0.18.5 entry below describes the 2026-10-11 assessment source.
 
 ## Reproducible evidence
 
@@ -42,7 +42,7 @@ SheetJS vendor records: [prototype pollution](https://cdn.sheetjs.com/advisories
 
 ## Recommended follow-up
 
-1. Prepare a bounded framework/build-tool upgrade and lock refresh. The current audit recommends Next 16.4.0; treat that as a candidate, verify supported versions when implementation starts, align `eslint-config-next`, and review transitive locks. Do not apply `npm audit fix --force`. Validate lint, TypeScript, local tests/static build and exact-source Android release gates.
+1. The bounded framework refresh is implemented in the [2026-10-12 task](../tasks/2026-10-12-framework-refresh.md), with release publication pending. Track the five high `braces` and three moderate `uuid` transitive findings recorded there; do not apply `npm audit fix --force` or claim the npm scopes cover the whole APK. Reassess when the announced October 14 disclosure becomes available.
 2. The [writer upgrade](spreadsheet-writer-evaluation.md) implementation, artifact review and public release are complete. Future changes to XLSX should preserve bilingual sheet text, numeric/text cell behavior and the existing six-sheet contract.
 3. Reassess before any hosted Next deployment, untrusted build-input processing or workbook-import feature. Re-run the production audit after remediation and add full build/native coverage before claiming broader supply-chain assurance.
 

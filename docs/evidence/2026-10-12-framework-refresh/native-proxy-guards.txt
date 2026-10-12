@@ -1,0 +1,81 @@
+Bridge.java
+389:     public boolean launchIntent(Uri url) {
+390:         // The proxy returns a remote body at the app origin, so block it before plugins can allow it.
+391:         String path = url.getPath();
+392:         if (path != null && path.startsWith(CAPACITOR_HTTP_INTERCEPTOR_START)) {
+393:             return true;
+394:         }
+395:
+396:         /*
+397:          * Give plugins the chance to handle the url
+398:          */
+399:         for (Map.Entry<String, PluginHandle> entry : plugins.entrySet()) {
+400:             Plugin plugin = entry.getValue().getInstance();
+401:             if (plugin != null) {
+402:                 Boolean shouldOverrideLoad = plugin.shouldOverrideLoad(url);
+403:                 if (shouldOverrideLoad != null) {
+404:                     return shouldOverrideLoad;
+405:                 }
+406:             }
+407:         }
+408:
+409:         if (url.getScheme().equals("data") || url.getScheme().equals("blob")) {
+410:             return false;
+411:         }
+412:
+
+WebViewLocalServer.java
+185:         Uri loadingUrl = request.getUrl();
+186:
+187:         if (null != loadingUrl.getPath() && loadingUrl.getPath().startsWith(Bridge.CAPACITOR_HTTP_INTERCEPTOR_START)) {
+188:             // Only fetch/XHR should reach the proxy; a document would run remote content at the app origin.
+189:             boolean httpEnabled = bridge.getConfig().getPluginConfiguration("CapacitorHttp").getBoolean("enabled", false);
+190:             if (!httpEnabled || isDocumentRequest(request)) {
+191:                 return null;
+192:             }
+193:             Logger.debug("Handling CapacitorHttp request: " + loadingUrl);
+194:             try {
+195:                 return handleCapacitorHttpRequest(request);
+196:             } catch (Exception e) {
+197:                 Logger.error(e.getLocalizedMessage());
+198:                 return null;
+199:             }
+200:         }
+201:
+202:         PathHandler handler;
+203:         synchronized (uriMatcher) {
+204:             handler = (PathHandler) uriMatcher.match(request.getUrl());
+205:         }
+206:         if (handler == null) {
+207:             return null;
+208:         }
+209:
+210:         if (isLocalFile(loadingUrl) || isMainUrl(loadingUrl) || !isAllowedUrl(loadingUrl) || isErrorUrl(loadingUrl)) {
+211:             Logger.debug("Handling local request: " + request.getUrl().toString());
+212:             return handleLocalRequest(request, handler);
+213:         } else {
+214:             return handleProxyRequest(request, handler);
+215:         }
+216:     }
+217:
+218:     /** isForMainFrame() is false for an iframe and a fetch alike; only navigations send this header. */
+219:     private boolean isDocumentRequest(WebResourceRequest request) {
+220:         if (request.isForMainFrame()) {
+221:             return true;
+222:         }
+223:         Map<String, String> headers = request.getRequestHeaders();
+224:         if (headers == null) {
+225:             // The proxy needs the headers too, so the request fails there anyway.
+226:             return false;
+227:         }
+228:         for (String header : headers.keySet()) {
+229:             if ("Upgrade-Insecure-Requests".equalsIgnoreCase(header)) {
+230:                 return true;
+231:             }
+232:         }
+233:         return false;
+234:     }
+235:
+236:     private boolean isLocalFile(Uri uri) {
+237:         String path = uri.getPath();
+238:         return path.startsWith(capacitorContentStart) || path.startsWith(capacitorFileStart);

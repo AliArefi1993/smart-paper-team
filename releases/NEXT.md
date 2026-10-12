@@ -1,3 +1,3 @@
 # Next Smart Paper Release
 
-No release candidate is currently queued. The published [Android 2026.10.17 release](smart-paper-v2026.10.17.md) passed exact-source CI, protected signing, independent artifact review and anonymous APK verification.
+Signed candidate [Android 2026.10.18](smart-paper-v2026.10.18.md), versionCode 35, passed exact-source CI, protected signing and independent artifact review. Team tag publication and anonymous APK verification remain pending.

@@ -4,6 +4,8 @@ Task documents preserve the intent and verification context of meaningful work s
 
 ## Active Follow-ups
 
+- [Framework/build dependency refresh](2026-10-12-framework-refresh.md): signed 2026.10.18 candidate passed CI and independent artifact review; team publication and anonymous download remain pending.
+
 - [Sequential backlog clearance](2026-10-12-backlog-clearance.md): authorized queue and handoff state for readiness-first work.
 - [Android data safety on a real phone](2026-10-08-android-data-safety-validation.md): broader upgrade, restore and failure-recovery checks remain; the discovered template Merge issue is already fixed and released.
 - [Data-safety phone matrix](2026-10-08-data-safety-phone-matrix.md): prepared cases awaiting physical-device execution.

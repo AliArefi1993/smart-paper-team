@@ -8,6 +8,8 @@ This directory contains prepared release records and tagged Smart Paper releases
 
 Previous release: [Android 2026.10.16](smart-paper-v2026.10.16.md), versionCode 33; its public APK verification remains documented in that record.
 
+Signed candidate: [Android 2026.10.18](smart-paper-v2026.10.18.md), versionCode 35. Exact-source CI, protected signing and independent APK review passed; team tag publication and anonymous public download remain pending.
+
 ## Recent Releases
 
 | Version | Outcome |
