@@ -4,7 +4,7 @@ This roadmap is based on repository inspection only. Speculative ideas are marke
 
 ## Current Goal: Confidence In The Shipped Android App
 
-Android `2026.10.14` / versionCode 31 is the latest published release; the [release record](releases/smart-paper-v2026.10.14.md) documents exact-source CI, protected signing, independent artifact review and public checksum verification. Android cloud backup is excluded while supported device transfer remains allowed; actual OS/OEM behavior remains a physical-device follow-up. The Planner fixed bottom area was removed in local-data mode while preserving inline save feedback and reachable day navigation; see the [task](tasks/2026-10-09-planner-bottom-area.md). Finance session expiry continues to clear displayed data and unsaved edits promptly while preserving saved records; see its [task](tasks/2026-10-09-finance-session-expiry.md). The seven-route audit remains a structural reference with native follow-ups.
+Android `2026.10.16` / versionCode33 is the accepted release candidate (public verification pending); the [release record](releases/smart-paper-v2026.10.16.md) documents exact-source CI, protected signing, independent artifact review and publication state. Android cloud backup is excluded while supported device transfer remains allowed; actual OS/OEM behavior remains a physical-device follow-up. The Planner fixed bottom area was removed in local-data mode while preserving inline save feedback and reachable day navigation; see the [task](tasks/2026-10-09-planner-bottom-area.md). Finance session expiry continues to clear displayed data and unsaved edits promptly while preserving saved records; see its [task](tasks/2026-10-09-finance-session-expiry.md). The seven-route audit remains a structural reference with native follow-ups.
 
 - Prioritize observed design/implementation mismatches by effect on local data, task completion, and bilingual phone use. A user-visible fix requires a ready Designer handoff and targeted QA.
 
@@ -37,9 +37,9 @@ Completed 2026-10-08: [fixed template loss during Merge import](tasks/2026-10-08
 
 - Shipped: [GitHub Actions CI and Android builds](tasks/2026-10-07-github-actions-ci-android-builds.md), including hosted frontend checks, isolated verification APK artifacts, verified success/failed-test gates, and a Security-accepted protected stable signing run. Existing team tag publication remains separate; independent CI archive download, fork/cancellation/cache-hit, physical-device, and account-usage checks remain follow-ups.
 
-- Planned evaluation: [CI coverage and local test policy](tasks/2026-10-11-ci-local-test-policy.md), inventorying hosted coverage and triggers, then recommending risk-based local versus CI checks and when exact-commit CI can serve as reusable validation. No policy or workflow change is adopted yet; backend remains paused and release gates stay in force.
+- Completed: [CI coverage and local test policy](tasks/2026-10-11-ci-local-test-policy.md): coverage/triggers inventoried and risk-based local checks plus exact-commit hosted evidence reuse accepted. Workflow and release gates are unchanged; backend remains paused.
 
-- Planned: [Design and install a Smart Paper Android launcher icon](tasks/2026-10-07-android-launcher-icon.md); important visual identity task covering the installed home-screen/app-drawer icon, not a full brand redesign.
+- Implemented and approved: [Android launcher icon](tasks/2026-10-11-android-launcher-icon.md); adaptive, round, legacy and themed artwork is included in the coordinated 2026.10.16 release. Physical launcher/OEM/upgrade checks remain follow-ups.
 
 - Planned: [Finance optional and hidden by default](tasks/2026-10-07-finance-optional-default-hidden.md); preserve existing records and pause feature expansion.
 - Planned: [Change the Finance PIN](tasks/2026-10-09-finance-change-pin.md), giving users a discoverable place to replace the default/current Finance PIN while preserving their records.
@@ -51,6 +51,8 @@ Completed 2026-10-08: [fixed template loss during Merge import](tasks/2026-10-08
 - Planned: accessible Android **Report a problem**, with optional local crash/error diagnostics and basic usage analytics, preview/delete controls, and voluntary file sharing through Android/email. No server or automatic uploads. See the [future task](tasks/2026-10-07-local-feedback-diagnostics.md); implementation is not started.
 
 - Planned evaluation: [Microsoft Clarity for Android UX diagnostics](tasks/2026-10-10-microsoft-clarity-evaluation.md), checking packaged Capacitor 8 compatibility, synthetic-data replay usefulness, privacy, and failure coverage against planned voluntary local diagnostics. No hosted telemetry is adopted; implementation is not started.
+
+- Completed: [Five sequential confidence tasks](tasks/2026-10-11-five-task-release-batch.md): XLSX ZIP/XML, configurable-section visibility/restore, Finance CRUD/session-denial and seven-day template lifecycle/restore regressions, plus the accepted CI/local-test policy. Browser wiring and native behavior remain separate gaps.
 
 - Add frontend automated tests around primary user flows: weekly planner save/load, finance unlock/add/edit/delete, export/import, language switching.
 - Add frontend automated tests around configurable planner sections: settings save/load, hide/activate behavior, planner save/load with custom labels, summaries, and local export/import.

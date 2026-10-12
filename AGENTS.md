@@ -101,7 +101,7 @@ For multi-step, cross-repository, migration, or release work, create or update a
 ## Validation Expectations
 
 - Backend changes should use commands discovered in `smart-paper/AGENTS.md`.
-- Frontend changes should use commands discovered in `smart-paper-front/AGENTS.md`.
+- Frontend changes should use commands discovered in `smart-paper-front/AGENTS.md`; select local checks and reuse successful exact-commit hosted checks according to [CI/local-test policy](docs/ci-local-test-policy.md). Design, security, device and release artifact gates remain separate.
 - Documentation changes should be validated for obvious syntax and link/path accuracy.
 - A feature is not complete until acceptance criteria pass, relevant automated checks pass, no unresolved critical/high review finding remains, and docs are updated where necessary.
 

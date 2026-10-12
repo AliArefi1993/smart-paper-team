@@ -1,8 +1,8 @@
 # Task: Design and install the Smart Paper Android launcher icon
 
-Status: planned
+Status: implemented; superseded by the 2026-10-11 implementation record
 Created: 2026-10-07
-Updated: 2026-10-07
+Updated: 2026-10-12
 
 ## Objective
 
@@ -51,4 +51,4 @@ Give Smart Paper a recognizable Android launcher icon: the icon users see on the
 
 ## Outcome / Handoff
 
-Planned only. Next action when selected is Designer review of the current identity and installed icon. No artwork or app changes made.
+The approved folded-paper/check design is implemented and independently reviewed; see [implementation and coordinated release](2026-10-11-android-launcher-icon.md). This file preserves the original backlog brief. Physical installation, OEM rendering and upgrade/data-retention checks remain unverified follow-ups.

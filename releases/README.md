@@ -4,12 +4,13 @@ This directory contains prepared release records and tagged Smart Paper releases
 
 ## Latest Release
 
-[Android 2026.10.14](smart-paper-v2026.10.14.md) is published at versionCode 31. The record documents anonymous download and byte-for-byte verification of the stable APK: [download SmartPaper-local-2026.10.14-release.apk](https://github.com/AliArefi1993/smart-paper-team/releases/download/smart-paper-v2026.10.14/SmartPaper-local-2026.10.14-release.apk) (SHA-256 `24caacb6ead7bc953b45b2d4716bd39df9146093c664a38e3f5fb1dcba63c82b`).
+[Android 2026.10.16](smart-paper-v2026.10.16.md), versionCode33, passed exact-source CI, protected signing and independent artifact review; publication/public download verification are in progress. [Download APK](https://github.com/AliArefi1993/smart-paper-team/releases/download/smart-paper-v2026.10.16/SmartPaper-local-2026.10.16-release.apk); SHA-256 `7637204b749689d7209a09b064d97843cc2dadfb4b1acda28d9789350e8ad908`. The signed icon-only 2026.10.15 candidate remains unpublished and is superseded by this coordinated release.
 
 ## Recent Releases
 
 | Version | Outcome |
 | --- | --- |
+| [2026.10.16](smart-paper-v2026.10.16.md) | Approved icon and natural-sand timer; four regression tasks plus accepted CI policy; public verification pending. |
 | [2026.10.14](smart-paper-v2026.10.14.md) | Published; backup/device-transfer policy and runtime-only Finance unlock; public APK matched the committed artifact. |
 | [2026.10.13](smart-paper-v2026.10.13.md) | Published; Planner event editor fits short landscape viewports; public APK matched the committed artifact. |
 | [2026.10.12](smart-paper-v2026.10.12.md) | Published; simplified Planner bottom area and inline save status; public APK matched the committed artifact. |

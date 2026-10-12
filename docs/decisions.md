@@ -77,6 +77,12 @@ This file records durable choices that constrain future work. It is intentionall
 - **Why:** Preserve a phone replacement path while narrowing cloud eligibility and preventing restored unlock deadlines from granting Finance access.
 - **Consequence:** Keep verified external JSON backups as the deliberate recovery path. Do not promise OEM migration success, encryption or deletion of historical cloud snapshots. Persisting authorization across restarts requires a separately reviewed non-backup-bound identity mechanism. See [policy](android-backup-policy.md) and [task](../tasks/2026-10-10-android-backup-policy.md).
 
+### D-013 — Use risk-based local checks and reuse exact-commit CI evidence
+
+- **Decision (2026-10-12):** Follow the [CI/local-test policy](ci-local-test-policy.md): check documentation paths without app tests, use focused local checks for early feedback, and reuse successful named hosted checks on the exact final commit instead of repeating identical local suites.
+- **Why:** Hosted frontend verification already runs clean install, lint, types, tests and the local-data build; repeated checks on unchanged source add little evidence. Concurrent installs can invalidate shared-checkout results.
+- **Consequence:** Record exact source and run identity. Dirty source, failures, offline work and uncovered behavior need their own checks; security review/audits, Designer/studio QA, physical-device follow-ups, protected signing and independent artifact/public-download verification remain separate. Workflow coverage and release gates are unchanged.
+
 ## Adding Or Changing A Decision
 
 Add an entry only when the choice is costly to reverse, crosses repository boundaries, defines a product constraint, or is likely to be debated again. Include the decision, reason, and practical consequence. If superseded, keep the old entry and point it to the replacement.

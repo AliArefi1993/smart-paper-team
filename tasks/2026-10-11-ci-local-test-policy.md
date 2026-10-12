@@ -1,8 +1,8 @@
 # Evaluate CI Coverage And Local Test Policy
 
-Status: planned
+Status: complete; policy accepted by lead
 Created: 2026-10-11
-Updated: 2026-10-11
+Updated: 2026-10-12
 
 ## Objective
 
@@ -18,12 +18,12 @@ Decide which checks should run in GitHub CI and which local checks are useful be
 
 ## Acceptance Criteria
 
-- [ ] Inventory frontend automated coverage, workflow triggers, and important uncovered or duplicated checks; identify justified missing CI tests for a subsequent implementation phase.
-- [ ] Decide which categories need no local test run, targeted local tests, or the full local suite, covering documentation-only edits, scoped fixes, data/import/migration changes, security/dependency changes, native changes, CI failures, and offline work.
-- [ ] Assess when successful CI for the exact commit can be reused as validation, while retaining targeted local debugging or checks where justified.
-- [ ] Compare expected runtime and cost; document evidence, tradeoffs, and any remaining uncertainty.
-- [ ] Keep existing release gates intact; make no workflow, application, or backend changes as part of this evaluation.
-- [ ] Update the relevant documentation with the accepted policy; no policy is adopted by this planned task.
+- [x] Inventory frontend automated coverage, workflow triggers, and important uncovered or duplicated checks; identify justified missing CI tests for a subsequent implementation phase.
+- [x] Recommend which categories need no local test run, targeted local tests, or the full local suite, covering documentation-only edits, scoped fixes, data/import/migration changes, security/dependency changes, native changes, CI failures, and offline work.
+- [x] Assess when successful CI for the exact commit can be reused as validation, while retaining targeted local debugging or checks where justified.
+- [x] Compare observed runtime and cost evidence; document tradeoffs and remaining uncertainty.
+- [x] Keep existing release gates intact; make no workflow, application, or backend changes as part of this evaluation.
+- [x] Record accepted risk-based local checks and exact-commit CI reuse in the policy document and operating guidance.
 
 ## Non-Goals
 
@@ -42,17 +42,17 @@ Decide which checks should run in GitHub CI and which local checks are useful be
 
 | Check | Command or evidence | Result |
 | --- | --- | --- |
-| Workflow and test inventory | Inspect repository tests and workflow files | Not run |
-| Runtime/cost comparison | Available hosted run data and documented runner pricing | Not run |
-| Link/path validation | Verify referenced workspace and frontend paths | Passed |
+| Workflow and test inventory | Inspect `smart-paper-front/tests/`, `.github/workflows/`, `.github/CI.md`, and frontend commands | 17 test files inventoried; triggers, overlap and gaps recorded in [recommendation](../docs/ci-local-test-policy.md) |
+| Runtime/cost comparison | `gh run list/view` for three recent successful verification jobs; official GitHub billing documentation and repository visibility | 3m42s–5m49s observed; inspected runs had cache misses, so no clean/cache comparison. Repository is public and standard hosted Linux use is free per current docs; account-specific usage/storage unknown. No dollar estimate made. |
+| Link/path validation | Resolve local Markdown paths and inspect diff | Passed: local targets exist; diff checked during batch closeout |
 
 ## Decisions And Risks
 
-- No local-run frequency policy is adopted yet. User request is to evaluate options and make a recommendation.
+- Lead accepted the policy on 2026-10-12; exact-SHA reuse never replaces audits, design/device evidence or release artifact gates.
 - Any justified CI coverage additions are identified for a subsequent implementation phase; this evaluation does not change workflows or tests.
 - Backend remains paused unless resumed; retain existing release acceptance, exact-source, signing and artifact gates.
 - Runtime and account-specific billing may not be available from public repository evidence.
 
 ## Outcome / Handoff
 
-Planned. Next action: inventory current checks and produce a risk-based recommendation for lead review. No workflow or application changes are included.
+Evaluation and lead acceptance complete. [Policy](../docs/ci-local-test-policy.md) and decision D-013 record defaults and exact-commit reuse; AGENTS.md links the policy. No workflow, application, backend or test changes are included in this evaluation.

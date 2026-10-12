@@ -23,10 +23,18 @@ These records preserve candidate work, not an approved sequence. Use [ROADMAP.md
 - [Microsoft Clarity evaluation](2026-10-10-microsoft-clarity-evaluation.md)
 - [Periodic team reviews](2026-10-08-periodic-team-reviews.md)
 - [Planner Review this week with AI shortcut](2026-10-07-planner-ai-review-shortcut.md)
-- [Smart Paper Android launcher icon](2026-10-07-android-launcher-icon.md)
 - [Timer optional and hidden by default](2026-10-07-timer-optional-default-hidden.md)
 
 ## Completed / Assessed
+
+- [Five sequential confidence tasks and release](2026-10-11-five-task-release-batch.md) — four focused data/export regression tasks and accepted CI/local-test policy; release closeout recorded in the task.
+- [CI/local-test policy](2026-10-11-ci-local-test-policy.md) — risk-based local checks and exact-commit hosted evidence reuse; release gates preserved.
+- [XLSX export regression](2026-10-11-xlsx-export-regression.md)
+- [Planner section regression](2026-10-11-planner-section-regression.md)
+- [Finance record regression](2026-10-11-finance-record-regression.md)
+- [Week template regression](2026-10-11-week-template-regression.md)
+- [Android launcher icon](2026-10-11-android-launcher-icon.md) — approved source and artifact; consolidated publication in 2026.10.16.
+- [Natural sand timer](2026-10-11-timer-natural-sand.md) — approved bilingual design/browser checks and source; consolidated publication in 2026.10.16.
 
 These records cover shipped work, completed documentation, or bounded assessments. Their task-specific outcomes and any still-open device follow-ups remain in the linked documents.
 
