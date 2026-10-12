@@ -4,7 +4,7 @@ Task documents preserve the intent and verification context of meaningful work s
 
 ## Active Follow-ups
 
-- [Finance visibility](2026-10-07-finance-optional-default-hidden.md): Product scope and bilingual Designer handoff accepted; implementation in progress.
+- [Planner AI review shortcut](2026-10-07-planner-ai-review-shortcut.md): ready Product/Designer handoff; implementation follows published Finance 2026.10.19.
 
 - [Sequential backlog clearance](2026-10-12-backlog-clearance.md): authorized queue and handoff state for readiness-first work.
 - [Android data safety on a real phone](2026-10-08-android-data-safety-validation.md): broader upgrade, restore and failure-recovery checks remain; the discovered template Merge issue is already fixed and released.
@@ -23,13 +23,14 @@ These records preserve candidate work, not an approved sequence. Use [ROADMAP.md
 - [Local problem reporting and optional diagnostics](2026-10-07-local-feedback-diagnostics.md)
 - [Microsoft Clarity evaluation](2026-10-10-microsoft-clarity-evaluation.md)
 - [Periodic team reviews](2026-10-08-periodic-team-reviews.md)
-- [Planner Review this week with AI shortcut](2026-10-07-planner-ai-review-shortcut.md)
 
 ## Cancelled
 
 - [Timer optional and hidden by default](2026-10-07-timer-optional-default-hidden.md) — cancelled on 2026-10-12; keep Timer available by default.
 
 ## Completed / Assessed
+
+- [Finance visibility](2026-10-07-finance-optional-default-hidden.md): shipped Android 2026.10.19; public APK verified.
 
 - [Lightweight project home and roadmap cleanup](2026-10-08-project-home-roadmap.md) — completed and pushed in team commit `3257063`.
 

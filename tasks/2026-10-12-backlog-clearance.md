@@ -12,7 +12,7 @@ Work through the maintainer-authorized backlog in sequence, starting with the ea
 
 - Priority source: [ROADMAP.md](../ROADMAP.md).
 - Owning repository varies by step; coordinate in this team repository and keep app changes in their owning repositories.
-- Current Android baseline: [2026.10.18 release record](../releases/smart-paper-v2026.10.18.md).
+- Current Android baseline: [2026.10.19 release record](../releases/smart-paper-v2026.10.19.md).
 - The maintainer authorized the queue and requested no artificial closure of physical-device gaps.
 
 ## Acceptance Criteria
@@ -48,6 +48,8 @@ Work through the maintainer-authorized backlog in sequence, starting with the ea
 | Frontend hygiene | `find smart-paper-front -maxdepth 1 -type d -name 'node_modules-blocked-*'`; `git ls-files '*node_modules-blocked-*'`; `.gitignore` and `git check-ignore` | No matching directories or tracked paths; `/node_modules-blocked-*/` ignore rule confirmed; no cleanup needed |
 | XLSX writer upgrade | [Implementation task](2026-10-12-spreadsheet-writer-upgrade.md) | Shipped in Android 2026.10.17; publisher run and anonymous APK hash verified |
 | Framework refresh | [Implementation and release evidence](2026-10-12-framework-refresh.md) | Shipped in Android 2026.10.18; publisher and anonymous APK SHA-256 verified |
+| Finance visibility | [Implementation/release task](2026-10-07-finance-optional-default-hidden.md) | Shipped in Android 2026.10.19; Security, publisher and anonymous APK verified |
+| Planner AI shortcut readiness | Product, personal systems and [ready Designer handoff](../design/2026-10-12-planner-ai-shortcut.md) | Selected next; studio/bilingual evidence passed |
 | Physical-device follow-ups | Observed Android device results | Open; do not infer completion |
 
 ## Decisions And Risks
@@ -58,4 +60,4 @@ Work through the maintainer-authorized backlog in sequence, starting with the ea
 
 ## Outcome / Handoff
 
-Project-home cleanup, frontend hygiene review and the evaluated XLSX writer upgrade are complete. Framework refresh Android 2026.10.18 publication and anonymous checksum verification passed. The fifth task, Finance visibility, passed implementation checks, Security and final Designer/browser review; its signed release gates are underway. After publication, select the next bounded offline task by readiness. Backend remains paused and Android device evidence remains open.
+Project-home cleanup, frontend hygiene review and the evaluated XLSX writer upgrade are complete. Framework refresh Android 2026.10.18 publication and anonymous checksum verification passed. The fifth task, Finance visibility, shipped in Android 2026.10.19 after independent artifact, publisher and anonymous checksum verification. The sixth selected task is the viewed-week Planner AI report shortcut; Product/personal systems scope and ready bilingual Designer/studio review passed. Continue implementation through the same validation and release gates. Backend remains paused and Android device evidence remains open.

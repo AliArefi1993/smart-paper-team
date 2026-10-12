@@ -21,6 +21,8 @@ Updated: 2026-10-12. Keep this file short and update it when user-visible featur
 
 ## Recent completed work
 
+- Shipped optional Finance visibility in [Android 2026.10.19](releases/smart-paper-v2026.10.19.md): immediate separate Settings preference, safe saved-data upgrade, unchanged PIN/backup access and hidden-route recovery. Tests, bilingual browser/Designer review, Security, signed artifact and public APK verification passed; native device checks remain open.
+
 - Shipped the framework refresh and Capacitor 8.5.1 native proxy fix in [Android 2026.10.18](releases/smart-paper-v2026.10.18.md). Tests, bilingual browser smoke, compiled native guards, signing and public download verified; physical-device behavior remains unverified.
 
 - Shipped the local XLSX writer upgrade to vendored SheetJS CE 0.20.3 in [Android 2026.10.17](releases/smart-paper-v2026.10.17.md); source, hosted, artifact and public-download checks passed. Phone spreadsheet opening/rendering and low-memory behavior remain unverified.

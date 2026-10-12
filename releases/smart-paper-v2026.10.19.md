@@ -2,7 +2,7 @@
 
 Date: 2026-10-12
 
-Status: Independent Security accepted; publication and anonymous download verification pending.
+Status: Published and publicly verified.
 
 ## Scope
 
@@ -15,7 +15,7 @@ Status: Independent Security accepted; publication and anonymous download verifi
 
 | Repository | Tag | Commit | Notes |
 | --- | --- | --- | --- |
-| team root | `smart-paper-v2026.10.19` | Determined at release closeout | Exact APK, provenance and release memory |
+| team root | `smart-paper-v2026.10.19` | `1a605e3d31d0fb42617cdf5a74416ba397041a6d` | Exact APK, provenance and release memory |
 | backend `smart-paper/` | `smart-paper-v2026.10.19` | `68c789b707239ef5451f98f7f6ce49d7c9b8a8c2` | Unchanged; backend remains paused |
 | frontend `smart-paper-front/` | `smart-paper-v2026.10.19` | `c0ada332093baea9ff2d0b83a953d37642a037f8` | Exact source used by CI and protected signing |
 
@@ -51,7 +51,7 @@ Finance can now be shown or hidden from Settings without deleting its saved reco
 
 ## Publication
 
-Independent Security artifact acceptance passed. Release tags, publisher workflow and anonymous public APK checksum verification remain pending.
+Publisher [38283072503](https://github.com/AliArefi1993/smart-paper-team/actions/runs/38283072503) succeeded. The [public release](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.19) is non-draft/non-prerelease. Anonymous download of asset `634438974` matched the committed APK byte-for-byte: 4,381,120 bytes, SHA-256 `5df46b4034264a0b31c200fe364ac12f4e13fc23847e34984cc879eff4f1791f`. Annotated frontend/backend tags were pushed before the team tag; tag targets are recorded above.
 
 ## Known Follow-Ups
 

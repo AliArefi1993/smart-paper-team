@@ -1,6 +1,6 @@
 # Task: Make Finance optional and hidden by default
 
-Status: implementation accepted; publication verification pending
+Status: completed; Android 2026.10.19 published
 Created: 2026-10-07
 Updated: 2026-10-12
 
@@ -24,7 +24,7 @@ Keep Planner central by removing Finance from the default experience. Users can 
 - [x] Hidden direct routes explain how to enable without revealing records or granting unlock; all existing Finance navigation links follow the preference. Designer defines interaction with unsaved settings/Finance edits.
 - [x] Storage failure does not falsely report success or erase data; JSON import preserves explicit visibility choice, and hidden Finance remains accessible through Settings and existing unlock-gated backup/import/report flows. Visibility stays outside JSON schema 5 in this cycle.
 - [x] Relevant English/Persian and accessibility states are covered by a ready Designer handoff and editable studio stories before frontend implementation.
-- [ ] Relevant automated checks, independent review, documentation and validated Android release workflow are completed when implemented.
+- [x] Relevant automated checks, independent review, documentation and validated Android release workflow are completed when implemented.
 
 ## Non-Goals
 
@@ -64,4 +64,4 @@ Keep Planner central by removing Finance from the default experience. Users can 
 
 ## Outcome / Handoff
 
-Frontend behavior and final copy are accepted. Frontend initial commit `f7e8297` includes Android 2026.10.19/code36; final copy commit `c0ada332093baea9ff2d0b83a953d37642a037f8` passed CI `38276109486`. First stable run `38276691881` failed an upstream Google Maven `lint-checks-31.13.0.jar` HTTP 503; retry `38277577658` passed unsigned assembly and candidate verification, then received protected signing approval. Candidate artifact `11760645019`, original archive SHA-256 `57d77400edcbe20f2f6c549c6fbdd8bb3dc8568567bd3b37daaba6b48845bb90`, matches source/version and 113 packaged web assets. Signed artifact review passed: independent Security accepted one stable v2/v3 signer, identity/code36, provenance, 557 payload entries and 113 web assets; no actionable finding. Publication/public checksum remain required. Do not mark shipped until independent artifact review, publication and public checksum verification pass. Backend stays paused; Timer remains available.
+Frontend behavior and final copy are accepted. Frontend initial commit `f7e8297` includes Android 2026.10.19/code36; final copy commit `c0ada332093baea9ff2d0b83a953d37642a037f8` passed CI `38276109486`. First stable run `38276691881` failed an upstream Google Maven `lint-checks-31.13.0.jar` HTTP 503; retry `38277577658` passed unsigned assembly and candidate verification, then received protected signing approval. Candidate artifact `11760645019`, original archive SHA-256 `57d77400edcbe20f2f6c549c6fbdd8bb3dc8568567bd3b37daaba6b48845bb90`, matches source/version and 113 packaged web assets. Signed artifact review passed: independent Security accepted one stable v2/v3 signer, identity/code36, provenance, 557 payload entries and 113 web assets; no actionable finding. Publisher `38283072503` succeeded; anonymous asset `634438974` matches the reviewed APK SHA-256 `5df46b4034264a0b31c200fe364ac12f4e13fc23847e34984cc879eff4f1791f`. [Release record](../releases/smart-paper-v2026.10.19.md). Independent artifact review, publication and public checksum verification all passed. Backend stays paused; Timer remains available.
