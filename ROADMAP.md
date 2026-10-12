@@ -19,8 +19,8 @@ Open Android evidence remains follow-up work, not blanket release gates:
 
 ## Next — ordered ready work
 
-1. Review open physical-device evidence, especially the [data-safety phone matrix](tasks/2026-10-08-data-safety-phone-matrix.md), without claiming unobserved native behavior.
-2. Take any next user-visible work through Product and Designer discovery before implementation. Candidates include [PIN change](tasks/2026-10-09-finance-change-pin.md), [Idea Space relationships](tasks/2026-10-07-idea-space-connected-thoughts-refactor.md), [accessibility/Persian review](tasks/2026-10-08-accessibility-persian-phone-review.md), and evidence-based improvements in the [notification review](tasks/2026-10-08-android-notification-review.md). No order is set among these candidates.
+1. Implement the selected [Finance PIN change](tasks/2026-10-09-finance-change-pin.md) from its accepted Product scope and [ready bilingual Designer handoff](design/2026-10-13-finance-pin.md). Preserve the explicit persistence, relock, recovery and backup/session boundaries; complete independent Security/QA and release gates before calling it shipped.
+2. Take later user-visible work through Product and Designer discovery before implementation. Candidates include [Idea Space relationships](tasks/2026-10-07-idea-space-connected-thoughts-refactor.md), [accessibility/Persian review](tasks/2026-10-08-accessibility-persian-phone-review.md), and evidence-based improvements in the [notification review](tasks/2026-10-08-android-notification-review.md). No order is set among these candidates.
 
 ## Later
 

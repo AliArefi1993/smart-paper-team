@@ -4,6 +4,7 @@ Task documents preserve the intent and verification context of meaningful work s
 
 ## Active Follow-ups
 
+- [Finance change PIN](2026-10-09-finance-change-pin.md): Product scope and bilingual Designer handoff are ready; frontend implementation and independent Security/QA remain.
 - [Sequential backlog clearance](2026-10-12-backlog-clearance.md): authorized queue and handoff state for readiness-first work.
 - [Android data safety on a real phone](2026-10-08-android-data-safety-validation.md): broader upgrade, restore and failure-recovery checks remain; the discovered template Merge issue is already fixed and released.
 - [Data-safety phone matrix](2026-10-08-data-safety-phone-matrix.md): prepared cases awaiting physical-device execution.
@@ -16,7 +17,6 @@ These records preserve candidate work, not an approved sequence. Use [ROADMAP.md
 
 - [Android accessibility and Persian usability](2026-10-08-accessibility-persian-phone-review.md)
 - [Android notifications review](2026-10-08-android-notification-review.md)
-- [Finance change PIN](2026-10-09-finance-change-pin.md)
 - [Idea Space connected-thoughts refactor](2026-10-07-idea-space-connected-thoughts-refactor.md)
 - [Local problem reporting and optional diagnostics](2026-10-07-local-feedback-diagnostics.md)
 - [Microsoft Clarity evaluation](2026-10-10-microsoft-clarity-evaluation.md)
