@@ -2,7 +2,7 @@
 
 Date: 2026-10-12
 
-Status: Exact-source CI, protected signing and independent artifact review passed; publication/public verification pending.
+Status: Published and publicly verified.
 
 ## Scope
 
@@ -43,7 +43,7 @@ Status: Exact-source CI, protected signing and independent artifact review passe
 
 ## Publication
 
-Lead release go granted after independent artifact acceptance. Scoped release commit and coordinated tags pending; the team tag publishes the committed APK. Anonymous public download and byte verification remain required.
+The annotated release tag was pushed to frontend `ea05f160320f6a8c7017d6c25d8bf2625fc37e95`, backend `68c789b707239ef5451f98f7f6ce49d7c9b8a8c2`, and team release commit `fb6cbe3e8959a899048a098eb630f584e9cbe0e2` in that order. Publisher run [38207188159](https://github.com/AliArefi1993/smart-paper-team/actions/runs/38207188159) completed successfully. The public [GitHub Release](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.16) is non-draft/non-prerelease and contains APK asset `632745926` (`SmartPaper-local-2026.10.16-release.apk`, 4,395,446 bytes). An anonymous download matched the committed APK byte-for-byte; SHA-256 is `7637204b749689d7209a09b064d97843cc2dadfb4b1acda28d9789350e8ad908`.
 
 ## Known Follow-Ups
 

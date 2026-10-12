@@ -1,6 +1,6 @@
 # Task: Five sequential confidence tasks and stable release
 
-Status: five tasks complete; accepted stable release publication in progress
+Status: five tasks complete; Android 2026.10.16 published and publicly verified
 Created: 2026-10-11
 Updated: 2026-10-12
 
@@ -31,4 +31,4 @@ Task 1 complete: independent XLSX ZIP/XML checks passed (2 focused Docker Node 2
 
 Release go: publish Android 2026.10.16/code 33 including accepted icon and timer commits. Icon 2026.10.15 was signed/reviewed but its owner hit usage limits before publication; its prepared record/artifact are preserved, and the final batch supersedes that unpublished candidate. The routine isolated source copy was prepared but no completed broad-run evidence survived; use final exact-source hosted CI and stable workflow checks under the accepted policy. Four test files committed/pushed at `2513a2a`. Independent reviewer accepted all four. No task-owned process remains (Docker inventory empty at lead takeover).
 
-Final source `ea05f16` passed automatic CI38206205739 and protected signing38206221167. Independent Security accepted final APK/checksum/provenance, pinned single v2/v3 signer, code33/name2026.10.16/non-debug identity, 581 payload entries, 137 web files, preserved compiled icon/backup resources and packaged timer assets. Lead grants publication go. Exact final bytes committed from hosted artifact; physical checks remain unverified. Public verification pending.
+Final source `ea05f16` passed automatic CI [38206205739](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38206205739) and protected signing [38206221167](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38206221167). Independent Security accepted final APK/checksum/provenance, pinned single v2/v3 signer, code33/name2026.10.16/non-debug identity, 581 payload entries, 137 web files, preserved compiled icon/backup resources and packaged timer assets. Publisher run [38207188159](https://github.com/AliArefi1993/smart-paper-team/actions/runs/38207188159) succeeded. Anonymous public download of asset `632745926` matched the committed APK byte-for-byte (4,395,446 bytes; SHA-256 `7637204b749689d7209a09b064d97843cc2dadfb4b1acda28d9789350e8ad908`). Physical checks remain unverified.

@@ -4,13 +4,13 @@ This directory contains prepared release records and tagged Smart Paper releases
 
 ## Latest Release
 
-[Android 2026.10.16](smart-paper-v2026.10.16.md), versionCode33, passed exact-source CI, protected signing and independent artifact review; publication/public download verification are in progress. [Download APK](https://github.com/AliArefi1993/smart-paper-team/releases/download/smart-paper-v2026.10.16/SmartPaper-local-2026.10.16-release.apk); SHA-256 `7637204b749689d7209a09b064d97843cc2dadfb4b1acda28d9789350e8ad908`. The signed icon-only 2026.10.15 candidate remains unpublished and is superseded by this coordinated release.
+[Android 2026.10.16](smart-paper-v2026.10.16.md), versionCode 33, passed exact-source CI, protected signing and independent artifact review, then published successfully. The [public APK](https://github.com/AliArefi1993/smart-paper-team/releases/download/smart-paper-v2026.10.16/SmartPaper-local-2026.10.16-release.apk) was anonymously downloaded and matched the committed artifact byte-for-byte: 4,395,446 bytes, SHA-256 `7637204b749689d7209a09b064d97843cc2dadfb4b1acda28d9789350e8ad908`. The signed icon-only 2026.10.15 candidate remains unpublished and is preserved as review evidence.
 
 ## Recent Releases
 
 | Version | Outcome |
 | --- | --- |
-| [2026.10.16](smart-paper-v2026.10.16.md) | Approved icon and natural-sand timer; four regression tasks plus accepted CI policy; public verification pending. |
+| [2026.10.16](smart-paper-v2026.10.16.md) | Approved icon and natural-sand timer; four regression tasks plus accepted CI policy; published and publicly verified. |
 | [2026.10.14](smart-paper-v2026.10.14.md) | Published; backup/device-transfer policy and runtime-only Finance unlock; public APK matched the committed artifact. |
 | [2026.10.13](smart-paper-v2026.10.13.md) | Published; Planner event editor fits short landscape viewports; public APK matched the committed artifact. |
 | [2026.10.12](smart-paper-v2026.10.12.md) | Published; simplified Planner bottom area and inline save status; public APK matched the committed artifact. |

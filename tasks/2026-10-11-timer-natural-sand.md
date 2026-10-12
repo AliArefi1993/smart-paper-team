@@ -1,6 +1,6 @@
 # Task: Natural sand timer design
 
-Status: implemented and accepted; coordinated release pending
+Status: implemented and accepted; included in published Android 2026.10.16
 Created: 2026-10-11
 Updated: 2026-10-12
 

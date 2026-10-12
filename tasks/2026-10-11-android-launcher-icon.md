@@ -1,6 +1,6 @@
 # Task: Android launcher icon redesign
 
-Status: source and artifact accepted; coordinated publication in 2026.10.16 pending
+Status: source and artifact accepted; included in published Android 2026.10.16
 Created: 2026-10-11
 Updated: 2026-10-11
 
@@ -45,8 +45,8 @@ Replace the installed Android app's generic launcher artwork with a distinctive 
 
 ## Outcome / Handoff
 
-Approved paper/check identity implemented. Independent Security source review passed; lead viewed legacy PNG parity. Frontend `99bd2de7b852801416fbb6b550c30ee1239a968f` committed/pushed; exact-source hosted build [38164657390](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38164657390) underway. Designer accepted implemented vectors and round raster. Unsigned hosted gate passed; protected signing approved by lead under standing authorization. Hosted signing passed; original final/candidate ZIPs independently rehashed. APK SHA-256 `a04e4aa3e9dee2d22dd9e51db80a471e9e8e402af599f06f713091e6d8576320`, size 4,391,350 bytes. Independent artifact gate passed; lead authorized publication. Public verification pending.
+Approved paper/check identity implemented. Independent Security source review passed; lead viewed legacy PNG parity. Frontend `99bd2de7b852801416fbb6b550c30ee1239a968f` committed/pushed; exact-source hosted build [38164657390](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38164657390) passed. Designer accepted implemented vectors and round raster. Unsigned hosted gate passed; protected signing approved by lead under standing authorization. Hosted signing passed; original final/candidate ZIPs independently rehashed. The standalone icon APK SHA-256 was `a04e4aa3e9dee2d22dd9e51db80a471e9e8e402af599f06f713091e6d8576320`, size 4,391,350 bytes. Independent artifact gate passed. That 2026.10.15 candidate was not published; the icon shipped in coordinated release 2026.10.16.
 
 Independent artifact verification: pinned single v2/v3 signer and non-debug package/code32 accepted; 581 unsigned/signed shared entries, 137 web files, compiled v26/v33 vectors and 10 legacy PNG pixel equality passed. Backup rules unchanged. Physical checks remain unverified.
 
-2026-10-12 coordination: owner hit usage limits after signed-artifact acceptance but before publication. The reviewed 2026.10.15 candidate remains unpublished; the batch owner consolidates this accepted icon with the timer and regression work into 2026.10.16/code33. No physical installation is claimed.
+2026-10-12 coordination: the reviewed 2026.10.15 icon-only candidate remains unpublished as preserved evidence. This accepted icon was included with the timer and regression work in Android 2026.10.16/code33. The final APK passed independent review and was anonymously downloaded from the [published release](../releases/smart-paper-v2026.10.16.md) with exact byte and checksum match. No physical installation is claimed.
