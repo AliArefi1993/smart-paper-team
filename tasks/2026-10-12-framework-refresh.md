@@ -1,6 +1,6 @@
 # Task: Refresh the offline app framework and build dependencies
 
-Status: in progress — signed candidate accepted; publication pending
+Status: complete — published and publicly verified
 Created: 2026-10-12
 Updated: 2026-10-12
 
@@ -11,7 +11,7 @@ Reduce the recorded dependency findings with a bounded compatible framework/buil
 ## Context
 
 - Next step after the published [writer upgrade](2026-10-12-spreadsheet-writer-upgrade.md) in the [sequential backlog](2026-10-12-backlog-clearance.md).
-- Frontend source `047e4bd15d9542693fe03d1e6c4f42d65d798a65`, Android release candidate 2026.10.18/code35.
+- Frontend source `047e4bd15d9542693fe03d1e6c4f42d65d798a65`, published Android 2026.10.18/code35.
 - [Dependency assessment](../docs/android-dependency-advisories.md); previous audit: 6 production / 20 full-install package findings; refreshed audit is 0 production / 8 full-install findings.
 - Read-only preparation verified available Next/eslint-config-next 16.4.0 and compatible patch-level transitive candidates. Verify actual resolved audits before claiming remediation.
 
@@ -23,8 +23,8 @@ Reduce the recorded dependency findings with a bounded compatible framework/buil
 - [x] English/Persian navigation and local planner/export smoke checks cover compiler/routing risks, with browser evidence distinguished from native device evidence.
 - [x] Independent code/Security review has no unresolved critical/high implementation finding.
 - [x] Exact-source Android CI, protected signing and independent compiled artifact review pass.
-- [ ] Team tag publishes the release; anonymous public APK download matches the reviewed artifact.
-- [ ] Current docs/backlog records updated; remaining uncertainty accurately scoped.
+- [x] Team tag publishes the release; anonymous public APK download matches the reviewed artifact.
+- [x] Current docs/backlog records updated; remaining uncertainty accurately scoped.
 
 ## Non-Goals
 
@@ -53,7 +53,7 @@ Reduce the recorded dependency findings with a bounded compatible framework/buil
 | Exact-source CI | [38212196581](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38212196581) on `047e4bd15d9542693fe03d1e6c4f42d65d798a65` | Passed |
 | Stable build | [38212221396](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38212221396), code35/name `2026.10.18` | Passed; approval submitted after successful unsigned candidate |
 | Independent artifact review | Candidate `11729891190`, final `11730385657`; original ZIPs and provenance | Passed; 556 candidate entries and 112 web assets match; pinned signer, identity, version, non-debug and native proxy guards accepted |
-| Public release | Team tag and anonymous APK download | Pending publication gate |
+| Public release | Publisher run `38213573797`; public asset `632920811` | Published, non-draft/non-prerelease; anonymous download matched 4,376,928 bytes and SHA-256 `fe6b8b1de15daf76d09a12820ececd34be7246ee165579ade3ae7e7c5e9c1536` |
 
 ## Decisions And Risks
 
@@ -74,4 +74,4 @@ Reduce the recorded dependency findings with a bounded compatible framework/buil
 
 Implementation accepted after lead browser smoke and independent Security/code review. Frontend package manifests/lock, factual Next.js baseline, and Android version were committed in frontend `047e4bd15d9542693fe03d1e6c4f42d65d798a65`. Evidence and logs are at `/private/tmp/smart-paper-framework-evidence/` (`audit-full.json`, `audit-production.json`, `metadata.json`, `native-proxy-guards.txt`, install/lint/types/tests/build/cap-sync logs); raw audits, metadata and native guard evidence are preserved under [durable evidence](../docs/evidence/2026-10-12-framework-refresh/).
 
-Task-owned final static server `python3 /private/tmp/smart-paper-framework-evidence/serve.py` was stopped with SIGINT after browser QA; PID43289 on `127.0.0.1:8874` exited and no listener remains. Docker validation containers exited 0 and were auto-removed. The exact APK/provenance are copied to the release staging paths; team publication and anonymous checksum verification remain pending. Other task-owned Finance design previews belong to the next task and were left untouched.
+The exact reviewed APK and provenance were committed and published in Android 2026.10.18. Publisher run `38213573797` succeeded; anonymous public asset `632920811` matched the APK byte-for-byte. The framework QA server on port8874 and the completed Finance design previews on ports8875/8876 were stopped gracefully after their consumers finished; no listeners remain. Docker validation and Security containers exited successfully and were auto-removed. Next is the selected Finance visibility task after its bilingual Designer handoff is ready. Physical-device checks remain open.

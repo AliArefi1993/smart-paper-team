@@ -2,7 +2,7 @@
 
 Date: 2026-10-12
 
-Status: Stable-signed and independently reviewed; team tag publication pending.
+Status: Published and publicly verified.
 
 ## Scope
 
@@ -14,7 +14,7 @@ Status: Stable-signed and independently reviewed; team tag publication pending.
 
 | Repository | Tag | Commit | Notes |
 | --- | --- | --- | --- |
-| team root | `smart-paper-v2026.10.18` | Release-preparation commit containing this record and exact APK | Tag is created and pushed last after this commit is pushed |
+| team root | `smart-paper-v2026.10.18` | `8727b39cf538aa10f384e76554f94c02a4ef50d0` | Release record and exact reviewed APK artifact |
 | backend `smart-paper/` | `smart-paper-v2026.10.18` | `68c789b707239ef5451f98f7f6ce49d7c9b8a8c2` | Unchanged; backend work remains paused |
 | frontend `smart-paper-front/` | `smart-paper-v2026.10.18` | `047e4bd15d9542693fe03d1e6c4f42d65d798a65` | Exact source used by hosted CI and stable build |
 
@@ -47,9 +47,11 @@ Status: Stable-signed and independently reviewed; team tag publication pending.
 
 The framework and build dependencies were refreshed within the existing majors; the Capacitor Android proxy-navigation security patch is included. Existing offline Android behavior, data, and export contract are preserved. The audited npm scopes are improved while residual findings and a forthcoming advisories disclosure remain explicitly unverified.
 
+## Publication
+
+- Publisher workflow [38213573797](https://github.com/AliArefi1993/smart-paper-team/actions/runs/38213573797) succeeded; public GitHub Release: https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.18 (asset ID `632920811`). Anonymous download was 4,376,928 bytes and SHA-256 `fe6b8b1de15daf76d09a12820ececd34be7246ee165579ade3ae7e7c5e9c1536`, matching the committed APK byte-for-byte.
 ## Known Follow-Ups
 
-- Public GitHub Release and anonymous APK download verification are pending the team tag publisher.
 - Physical-device keyboard, lifecycle, accessibility, spreadsheet rendering, install/upgrade and data-retention behavior remain unverified.
 - Five high full-install package findings share the braces advisory and three moderate findings share the CLI/xcode UUID advisory; see the task record for exact dependency paths. The announced October 14 disclosure remains unpublished as of this release preparation.
-- Backend and hosted-web work remain paused. Finance visibility has been selected as the next product task; its bilingual Designer handoff is in progress.
+- Backend and hosted-web work remain paused. Finance visibility is selected as the next product task; its bilingual Designer handoff is accepted and implementation is starting.

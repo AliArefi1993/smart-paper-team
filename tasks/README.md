@@ -4,7 +4,7 @@ Task documents preserve the intent and verification context of meaningful work s
 
 ## Active Follow-ups
 
-- [Framework/build dependency refresh](2026-10-12-framework-refresh.md): signed 2026.10.18 candidate passed CI and independent artifact review; team publication and anonymous download remain pending.
+- [Finance visibility](2026-10-07-finance-optional-default-hidden.md): Product scope and bilingual Designer handoff accepted; implementation in progress.
 
 - [Sequential backlog clearance](2026-10-12-backlog-clearance.md): authorized queue and handoff state for readiness-first work.
 - [Android data safety on a real phone](2026-10-08-android-data-safety-validation.md): broader upgrade, restore and failure-recovery checks remain; the discovered template Merge issue is already fixed and released.
@@ -18,10 +18,8 @@ These records preserve candidate work, not an approved sequence. Use [ROADMAP.md
 
 - [Android accessibility and Persian usability](2026-10-08-accessibility-persian-phone-review.md)
 - [Android notifications review](2026-10-08-android-notification-review.md)
-- [Finance optional and hidden by default](2026-10-07-finance-optional-default-hidden.md)
 - [Finance change PIN](2026-10-09-finance-change-pin.md)
 - [Idea Space connected-thoughts refactor](2026-10-07-idea-space-connected-thoughts-refactor.md)
-- [Lightweight project home and roadmap cleanup](2026-10-08-project-home-roadmap.md) — completed and pushed in team commit `3257063`.
 - [Local problem reporting and optional diagnostics](2026-10-07-local-feedback-diagnostics.md)
 - [Microsoft Clarity evaluation](2026-10-10-microsoft-clarity-evaluation.md)
 - [Periodic team reviews](2026-10-08-periodic-team-reviews.md)
@@ -32,6 +30,10 @@ These records preserve candidate work, not an approved sequence. Use [ROADMAP.md
 - [Timer optional and hidden by default](2026-10-07-timer-optional-default-hidden.md) — cancelled on 2026-10-12; keep Timer available by default.
 
 ## Completed / Assessed
+
+- [Lightweight project home and roadmap cleanup](2026-10-08-project-home-roadmap.md) — completed and pushed in team commit `3257063`.
+
+- [Framework/build dependency refresh](2026-10-12-framework-refresh.md) — Next.js 16.4.0 and Capacitor 8.5.1; published in Android 2026.10.18 after CI, protected signing, Security review and anonymous APK verification.
 
 - [Offline XLSX writer upgrade](2026-10-12-spreadsheet-writer-upgrade.md) — vendored SheetJS CE 0.20.3; shipped in Android 2026.10.17 after CI, Security review and anonymous public APK verification.
 

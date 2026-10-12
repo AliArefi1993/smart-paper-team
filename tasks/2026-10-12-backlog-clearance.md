@@ -12,7 +12,7 @@ Work through the maintainer-authorized backlog in sequence, starting with the ea
 
 - Priority source: [ROADMAP.md](../ROADMAP.md).
 - Owning repository varies by step; coordinate in this team repository and keep app changes in their owning repositories.
-- Current Android baseline: [2026.10.17 release record](../releases/smart-paper-v2026.10.17.md).
+- Current Android baseline: [2026.10.18 release record](../releases/smart-paper-v2026.10.18.md).
 - The maintainer authorized the queue and requested no artificial closure of physical-device gaps.
 
 ## Acceptance Criteria
@@ -20,7 +20,7 @@ Work through the maintainer-authorized backlog in sequence, starting with the ea
 - [x] Complete and validate the project-home/roadmap cleanup as the initial step.
 - [x] Review frontend repository hygiene without deleting or resetting files; record whether any safe cleanup is needed.
 - [x] Implement the evaluated XLSX writer upgrade with focused compatibility/security regressions and required reviews.
-- [ ] Complete a bounded framework/build-tool refresh with scoped checks and release evidence.
+- [x] Complete a bounded framework/build-tool refresh with scoped checks and release evidence.
 - [ ] For later user-visible candidates, have Product/Designer define scope and a ready handoff before implementation; no priority order among those candidates is assumed.
 - [ ] Preserve open physical-device evidence until actual device results are recorded.
 - [ ] Keep task, roadmap, product and status documentation accurate as each step completes.
@@ -47,7 +47,7 @@ Work through the maintainer-authorized backlog in sequence, starting with the ea
 | Initial backlog step | [Project-home cleanup task](2026-10-08-project-home-roadmap.md) | Completed and pushed in team commit `3257063` |
 | Frontend hygiene | `find smart-paper-front -maxdepth 1 -type d -name 'node_modules-blocked-*'`; `git ls-files '*node_modules-blocked-*'`; `.gitignore` and `git check-ignore` | No matching directories or tracked paths; `/node_modules-blocked-*/` ignore rule confirmed; no cleanup needed |
 | XLSX writer upgrade | [Implementation task](2026-10-12-spreadsheet-writer-upgrade.md) | Shipped in Android 2026.10.17; publisher run and anonymous APK hash verified |
-| Framework refresh | [Implementation and release evidence](2026-10-12-framework-refresh.md) | Source, exact CI, signing and Security review passed; team publication and public APK verification pending |
+| Framework refresh | [Implementation and release evidence](2026-10-12-framework-refresh.md) | Shipped in Android 2026.10.18; publisher and anonymous APK SHA-256 verified |
 | Physical-device follow-ups | Observed Android device results | Open; do not infer completion |
 
 ## Decisions And Risks

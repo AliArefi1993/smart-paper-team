@@ -4,16 +4,15 @@ This directory contains prepared release records and tagged Smart Paper releases
 
 ## Latest Release
 
-[Android 2026.10.17](smart-paper-v2026.10.17.md), versionCode 34, passed exact-source CI, protected signing and independent artifact review, then published successfully. The [public APK](https://github.com/AliArefi1993/smart-paper-team/releases/download/smart-paper-v2026.10.17/SmartPaper-local-2026.10.17-release.apk) was anonymously downloaded and matched the committed artifact byte-for-byte: 4,420,022 bytes, SHA-256 `957b380aada0313b348b58e6c799882d4ed30806f9b7a2eb815c22800d500061`.
+[Android 2026.10.18](smart-paper-v2026.10.18.md), versionCode 35, passed exact-source CI, protected signing and independent artifact review, then published successfully. The [public APK](https://github.com/AliArefi1993/smart-paper-team/releases/download/smart-paper-v2026.10.18/SmartPaper-local-2026.10.18-release.apk) was anonymously downloaded and matched the committed artifact byte-for-byte: 4,376,928 bytes, SHA-256 `fe6b8b1de15daf76d09a12820ececd34be7246ee165579ade3ae7e7c5e9c1536`.
 
-Previous release: [Android 2026.10.16](smart-paper-v2026.10.16.md), versionCode 33; its public APK verification remains documented in that record.
-
-Signed candidate: [Android 2026.10.18](smart-paper-v2026.10.18.md), versionCode 35. Exact-source CI, protected signing and independent APK review passed; team tag publication and anonymous public download remain pending.
+Previous release: [Android 2026.10.17](smart-paper-v2026.10.17.md), versionCode 34; its public APK verification remains documented in that record.
 
 ## Recent Releases
 
 | Version | Outcome |
 | --- | --- |
+| [2026.10.18](smart-paper-v2026.10.18.md) | Framework/build refresh; published and anonymously verified. |
 | [2026.10.17](smart-paper-v2026.10.17.md) | Vendored SheetJS CE 0.20.3; published and anonymously verified. |
 | [2026.10.16](smart-paper-v2026.10.16.md) | Approved icon and natural-sand timer; four regression tasks plus accepted CI policy; published and publicly verified. |
 | [2026.10.14](smart-paper-v2026.10.14.md) | Published; backup/device-transfer policy and runtime-only Finance unlock; public APK matched the committed artifact. |
