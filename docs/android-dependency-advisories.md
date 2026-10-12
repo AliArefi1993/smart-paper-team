@@ -10,7 +10,7 @@ This completes the bounded assessment, not dependency remediation. Application c
 
 ## Follow-up status (2026-10-12)
 
-The XLSX writer remediation was implemented with vendored SheetJS CE 0.20.3 for [Android 2026.10.17](../releases/smart-paper-v2026.10.17.md), frontend `41e6b2e4daf4f5d67529a6d0fb97430ae5c90163`; tag publication is pending. After the update, the recorded audit reports 20 full-install findings (1 low, 4 moderate, 13 high, 2 critical) and 6 production findings (1 moderate, 4 high, 1 critical). This is not a clean audit and does not establish exploitability or safety; the remaining findings are unrelated dependencies. The historical `xlsx` 0.18.5 entry below describes the 2026-10-11 assessment source.
+The XLSX writer remediation was implemented with vendored SheetJS CE 0.20.3 for [Android 2026.10.17](../releases/smart-paper-v2026.10.17.md), frontend `41e6b2e4daf4f5d67529a6d0fb97430ae5c90163`; it is publicly released and verified. After the update, the recorded audit reports 20 full-install findings (1 low, 4 moderate, 13 high, 2 critical) and 6 production findings (1 moderate, 4 high, 1 critical). This is not a clean audit and does not establish exploitability or safety; the remaining findings are unrelated dependencies. The historical `xlsx` 0.18.5 entry below describes the 2026-10-11 assessment source.
 
 ## Reproducible evidence
 
@@ -43,7 +43,7 @@ SheetJS vendor records: [prototype pollution](https://cdn.sheetjs.com/advisories
 ## Recommended follow-up
 
 1. Prepare a bounded framework/build-tool upgrade and lock refresh. The current audit recommends Next 16.4.0; treat that as a candidate, verify supported versions when implementation starts, align `eslint-config-next`, and review transitive locks. Do not apply `npm audit fix --force`. Validate lint, TypeScript, local tests/static build and exact-source Android release gates.
-2. The [writer upgrade](spreadsheet-writer-evaluation.md) implementation and artifact review are complete; publication remains pending. Future changes to XLSX should preserve bilingual sheet text, numeric/text cell behavior and the existing six-sheet contract.
+2. The [writer upgrade](spreadsheet-writer-evaluation.md) implementation, artifact review and public release are complete. Future changes to XLSX should preserve bilingual sheet text, numeric/text cell behavior and the existing six-sheet contract.
 3. Reassess before any hosted Next deployment, untrusted build-input processing or workbook-import feature. Re-run the production audit after remediation and add full build/native coverage before claiming broader supply-chain assurance.
 
 These are proposed remediation scopes, not completed fixes or an approved product queue. No background audit processes remain. Physical-device, privacy and data-safety follow-ups remain in their existing tasks.

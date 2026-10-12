@@ -9,7 +9,7 @@ This repository coordinates the Smart Paper product. It stores durable project c
 - [Prioritized roadmap](ROADMAP.md)
 - [Prepared task index](tasks/README.md)
 - [Release history](releases/README.md)
-- Latest published Android release: [2026.10.16 release record](releases/smart-paper-v2026.10.16.md) · [download APK](https://github.com/AliArefi1993/smart-paper-team/releases/download/smart-paper-v2026.10.16/SmartPaper-local-2026.10.16-release.apk)
+- Latest published Android release: [2026.10.17 release record](releases/smart-paper-v2026.10.17.md) · [download APK](https://github.com/AliArefi1993/smart-paper-team/releases/download/smart-paper-v2026.10.17/SmartPaper-local-2026.10.17-release.apk)
 
 ## Workspace Map
 

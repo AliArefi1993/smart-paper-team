@@ -2,7 +2,7 @@
 
 Date: 2026-10-12
 
-Status: Signed; publication pending.
+Status: Published and publicly verified.
 
 ## Scope
 
@@ -14,7 +14,7 @@ Status: Signed; publication pending.
 
 | Repository | Tag | Commit | Notes |
 | --- | --- | --- | --- |
-| team root | `smart-paper-v2026.10.17` | Release record and exact reviewed APK artifact | Tag target is this release commit |
+| team root | `smart-paper-v2026.10.17` | `860bf687eefdb8d074bf28b5373c69e61ed79687` | Release record and exact reviewed APK artifact |
 | backend `smart-paper/` | `smart-paper-v2026.10.17` | `68c789b707239ef5451f98f7f6ce49d7c9b8a8c2` | Unchanged; backend work remains paused |
 | frontend `smart-paper-front/` | `smart-paper-v2026.10.17` | `41e6b2e4daf4f5d67529a6d0fb97430ae5c90163` | Exact source used by hosted CI and stable build |
 
@@ -50,4 +50,4 @@ The existing XLSX export now bundles maintained SheetJS CE 0.20.3 from the commi
 - Physical-device spreadsheet opening/rendering, Persian cell display, chooser behavior and low-memory export remain unverified.
 - Existing backup/restore, upgrade/data-retention, launcher, timer lifecycle, native accessibility and TalkBack follow-ups remain open; this release does not certify them.
 - Backend and hosted-web work remain paused. Framework/build-tool refresh is the next readiness-first backlog task.
-- Public GitHub Release and anonymous APK download verification are pending the annotated team tag.
+- Publisher workflow [38210724200](https://github.com/AliArefi1993/smart-paper-team/actions/runs/38210724200) succeeded; public GitHub Release: https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.17 (asset ID `632842140`). Anonymous download was 4,420,022 bytes and SHA-256 `957b380aada0313b348b58e6c799882d4ed30806f9b7a2eb815c22800d500061`, matching the committed APK byte-for-byte.

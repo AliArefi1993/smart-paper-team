@@ -1,6 +1,6 @@
 # Task: Upgrade the offline XLSX writer
 
-Status: in progress — release publication pending
+Status: complete — published and publicly verified
 Created: 2026-10-12
 Updated: 2026-10-12
 
@@ -23,7 +23,7 @@ Replace the stale registry XLSX writer with the evaluated official vendored Shee
 - [x] Docker clean install, lint, TypeScript, tests, local production build and audits recorded; remaining advisories stated accurately.
 - [x] Independent Security/code review reported no actionable security/code finding.
 - [x] Exact-source CI, protected signed Android artifact and independent provenance review passed.
-- [ ] Team tag publication and anonymous public APK download verified.
+- [x] Team tag publication and anonymous public APK download verified (publisher run `38210724200`; asset `632842140`, 4,420,022 bytes, SHA-256 `957b380aada0313b348b58e6c799882d4ed30806f9b7a2eb815c22800d500061`).
 - [x] Durable docs and task/backlog status updated.
 
 ## Non-Goals
@@ -49,10 +49,10 @@ Replace the stale registry XLSX writer with the evaluated official vendored Shee
 | XLSX-focused regression | Docker Node 24 `node --test tests/export-xlsx-regression.test.mjs` | Passed; 5 tests. Year-sized 52-week, 10-section, 3-event/day workbook: 213 ms and 1,846,021 bytes in this run |
 | Local production build and offline bundle | Docker Node 24 `NEXT_PUBLIC_DATA_MODE=local npm run build`; searched `.next/static` for XLSX CDN references | Build passed; no runtime XLSX CDN references. Export component JS chunks grew from 440,096 to 522,249 raw bytes (+82,153 / 18.7%) |
 | npm audits | Baseline full install: 21 (1 low, 4 moderate, 14 high, 2 critical); candidate full: 20 (1 low, 4 moderate, 13 high, 2 critical). Candidate production: 6 (1 moderate, 4 high, 1 critical) across baseline-browser-mapping, nanoid, next, postcss, sharp, source-map-js | One high-severity package finding removed from full and production audit views; remaining findings are unrelated dependencies. Vendored package absence from registry results is not a safety proof |
-| Independent review and release | Security/code review of source/tests completed; exact-source CI, protected signing and artifact review | No actionable security/code finding; release gates pending lead acceptance |
+| Independent review and release | Security/code review of source/tests completed; exact-source CI, protected signing and artifact review | No actionable security/code finding; lead accepted release go/no-go and all release gates passed |
 | Exact-source hosted checks | Frontend CI [38209364570](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38209364570); protected stable build [38209384856](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38209384856) | Both succeeded for frontend `41e6b2e4daf4f5d67529a6d0fb97430ae5c90163`, versionCode 34/name `2026.10.17` |
 | Independent artifact review | Candidate artifact `11728887296`; final artifact `11729141851`; provenance in [release record](../releases/smart-paper-v2026.10.17.md) | Security accepted signer, identity/version, all 581 candidate payload entries, 137 web assets and bundled SheetJS 0.20.3; no actionable artifact finding |
-| Public artifact | [Android 2026.10.17](../releases/smart-paper-v2026.10.17.md) | Pending team tag and anonymous download |
+| Public artifact | [Android 2026.10.17](../releases/smart-paper-v2026.10.17.md) | Publisher run `38210724200`; public asset `632842140` anonymously downloaded and SHA-256 matched |
 
 ## Decisions And Risks
 
@@ -62,4 +62,4 @@ Replace the stale registry XLSX writer with the evaluated official vendored Shee
 
 ## Outcome / Handoff
 
-Implemented as frontend `41e6b2e4daf4f5d67529a6d0fb97430ae5c90163`. Exact-source checks, protected signing and independent Security review passed. The signed release record and APK are ready for publication; public download verification remains open. Physical-device chooser, spreadsheet rendering and low-memory behavior remain unverified; backend work remains paused. No persistent background processes were started.
+Implemented as frontend `41e6b2e4daf4f5d67529a6d0fb97430ae5c90163` and shipped in Android 2026.10.17. Exact-source checks, protected signing, independent Security review and anonymous public APK SHA-256 verification passed. Physical-device chooser, spreadsheet rendering and low-memory behavior remain unverified; backend work remains paused. No persistent background processes were started.

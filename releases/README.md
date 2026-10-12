@@ -4,14 +4,15 @@ This directory contains prepared release records and tagged Smart Paper releases
 
 ## Latest Release
 
-[Android 2026.10.16](smart-paper-v2026.10.16.md), versionCode 33, passed exact-source CI, protected signing and independent artifact review, then published successfully. The [public APK](https://github.com/AliArefi1993/smart-paper-team/releases/download/smart-paper-v2026.10.16/SmartPaper-local-2026.10.16-release.apk) was anonymously downloaded and matched the committed artifact byte-for-byte: 4,395,446 bytes, SHA-256 `7637204b749689d7209a09b064d97843cc2dadfb4b1acda28d9789350e8ad908`.
+[Android 2026.10.17](smart-paper-v2026.10.17.md), versionCode 34, passed exact-source CI, protected signing and independent artifact review, then published successfully. The [public APK](https://github.com/AliArefi1993/smart-paper-team/releases/download/smart-paper-v2026.10.17/SmartPaper-local-2026.10.17-release.apk) was anonymously downloaded and matched the committed artifact byte-for-byte: 4,420,022 bytes, SHA-256 `957b380aada0313b348b58e6c799882d4ed30806f9b7a2eb815c22800d500061`.
 
-Next signed candidate: [Android 2026.10.17](smart-paper-v2026.10.17.md), versionCode 34. Exact-source CI, protected signing and independent artifact review passed; tag publication and public download verification are pending.
+Previous release: [Android 2026.10.16](smart-paper-v2026.10.16.md), versionCode 33; its public APK verification remains documented in that record.
 
 ## Recent Releases
 
 | Version | Outcome |
 | --- | --- |
+| [2026.10.17](smart-paper-v2026.10.17.md) | Vendored SheetJS CE 0.20.3; published and anonymously verified. |
 | [2026.10.16](smart-paper-v2026.10.16.md) | Approved icon and natural-sand timer; four regression tasks plus accepted CI policy; published and publicly verified. |
 | [2026.10.14](smart-paper-v2026.10.14.md) | Published; backup/device-transfer policy and runtime-only Finance unlock; public APK matched the committed artifact. |
 | [2026.10.13](smart-paper-v2026.10.13.md) | Published; Planner event editor fits short landscape viewports; public APK matched the committed artifact. |

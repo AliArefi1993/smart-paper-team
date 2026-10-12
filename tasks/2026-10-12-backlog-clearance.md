@@ -46,8 +46,8 @@ Work through the maintainer-authorized backlog in sequence, starting with the ea
 | --- | --- | --- |
 | Initial backlog step | [Project-home cleanup task](2026-10-08-project-home-roadmap.md) | Completed and pushed in team commit `3257063` |
 | Frontend hygiene | `find smart-paper-front -maxdepth 1 -type d -name 'node_modules-blocked-*'`; `git ls-files '*node_modules-blocked-*'`; `.gitignore` and `git check-ignore` | No matching directories or tracked paths; `/node_modules-blocked-*/` ignore rule confirmed; no cleanup needed |
-| XLSX writer upgrade | [Implementation task](2026-10-12-spreadsheet-writer-upgrade.md) | Source and artifact checks complete; tag publication pending |
-| Framework refresh | Bounded source and validation record | Next after writer publication |
+| XLSX writer upgrade | [Implementation task](2026-10-12-spreadsheet-writer-upgrade.md) | Shipped in Android 2026.10.17; publisher run and anonymous APK hash verified |
+| Framework refresh | Bounded source and validation record | Next: bounded framework/build-tool refresh |
 | Physical-device follow-ups | Observed Android device results | Open; do not infer completion |
 
 ## Decisions And Risks
@@ -58,4 +58,4 @@ Work through the maintainer-authorized backlog in sequence, starting with the ea
 
 ## Outcome / Handoff
 
-Project-home cleanup, frontend hygiene review and implementation/validation of the evaluated XLSX writer upgrade are complete. Android 2026.10.17 is signed and independently reviewed; team tag publication remains pending. Next is a bounded framework/build-tool refresh. Backend remains paused and Android device evidence remains open.
+Project-home cleanup, frontend hygiene review and implementation/validation of the evaluated XLSX writer upgrade are complete. Android 2026.10.17 is published and the anonymous download matched the reviewed APK. Next is a bounded framework/build-tool refresh. Backend remains paused and Android device evidence remains open.

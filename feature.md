@@ -21,7 +21,7 @@ Updated: 2026-10-12. Keep this file short and update it when user-visible featur
 
 ## Recent completed work
 
-- The local XLSX writer upgrade to vendored SheetJS CE 0.20.3 passed source, hosted and artifact checks; publication is pending for [Android 2026.10.17](releases/smart-paper-v2026.10.17.md). Phone spreadsheet opening/rendering and low-memory behavior remain unverified.
+- Shipped the local XLSX writer upgrade to vendored SheetJS CE 0.20.3 in [Android 2026.10.17](releases/smart-paper-v2026.10.17.md); source, hosted, artifact and public-download checks passed. Phone spreadsheet opening/rendering and low-memory behavior remain unverified.
 - Added focused XLSX export, configurable-section visibility/restore, Finance CRUD/session-denial and seven-day template lifecycle/backup regression coverage; accepted risk-based local checks and exact-commit CI reuse. See [batch](tasks/2026-10-11-five-task-release-batch.md). No app behavior or dependency change in these five tasks.
 - Approved adaptive/round/legacy/themed Android paper icon, included with the natural-sand timer in the coordinated 2026.10.16 release; physical installation/OEM and native accessibility remain follow-ups.
 

@@ -5,7 +5,6 @@ Task documents preserve the intent and verification context of meaningful work s
 ## Active Follow-ups
 
 - [Sequential backlog clearance](2026-10-12-backlog-clearance.md): authorized queue and handoff state for readiness-first work.
-- [Offline XLSX writer upgrade](2026-10-12-spreadsheet-writer-upgrade.md): source and signed artifact accepted; team tag publication and anonymous APK verification pending.
 - [Android data safety on a real phone](2026-10-08-android-data-safety-validation.md): broader upgrade, restore and failure-recovery checks remain; the discovered template Merge issue is already fixed and released.
 - [Data-safety phone matrix](2026-10-08-data-safety-phone-matrix.md): prepared cases awaiting physical-device execution.
 
@@ -20,7 +19,7 @@ These records preserve candidate work, not an approved sequence. Use [ROADMAP.md
 - [Finance optional and hidden by default](2026-10-07-finance-optional-default-hidden.md)
 - [Finance change PIN](2026-10-09-finance-change-pin.md)
 - [Idea Space connected-thoughts refactor](2026-10-07-idea-space-connected-thoughts-refactor.md)
-- [Lightweight project home and roadmap cleanup](2026-10-08-project-home-roadmap.md): priority confirmation and the broader bounded cleanup remain outstanding.
+- [Lightweight project home and roadmap cleanup](2026-10-08-project-home-roadmap.md) — completed and pushed in team commit `3257063`.
 - [Local problem reporting and optional diagnostics](2026-10-07-local-feedback-diagnostics.md)
 - [Microsoft Clarity evaluation](2026-10-10-microsoft-clarity-evaluation.md)
 - [Periodic team reviews](2026-10-08-periodic-team-reviews.md)
@@ -31,6 +30,8 @@ These records preserve candidate work, not an approved sequence. Use [ROADMAP.md
 - [Timer optional and hidden by default](2026-10-07-timer-optional-default-hidden.md) — cancelled on 2026-10-12; keep Timer available by default.
 
 ## Completed / Assessed
+
+- [Offline XLSX writer upgrade](2026-10-12-spreadsheet-writer-upgrade.md) — vendored SheetJS CE 0.20.3; shipped in Android 2026.10.17 after CI, Security review and anonymous public APK verification.
 
 - [Five sequential confidence tasks and release](2026-10-11-five-task-release-batch.md) — four focused data/export regression tasks and accepted CI/local-test policy; release closeout recorded in the task.
 - [CI/local-test policy](2026-10-11-ci-local-test-policy.md) — risk-based local checks and exact-commit hosted evidence reuse; release gates preserved.

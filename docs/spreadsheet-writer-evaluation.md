@@ -10,7 +10,7 @@ The vendor fixes the known ReDoS advisory in 0.20.2 or later. Its [ReDoS notice]
 
 ## Implementation follow-up
 
-The [2026-10-12 upgrade task](../tasks/2026-10-12-spreadsheet-writer-upgrade.md) implemented the vendored 0.20.3 candidate for Android 2026.10.17. The six-sheet contract is preserved, Docker checks and independent Security/code review passed, and the exact hosted artifact is ready; team tag publication remains pending. The evaluation below preserves the original assessment; use the task and release record for implementation and release evidence.
+The [2026-10-12 upgrade task](../tasks/2026-10-12-spreadsheet-writer-upgrade.md) implemented the vendored 0.20.3 candidate for Android 2026.10.17. The six-sheet contract is preserved, Docker checks and independent Security/code review passed, and Android 2026.10.17 is published with an anonymously verified APK. The evaluation below preserves the original assessment; use the task and release record for implementation and release evidence.
 
 ## Existing contract
 
