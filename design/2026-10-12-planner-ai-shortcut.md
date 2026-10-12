@@ -1,7 +1,7 @@
 # Design: Planner viewed-week AI report shortcut
 
-Status: ready for implementation
-Updated: 2026-10-12
+Status: implemented; Designer accepted
+Updated: 2026-10-13
 Owning frontend route/component: `/`, `/export`; `WeeklyPlanner`, `ExportView`, `AiReportPanel`
 Local studio: [PlannerAiShortcut.stories.tsx](studio/src/stories/PlannerAiShortcut.stories.tsx), `Proposals/Planner AI shortcut`
 Optional Figma: not required
@@ -47,7 +47,7 @@ Reuse global surface, border, ink, muted, teal and focus roles. No assets or tok
 | Loading/no loaded detail | Disabled shortcut; **Loading the viewed week… / در حال خواندن هفتهٔ نمایش‌داده‌شده…**. Do not use stale detail while selection changes. |
 | Saving/load failure | Disabled until the loaded week is current and successfully persisted. Keep existing load recovery/save Retry and retained writing. |
 | Failed save | Existing save error and Retry stay primary recovery; explain **Save failed. Retry saving before preparing a report. / ذخیره انجام نشد. پیش از آماده‌سازی گزارش، دوباره ذخیره کنید.** Successful Retry enables entry with saved edits. No automatic navigation after Retry. |
-| Open event/template/full-writing editor | Disable while an editor/sheet is active. **Save or cancel the open editor before preparing a report. / پیش از آماده‌سازی گزارش، ویرایش باز را ذخیره یا لغو کنید.** Preserve existing explicit Save/Cancel/Close resolution and dirty-writing protections; do not introduce an implicit discard. A template sheet has its existing close action rather than a new save-on-exit rule. |
+| Open event/template/full-writing editor | Disable while an editor/sheet is active. **Finish editing before preparing a report. / پیش از آماده‌سازی گزارش، ویرایش را تمام کنید.** Preserve each editor’s existing controls: event Add/Save or Cancel; template sheet Close; full-writing Done with existing autosave/status/Retry. Full-writing Done does not discard or require a manual save. Keep dirty-writing protections; do not introduce an implicit discard or generic Save/Cancel promise. |
 | Invalid contextual entry | Focus report heading and announce inline alert: **The week link is invalid. No report was prepared. Choose dates to continue. / پیوند هفته معتبر نیست. گزارشی آماده نشد. برای ادامه، تاریخ‌ها را انتخاب کنید.** Empty disabled dates/fields, no report preview, all three transfer actions disabled. Ordinary backup/export controls remain independent. |
 | Invalid recovery | **Choose report dates / انتخاب تاریخ‌های گزارش** clears invalid context, enables blank date controls and focuses From date. Keep report preview and transfer unavailable until the user supplies a valid inclusive range or deliberately chooses existing **All dates / همهٔ تاریخ‌ها**. Do not silently preview all history on recovery. No viewed-week claim after recovery. |
 | No matching data/source error/busy | Reuse existing no-data/source-load error/busy states and action locks; don't fabricate an empty-week report or successful transfer. |
@@ -93,4 +93,15 @@ Base: `http://localhost:6006/?path=/story/proposals-planner-ai-shortcut--`.
 | Accessibility | Keyboard Tab to shortcut screenshot; labeled native controls/disabled AX; 22px Persian text, measured 390px scroll width and visible button heights ≥48px | Passed bounded browser checks; no TalkBack claim |
 | Text contrast | Light ink/soft 13.50:1, muted/white 6.11:1; Dark ink/soft 11.63:1, muted/surface 8.45:1 | Above 4.5:1 for checked text roles; disabled contrast is not an enabled-action cue |
 | Running-app comparison | Baseline Planner week header/date/save/Templates and direct Export blank-date/default-field flow, saved screenshots | Passed current-behavior comparison; proposal intentionally adds action/context/focus only |
-| Actual implementation / Android | Future QA, native clipboard/chooser/recipient, lifecycle, keyboard and TalkBack | Unverified follow-ups; no device validation inferred |
+| Actual implementation | Parent QA and final Designer screenshot review, 2026-10-13 | Accepted after editor-helper correction; bounded browser evidence only |
+| Native Android | Clipboard/chooser/recipient, lifecycle, keyboard and TalkBack | Unverified follow-ups; no device validation inferred |
+
+## Actual implementation review — 2026-10-13
+
+Designer reviewed the parent’s actual implementation screenshots in [implementation evidence](evidence/2026-10-12-planner-ai-shortcut/implementation/), including past/future EN date context, FA wide report, invalid link/recovery, storage-failure retained writing and event/full-writing guards. Existing eight fields, excluded Finance, clear offline/external AI explanation, visible focus and readable Light/Dark surfaces match the handoff. Parent QA reports exact week inclusion/exclusion, date/language preservation, explicit invalid recovery, save/editor guards and Retry success; these behavior claims are attributed to QA rather than inferred from static images.
+
+The bounded editor-helper correction is implemented and source-verified in both languages: **Finish editing before preparing a report. / پیش از آماده‌سازی گزارش، ویرایش را تمام کنید.** The observed full-writing view has **Done** and automatic saving, so the earlier Save/Cancel wording inaccurately names its controls. Event controls and guards remain unchanged. Studio helper matches the corrected meaning. No unresolved Designer finding remains.
+
+The new Export Suspense boundary has no fallback. A fleeting pre-hydration blank was reported; there is no evidence of sustained loading or a user-facing failure. A new loading presentation is not required by this bounded review; defer it unless slow-device evidence establishes a material delay. Do not claim the current Suspense boundary displays a loading state. Native Android/TalkBack evidence remains unverified.
+
+Final Designer acceptance: inspected [FA Dark phone, 390×844](evidence/2026-10-12-planner-ai-shortcut/implementation/final-future-report-fa-dark-phone.jpg), [FA Dark wide, 1280×900](evidence/2026-10-12-planner-ai-shortcut/implementation/final-future-report-fa-dark-wide.jpg), and [EN Light wide, 1280×900](evidence/2026-10-12-planner-ai-shortcut/implementation/final-future-report-en-light-wide.jpg). Viewed-week Shamsi context and Gregorian date inputs agree, RTL/LTR order and wrapping are readable, all eight fields remain present with Finance off, and focus is visible in the FA contextual entry. These clean captures and the earlier actual error/editor/failure witnesses match the amended handoff. **Accepted for the lead’s remaining validation/release gates.** Native Android behavior is not certified by this review.

@@ -23,6 +23,7 @@ The current published release targets Android `2026.10.18` / versionCode 35 (loc
 - Protects finance data behind a PIN/session unlock when using the Django backend.
 - Exports planner and finance data as JSON, CSV, Excel, and Markdown for AI review.
 - Lets Android users create a separate Markdown AI report with selected fields and an inclusive date range, review its text, copy it deliberately to the device clipboard or share its file through the device chooser. Manual text selection remains available when clipboard access fails. The report explains its scope and asks the receiving AI for a grounded first response. Finance fields start off and require the finance unlock.
+- Offers Android Planner “Review this week with AI” for the loaded viewed week, including past/future weeks. The existing report opens with inclusive Saturday–Friday dates and Finance excluded; fields and dates remain editable. Failed saves and active editors must be resolved first. Invalid week context requires deliberate date recovery and never silently exposes an all-history preview. Preparation works offline; cloud AI responses need internet.
 - Imports Smart Paper JSON backups in merge/upsert or replace mode. Local Merge preserves unrelated saved week templates and updates matching IDs from the incoming backup; an empty or omitted template collection deletes nothing. Replace uses only the incoming collection.
 - Gives Android JSON backups dated filenames and shows the chosen file's week and income counts before replace confirmation.
 - Supports English and Persian UI text.

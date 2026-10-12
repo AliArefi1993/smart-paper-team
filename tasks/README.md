@@ -4,7 +4,7 @@ Task documents preserve the intent and verification context of meaningful work s
 
 ## Active Follow-ups
 
-- [Planner AI review shortcut](2026-10-07-planner-ai-review-shortcut.md): ready Product/Designer handoff; implementation follows published Finance 2026.10.19.
+- [Planner AI review shortcut](2026-10-07-planner-ai-review-shortcut.md): implementation and final artifact Security accepted; Android 2026.10.20 publication and public checksum verification pending.
 
 - [Sequential backlog clearance](2026-10-12-backlog-clearance.md): authorized queue and handoff state for readiness-first work.
 - [Android data safety on a real phone](2026-10-08-android-data-safety-validation.md): broader upgrade, restore and failure-recovery checks remain; the discovered template Merge issue is already fixed and released.

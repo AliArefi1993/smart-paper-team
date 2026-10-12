@@ -1,0 +1,11 @@
+# Planner shortcut implementation evidence
+
+Actual built local-data app, isolated loopback origin `127.0.0.1:8892`, synthetic records only. Browser evidence supports the bounded web behavior, not native Android certification. Final clean captures are 390×844 phone and 1280×900 wide; `final-*` supersede earlier layout/copy captures. The generic editor helper was corrected after review: “Finish editing before preparing a report.” / «پیش از آماده‌سازی گزارش، ویرایش را تمام کنید.»
+
+Verified empty/current, past October3–9 and future October24–30 report context, correct saved goal inclusion and adjacent-week exclusion. Date edits clear context; language changes retain actual edited dates. Direct Export and deliberate All dates retain existing defaults. Invalid non-Saturday context blocks preview and all three transfers; backup unlock remains independent. Recovery focuses blank From and stays blocked until deliberate valid dates or All dates. Finance stays unchecked.
+
+Template/event drafts and full-writing view disable the shortcut until existing Cancel/Save/Done resolution; ordinary saved expanded inline sections do not. Controlled weeks-key write failure retains “Failed-save retained QA” and disables departure. Turning failure off alone remains blocked; existing Retry succeeds without navigation, and the deliberately opened report includes recovered writing.
+
+Fixture was injected before modules only on the synthetic root `?qaPlannerWrites=1`, wrapping only localStorage `smart-paper.local.weeks` writes with visible fail/recover controls and a failure count. Other keys/sessionStorage pass through. Neither shipped source nor exported files were changed by the fixture. Fixture source was prepared under `/private/tmp/smart-paper-planner-ai-qa`; no real data was read or sent.
+
+Automation limitation: filling native date inputs alone changed the DOM without a React change event. Real ArrowUp/ArrowDown input after filling established application state; those edited dates survived language changes. Brief pre-hydration blank from existing Suspense was not evidence of an app failure. Final Designer accepted phone/wide EN/FA Light/Dark context, wrapping and focus. Native clipboard, chooser/recipient delivery, lifecycle, installation/upgrade and TalkBack remain unverified.

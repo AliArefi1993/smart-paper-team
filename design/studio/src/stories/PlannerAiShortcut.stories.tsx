@@ -59,8 +59,8 @@ function PlannerAiShortcut({
         )
       : state === "editor"
         ? c(
-            "Save or cancel the open editor before preparing a report.",
-            "پیش از آماده‌سازی گزارش، ویرایش باز را ذخیره یا لغو کنید.",
+            "Finish editing before preparing a report.",
+            "پیش از آماده‌سازی گزارش، ویرایش را تمام کنید.",
           )
         : c("Loading the viewed week…", "در حال خواندن هفتهٔ نمایش‌داده‌شده…");
   const awaitingChoice = recovered && !selectionApproved;

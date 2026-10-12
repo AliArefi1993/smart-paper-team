@@ -2,7 +2,7 @@
 
 Status: in progress
 Created: 2026-10-12
-Updated: 2026-10-12
+Updated: 2026-10-13
 
 ## Objective
 
@@ -49,7 +49,7 @@ Work through the maintainer-authorized backlog in sequence, starting with the ea
 | XLSX writer upgrade | [Implementation task](2026-10-12-spreadsheet-writer-upgrade.md) | Shipped in Android 2026.10.17; publisher run and anonymous APK hash verified |
 | Framework refresh | [Implementation and release evidence](2026-10-12-framework-refresh.md) | Shipped in Android 2026.10.18; publisher and anonymous APK SHA-256 verified |
 | Finance visibility | [Implementation/release task](2026-10-07-finance-optional-default-hidden.md) | Shipped in Android 2026.10.19; Security, publisher and anonymous APK verified |
-| Planner AI shortcut readiness | Product, personal systems and [ready Designer handoff](../design/2026-10-12-planner-ai-shortcut.md) | Selected next; studio/bilingual evidence passed |
+| Planner AI shortcut | Product/personal systems, ready design and [implementation](2026-10-07-planner-ai-review-shortcut.md) | Accepted: 110 tests, source Security, final Designer, actual failure/range/privacy checks, exact-source CI, signing and final artifact Security; release publication pending |
 | Physical-device follow-ups | Observed Android device results | Open; do not infer completion |
 
 ## Decisions And Risks
@@ -60,4 +60,4 @@ Work through the maintainer-authorized backlog in sequence, starting with the ea
 
 ## Outcome / Handoff
 
-Project-home cleanup, frontend hygiene review and the evaluated XLSX writer upgrade are complete. Framework refresh Android 2026.10.18 publication and anonymous checksum verification passed. The fifth task, Finance visibility, shipped in Android 2026.10.19 after independent artifact, publisher and anonymous checksum verification. The sixth selected task is the viewed-week Planner AI report shortcut; Product/personal systems scope and ready bilingual Designer/studio review passed. Continue implementation through the same validation and release gates. Backend remains paused and Android device evidence remains open.
+Project-home cleanup, frontend hygiene review and the evaluated XLSX writer upgrade are complete. Framework refresh Android 2026.10.18 publication and anonymous checksum verification passed. The fifth task, Finance visibility, shipped in Android 2026.10.19 after independent artifact, publisher and anonymous checksum verification. The sixth selected task, the viewed-week Planner AI report shortcut, passed Product/personal systems scope, bilingual Designer/studio review, implementation, source/browser checks, exact-source CI, protected signing and final artifact Security review. Android 2026.10.20 publication and public checksum verification remain. Backend remains paused and Android device evidence remains open.
