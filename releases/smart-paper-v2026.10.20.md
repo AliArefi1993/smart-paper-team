@@ -2,7 +2,7 @@
 
 Date: 2026-10-13
 
-Status: Independent Security accepted the signed artifact; publication and anonymous checksum verification pending.
+Status: Published; anonymous public APK download matches the exact accepted signed artifact.
 
 ## Scope
 
@@ -14,9 +14,9 @@ Status: Independent Security accepted the signed artifact; publication and anony
 
 | Repository | Tag | Commit | Notes |
 | --- | --- | --- | --- |
-| team root | `smart-paper-v2026.10.20` | Pending | Release record and exact reviewed APK artifact |
+| team root | `smart-paper-v2026.10.20` | `85387bc464448865d8148ce284d8a3044204dd19` | Release record and exact reviewed APK artifact |
 | backend `smart-paper/` | `smart-paper-v2026.10.20` | `68c789b707239ef5451f98f7f6ce49d7c9b8a8c2` | Unchanged; backend remains paused |
-| frontend `smart-paper-front/` | `smart-paper-v2026.10.20` | `4f62d32f493867625ff828fd765b8a1244372036` | Exact source used by CI and protected signing; tag pending |
+| frontend `smart-paper-front/` | `smart-paper-v2026.10.20` | `4f62d32f493867625ff828fd765b8a1244372036` | Exact source used by CI and protected signing |
 
 ## Android Local-Data Version
 
@@ -40,7 +40,7 @@ Status: Independent Security accepted the signed artifact; publication and anony
 - Final artifact `11774266633`, original ZIP 4,383,251 bytes, SHA-256 `badd550c202b3620d473db63b7265b39720a3de401097787b31e263ab0d7f3b7`. Candidate and final ZIPs are retained in `/private/tmp/smart-paper-release-2026.10.20/`; local archive hashes match GitHub artifact metadata.
 - Routine checks passed: `SHA256SUMS` and provenance bind the exact source/run/version/package/local mode, candidate ID/archive hash, unsigned/final APK hashes, 113 web assets, and pinned stable certificate. Docker `apksigner` verified one signer across APK v2/v3; `aapt` reports package `com.aliarefi.smartpaper`, code 37/name `2026.10.20`, and non-debug status. All 557 unsigned APK entries and 113 packaged web assets match; only three signature records were added.
 - Source Security and final Designer accepted. All 110 tests, lint, TypeScript, local-data build, and synthetic browser checks for empty/past/future weeks, privacy, invalid context/recovery, failed saves and active editors passed. See [implementation evidence](../design/evidence/2026-10-12-planner-ai-shortcut/implementation/README.md).
-- Independent Security accepted the exact signed artifact: stable v2/v3 signature and identity, provenance, all 557 APK payload entries, all 113 web assets, and packaged Planner behavior passed with no finding. Public publication and anonymous checksum verification remain pending. No local APK rebuild was performed after hosted validation.
+- Independent Security accepted the exact signed artifact: stable v2/v3 signature and identity, provenance, all 557 APK payload entries, all 113 web assets, and packaged Planner behavior passed with no finding. No local APK rebuild was performed after hosted validation.
 
 ## Release Notes
 
@@ -48,7 +48,7 @@ Planner can open the selective AI report for the week currently being viewed, in
 
 ## Publication
 
-Independent Security accepted the exact signed APK. The release tag, publisher workflow, and anonymous public APK checksum verification remain pending.
+The annotated frontend tag points to `4f62d32f493867625ff828fd765b8a1244372036`; the unchanged backend tag points to `68c789b707239ef5451f98f7f6ce49d7c9b8a8c2`; and the annotated team tag points to `85387bc464448865d8148ce284d8a3044204dd19`. Publisher workflow [38310395171](https://github.com/AliArefi1993/smart-paper-team/actions/runs/38310395171) completed successfully. The public non-draft, non-prerelease release is [smart-paper-v2026.10.20](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.20). Anonymous asset `635037976` (`SmartPaper-local-2026.10.20-release.apk`) is 4,381,120 bytes; its SHA-256 is `784d4f232c0fc0c5bc8dcad1c9857b528aa71ccedb25e15dae5c66289d956f79`, matching the committed APK byte-for-byte.
 
 ## Known Follow-Ups
 

@@ -1,6 +1,6 @@
 # Task: Review the viewed Planner week with AI
 
-Status: implemented and accepted; release publication and public checksum verification pending
+Status: complete; Android 2026.10.20 published and anonymous public APK checksum verified
 Created: 2026-10-07
 Updated: 2026-10-13
 
@@ -27,7 +27,7 @@ Make the existing selective AI report easier to discover from Planner through a 
 - [x] Direct Export retains its existing all-dates defaults. Invalid/incomplete/ambiguous/impossible or non-week query context shows understandable recovery without silently presenting all-history data as the viewed week. Pass only calendar context in URLs, never report content.
 - [x] Do not imply AI runs inside Smart Paper or that opening an AI app automatically attaches/sends a report.
 - [x] English/Persian, RTL/LTR, Light/Dark, empty/past/future week, long content, focus and error states have a ready editable studio handoff and relevant source/browser checks. Native delivery, lifecycle and TalkBack remain explicit follow-ups until observed.
-- [ ] Documentation and the validated Android release workflow are completed when implemented.
+- [x] Documentation and the validated Android release workflow are completed when implemented.
 
 ## Non-Goals
 
@@ -59,7 +59,7 @@ Make the existing selective AI report easier to discover from Planner through a 
 | Exact-source CI | Hosted run `38308396886` on frontend `4f62d32f493867625ff828fd765b8a1244372036` | Passed |
 | Protected stable build | Hosted run `38308970779`; candidate `11774301453`; signed artifact `11774266633` | Passed |
 | Independent final artifact Security | Exact signed APK/provenance, stable v2/v3 identity, 557 payload entries and 113 web assets | Accepted with no finding |
-| Publication | Release tag and anonymous APK download | Pending |
+| Publication | Annotated frontend/backend/team tags; publisher run `38310395171`; public release asset `635037976`, 4,381,120 bytes, SHA-256 `784d4f232c0fc0c5bc8dcad1c9857b528aa71ccedb25e15dae5c66289d956f79`; anonymous download byte-compared with committed artifact | Passed; public release is non-draft/non-prerelease |
 
 ## Decisions And Risks
 

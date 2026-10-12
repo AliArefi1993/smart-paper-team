@@ -4,8 +4,6 @@ Task documents preserve the intent and verification context of meaningful work s
 
 ## Active Follow-ups
 
-- [Planner AI review shortcut](2026-10-07-planner-ai-review-shortcut.md): implementation and final artifact Security accepted; Android 2026.10.20 publication and public checksum verification pending.
-
 - [Sequential backlog clearance](2026-10-12-backlog-clearance.md): authorized queue and handoff state for readiness-first work.
 - [Android data safety on a real phone](2026-10-08-android-data-safety-validation.md): broader upgrade, restore and failure-recovery checks remain; the discovered template Merge issue is already fixed and released.
 - [Data-safety phone matrix](2026-10-08-data-safety-phone-matrix.md): prepared cases awaiting physical-device execution.
@@ -29,6 +27,8 @@ These records preserve candidate work, not an approved sequence. Use [ROADMAP.md
 - [Timer optional and hidden by default](2026-10-07-timer-optional-default-hidden.md) — cancelled on 2026-10-12; keep Timer available by default.
 
 ## Completed / Assessed
+
+- [Planner AI review shortcut](2026-10-07-planner-ai-review-shortcut.md): shipped in Android 2026.10.20; independent artifact Security and public APK verification passed.
 
 - [Finance visibility](2026-10-07-finance-optional-default-hidden.md): shipped Android 2026.10.19; public APK verified.
 
