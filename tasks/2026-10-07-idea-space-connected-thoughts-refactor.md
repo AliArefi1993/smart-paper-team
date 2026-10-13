@@ -1,6 +1,6 @@
 # Task: Refactor Idea Space around connected thoughts
 
-Status: implementing from ready Designer handoff
+Status: browser QA in progress; not shipped
 Created: 2026-10-07
 Updated: 2026-10-13
 

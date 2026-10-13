@@ -1,14 +1,14 @@
 # Android data-safety execution matrix
 
 Status: prepared; physical-device execution pending
-Updated: 2026-10-08
+Updated: 2026-10-13
 Owner: [Android data-safety validation](2026-10-08-android-data-safety-validation.md)
 
 Use synthetic records on a spare device. Keep an externally readable JSON backup before upgrade or interruption experiments; never uninstall the sole installation holding personal records. All rows below are **not run on a phone**.
 
 ## Record before execution
 
-Record device model/Android/WebView version, installed and candidate APK versionCode/versionName, frontend revision, certificate SHA-256, APK checksum, backup filename/checksum and fixture values. Published baseline: 2026.10.7 / code 24 / frontend `036d2c5`; APK SHA-256 `8554c574d60b3e8ec7c33d9026d7c8eac0b9a4c033297ce90097377d2ea59a2f`; stable certificate: `59912e191b4588996b4f3641c9b3609e77fa75aa6695be789ece1a0325faf2a5`. Use a verified higher-version candidate for upgrade; do not modify personal records to test.
+Record device model/Android/WebView version, installed and candidate APK versionCode/versionName, frontend revision, certificate SHA-256, APK checksum, backup filename/checksum and fixture values. Current published baseline is Android 2026.10.21 / code 38 / frontend `4a6736df8d98770ab608334583d1ba8a5ac1403d`, app ID `com.aliarefi.smartpaper`, APK SHA-256 `5866485c0a266e6ecca1485c7d3cd4e870e888ce3c4ad4100fc0bef9675ece69`, stable certificate SHA-256 `59912e191b4588996b4f3641c9b3609e77fa75aa6695be789ece1a0325faf2a5` ([release record](../releases/smart-paper-v2026.10.21.md)). This is the published reference version, not an observation that it is installed on the phone. A separate verification APK was prepared from exact-source CI 38334342301 at `/private/tmp/smart-paper-phone-qa-2026-10-13`: frontend `4a6736df8d98770ab608334583d1ba8a5ac1403d`, versionName `2026.10.21-verification`, package `com.aliarefi.smartpaper.verification`, SHA-256 `7bfac87ce19a280e7cdbea56f3e7a25be0aa9b5b1cbc8827f001244631ef8cca`. It was not installed; its distinct package ID cannot verify upgrade of the stable app. Treat it as preflight only. Use a verified higher-version stable-package candidate for an upgrade; do not modify personal records to test.
 
 ## Synthetic fixture
 
@@ -45,4 +45,4 @@ Low-storage and termination tests belong only on a disposable environment with e
 
 ## Current local evidence
 
-On 2026-10-08 the frontend passed Docker lint, TypeScript and all 52 tests; the default-Merge template-loss bug is fixed and validated for [template merge safety](2026-10-08-template-merge-safety.md). No ADB executable was available through this workspace PATH. No physical upgrade, low-storage or process-termination result is claimed.
+On 2026-10-08 the frontend passed Docker lint, TypeScript and all 52 tests; the default-Merge template-loss bug is fixed and validated for [template merge safety](2026-10-08-template-merge-safety.md). On 2026-10-13 a Samsung A15 running Android 16 was available. Its USB cable did not charge it; Mac SPUSBHost inventory showed only buses and no attached device. The Mac was using the phone hotspot; no alternate Wi-Fi was reported. The published 2026.10.21/code 38 APK is the current reference, but no app was installed during this preparation and no native or physical-device QA has run. The separate verification APK listed above was prepared only as a preflight artifact and cannot be used to establish stable-package upgrade behavior. No physical upgrade, restore, low-storage, lifecycle or process-termination result is claimed.

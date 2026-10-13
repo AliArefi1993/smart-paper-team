@@ -4,9 +4,10 @@ Task documents preserve the intent and verification context of meaningful work s
 
 ## Active Follow-ups
 
+- [Idea Space connected-thoughts refactor](2026-10-07-idea-space-connected-thoughts-refactor.md): ready design; browser QA in progress, not shipped.
 - [Sequential backlog clearance](2026-10-12-backlog-clearance.md): authorized queue and handoff state for readiness-first work.
 - [Android data safety on a real phone](2026-10-08-android-data-safety-validation.md): broader upgrade, restore and failure-recovery checks remain; the discovered template Merge issue is already fixed and released.
-- [Data-safety phone matrix](2026-10-08-data-safety-phone-matrix.md): prepared cases awaiting physical-device execution.
+- [Data-safety phone matrix](2026-10-08-data-safety-phone-matrix.md): prepared cases awaiting physical-device execution; current stable APK is the 2026.10.21/code 38 published reference, not claimed installed.
 
 Many completed implementation and review records also retain phone, native Android, or TalkBack follow-ups. Their completed source, browser, design, or release work does not certify device validation; see each record's Outcome / Handoff and [STATUS.md](../STATUS.md).
 
@@ -16,16 +17,16 @@ These records preserve candidate work, not an approved sequence. Use [ROADMAP.md
 
 - [Android accessibility and Persian usability](2026-10-08-accessibility-persian-phone-review.md)
 - [Android notifications review](2026-10-08-android-notification-review.md)
-- [Idea Space connected-thoughts refactor](2026-10-07-idea-space-connected-thoughts-refactor.md)
 - [Local problem reporting and optional diagnostics](2026-10-07-local-feedback-diagnostics.md)
-- [Microsoft Clarity evaluation](2026-10-10-microsoft-clarity-evaluation.md)
-- [Periodic team reviews](2026-10-08-periodic-team-reviews.md)
 
 ## Cancelled
 
 - [Timer optional and hidden by default](2026-10-07-timer-optional-default-hidden.md) — cancelled on 2026-10-12; keep Timer available by default.
 
 ## Completed / Assessed
+
+- [Microsoft Clarity evaluation](2026-10-10-microsoft-clarity-evaluation.md): current Android diagnostic adoption rejected; conditional pilot deferred and unexecuted under [D-018](../docs/decisions.md).
+- [Periodic team reviews](2026-10-08-periodic-team-reviews.md): manual checkpoint policy adopted; first baseline remains due at the next normal work boundary.
 
 - [Finance change PIN](2026-10-09-finance-change-pin.md): shipped in Android 2026.10.21; independent artifact Security and public APK verification passed. Native/direct credential-entry follow-ups remain.
 - [Finance visible by default](2026-10-13-finance-default-visible.md): shipped in Android 2026.10.21; saved visibility preferences remain authoritative.

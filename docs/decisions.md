@@ -107,6 +107,12 @@ The initial-default portion is superseded by D-016 on 2026-10-13; the independen
 - **Decision (2026-10-13):** Store a dedicated salted verifier; only an absent credential uses the legacy PIN. Current-PIN verification, serialized atomic replacement and immediate protected-session revocation are required. Malformed/unreadable credentials fail closed.
 - **Consequence:** JSON contains records, never the credential; import preserves the destination PIN. No forgotten-PIN default bypass or destructive reset is offered. The existing full JSON backup/import remains PIN-gated and the limitation is disclosed before change. Supported OS transfer may copy the verifier but cannot restore a memory unlock. This remains a screen lock, not encryption. See [scope](../design/2026-10-13-finance-pin-product.md) and [implementation task](../tasks/2026-10-09-finance-change-pin.md).
 
+### D-018 — Reject automatic hosted Android diagnostics
+
+- **Decision (2026-10-13):** Reject automatic hosted telemetry or session replay for the Android diagnostic/reporting scope under the current offline/local-only reporting boundary. Any separately scoped diagnostic capture stays on-device, and sharing a reviewed report requires deliberate user action. The Clarity SDK/pilot is not adopted.
+- **Why:** There is no evidence that hosted replay is needed to address the current reporting problem, and automatic upload conflicts with the intended local-first diagnostic flow.
+- **Consequence:** This decision is specific to app diagnostics; it is not a general prohibition on unrelated hosted services. Reconsider hosted diagnostics only through an explicit Product decision with reviewed privacy, consent, retention, security and offline behavior. The conditional Clarity pilot remains unexecuted. See [evaluation](clarity-evaluation.md) and [local reporting task](../tasks/2026-10-07-local-feedback-diagnostics.md).
+
 ## Adding Or Changing A Decision
 
 Add an entry only when the choice is costly to reverse, crosses repository boundaries, defines a product constraint, or is likely to be debated again. Include the decision, reason, and practical consequence. If superseded, keep the old entry and point it to the replacement.
