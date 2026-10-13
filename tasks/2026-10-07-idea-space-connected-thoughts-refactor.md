@@ -1,6 +1,6 @@
 # Task: Refactor Idea Space around connected thoughts
 
-Status: browser QA in progress; not shipped
+Status: signed artifact accepted; public release verification pending
 Created: 2026-10-07
 Updated: 2026-10-13
 
@@ -19,11 +19,11 @@ Make relationships between saved thoughts understandable and easy to navigate. T
 
 - [x] Product records source-derived branch examples and synthetic bilingual fixtures; scope is existing origin/branch lineage. Independent-note associations remain Needs confirmation, with no research or maintainer example claimed.
 - [x] Review existing branching behavior and distinguish branch lineage from relationships between independently saved thoughts.
-- [ ] Users can recognize and navigate the agreed relationships between thoughts through a tested, understandable interaction.
+- [x] Users can recognize and navigate the agreed relationships between thoughts through a tested, understandable interaction.
 - [x] Product recommends direct origin/branch viewing using existing records. Explicit linking is unsupported for this cycle; no graph assumed. The maintainer chose existing branches first, and the Designer accepted the interaction handoff.
-- [ ] Preserve saved notes, existing branch relationships, search, writing/draft recovery and local backup/restore through the refactor.
+- [x] Preserve saved notes, existing branch relationships, search, writing/draft recovery and local backup/restore through the refactor.
 - [x] Product specifies unchanged schema/draft contracts and edit/deletion/import compatibility, including missing origins, duplicate IDs and cycles; implementation must verify preservation.
-- [ ] Keep capture and retrieval usable offline; evaluate connected and unconnected notes, empty states and longer English/Persian writing.
+- [x] Keep capture and retrieval usable offline; evaluate connected and unconnected notes, empty states and longer English/Persian writing.
 - [x] Relevant English/Persian and accessibility states are covered by a ready Designer handoff and editable studio stories before frontend implementation.
 - [ ] Relevant automated checks, independent review, documentation and validated Android release workflow are completed when implemented.
 
@@ -49,7 +49,13 @@ Make relationships between saved thoughts understandable and easy to navigate. T
 | Personal systems | Read-only report from `ideas_personal_scope` | Incorporated; direct lineage recommended, independent links unsupported |
 | Designer handoff | [Bilingual editable stories and rendered evidence](../design/2026-10-13-ideas-relationships.md) | Ready for implementation; reviewed EN/FA, Light/Dark, phone/wide, landscape and key draft/relationship states |
 | Physical device | Samsung A15 / Android 16; Mac USB host inventory | Host detects no attached device; cable/port and wireless preparation pending; no device QA run |
-| Frontend implementation checks | Owning repository and approved acceptance criteria | Pending; no app behavior is claimed |
+| Frontend implementation checks | Frontend `c489284d9483d6d2a05004d429ee50b08ca9c186`; Docker focused tests, lint, types and local-data production build | 22 focused tests passed; lint/types/build/diff passed. No schema, credential or backend change |
+| Exact-source hosted CI | [Verification run 38355977518](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38355977518), exact frontend SHA `c489284d9483d6d2a05004d429ee50b08ca9c186` | Lint, type check, tests, local-data production build, isolated verification APK and artifact verification all passed |
+| Protected stable build | [Run 38356495797](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38356495797), Android 2026.10.22/code39 | Secret-free unsigned build and approved protected signing passed; final APK SHA-256 `7d1d4091b4e339f775514f7ed4058463b0ccf08c40d054676aeaf090ab18cd89`; `SHA256SUMS` passes. Independent final artifact Security accepted |
+| Independent final artifact Security | Candidate artifact `11793435373`; final artifact `11806519607` | Accepted: pinned stable v2/v3 signer, app/version/non-debug identity, 557 unchanged payload entries plus signature records, and all 113 web assets verified |
+| Independent review | Correctness, QA and source Security; final Designer app matrix | Accepted after confirmation-time freshness, notes-only retry and daily-context regressions were fixed and tested; no actionable finding remains |
+| Actual browser behavior | Final local build; child → origin outside search → other child → Escape/Back/Return | Exact new/recovered raw draft and query preserved; heading/entry focus and short-view keyboard confinement observed. Main EN/FA phone/wide Light/Dark matrix accepted |
+| Browser limits | Native discard dialog, injected storage fault/deletion, detached trigger fallback and daily entry | Not browser-tested; focused handler/source tests cover these paths. Physical Android/TalkBack remain unverified |
 
 ## Decisions And Risks
 
@@ -60,4 +66,4 @@ Make relationships between saved thoughts understandable and easy to navigate. T
 
 ## Outcome / Handoff
 
-Product scope and the Designer handoff are complete; the handoff is ready for implementation under the lead’s current backlog direction. The maintainer selected existing branches first. Frontend implementation, focused relationship/draft/import checks, independent reviews and existing release gates remain pending. No application behavior or physical-device QA is claimed; the available Samsung A15 is not yet detected by the Mac host while cable/port and wireless preparation are unresolved.
+Product, ready Designer, implementation, exact-source CI, protected signing and independent source/final-artifact reviews are accepted at frontend `c489284d9483d6d2a05004d429ee50b08ca9c186`. Android 2026.10.22/code39 signed artifact is accepted; public release verification remains pending. No physical-device result is claimed: Samsung A15/Android 16 has no charging indication and the Mac detects no attached USB device; the Mac uses the phone hotspot. Native checks await a working connection or maintainer manual execution.

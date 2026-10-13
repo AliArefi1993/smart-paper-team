@@ -19,9 +19,11 @@ Updated: 2026-10-13. Keep this file short and update it when user-visible featur
 - Import a JSON backup by merge or replace.
 - Set an optional morning plan notification and explicitly save validated Settings from the header or end of the form.
 - Run focus and rest countdowns with configurable lengths, warm natural sand and visible falling grains; pause freezes the grains and reduced motion suppresses them. A session stays accurate after navigation or app suspension.
-- Capture freeform ideas, expand optional writing sparks when wanted, revisit an older thought each day, branch from notes, and search or edit them. Notes are included in JSON backups. Contextual new/edit/branch drafts recover separately, protect dirty writing, and retain missing/changed-source writing with Keep as new thought. Drafts are excluded from backups.
+- Capture freeform ideas, expand optional writing sparks, revisit an older thought each day, and search or edit saved notes. Read a thought in full and follow its original thought or direct branches while retaining unfinished writing, search and return context. Notes are included in JSON backups. Contextual new/edit/branch drafts recover separately, protect dirty writing, and retain missing/changed-source writing with Keep as new thought. Drafts are excluded from backups.
 
 ## Recent completed work
+
+- Accepted Idea Space origin/branch reading for Android 2026.10.22/code39. Exact-source CI, protected signing and independent final artifact review passed; public release verification remains pending. See the [task](tasks/2026-10-07-idea-space-connected-thoughts-refactor.md).
 
 - Shipped Finance PIN change and the visible Finance default in [Android 2026.10.21](releases/smart-paper-v2026.10.21.md). The stable artifact passed independent Security review and public byte/hash verification; actual credential UI completion, native lifecycle and TalkBack remain follow-ups.
 
