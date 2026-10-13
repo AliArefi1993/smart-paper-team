@@ -37,6 +37,7 @@ Do not preload every project document. Load context according to the task:
    - continuing meaningful multi-step work: the relevant file under `tasks/`
    - product discovery or visual design: the relevant skill under `skills/` and files under `design/`
    - release or Android packaging: `docs/release-workflow.md`, `releases/NEXT.md`, and the latest relevant release record
+   - manual cross-app QA/discovery/maintenance checkpoint: `docs/periodic-reviews.md` and its [tracking task](tasks/2026-10-08-periodic-team-reviews.md); due checkpoints guide bounded review and do not add a release gate
    - implementation: the owning repository's `AGENTS.md`, then the relevant code and tests
 4. Use `rg` and narrow file reads before opening large files. Treat code and migrations as authoritative for implementation details.
 

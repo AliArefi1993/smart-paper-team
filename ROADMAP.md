@@ -25,7 +25,7 @@ Open Android evidence remains follow-up work, not blanket release gates:
 ## Later
 
 - Review project feedback/diagnostics and analytics policy before considering any implementation: [local problem reporting](tasks/2026-10-07-local-feedback-diagnostics.md) and [Clarity evaluation](tasks/2026-10-10-microsoft-clarity-evaluation.md). No hosted telemetry or automatic uploads are adopted.
-- [Periodic team reviews](tasks/2026-10-08-periodic-team-reviews.md) remain a prepared proposal; use only if they help maintain the project without adding process overhead.
+- [Periodic team reviews](tasks/2026-10-08-periodic-team-reviews.md) have an adopted manual policy in [docs/periodic-reviews.md](docs/periodic-reviews.md); run the first baseline checkpoint at the next normal work boundary. Device connection preparation remains pending for the available Samsung A15 (Android 16).
 - Validate week-template usage after release and consider daily/section-level defaults only if observed use supports them.
 - Improve configurable-section UX only when actual use shows a problem; review active slots, hidden slots with saved data, and optional separate English/Persian labels.
 - Add frontend integration coverage for primary user flows and configurable-section wiring where risk review supports it; current storage checks do not establish browser or native behavior.
