@@ -24,6 +24,8 @@ Updated: 2026-10-13. Keep this file short and update it when user-visible featur
 
 ## Recent completed work
 
+- Shipped local reporting/diagnostics in [Android 2026.10.23](releases/smart-paper-v2026.10.23.md): separate disclosed ON local defaults, preserved OFF choices, inspect/delete, independent optional evidence, exact preview and deliberate email/copy. Docker/hosted checks, bilingual runtime QA/Designer, independent APK Security and anonymous public byte/hash verification passed; native email delivery and TalkBack remain follow-ups.
+
 - Shipped Idea Space origin/branch reading in [Android 2026.10.22](releases/smart-paper-v2026.10.22.md). Exact-source CI, protected signing, independent final artifact review and public byte/hash verification passed; physical Android and TalkBack remain unverified. See the [task](tasks/2026-10-07-idea-space-connected-thoughts-refactor.md).
 
 - Shipped Finance PIN change and the visible Finance default in [Android 2026.10.21](releases/smart-paper-v2026.10.21.md). The stable artifact passed independent Security review and public byte/hash verification; actual credential UI completion, native lifecycle and TalkBack remain follow-ups.

@@ -4,7 +4,6 @@ Task documents preserve the intent and verification context of meaningful work s
 
 ## Active Follow-ups
 
-- [Local problem reporting and optional diagnostics](2026-10-07-local-feedback-diagnostics.md): Product scope accepted; bilingual Designer handoff in progress, then implementation and validation. Local switches default ON; deliberate support email with independently optional attachments.
 
 - [Idea Space connected-thoughts refactor](2026-10-07-idea-space-connected-thoughts-refactor.md): ready design; browser QA in progress, not shipped.
 - [Sequential backlog clearance](2026-10-12-backlog-clearance.md): authorized queue and handoff state for readiness-first work.
@@ -25,6 +24,8 @@ These records preserve candidate work, not an approved sequence. Use [ROADMAP.md
 - [Timer optional and hidden by default](2026-10-07-timer-optional-default-hidden.md) — cancelled on 2026-10-12; keep Timer available by default.
 
 ## Completed / Assessed
+
+- [Local problem reporting and diagnostics](2026-10-07-local-feedback-diagnostics.md): shipped in Android 2026.10.23; independent final APK Security and public byte/hash verification passed; native follow-ups remain.
 
 - [Microsoft Clarity evaluation](2026-10-10-microsoft-clarity-evaluation.md): current Android diagnostic adoption rejected; conditional pilot deferred and unexecuted under [D-018](../docs/decisions.md).
 - [Periodic team reviews](2026-10-08-periodic-team-reviews.md): manual checkpoint policy adopted; first baseline remains due at the next normal work boundary.

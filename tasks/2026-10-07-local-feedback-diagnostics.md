@@ -1,6 +1,6 @@
 # Task: Local problem reporting and optional diagnostics
 
-Status: implementation accepted; exact-source CI and Android release gates in progress
+Status: completed; Android 2026.10.23 published and publicly verified
 Created: 2026-10-07
 Updated: 2026-10-13
 
@@ -12,7 +12,7 @@ Give Android users an easy-to-reach way to report a problem directly. Separate e
 
 - Roadmap: [Now](../ROADMAP.md#now).
 - Owning implementation repository: `smart-paper-front/`; task memory belongs to the coordination repository.
-- Current product: [PRODUCT.md](../PRODUCT.md). Implementation is in the working tree; this capability is not yet released.
+- Current product: [PRODUCT.md](../PRODUCT.md). Shipped in Android 2026.10.23/code40.
 
 ## Acceptance Criteria
 
@@ -26,7 +26,7 @@ Give Android users an easy-to-reach way to report a problem directly. Separate e
 - [x] No server, telemetry service or automatic network upload is used. Recording remains offline and does not delay normal interactions or compromise primary-data saving.
 - [x] Capture JS runtime/known operation failures best-effort and explain limitations. Separate source/API feasibility assessment is recorded in the Product brief: no native crash integration exists; no native crash SDK/handler is added this cycle. Sudden native crashes/process termination may leave incomplete or no diagnostics; never promise full crash coverage.
 - [x] English/Persian and accessibility states are designed and validated; cancellation sends nothing and preserves primary app data.
-- [ ] Relevant automated checks, independent review, documentation and Android release workflow are completed when implemented.
+- [x] Relevant automated checks, independent review, documentation and Android release workflow are completed when implemented.
 
 ## Non-Goals
 
@@ -57,6 +57,8 @@ Give Android users an easy-to-reach way to report a problem directly. Separate e
 | Runtime QA/Designer | [Synthetic evidence](../docs/evidence/2026-10-13-local-diagnostics/README.md) and ready handoff | Accepted: EN/FA phone/wide/dark/landscape, disclosure/OFF/restart, report/preview/copy, delete/failure/privacy, parent draft/focus preservation |
 | Close regressions | Ten rapid double-Escape cycles plus unexpected dialog-close recovery | Passed after fixing native CloseWatcher bypass; deliberate discard/empty close remain closed |
 | Hosted exact-source CI | [Run 38441610985](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38441610985), frontend `b5d0b6ddbb1807d3783a90bd119c37b00bb64029` | Passed |
+| Hosted signing/artifact Security | Run38442339521, exact b5d0b6d; independent candidate/final APK review | Passed; pinned v2/v3 cert, stable identity/code40, 556 unchanged payload entries, 112 web assets, logging disabled and compiled email guards |
+| Publication | [Run38449040776](https://github.com/AliArefi1993/smart-paper-team/actions/runs/38449040776), public asset637924903 | Published; anonymous 4,409,696-byte download matches committed APK byte-for-byte and SHA-256 |
 | Static checks | Root/frontend `git diff --check` | Passed; does not establish app correctness |
 
 ## Decisions And Risks
@@ -69,8 +71,8 @@ Give Android users an easy-to-reach way to report a problem directly. Separate e
 
 ## Outcome / Handoff
 
-Implementation and browser acceptance are complete in frontend `b5d0b6ddbb1807d3783a90bd119c37b00bb64029`, committed and pushed with Android version40/name `2026.10.23`. Product accepted the user-directed ON local defaults and optional reviewed email flow; Designer accepted eleven runtime screenshots, and independent QA/Security accepted the corrected final source. Known-operation/runtime capture, bounded separate storage, independent controls, inspect/delete, exact preview/copy and native fixed-recipient email are implemented. Raw bridge logging is disabled. QA found rapid Escape bypass of the discard prompt, fixed with keyboard prevention and controlled close recovery; native URI construction was also corrected to preserve the recipient and encoded body. [Android's URI builder source](https://android.googlesource.com/platform/frameworks/base/+/5064fddf81e477a90c81d72f7328aa5887c67511/core/java/android/net/Uri.java) shows that query appending clears an opaque URI's recipient-bearing part.
+Shipped in [Android 2026.10.23](../releases/smart-paper-v2026.10.23.md), code40, frontend `b5d0b6ddbb1807d3783a90bd119c37b00bb64029`. Product and Designer accepted disclosed separate ON defaults with preserved OFF choices, bounded local-only recording, inspection/deletion, optional unchecked evidence, exact preview and deliberate email/copy. Independent QA/source/candidate/signed APK Security and all automated gates passed. Public APK asset637924903 matches the committed 4,409,696-byte signed artifact, SHA-256 `a3d49e0e08c916f61260a4d4cfc869c429076780f89f6ce931c14d738dfa17c6`. No backend or JSON schema5 change.
 
-Docker-only checks passed: 158 full tests, final 24 focused tests, lint with no warnings, types and local-data build; [durable synthetic runtime evidence](../docs/evidence/2026-10-13-local-diagnostics/README.md) preserves privacy, failure, consent and close checks. Actual email/clipboard delivery, physical Android lifecycle and TalkBack remain unverified; no real email was opened or sent in QA. JSON schema5 and backend `68c789b` remain unchanged.
+QA's rapid-Escape discard bypass was fixed and passed ten rapid cycles plus forced-close recovery. Native email preserves the fixed recipient and encoded subject/body; bridge logging is disabled. [Sanitized runtime evidence](../docs/evidence/2026-10-13-local-diagnostics/README.md) and the ready Designer handoff preserve bounded browser checks. No real email or system clipboard was used in QA.
 
-Next: exact-source CI passed. Protected stable build run38442339521 completed the unsigned candidate at the exact source; independent candidate review is in progress before signing approval, followed by final signed APK/publication gates. Do not mark shipped before final signed artifact and public download verification. Lead owns durable product/architecture/database/task/status updates; routine owns scoped release commit/tag/push and verified task process cleanup. Root docs remain uncommitted until the release record/artifact are ready. Unrelated containers and all volumes are preserved.
+Remaining follow-ups: physical Android email handler/body delivery, lifecycle/keyboard, upgrade/data retention and TalkBack; sudden native/startup failures may leave no record. Run the adopted bounded manual baseline at the next normal work boundary. Routine owns final scoped documentation/notes synchronization and verified task process cleanup; preserve unrelated containers and all volumes. No further implementation or release gate remains for this task.
