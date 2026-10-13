@@ -2,7 +2,7 @@
 
 Date: 2026-10-13
 
-Status: Signed artifact and independent final review accepted; public release verification pending.
+Status: Published; anonymous public APK download matches the exact independently accepted signed artifact.
 
 ## Scope
 
@@ -13,7 +13,7 @@ Status: Signed artifact and independent final review accepted; public release ve
 
 | Repository | Tag | Commit | Notes |
 | --- | --- | --- | --- |
-| team root | `smart-paper-v2026.10.22` | Pending first release commit | Release docs, exact APK and provenance |
+| team root | `smart-paper-v2026.10.22` | `202477902221c1679e28ba9aff5d54146ee16b05` | Release docs, exact APK and provenance |
 | backend `smart-paper/` | `smart-paper-v2026.10.22` | `68c789b707239ef5451f98f7f6ce49d7c9b8a8c2` | Unchanged; backend remains paused |
 | frontend `smart-paper-front/` | `smart-paper-v2026.10.22` | `c489284d9483d6d2a05004d429ee50b08ca9c186` | Exact source used by CI and protected stable signing |
 
@@ -46,7 +46,7 @@ Idea Space makes a saved thought and its existing origin/branch lineage easier t
 
 ## Publication
 
-Pending: create and push the annotated frontend and unchanged-backend tags, then the team tag last. Verify the published GitHub release and anonymously downloaded APK against the committed bytes and checksum, then update this record and GitHub release notes with the verified publication facts.
+Annotated frontend tag points to `c489284d9483d6d2a05004d429ee50b08ca9c186`; annotated unchanged-backend tag points to `68c789b707239ef5451f98f7f6ce49d7c9b8a8c2`; annotated team tag points to `202477902221c1679e28ba9aff5d54146ee16b05`. Publisher workflow [38389716149](https://github.com/AliArefi1993/smart-paper-team/actions/runs/38389716149) succeeded. The public non-draft, non-prerelease release is [smart-paper-v2026.10.22](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.22). Anonymous asset `636806775` (`SmartPaper-local-2026.10.22-release.apk`) is 4,393,408 bytes; its SHA-256 is `7d1d4091b4e339f775514f7ed4058463b0ccf08c40d054676aeaf090ab18cd89`, matching the committed APK byte-for-byte.
 
 ## Known Follow-Ups
 

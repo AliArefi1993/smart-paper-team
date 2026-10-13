@@ -1,6 +1,6 @@
 # Task: Refactor Idea Space around connected thoughts
 
-Status: signed artifact accepted; public release verification pending
+Status: complete — shipped in Android 2026.10.22/code39
 Created: 2026-10-07
 Updated: 2026-10-13
 
@@ -25,7 +25,7 @@ Make relationships between saved thoughts understandable and easy to navigate. T
 - [x] Product specifies unchanged schema/draft contracts and edit/deletion/import compatibility, including missing origins, duplicate IDs and cycles; implementation must verify preservation.
 - [x] Keep capture and retrieval usable offline; evaluate connected and unconnected notes, empty states and longer English/Persian writing.
 - [x] Relevant English/Persian and accessibility states are covered by a ready Designer handoff and editable studio stories before frontend implementation.
-- [ ] Relevant automated checks, independent review, documentation and validated Android release workflow are completed when implemented.
+- [x] Relevant automated checks, independent review, documentation and validated Android release workflow are completed when implemented.
 
 ## Non-Goals
 
@@ -53,6 +53,7 @@ Make relationships between saved thoughts understandable and easy to navigate. T
 | Exact-source hosted CI | [Verification run 38355977518](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38355977518), exact frontend SHA `c489284d9483d6d2a05004d429ee50b08ca9c186` | Lint, type check, tests, local-data production build, isolated verification APK and artifact verification all passed |
 | Protected stable build | [Run 38356495797](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38356495797), Android 2026.10.22/code39 | Secret-free unsigned build and approved protected signing passed; final APK SHA-256 `7d1d4091b4e339f775514f7ed4058463b0ccf08c40d054676aeaf090ab18cd89`; `SHA256SUMS` passes. Independent final artifact Security accepted |
 | Independent final artifact Security | Candidate artifact `11793435373`; final artifact `11806519607` | Accepted: pinned stable v2/v3 signer, app/version/non-debug identity, 557 unchanged payload entries plus signature records, and all 113 web assets verified |
+| Public release | [Publisher run 38389716149](https://github.com/AliArefi1993/smart-paper-team/actions/runs/38389716149); [release](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.22); anonymous asset `636806775` | Non-draft, non-prerelease release published. Anonymous APK SHA-256 `7d1d4091b4e339f775514f7ed4058463b0ccf08c40d054676aeaf090ab18cd89` matches committed bytes |
 | Independent review | Correctness, QA and source Security; final Designer app matrix | Accepted after confirmation-time freshness, notes-only retry and daily-context regressions were fixed and tested; no actionable finding remains |
 | Actual browser behavior | Final local build; child → origin outside search → other child → Escape/Back/Return | Exact new/recovered raw draft and query preserved; heading/entry focus and short-view keyboard confinement observed. Main EN/FA phone/wide Light/Dark matrix accepted |
 | Browser limits | Native discard dialog, injected storage fault/deletion, detached trigger fallback and daily entry | Not browser-tested; focused handler/source tests cover these paths. Physical Android/TalkBack remain unverified |
@@ -66,4 +67,4 @@ Make relationships between saved thoughts understandable and easy to navigate. T
 
 ## Outcome / Handoff
 
-Product, ready Designer, implementation, exact-source CI, protected signing and independent source/final-artifact reviews are accepted at frontend `c489284d9483d6d2a05004d429ee50b08ca9c186`. Android 2026.10.22/code39 signed artifact is accepted; public release verification remains pending. No physical-device result is claimed: Samsung A15/Android 16 has no charging indication and the Mac detects no attached USB device; the Mac uses the phone hotspot. Native checks await a working connection or maintainer manual execution.
+Product, ready Designer, implementation, exact-source CI, protected signing, independent source/final-artifact reviews and public APK verification are complete at frontend `c489284d9483d6d2a05004d429ee50b08ca9c186`. Android 2026.10.22/code39 is published; see the [release record](../releases/smart-paper-v2026.10.22.md). No physical-device result is claimed: Samsung A15/Android 16 has no charging indication and the Mac detects no attached USB device; the Mac uses the phone hotspot. Native checks await a working connection or maintainer manual execution.

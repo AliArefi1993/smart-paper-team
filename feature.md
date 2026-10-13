@@ -23,7 +23,7 @@ Updated: 2026-10-13. Keep this file short and update it when user-visible featur
 
 ## Recent completed work
 
-- Accepted Idea Space origin/branch reading for Android 2026.10.22/code39. Exact-source CI, protected signing and independent final artifact review passed; public release verification remains pending. See the [task](tasks/2026-10-07-idea-space-connected-thoughts-refactor.md).
+- Shipped Idea Space origin/branch reading in [Android 2026.10.22](releases/smart-paper-v2026.10.22.md). Exact-source CI, protected signing, independent final artifact review and public byte/hash verification passed; physical Android and TalkBack remain unverified. See the [task](tasks/2026-10-07-idea-space-connected-thoughts-refactor.md).
 
 - Shipped Finance PIN change and the visible Finance default in [Android 2026.10.21](releases/smart-paper-v2026.10.21.md). The stable artifact passed independent Security review and public byte/hash verification; actual credential UI completion, native lifecycle and TalkBack remain follow-ups.
 
