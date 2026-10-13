@@ -1,6 +1,6 @@
 # Manual QA, Discovery And Maintenance Checkpoints
 
-Status: adopted manual trial, 2026-10-13. Maintainer decision: “Adopt manual checkpoints.” Policy definition is complete; no checkpoint execution is claimed. Scheduled jobs, skill installations and release-cadence changes are outside this decision.
+Status: adopted manual trial, 2026-10-13. Maintainer decision: “Adopt manual checkpoints.” Policy definition is complete. The [first baseline checkpoint](../tasks/2026-10-13-manual-baseline-checkpoint.md) records selected execution evidence and remaining limits. Scheduled jobs, skill installations and release-cadence changes are outside this decision.
 
 ## Problem, Evidence And Outcome
 
@@ -56,4 +56,4 @@ Keep one compact block in the relevant task; put only an active material risk/ne
 
 Success signals for the trial: a session can recognize due work from that block; selected QA has explicit evidence and native limits; any proposal traces to evidence and a bounded next decision; repeated evidence is reused correctly; the checkpoint stays within its cap and adds no release gate. After two checkpoints, lead/maintainer may keep, revise or discontinue the cues using recorded useful findings and effort. No telemetry or guaranteed token/defect reduction target.
 
-**Adopted decision:** manual baseline at the next normal work boundary, then five app-change batches/30 active app-work days, a 30-minute/two-workstream cap and one shared checkpoint with at most three ranked proposals. No scheduled automation, installation, additional release gate or publication-cadence change. Next action is the first baseline checkpoint; actual QA/research/maintenance evidence remains pending until executed.
+**Adopted decision:** manual baseline at the next normal work boundary, then five app-change batches/30 active app-work days, a 30-minute/two-workstream cap and one shared checkpoint with at most three ranked proposals. No scheduled automation, installation, additional release gate or publication-cadence change. The [first baseline checkpoint](../tasks/2026-10-13-manual-baseline-checkpoint.md) records actual selected QA/maintenance evidence; deferred native/performance coverage remains explicit. Research and skill installation were skipped without a concrete need.
