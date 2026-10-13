@@ -1,6 +1,6 @@
 # Task: Give users a place to change the Finance PIN
 
-Status: implemented and accepted by source Security, QA, final Designer and independent artifact Security; publication pending
+Status: complete; Android 2026.10.21 published and anonymous public APK checksum verified
 Created: 2026-10-09
 Updated: 2026-10-13
 
@@ -21,13 +21,13 @@ Give users a clear, discoverable place to change the Finance password/PIN when t
 ## Acceptance Criteria
 
 - [x] Inspect current PIN setup, default, storage and change behavior; reuse or improve an existing flow if present.
-- [ ] Users can discover a Change Finance PIN action in an appropriate settings or Finance location chosen by Designer.
-- [ ] Changing the PIN requires verifying the current PIN, entering a valid new PIN and confirming it; incorrect current PIN, mismatch and save failure have clear feedback.
-- [ ] Successful changes persist after restart: the new PIN unlocks Finance and the previous PIN no longer does. Cancellation or failed persistence leaves the previous PIN usable.
-- [ ] Finance records remain unchanged, and session handling after a PIN change is explicitly defined and verified.
+- [x] Users can discover a Change Finance PIN action in an appropriate settings or Finance location chosen by Designer.
+- [x] Changing the PIN requires verifying the current PIN, entering a valid new PIN and confirming it; incorrect current PIN, mismatch and save failure have clear feedback.
+- [x] Successful changes persist after restart: the new PIN unlocks Finance and the previous PIN no longer does. Cancellation or failed persistence leaves the previous PIN usable.
+- [x] Finance records remain unchanged, and session handling after a PIN change is explicitly defined and verified.
 - [x] Define forgotten-PIN and backup/import behavior before implementation without silently deleting records or introducing a default-PIN bypass.
 - [x] Designer saves a ready bilingual handoff and editable studio states; messages accurately describe the local PIN as a screen lock rather than data encryption.
-- [ ] Relevant tests and independent Security/QA review pass, documentation is updated, and implemented changes follow the validated Android release workflow.
+- [x] Relevant tests and independent Security/QA review pass, documentation is updated, and implemented changes follow the validated Android release workflow.
 
 ## Non-Goals
 
@@ -56,11 +56,11 @@ Give users a clear, discoverable place to change the Finance password/PIN when t
 | Actual built browser | Fresh visible default, saved-hidden clean reload, hidden PIN access, empty-current validation/focus, Cancel retains Settings draft, EN/FA Light/Dark phone/wide/landscape, direct fragment and locked Finance/report defaults | Passed; actual credential replacement and native behavior not claimed |
 | Protected stable build | Run `38334700023` on exact source `4a6736df8d98770ab608334583d1ba8a5ac1403d`, Android code38/name `2026.10.21`; candidate artifact `11784845532`, final artifact `11786651262` | Passed; final artifact retained for independent Security review |
 | Final artifact Security | Exact APK/provenance, stable identity, 557 payload entries and 113 assets | Accepted; no finding |
-| Publication | Release tag and anonymous public APK download | Pending |
+| Publication | Annotated frontend/backend/team tags, publisher run `38341157085`, public asset `635744418` (4,389,312 bytes, SHA-256 `5866485c0a266e6ecca1485c7d3cd4e870e888ce3c4ad4100fc0bef9675ece69`) | Passed; public release is non-draft/non-prerelease and anonymous download matches committed APK byte-for-byte |
 
 ## Decisions And Risks
 
-- Design: final Designer accepted. Source Security and QA accepted; independent final artifact Security review remains required before publication.
+- Design: final Designer accepted. Source Security, QA and independent final artifact Security accepted; native and direct credential-entry checks remain unverified follow-ups.
 - Recommended boundary: separate persisted local credential; only missing credential uses legacy default; malformed/unreadable state fails closed. JSON Merge/Replace retain the receiving-device PIN and never restore a credential. No in-app forgotten-PIN recovery or silent data deletion. Product and lead accepted the scope; implementation must verify these behaviors.
 - Existing full JSON backup/import also require the PIN, including Planner/Ideas records. This consequence must be disclosed before replacement; backups contain records, not the credential. The brief makes this consequence explicit for the bounded cycle.
 - Successful persisted change immediately relocks all protected consumers and invalidates stale work; cancelled/failed atomic write retains prior credential/records. Use one atomic versioned salted-verifier key and safe concurrency handling; Security reviews the implemented derivation parameters and contract.
@@ -70,4 +70,4 @@ Give users a clear, discoverable place to change the Finance password/PIN when t
 
 Implemented the independent Settings PIN action, strict dedicated salted verifier, absent-only exact legacy compatibility, 4–12 digit cross-script normalization, Web Locks serialization and single-write commit. Successful changes synchronously revoke credential-bound Finance/Export/report access and pending work; cancellation, validation and write failure preserve the old credential and records. JSON import retains destination credentials and no forgotten-PIN bypass is added. The maintainer’s default-visible amendment preserves stored choices and report Finance exclusion.
 
-Source Security and QA accepted after the queued-save feedback fix. Fresh 119-test validation plus 24 focused final-amendment tests/lint/types/local build passed. Exact-source CI `38334342301` passed 121 tests, lint, types, local-data build and verification packaging at frontend `4a6736df8d98770ab608334583d1ba8a5ac1403d`. Actual browser checked default/reload/preferences, PIN entry/empty validation/Cancel, independent Settings drafts, direct fragment and bilingual layouts. New credentials were not entered or committed through browser automation; synthetic automated credential tests support the persistence/security acceptance. Actual credential UI interaction, native Web Locks, two actual windows, OS transfer, installation/upgrade, keyboard/lifecycle and TalkBack remain unverified follow-ups. The final Dark status-color correction passed lint/types/local build and actual EN/FA Cancel captures; Designer accepted the final PIN and default-visible states. Protected stable run `38334700023` succeeded, and independent artifact Security accepted the exact signed APK/provenance with no finding. Publication and public checksum verification remain pending.
+Source Security and QA accepted after the queued-save feedback fix. Fresh 119-test validation plus 24 focused final-amendment tests/lint/types/local build passed. Exact-source CI `38334342301` passed 121 tests, lint, types, local-data build and verification packaging at frontend `4a6736df8d98770ab608334583d1ba8a5ac1403d`. Actual browser checked default/reload/preferences, PIN entry/empty validation/Cancel, independent Settings drafts, direct fragment and bilingual layouts. New credentials were not entered or committed through browser automation; synthetic automated credential tests support the persistence/security acceptance. Actual credential UI interaction, native Web Locks, two actual windows, OS transfer, installation/upgrade, keyboard/lifecycle and TalkBack remain unverified follow-ups. The final Dark status-color correction passed lint/types/local build and actual EN/FA Cancel captures; Designer accepted the final PIN and default-visible states. Protected stable run `38334700023` succeeded, independent artifact Security accepted the exact signed APK/provenance with no finding, and publisher run `38341157085` plus anonymous asset byte verification passed. Android 2026.10.21/code38 is shipped; native/credential-entry limits remain open.

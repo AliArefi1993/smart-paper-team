@@ -2,7 +2,7 @@
 
 Date: 2026-10-13
 
-Status: Independent final artifact Security accepted the signed APK; publication and anonymous checksum verification pending.
+Status: Published; anonymous public APK download matches the exact independently accepted signed artifact.
 
 ## Scope
 
@@ -15,7 +15,7 @@ Status: Independent final artifact Security accepted the signed APK; publication
 
 | Repository | Tag | Commit | Notes |
 | --- | --- | --- | --- |
-| team root | `smart-paper-v2026.10.21` | Pending | Create only after independent final artifact Security acceptance |
+| team root | `smart-paper-v2026.10.21` | `3e67c48fba36b43583e22ed8c78dae6de9e58493` | Release record and exact reviewed APK artifact |
 | backend `smart-paper/` | `smart-paper-v2026.10.21` | `68c789b707239ef5451f98f7f6ce49d7c9b8a8c2` | Unchanged; backend remains paused |
 | frontend `smart-paper-front/` | `smart-paper-v2026.10.21` | `4a6736df8d98770ab608334583d1ba8a5ac1403d` | Exact source used by CI and protected stable signing |
 
@@ -49,7 +49,7 @@ Finance can remain visible by default on a fresh install without changing an exi
 
 ## Publication
 
-Independent final artifact Security accepted the exact signed APK. Publication and anonymous public verification remain pending. Commit the exact APK and provenance with the release record, push scoped commits, create annotated frontend and unchanged-backend tags first and the team tag last, then verify the anonymous public APK bytes and update this record before syncing release notes.
+Annotated frontend tag points to `4a6736df8d98770ab608334583d1ba8a5ac1403d`; annotated unchanged-backend tag points to `68c789b707239ef5451f98f7f6ce49d7c9b8a8c2`; annotated team tag points to `3e67c48fba36b43583e22ed8c78dae6de9e58493`. Publisher workflow [38341157085](https://github.com/AliArefi1993/smart-paper-team/actions/runs/38341157085) succeeded. The public non-draft, non-prerelease release is [smart-paper-v2026.10.21](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.21). Anonymous asset `635744418` (`SmartPaper-local-2026.10.21-release.apk`) is 4,389,312 bytes; its SHA-256 is `5866485c0a266e6ecca1485c7d3cd4e870e888ce3c4ad4100fc0bef9675ece69`, matching the committed APK byte-for-byte.
 
 ## Known Follow-Ups
 

@@ -23,6 +23,8 @@ Updated: 2026-10-13. Keep this file short and update it when user-visible featur
 
 ## Recent completed work
 
+- Shipped Finance PIN change and the visible Finance default in [Android 2026.10.21](releases/smart-paper-v2026.10.21.md). The stable artifact passed independent Security review and public byte/hash verification; actual credential UI completion, native lifecycle and TalkBack remain follow-ups.
+
 - Shipped the viewed-week Planner AI report shortcut in [Android 2026.10.20](releases/smart-paper-v2026.10.20.md). The public APK matches the independently accepted signed artifact; native delivery, lifecycle, upgrade/data retention and TalkBack remain follow-ups.
 
 - Shipped optional Finance visibility in [Android 2026.10.19](releases/smart-paper-v2026.10.19.md): immediate separate Settings preference, safe saved-data upgrade, unchanged PIN/backup access and hidden-route recovery. Tests, bilingual browser/Designer review, Security, signed artifact and public APK verification passed; native device checks remain open.

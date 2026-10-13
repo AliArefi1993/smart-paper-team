@@ -4,7 +4,6 @@ Task documents preserve the intent and verification context of meaningful work s
 
 ## Active Follow-ups
 
-- [Finance change PIN](2026-10-09-finance-change-pin.md): Product scope and bilingual Designer handoff are ready; frontend implementation and independent Security/QA remain.
 - [Sequential backlog clearance](2026-10-12-backlog-clearance.md): authorized queue and handoff state for readiness-first work.
 - [Android data safety on a real phone](2026-10-08-android-data-safety-validation.md): broader upgrade, restore and failure-recovery checks remain; the discovered template Merge issue is already fixed and released.
 - [Data-safety phone matrix](2026-10-08-data-safety-phone-matrix.md): prepared cases awaiting physical-device execution.
@@ -27,6 +26,9 @@ These records preserve candidate work, not an approved sequence. Use [ROADMAP.md
 - [Timer optional and hidden by default](2026-10-07-timer-optional-default-hidden.md) — cancelled on 2026-10-12; keep Timer available by default.
 
 ## Completed / Assessed
+
+- [Finance change PIN](2026-10-09-finance-change-pin.md): shipped in Android 2026.10.21; independent artifact Security and public APK verification passed. Native/direct credential-entry follow-ups remain.
+- [Finance visible by default](2026-10-13-finance-default-visible.md): shipped in Android 2026.10.21; saved visibility preferences remain authoritative.
 
 - [Planner AI review shortcut](2026-10-07-planner-ai-review-shortcut.md): shipped in Android 2026.10.20; independent artifact Security and public APK verification passed.
 
