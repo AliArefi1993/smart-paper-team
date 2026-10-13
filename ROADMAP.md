@@ -8,7 +8,7 @@ This file is the source for future-work priority. Shipped behavior belongs in [f
 
 Focus on a useful, reliable Android app that works without internet. Prioritize observed issues affecting local data, task completion and bilingual phone use. Continue stable-signed APK publication after validated user-visible changes. No server is available; Django/backend and hosted-web work remain paused. Keep Timer available by default; the optional/hidden proposal was cancelled in [the task record](tasks/2026-10-07-timer-optional-default-hidden.md).
 
-The maintainer-requested project-home cleanup, frontend hygiene review, [spreadsheet-writer upgrade](tasks/2026-10-12-spreadsheet-writer-upgrade.md), [framework/build refresh](tasks/2026-10-12-framework-refresh.md), [Finance visibility](tasks/2026-10-07-finance-optional-default-hidden.md), [Planner AI report shortcut](tasks/2026-10-07-planner-ai-review-shortcut.md), and [Finance PIN change](tasks/2026-10-09-finance-change-pin.md) are complete. Android 2026.10.21 is published and its anonymous APK bytes match the independently accepted artifact. No feature is selected next; take future work through Product and Designer discovery. Keep observed physical-device evidence open until completed.
+The maintainer-requested project-home cleanup, frontend hygiene review, [spreadsheet-writer upgrade](tasks/2026-10-12-spreadsheet-writer-upgrade.md), [framework/build refresh](tasks/2026-10-12-framework-refresh.md), [Finance visibility](tasks/2026-10-07-finance-optional-default-hidden.md), [Planner AI report shortcut](tasks/2026-10-07-planner-ai-review-shortcut.md), and [Finance PIN change](tasks/2026-10-09-finance-change-pin.md) are complete. Android 2026.10.21 is published and its anonymous APK bytes match the independently accepted artifact. The selected change is readable navigation through existing Idea Space origins and direct branches, from the accepted Product scope; implementation is underway from the [ready bilingual Designer handoff](design/2026-10-13-ideas-relationships.md). Keep observed physical-device evidence open until completed.
 
 Open Android evidence remains follow-up work, not blanket release gates:
 
@@ -19,8 +19,8 @@ Open Android evidence remains follow-up work, not blanket release gates:
 
 ## Next — ordered ready work
 
-1. Review open physical-device evidence, especially the [data-safety phone matrix](tasks/2026-10-08-data-safety-phone-matrix.md), without inferring results that have not been observed.
-2. Take any next user-visible work through Product and Designer discovery before implementation. Candidates include [Idea Space relationships](tasks/2026-10-07-idea-space-connected-thoughts-refactor.md), [accessibility/Persian review](tasks/2026-10-08-accessibility-persian-phone-review.md), and evidence-based improvements in the [notification review](tasks/2026-10-08-android-notification-review.md). No order is set among these candidates.
+1. Implement the selected [Idea Space origins and branches](tasks/2026-10-07-idea-space-connected-thoughts-refactor.md) from the [ready Designer handoff](design/2026-10-13-ideas-relationships.md), then complete focused checks and the existing release gates. Preserve active writing/search and current backup contracts.
+2. Execute physical-device evidence when a spare device is available, including the [data-safety matrix](tasks/2026-10-08-data-safety-phone-matrix.md). Take later user-visible work through Product and Designer. Candidates include [accessibility/Persian review](tasks/2026-10-08-accessibility-persian-phone-review.md), and evidence-based improvements in the [notification review](tasks/2026-10-08-android-notification-review.md). No order is set among these candidates.
 
 ## Later
 
