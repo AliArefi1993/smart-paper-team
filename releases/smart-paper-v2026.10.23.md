@@ -2,7 +2,7 @@
 
 Date: 2026-10-13
 
-Status: Signed artifact independently verified; release publication remains pending.
+Status: Published and publicly verified.
 
 ## Scope
 
@@ -14,7 +14,7 @@ Status: Signed artifact independently verified; release publication remains pend
 
 | Repository | Tag | Commit | Notes |
 | --- | --- | --- | --- |
-| team root | `smart-paper-v2026.10.23` | Assigned during publication | Release docs, exact APK and provenance |
+| team root | `smart-paper-v2026.10.23` | `30bce9a63fe09c56b0272498b777101e85b4abb4` | Release docs, exact APK and provenance |
 | backend `smart-paper/` | `smart-paper-v2026.10.23` | `68c789b707239ef5451f98f7f6ce49d7c9b8a8c2` | Unchanged; backend remains paused |
 | frontend `smart-paper-front/` | `smart-paper-v2026.10.23` | `b5d0b6ddbb1807d3783a90bd119c37b00bb64029` | Exact source for CI and stable build |
 
@@ -49,7 +49,7 @@ Report a problem from Settings or covered failure states without losing current 
 
 ## Publication
 
-Pending scoped release commit/tags, publisher workflow and anonymous public byte/hash verification. Public availability is not claimed until those checks pass.
+Published at [GitHub Release](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.23). Publisher workflow [38449040776](https://github.com/AliArefi1993/smart-paper-team/actions/runs/38449040776) succeeded. Public release `411996012` is non-draft and non-prerelease; APK asset `637924903` is 4,409,696 bytes. An anonymous download matched the committed APK byte-for-byte with SHA-256 `a3d49e0e08c916f61260a4d4cfc869c429076780f89f6ce931c14d738dfa17c6`.
 
 ## Known Follow-Ups
 
