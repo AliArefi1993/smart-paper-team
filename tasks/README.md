@@ -4,6 +4,8 @@ Task documents preserve the intent and verification context of meaningful work s
 
 ## Active Follow-ups
 
+- [Local problem reporting and optional diagnostics](2026-10-07-local-feedback-diagnostics.md): Product scope accepted; bilingual Designer handoff in progress, then implementation and validation. Local switches default ON; deliberate support email with independently optional attachments.
+
 - [Idea Space connected-thoughts refactor](2026-10-07-idea-space-connected-thoughts-refactor.md): ready design; browser QA in progress, not shipped.
 - [Sequential backlog clearance](2026-10-12-backlog-clearance.md): authorized queue and handoff state for readiness-first work.
 - [Android data safety on a real phone](2026-10-08-android-data-safety-validation.md): broader upgrade, restore and failure-recovery checks remain; the discovered template Merge issue is already fixed and released.
@@ -17,7 +19,6 @@ These records preserve candidate work, not an approved sequence. Use [ROADMAP.md
 
 - [Android accessibility and Persian usability](2026-10-08-accessibility-persian-phone-review.md)
 - [Android notifications review](2026-10-08-android-notification-review.md)
-- [Local problem reporting and optional diagnostics](2026-10-07-local-feedback-diagnostics.md)
 
 ## Cancelled
 

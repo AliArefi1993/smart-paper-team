@@ -113,6 +113,12 @@ The initial-default portion is superseded by D-016 on 2026-10-13; the independen
 - **Why:** There is no evidence that hosted replay is needed to address the current reporting problem, and automatic upload conflicts with the intended local-first diagnostic flow.
 - **Consequence:** This decision is specific to app diagnostics; it is not a general prohibition on unrelated hosted services. Reconsider hosted diagnostics only through an explicit Product decision with reviewed privacy, consent, retention, security and offline behavior. The conditional Clarity pilot remains unexecuted. See [evaluation](clarity-evaluation.md) and [local reporting task](../tasks/2026-10-07-local-feedback-diagnostics.md).
 
+### D-019 — Disclosed local recording defaults ON; reports remain voluntary
+
+- **Decision (2026-10-13):** Following explicit maintainer direction and Product/Designer review, separate local error and feature-count switches default ON only when preferences are absent, after visible bilingual disclosure and successful initialization. Saved OFF choices remain authoritative; unreadable, malformed or failed preference persistence fails closed. This supersedes the earlier OFF-default planning brief, without changing D-018's hosted-upload boundary.
+- **Why:** Limited local evidence can exist before a reported failure, while independent switches, bounded retention, inspection and deletion keep control on the device.
+- **Consequence:** Automatic evidence uses static codes/daily aggregates, never personal writing, Finance records, PINs, raw error prose or identifiers. Each report starts with both evidence choices unchecked and a voluntary ephemeral description; users review the exact snapshot before deliberate email or clipboard handoff. Email drafts target the maintainer-confirmed support address, with final Send controlled by the receiving app. Native/startup failures may leave no record. See the [Product brief](../design/2026-10-13-local-diagnostics-product.md) and [task](../tasks/2026-10-07-local-feedback-diagnostics.md).
+
 ## Adding Or Changing A Decision
 
 Add an entry only when the choice is costly to reverse, crosses repository boundaries, defines a product constraint, or is likely to be debated again. Include the decision, reason, and practical consequence. If superseded, keep the old entry and point it to the replacement.

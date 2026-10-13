@@ -1,0 +1,375 @@
+[
+  {
+    "name": "fresh",
+    "detail": {
+      "disclosure": true,
+      "storage": {
+        "smart-paper.diagnostics.preferences.v1": "{\"errors\":true,\"usage\":true}",
+        "smart-paper.diagnostics.data.v1": "{\"errors\":[],\"usage\":[{\"day\":\"2026-10-13\",\"routes\":{\"settings\":1},\"flows\":{}}]}"
+      },
+      "writes": [
+        {
+          "key": "smart-paper.diagnostics.preferences.v1",
+          "disclosure": true
+        },
+        {
+          "key": "smart-paper.diagnostics.data.v1",
+          "disclosure": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "exactCopy",
+    "detail": true
+  },
+  {
+    "name": "draftAndEscape",
+    "detail": {
+      "draftPreserved": true,
+      "repeatedEscape": true,
+      "focusRestored": true
+    }
+  },
+  {
+    "name": "independentOffRestart",
+    "detail": true
+  },
+  {
+    "name": "newReportWithOff",
+    "detail": true
+  },
+  {
+    "name": "previewMetrics",
+    "detail": {
+      "viewport": [
+        390,
+        844
+      ],
+      "bounds": [
+        16,
+        42.203125,
+        358,
+        759.59375
+      ],
+      "client": [
+        356,
+        758
+      ],
+      "scroll": [
+        356,
+        854
+      ],
+      "active": "diagnostic-heading",
+      "buttons": [
+        {
+          "text": "Email Smart Paper",
+          "height": 48,
+          "fg": "rgb(255, 255, 255)",
+          "bg": "lab(35.5975 -26.6648 -4.34487)"
+        },
+        {
+          "text": "Copy report",
+          "height": 48,
+          "fg": "rgb(23, 43, 41)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Edit report",
+          "height": 48,
+          "fg": "rgb(23, 43, 41)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Inspect recorded data",
+          "height": 48,
+          "fg": "rgb(23, 43, 41)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Close report",
+          "height": 48,
+          "fg": "rgb(23, 43, 41)",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "textarea": {
+        "direction": "ltr",
+        "font": "Geist, \"Geist Fallback\", system-ui, sans-serif"
+      }
+    }
+  },
+  {
+    "name": "darkMetrics",
+    "detail": {
+      "viewport": [
+        390,
+        844
+      ],
+      "bounds": [
+        16,
+        42.203125,
+        358,
+        759.59375
+      ],
+      "client": [
+        356,
+        758
+      ],
+      "scroll": [
+        356,
+        854
+      ],
+      "active": "diagnostic-heading",
+      "buttons": [
+        {
+          "text": "Email Smart Paper",
+          "height": 48,
+          "fg": "rgb(255, 255, 255)",
+          "bg": "lab(35.5975 -26.6648 -4.34487)"
+        },
+        {
+          "text": "Copy report",
+          "height": 48,
+          "fg": "rgb(238, 245, 241)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Edit report",
+          "height": 48,
+          "fg": "rgb(238, 245, 241)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Inspect recorded data",
+          "height": 48,
+          "fg": "rgb(238, 245, 241)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Close report",
+          "height": 48,
+          "fg": "rgb(238, 245, 241)",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "textarea": {
+        "direction": "ltr",
+        "font": "Geist, \"Geist Fallback\", system-ui, sans-serif"
+      }
+    }
+  },
+  {
+    "name": "faComposerMetrics",
+    "detail": {
+      "viewport": [
+        390,
+        844
+      ],
+      "bounds": [
+        16,
+        42.203125,
+        358,
+        759.59375
+      ],
+      "client": [
+        356,
+        758
+      ],
+      "scroll": [
+        356,
+        766
+      ],
+      "active": "diagnostic-description",
+      "buttons": [
+        {
+          "text": "بررسی گزارش",
+          "height": 48,
+          "fg": "rgb(255, 255, 255)",
+          "bg": "lab(44.4134 -33.1436 -4.22149)"
+        },
+        {
+          "text": "دیدن داده‌های ثبت‌شده",
+          "height": 48,
+          "fg": "rgb(238, 245, 241)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "بستن گزارش",
+          "height": 48,
+          "fg": "rgb(238, 245, 241)",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "textarea": {
+        "direction": "rtl",
+        "font": "Vazirmatn, \"Noto Sans Arabic\", Tahoma, Arial, sans-serif"
+      }
+    }
+  },
+  {
+    "name": "shortMetrics",
+    "detail": {
+      "viewport": [
+        740,
+        360
+      ],
+      "bounds": [
+        16,
+        18,
+        708,
+        324
+      ],
+      "client": [
+        706,
+        322
+      ],
+      "scroll": [
+        706,
+        742
+      ],
+      "active": "diagnostic-heading",
+      "buttons": [
+        {
+          "text": "ایمیل به اسمارت پیپر",
+          "height": 48,
+          "fg": "rgb(255, 255, 255)",
+          "bg": "lab(44.4134 -33.1436 -4.22149)"
+        },
+        {
+          "text": "کپی گزارش",
+          "height": 48,
+          "fg": "rgb(238, 245, 241)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "ویرایش گزارش",
+          "height": 48,
+          "fg": "rgb(238, 245, 241)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "دیدن داده‌های ثبت‌شده",
+          "height": 48,
+          "fg": "rgb(238, 245, 241)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "بستن گزارش",
+          "height": 48,
+          "fg": "rgb(238, 245, 241)",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "textarea": {
+        "direction": "ltr",
+        "font": "Vazirmatn, \"Noto Sans Arabic\", Tahoma, Arial, sans-serif"
+      }
+    }
+  },
+  {
+    "name": "wideMetrics",
+    "detail": {
+      "viewport": [
+        1280,
+        800
+      ],
+      "bounds": [
+        280,
+        40,
+        720,
+        720
+      ],
+      "client": [
+        718,
+        718
+      ],
+      "scroll": [
+        718,
+        742
+      ],
+      "active": "diagnostic-heading",
+      "buttons": [
+        {
+          "text": "ایمیل به اسمارت پیپر",
+          "height": 48,
+          "fg": "rgb(255, 255, 255)",
+          "bg": "lab(44.4134 -33.1436 -4.22149)"
+        },
+        {
+          "text": "کپی گزارش",
+          "height": 48,
+          "fg": "rgb(238, 245, 241)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "ویرایش گزارش",
+          "height": 48,
+          "fg": "rgb(238, 245, 241)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "دیدن داده‌های ثبت‌شده",
+          "height": 48,
+          "fg": "rgb(238, 245, 241)",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "بستن گزارش",
+          "height": 48,
+          "fg": "rgb(238, 245, 241)",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "textarea": {
+        "direction": "ltr",
+        "font": "Vazirmatn, \"Noto Sans Arabic\", Tahoma, Arial, sans-serif"
+      }
+    }
+  },
+  {
+    "name": "ackPresentPrefsAbsent",
+    "detail": {
+      "disclosure": true,
+      "prefs": "{\"errors\":true,\"usage\":true}"
+    }
+  },
+  {
+    "name": "deleteAndInvalidation",
+    "detail": {
+      "data": {
+        "errors": [],
+        "usage": [
+          {
+            "day": "2026-10-13",
+            "routes": {
+              "planner": 2
+            },
+            "flows": {
+              "save": {
+                "failed": 1
+              }
+            }
+          }
+        ]
+      },
+      "primary": "QA_PRIMARY_CANARY",
+      "prefs": {
+        "errors": false,
+        "usage": false
+      }
+    }
+  },
+  {
+    "name": "primaryReadFailureComposer",
+    "detail": true
+  },
+  {
+    "name": "runtimeCanaries",
+    "detail": true
+  },
+  {
+    "name": "unavailableStorageReport",
+    "detail": true
+  }
+]

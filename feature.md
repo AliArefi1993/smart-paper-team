@@ -12,6 +12,7 @@ Updated: 2026-10-13. Keep this file short and update it when user-visible featur
 - Enable optional Finance in Settings to track a goal and income entries, with confirmation before deletion. Finance starts visible by default; saved visible/hidden choices remain authoritative. Hiding preserves records, PIN protection and backup/export access.
 - Change a known Finance PIN offline in Settings with current/new/confirmation, immediate relock and failure-safe persistence. PINs stay outside JSON backups; import retains the receiving device’s PIN.
 - Use English or Persian.
+- Inspect/delete local errors and feature counts with independent disclosed ON defaults and preserved saved OFF choices. Describe a problem, choose optional evidence, review its exact text and deliberately email Smart Paper or copy the report; nothing uploads automatically and personal app contents are excluded from collection.
 - Choose a saved Light or Dark appearance across every app page, including summaries and reports.
 - Export JSON backups and readable CSV, Excel, or Markdown files.
 - Create a selective Markdown AI report by field and date range, preview its text, then copy it for manual pasting or share its file using the phone's app chooser. Manual text selection is available when copying fails; changed source data requires reviewing the refreshed preview. The file explains itself and asks the AI for a grounded first response.

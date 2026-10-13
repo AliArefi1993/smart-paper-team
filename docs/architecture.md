@@ -79,7 +79,7 @@ See `docs/database.md` for entity relationships, persistence ownership, and sche
 
 ## Frontend
 
-- Framework: Next.js 16.2.4 App Router.
+- Framework: Next.js 16.4.0 App Router.
 - Language: TypeScript, React 19.2.4.
 - Styling/component approach: React client components with Tailwind CSS classes; no separate component library found.
 - Routes:
@@ -97,6 +97,8 @@ See `docs/database.md` for entity relationships, persistence ownership, and sche
   - `LanguageToggle`
 - State management: React `useState`, `useEffect`, `useMemo`; no external state library found.
 - Internationalization: custom `src/lib/i18n.ts` and `useLanguage`, persisted in localStorage.
+- Local reporting is owned by `DiagnosticsRoot`, independent of primary-record loading and Settings drafts. Its visible disclosure precedes recorder activation; separate error/usage choices default ON only when absent and successfully initialized. Known operation boundaries and payload-free runtime listeners record strict static codes/daily aggregates in `local-diagnostics.ts`. Planner successful typing autosaves do not generate keystroke counts.
+- Reporting prepares an immutable reviewed snapshot with separately unchecked evidence choices and an ephemeral optional description. Email/copy consume exactly that preview. The internal Android `EmailReportPlugin` requests an `ACTION_SENDTO` draft with a fixed support recipient and encoded subject/body; Smart Paper does not send mail or upload diagnostics. Browser handoff cannot confirm a handler or delivery. Capacitor bridge logging is disabled so volunteered report text does not enter debug bridge logs. Packaged version/build context comes from the committed Gradle identity at frontend build time.
 - Local data mode: `src/lib/local-store.ts` implements planner, planner section settings, finance and export/import in browser storage. Finance authorization uses a module-memory one-hour deadline, starts locked on full runtime recreation and ignores legacy persisted unlock deadlines. `src/lib/idea-notes.ts` owns Idea Space records; local JSON backup/import includes them. Backend mode currently shows Idea Space as unavailable.
 - `src/lib/idea-draft.ts` owns a separate contextual new/edit/branch draft, source snapshot and commit receipt. A marked envelope at the existing draft key distinguishes structured recovery from legacy prose. Commits reread saved notes and reconcile receipts before cleanup/retry; missing sources and stale edits require explicit Keep as new thought. Failed draft writes retain session memory across SPA return, without a reload/process-termination guarantee. Drafts do not enter backups or reports.
 - Settings retains explicit validated batch saving, reachable before and after the full form; Finance retains deliberate commits and confirms income deletion. The separate local-only Finance checkbox saves immediately through `finance-visibility.ts` and `use-finance-visibility.ts`, independently of Settings drafts. Planner/Summaries/Export links and direct Finance content wait for the same initialized preference. Hiding clears cached sensitive display and suspends its lifecycle watcher; re-enabling rechecks existing authorization without extending or revoking the runtime deadline. Backup/import and PIN policy are unchanged.

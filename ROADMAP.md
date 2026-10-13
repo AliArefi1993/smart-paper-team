@@ -10,6 +10,8 @@ Focus on a useful, reliable Android app that works without internet. Prioritize 
 
 The maintainer-requested project-home cleanup, frontend hygiene review, [spreadsheet-writer upgrade](tasks/2026-10-12-spreadsheet-writer-upgrade.md), [framework/build refresh](tasks/2026-10-12-framework-refresh.md), [Finance visibility](tasks/2026-10-07-finance-optional-default-hidden.md), [Planner AI report shortcut](tasks/2026-10-07-planner-ai-review-shortcut.md), and [Finance PIN change](tasks/2026-10-09-finance-change-pin.md) are complete. Android 2026.10.22 is published and its anonymous APK bytes match the independently accepted artifact. Idea Space direct origin/branch reading shipped under the [ready bilingual Designer handoff](design/2026-10-13-ideas-relationships.md). Keep observed physical-device evidence open until completed.
 
+[Local problem reporting](tasks/2026-10-07-local-feedback-diagnostics.md) implementation is accepted at frontend `b5d0b6d`, with disclosed local defaults ON, independent unchecked report evidence and deliberate support email. Product, Designer, Docker checks and independent runtime QA/source Security passed. Android 2026.10.23/code40 exact-source CI, signing, APK review and publication remain in progress. The first manual baseline checkpoint remains a separate non-gating review at the next normal work boundary. Hosted diagnostic upload remains rejected under [D-018](docs/decisions.md).
+
 Open Android evidence remains follow-up work, not blanket release gates:
 
 - Execute the [data-safety phone matrix](tasks/2026-10-08-data-safety-phone-matrix.md) on a spare device, including upgrade, backup/restore and interruption cases. Keep the broader [data-safety task](tasks/2026-10-08-android-data-safety-validation.md) open until observed results are recorded.
@@ -24,7 +26,6 @@ Open Android evidence remains follow-up work, not blanket release gates:
 
 ## Later
 
-- [Local problem reporting](tasks/2026-10-07-local-feedback-diagnostics.md) remains unimplemented; its [Product brief](design/2026-10-13-local-diagnostics-product.md) is ready for Designer review. No frontend implementation has started. The [Clarity evaluation](tasks/2026-10-10-microsoft-clarity-evaluation.md) is complete: current Android diagnostic adoption was rejected because automatic hosted upload conflicts with the local-first reporting boundary; no SDK or pilot was run. This decision is specific to app diagnostics, not a general prohibition on unrelated hosted services; see [D-018](docs/decisions.md).
 - [Periodic team reviews](tasks/2026-10-08-periodic-team-reviews.md) have an adopted manual policy in [docs/periodic-reviews.md](docs/periodic-reviews.md); run the first baseline checkpoint at the next normal work boundary. Device connection preparation remains pending for the available Samsung A15 (Android 16).
 - Validate week-template usage after release and consider daily/section-level defaults only if observed use supports them.
 - Improve configurable-section UX only when actual use shows a problem; review active slots, hidden slots with saved data, and optional separate English/Persian labels.

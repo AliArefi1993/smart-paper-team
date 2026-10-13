@@ -28,6 +28,7 @@ The current published release targets Android `2026.10.22` / versionCode 39 (loc
 - Imports Smart Paper JSON backups in merge/upsert or replace mode. Local Merge preserves unrelated saved week templates and updates matching IDs from the incoming backup; an empty or omitted template collection deletes nothing. Replace uses only the incoming collection.
 - Gives Android JSON backups dated filenames and shows the chosen file's week and income counts before replace confirmation.
 - Supports English and Persian UI text.
+- Provides local problem reporting with two independent disclosed error-recording and feature-count switches, ON when no preference exists; saved OFF choices remain authoritative. Automatic evidence excludes personal writing, Finance records, PINs and raw errors. Users can inspect/delete bounded recent evidence, describe a failure, independently choose optional evidence (unchecked for each report), review the exact text and deliberately open email to the configured support address or copy it. Reports remain independent of primary-data loading and unsaved Settings drafts. Smart Paper never automatically uploads or sends reports; sudden native/startup failures may leave no record.
 - Offers a saved Light/Dark appearance choice across Planner, Idea Space, Timer, Summaries, Finance, Export/AI report, and Settings, using shared green-toned dark roles including Planner.
 - Supports a local browser-storage mode for Android/static export builds.
 - Supports opt-in Android local morning plan notifications.

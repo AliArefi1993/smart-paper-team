@@ -1,0 +1,6 @@
+{
+  "unexpectedCloseRecovery": true,
+  "exactDescriptionPreserved": true,
+  "deliberateDiscardClosed": true,
+  "emptyDeliberateCloseClosed": true
+}

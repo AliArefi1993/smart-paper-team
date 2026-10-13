@@ -40,6 +40,13 @@ The finance session unlock gates finance and export/import endpoints; it is not 
 - Credential replacement requires Web Crypto and Web Locks, one validated atomic storage write and immediate revocation; unavailable APIs or a failed write preserve the existing credential. JSON schema 5 and all supported old-backup imports exclude credential/session state and leave the destination credential untouched. Supported OS data transfer may copy the credential with records, while a recreated runtime starts locked; actual transfer is unverified.
 - Cross-stack data changes must review Django models/migrations, serializers/views, frontend types and adapters, local-store normalization, and import/export compatibility.
 
+## Local Diagnostic Evidence
+
+- `src/lib/local-diagnostics.ts` owns `smart-paper.diagnostics.preferences.v1` and `smart-paper.diagnostics.data.v1`, separate from primary records. Independent booleans default ON after visible disclosure and verified absent-preference initialization; saved OFF choices are preserved. Malformed/unreadable choices and failed saving fail closed; explicit retry repairs choices without touching primary data.
+- Error records contain only coarse calendar day, static route/action/error code. Usage contains daily route counts and aggregate observed flow outcomes, with bounded numeric counts. Reconstruct allowlisted fields on load/recording; never serialize raw exceptions, private prose, Finance amounts/records, PINs, identifiers or replay.
+- Retain at most 200 errors, 14 calendar days and 128 KiB serialized UTF-8 across categories, enforcing expiry/bounds on store access. Quota shedding touches diagnostic evidence only. Verified category deletion preserves the other category, preferences and primary records; clear-all can recover malformed evidence.
+- Disclosure acknowledgement is separate at `smart-paper.diagnostics.disclosure.v1`; an acknowledgement cannot bypass disclosure when recording preferences are absent. Report descriptions and previews are component memory only. Diagnostic preferences/evidence/acknowledgement and report text are excluded from JSON backups and AI reports; imports leave them unchanged. No backup schema or Django entity/migration changes.
+
 ## Idea Draft Recovery
 
 - `src/lib/idea-draft.ts` uses the existing `smart-paper.local.idea-draft` key for one unfinished new/edit/branch draft, including its source snapshot and optional commit receipt. It is separate from saved Idea Space records.
