@@ -6,6 +6,8 @@ Updated: 2026-10-12
 
 ## Objective
 
+Historical default: the original fresh-hidden behavior shipped in 2026.10.19. Maintainer direction on 2026-10-13 supersedes only that default with [Show Finance = true](2026-10-13-finance-default-visible.md); optional visibility and stored-choice preservation remain.
+
 Keep Planner central by removing Finance from the default experience. Users can deliberately enable Finance when they want it; pause further Finance feature expansion.
 
 ## Context

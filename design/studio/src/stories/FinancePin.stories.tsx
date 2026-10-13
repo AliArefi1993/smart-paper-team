@@ -545,7 +545,7 @@ const meta = {
     width: "phone",
     theme: "light",
     state: "summary",
-    financeVisible: false,
+    financeVisible: true,
     unlocked: false,
     largeText: false,
     legacy: false,
@@ -566,7 +566,7 @@ export const PersianPhoneDark: Story = {
 export const EnglishPhoneDark: Story = {
   args: { theme: "dark", state: "form", financeVisible: true, unlocked: true },
 };
-export const PersianPhone: Story = { args: { language: "fa", state: "form" } };
+export const PersianPhone: Story = { args: { language: "fa", state: "form", financeVisible: false } };
 export const EnglishWide: Story = {
   args: { width: "wide", state: "form", unlocked: true },
 };
@@ -632,3 +632,7 @@ export const Unsupported: Story = {
 };
 
 export const MissingCurrent: Story = { args: { state: "missing-current" } };
+
+export const SavedHiddenSettings: Story = {
+  args: { financeVisible: false, state: "summary" },
+};

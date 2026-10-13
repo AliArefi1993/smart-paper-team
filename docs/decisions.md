@@ -91,9 +91,21 @@ This file records durable choices that constrain future work. It is intentionall
 
 ### D-015 — Keep Finance visibility separate from records and authorization
 
+The initial-default portion is superseded by D-016 on 2026-10-13; the independent preference/authorization contract remains.
+
 - **Decision (2026-10-12):** New Android installations start with Finance hidden. Explicit device-local choice wins; existing installations without a choice retain visible Finance when the Finance storage key exists, even if its contents are empty or damaged. Persist the initial choice before import can alter key presence.
 - **Why:** Preserve existing users' access while keeping Finance optional for new users, without treating hidden data as deleted or changing the PIN boundary.
 - **Consequence:** Settings saves this preference immediately and independently of its other drafts. Hide never deletes Finance or changes backup inclusion; enabling grants no authorization. JSON schema 5 excludes the preference and import preserves it. Read/write failures retain a recoverable effective state without claiming durable success. Backend parity stays paused. See the [Finance handoff](../design/2026-10-12-finance-visibility.md).
+
+### D-016 — Show Finance by default while retaining saved choices
+
+- **Decision (2026-10-13):** The maintainer considers Finance useful to keep available. Unset visibility now defaults visible, independently of records; existing saved visible/hidden values remain authoritative.
+- **Consequence:** Retain the independent Settings toggle, records, PIN and backup contract. Finance report fields still start excluded. This changes the fresh default, without silently overriding a previous stored hidden choice. See the [ready addendum](../design/2026-10-13-finance-default-visible.md) and [task](../tasks/2026-10-13-finance-default-visible.md).
+
+### D-017 — Replace a known local Finance PIN without migrating it through JSON
+
+- **Decision (2026-10-13):** Store a dedicated salted verifier; only an absent credential uses the legacy PIN. Current-PIN verification, serialized atomic replacement and immediate protected-session revocation are required. Malformed/unreadable credentials fail closed.
+- **Consequence:** JSON contains records, never the credential; import preserves the destination PIN. No forgotten-PIN default bypass or destructive reset is offered. The existing full JSON backup/import remains PIN-gated and the limitation is disclosed before change. Supported OS transfer may copy the verifier but cannot restore a memory unlock. This remains a screen lock, not encryption. See [scope](../design/2026-10-13-finance-pin-product.md) and [implementation task](../tasks/2026-10-09-finance-change-pin.md).
 
 ## Adding Or Changing A Decision
 

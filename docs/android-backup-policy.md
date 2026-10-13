@@ -20,6 +20,8 @@ References: [Android Auto Backup rules](https://developer.android.com/identity/d
 
 ## Finance authorization
 
+A custom Finance credential is a separate persisted salted verifier; full supported OS transfer may copy it alongside records. JSON backups do not include it, and Merge/Replace preserve the receiving device’s PIN. Forgetting the PIN blocks the existing full JSON export/import path; no in-app reset or default bypass is provided. Credential changes revoke authorization immediately. These changes retain the cloud exclusion/device-transfer configuration and runtime-only unlock boundary.
+
 Saved finance records remain in existing storage. The unlock deadline exists only in JavaScript module memory, starts locked, and never trusts the legacy `smart-paper.local.finance-unlocked-until` storage key. Full document/process recreation requires PIN entry again; ordinary navigation retains the running module's one-hour deadline. Existing expiry/resume and read/mutation/export authorization checks remain required.
 
 Copied persisted deadlines cannot authorize a new runtime. This does not encrypt finance or protect against modified app-origin code or device-level access. `sessionStorage` is not a documented Android backup-exclusion boundary. A native install nonce in `getNoBackupFilesDir()` is a future alternative only if restart-persistent authorization is needed; initialization must precede authorization.

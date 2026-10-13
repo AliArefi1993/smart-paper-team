@@ -1,0 +1,11 @@
+# Finance PIN / default-visible implementation evidence
+
+Actual local-data static build served on isolated loopback origin `127.0.0.1:8893`; synthetic/default records only. Phone390×844, wide1280×900 and landscape844×390 captures distinguish actual screen evidence from the studio proposal and automated store tests.
+
+Verified: first Settings visit has Show Finance checked with no Finance records; explicit hide persists after clean reload; hidden Finance still permits opening its PIN-change form. Empty Save reports current-PIN required and focuses `finance-pin-0`; inputs are password fields with legacy current text/new numeric modes. Cancel preserves a synthetic independent Settings draft and reports unchanged PIN. The draft was restored to its original value and explicitly saved before a clean reload; an earlier reload with a dirty draft did not navigate, and is not counted as persistence evidence. No manual warning acceptance or user data was involved.
+
+EN Light / FA Dark phone and wide, short landscape, warnings before Save and reachable actions were captured. The Finance link is visible after re-enabling, while Finance remains locked; default report Finance checkboxes remain off. The Finance-to-Settings `#finance-pin` link opens the form and focuses its heading. Browser console had no errors/warnings.
+
+No new credential was entered or committed through computer use. Persistence, old/new denial, restart, errors, revocation, imports and concurrency are supported by reviewed synthetic automated tests. Two independent runtimes use a mocked Web Locks queue; this is not an actual two-window/native test. Actual credential UI completion, native Web Locks, keyboard/lifecycle, installation/upgrade, OS/OEM transfer, recipient delivery and TalkBack remain unverified. Already dispatched external delivery cannot be recalled.
+
+Final Designer identified a Dark-mode status contrast issue and requested the existing mapped `text-emerald-800` status role. The final dark-Cancel screenshots supersede pre-fix feedback styling; actual computed color is rgb(169,232,188), the existing mapped Dark status role. Final review acceptance is recorded in the linked design handoff after the correction.
