@@ -2,7 +2,7 @@
 
 Status: planned
 Created: 2026-10-08
-Updated: 2026-10-09
+Updated: 2026-10-14
 
 ## Objective
 
@@ -53,7 +53,8 @@ Include the maintainer's 2026-10-09 request for better notification design and U
 | --- | --- | --- |
 | Scope | Maintainer request on 2026-10-08 | Saved as future work |
 | Expanded UX scope | Maintainer request on 2026-10-09 | Notification design, messages and permission-request placement/timing recorded |
-| Code/device checks | Deferred until task starts | Not run |
+| Empty-day source check | Frontend `9aee030`: `src/lib/notifications.ts`, Settings/Planner callers and EN/FA translations | Enabled/permitted reminders schedule even without timed entries; fallback is Settings feature-description copy. Source review only; native delivery unverified |
+| Native checks and broader review | Deferred until device execution | Not run |
 
 ## Decisions And Risks
 
@@ -64,3 +65,12 @@ Include the maintainer's 2026-10-09 request for better notification design and U
 ## Outcome / Handoff
 
 Future task saved only. When selected, establish current behavior and native evidence before designing improvements. No app or reminder changes made.
+
+
+## Empty-day review — 2026-10-14
+
+Maintainer asked what is sent when nothing is set and whether a reminder is useful then. At frontend `9aee030`, `notificationBody` uses only the target day's `schedule_entries`: up to four event times/titles, otherwise the provided fallback. Settings and Planner both pass title “Today’s plan” / “برنامه امروز” and the feature-description body “Send a local Android reminder with the day's timed events.” / “یک یادآوری محلی اندروید با رویدادهای زمان‌دار روز ارسال شود.” Enabled reminders with granted permission are scheduled even for empty timed-event lists. Day notes, goals and section content do not influence this check. This is source evidence, not observed phone delivery.
+
+Personal systems recommends skipping the timed-event summary when there are no timed events. Absence of timed events does not prove an empty plan or unfinished planning. A daily planning prompt should be an explicit optional choice if desired; this remains Needs confirmation. The current generic feature-description fallback gives no day-specific information. Android's [notification guidance](https://developer.android.com/design/ui/mobile/guides/home-screen/notifications) calls for timely, relevant information and direct value.
+
+This check does not implement a behavior change. Resulting design should cover notes/goals-only days, deliberate rest days, removing the last event, adding an event later, and both languages; implementation requires the normal ready Designer handoff and tests. Physical notification cases and the wider review remain open. Product accepted this recommendation as a future fix; no ready Designer handoff or implementation in this review.
