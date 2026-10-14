@@ -8,7 +8,7 @@ This file is the source for future-work priority. Shipped behavior belongs in [f
 
 Focus on a useful, reliable Android app that works without internet. Prioritize observed issues affecting local data, task completion and bilingual phone use. Continue stable-signed APK publication after validated user-visible changes. No server is available; Django/backend and hosted-web work remain paused. Keep Timer available by default; the optional/hidden proposal was cancelled in [the task record](tasks/2026-10-07-timer-optional-default-hidden.md).
 
-The maintainer-requested project-home cleanup, frontend hygiene review, [spreadsheet-writer upgrade](tasks/2026-10-12-spreadsheet-writer-upgrade.md), [framework/build refresh](tasks/2026-10-12-framework-refresh.md), [Finance visibility](tasks/2026-10-07-finance-optional-default-hidden.md), [Planner AI report shortcut](tasks/2026-10-07-planner-ai-review-shortcut.md), [Finance PIN change](tasks/2026-10-09-finance-change-pin.md), and [local reporting/diagnostics](tasks/2026-10-07-local-feedback-diagnostics.md) are complete. Android 2026.10.23 is published and its anonymous APK bytes match the independently accepted artifact. Idea Space direct origin/branch reading shipped under the [ready bilingual Designer handoff](design/2026-10-13-ideas-relationships.md). Keep observed physical-device evidence open until completed.
+The maintainer-requested project-home cleanup, frontend hygiene review, [spreadsheet-writer upgrade](tasks/2026-10-12-spreadsheet-writer-upgrade.md), [framework/build refresh](tasks/2026-10-12-framework-refresh.md), [Finance visibility](tasks/2026-10-07-finance-optional-default-hidden.md), [Planner AI report shortcut](tasks/2026-10-07-planner-ai-review-shortcut.md), [Finance PIN change](tasks/2026-10-09-finance-change-pin.md), [local reporting/diagnostics](tasks/2026-10-07-local-feedback-diagnostics.md), and [desktop backlog batch](tasks/2026-10-13-desktop-backlog-batch.md) are complete. Android 2026.10.24 is prepared; exact-source CI, protected signing and independent artifact review passed. Tag publication and anonymous public APK byte verification remain. Idea Space direct origin/branch reading shipped under the [ready bilingual Designer handoff](design/2026-10-13-ideas-relationships.md). Keep observed physical-device evidence open until completed.
 
 Open Android evidence remains follow-up work, not blanket release gates:
 
@@ -19,7 +19,7 @@ Open Android evidence remains follow-up work, not blanket release gates:
 
 ## Next — ordered ready work
 
-1. Complete the locally validated [desktop backlog batch](tasks/2026-10-13-desktop-backlog-batch.md): push the frontend change when permitted, run exact-source CI and finish the signed Android release. Persian draft recovery, browser coverage, desktop keyboard corrections and synthetic performance evidence are ready locally.
+1. Publish the prepared [Android 2026.10.24 release](releases/smart-paper-v2026.10.24.md), then verify the anonymous public APK bytes against the committed artifact.
 2. Execute physical-device evidence when a spare device is available, including the [data-safety matrix](tasks/2026-10-08-data-safety-phone-matrix.md). Future user-visible work requires Product and Designer review. Candidates include [accessibility/Persian review](tasks/2026-10-08-accessibility-persian-phone-review.md), and evidence-based improvements in the [notification review](tasks/2026-10-08-android-notification-review.md). No order is set among these candidates.
 
 ## Later

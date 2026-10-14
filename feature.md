@@ -24,6 +24,8 @@ Updated: 2026-10-13. Keep this file short and update it when user-visible featur
 
 ## Recent completed work
 
+- Prepared Android 2026.10.24 with the desktop backlog batch: Persian Idea recovery status, browser integration coverage, bilingual desktop keyboard/focus corrections, and integrity-checked synthetic offline performance comparisons. Exact-source CI, protected signing and independent artifact Security review passed; publication and public APK verification are pending.
+
 - Shipped local reporting/diagnostics in [Android 2026.10.23](releases/smart-paper-v2026.10.23.md): separate disclosed ON local defaults, preserved OFF choices, inspect/delete, independent optional evidence, exact preview and deliberate email/copy. Docker/hosted checks, bilingual runtime QA/Designer, independent APK Security and anonymous public byte/hash verification passed; native email delivery and TalkBack remain follow-ups.
 
 - Shipped Idea Space origin/branch reading in [Android 2026.10.22](releases/smart-paper-v2026.10.22.md). Exact-source CI, protected signing, independent final artifact review and public byte/hash verification passed; physical Android and TalkBack remain unverified. See the [task](tasks/2026-10-07-idea-space-connected-thoughts-refactor.md).
