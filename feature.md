@@ -24,6 +24,8 @@ Updated: 2026-10-14. Keep this file short and update it when user-visible featur
 
 ## Recent completed work
 
+- Shipped empty-day reminder suppression in [Android 2026.10.26](releases/smart-paper-v2026.10.26.md): empty timed-event days stay silent while saved reminder choices and populated-event reminders remain intact. Exact-source CI, protected signing, independent artifact review and anonymous public APK verification passed; physical notification delivery and TalkBack remain follow-ups.
+
 - Shipped the Export unlock locale correction in [Android 2026.10.25](releases/smart-paper-v2026.10.25.md): the visible success feedback follows English/Persian language changes while Finance authorization remains active. Exact-source CI, protected signing, independent artifact Security review and anonymous public APK verification passed; physical Android/TalkBack remain follow-ups.
 
 - Shipped the desktop backlog batch in [Android 2026.10.24](releases/smart-paper-v2026.10.24.md): Persian Idea recovery status, browser integration coverage, bilingual desktop keyboard/focus corrections, and integrity-checked synthetic offline performance comparisons. Exact-source CI, protected signing, independent artifact Security review and anonymous public APK verification passed; physical Android/TalkBack remain follow-ups.

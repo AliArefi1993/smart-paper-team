@@ -1,3 +1,3 @@
 # Next Smart Paper Release
 
-Android 2026.10.26/code43 for the [empty-day notification correction](../tasks/2026-10-14-empty-day-notification.md) has passed exact-source CI, protected signing and independent final artifact review. The exact APK and provenance are prepared for the release commit; repository tags, publication and anonymous download verification remain pending. Backend is unchanged. Physical/native notification and TalkBack checks remain open.
+No Android release is currently in preparation. Android 2026.10.26/code43 is published from frontend `aa33f7942364185b5421fbdc65ed5944f539eda2`; its anonymous public APK download matches the committed artifact byte-for-byte. See the [release record](smart-paper-v2026.10.26.md). Backend is unchanged; physical/native notification and TalkBack checks remain open. Future user-visible work requires an approved scope and ready design handoff.

@@ -12,7 +12,7 @@ Date: 2026-10-14
 
 | Repository | Tag | Commit | Notes |
 | --- | --- | --- | --- |
-| team root | `smart-paper-v2026.10.26` | Pending release commit | Release record, exact APK and provenance committed before tagging. |
+| team root | `smart-paper-v2026.10.26` | `66a7630f5512efe86684895b5288fc143355a158` | Release record, exact APK and provenance committed before tagging. |
 | backend `smart-paper/` | `smart-paper-v2026.10.26` | `68c789b707239ef5451f98f7f6ce49d7c9b8a8c2` | Unchanged; release marker only. |
 | frontend `smart-paper-front/` | `smart-paper-v2026.10.26` | `aa33f7942364185b5421fbdc65ed5944f539eda2` | Exact source used for CI and hosted build. |
 
@@ -40,14 +40,14 @@ Date: 2026-10-14
 | Hosted unsigned candidate | [Stable build run 38589501971](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38589501971) | Passed; candidate artifact `11906708755`, archive SHA-256 `dc506df12b99045e031e428c1fcd681e76e0f9ab3e73c81d7e8cead8829fad05`. Independent review accepted identity/version/non-debug status, packaged behavior, all 556 APK payload entries and 112 web assets. |
 | Protected stable signing | [Stable build run 38589501971](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38589501971) | Passed after required `stable-signing` environment approval. Final artifact `11908591195`, archive SHA-256 `a00e3b80aa6a31eb52aa97f1b297ba60cd80d78656df249935c3f7a259fc8f9a`. |
 | Final artifact Security review | Independent review of the signed APK and provenance | Passed: checksum/provenance match, pinned v2/v3 signer and certificate, Android identity/version/non-debug status, and all 556 candidate payload entries match; only signature metadata was added. No actionable finding. |
-| Public release | Pending | Tag and publisher have not yet run. |
+| Public release | [Publisher run 38593913916](https://github.com/AliArefi1993/smart-paper-team/actions/runs/38593913916) | Published non-draft release [Smart Paper 2026.10.26](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.26), asset `640873575`, 4,409,696 bytes. Anonymous download SHA-256 `201edcc40e57ce174ae21aad8fa3a06b3d372fe720bce33fc075479ef7db55d7` matches the committed APK byte-for-byte. |
 | Backend tests and migration check | Not run | Backend unchanged; no backend application change in this release. |
 
 ## Release Notes
 
 - Morning notifications no longer use generic fallback copy on days without timed events. The pending reminder is cancelled and no notification is scheduled for that day.
 - Saved reminder choices remain enabled for later populated days, and notes/goals alone do not trigger a notification.
-- Publication and anonymous public APK verification are pending.
+- Published as Android 2026.10.26/code43. The anonymous public APK download matches the committed artifact byte-for-byte.
 
 ## Known Follow-Ups
 

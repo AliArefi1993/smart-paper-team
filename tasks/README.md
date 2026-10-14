@@ -1,10 +1,6 @@
 # Task Documents
 
-Task documents preserve the intent and verification context of meaningful work so a future agent can continue without reconstructing the conversation. This index groups records by current state; placement and dates do not imply priority or queue order.
-
-## Current task
-
-- [Empty-day morning reminder](2026-10-14-empty-day-notification.md): Product/Designer scope, implementation and release authorized; wider phone notification review remains separate.
+Task documents preserve the intent and verification context of meaningful work so a future agent can continue without reconstructing the conversation. Completed record placement and dates do not imply priority; ROADMAP owns the remaining queue order.
 
 ## Remaining queue — one task at a time
 
@@ -27,6 +23,7 @@ Complete and document each selected task before starting the next. Reproduced is
 
 ## Completed / Assessed
 
+- [Empty-day morning reminder](2026-10-14-empty-day-notification.md): shipped in Android 2026.10.26; physical delivery/TalkBack and the wider notification review remain open.
 - [Sequential backlog clearance](2026-10-12-backlog-clearance.md): ready implementation queue complete; phone work remains in the ordered queue above.
 - [Idea Space connected-thoughts refactor](2026-10-07-idea-space-connected-thoughts-refactor.md): shipped in Android 2026.10.22.
 - [First manual baseline checkpoint](2026-10-13-manual-baseline-checkpoint.md): bounded baseline recorded; its localization follow-up shipped in the desktop batch.
