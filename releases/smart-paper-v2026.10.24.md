@@ -11,7 +11,7 @@ Date: 2026-10-14
 
 | Repository | Tag | Commit | Notes |
 | --- | --- | --- | --- |
-| team root | `smart-paper-v2026.10.24` | pending | Tag will point to the release-record commit. |
+| team root | `smart-paper-v2026.10.24` | `0b56075c535f8e3521c62ec538369ba79a09ab9a` | Release record, exact APK and provenance committed before tagging. |
 | backend `smart-paper/` | `smart-paper-v2026.10.24` | `68c789b707239ef5451f98f7f6ce49d7c9b8a8c2` | Unchanged; release marker only. |
 | frontend `smart-paper-front/` | `smart-paper-v2026.10.24` | `4c9bfad4f26d1165e18894eef096ee405f6f21f5` | Exact source used for CI and hosted build. |
 
@@ -40,7 +40,7 @@ Date: 2026-10-14
 | Hosted unsigned candidate | [Stable build run 38529803527](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38529803527) | Lint, TypeScript, tests, local-data build, Android assembly, candidate verification and upload passed. Candidate artifact `11877981120`; archive SHA-256 `cb4987ad11828492b2361c252fc0242e4864a42c5143894f9c030840f86764fb`. |
 | Protected stable signing | [Stable build run 38529803527](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38529803527) | Passed. Final artifact `11877369384`; archive SHA-256 `39c7c081808207b927ab81ef35a9b9d7e73749dbc904fb2aed315d10bf13b123`. |
 | Artifact Security review | Independent review of candidate and signed APK | Passed: expected v2/v3 signer, identity/version/non-debug, all 556 candidate payload entries and 112 web assets match; cloud exclusion/transfer manifest verified; no critical/high finding. |
-| Public release | Pending tag publication | Pending; public anonymous APK bytes and SHA-256 must be verified after publication. |
+| Public release | [Publisher run 38531489626](https://github.com/AliArefi1993/smart-paper-team/actions/runs/38531489626) | Published non-draft release [Smart Paper 2026.10.24](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.24), asset `639665121`, 4,409,696 bytes. Anonymous download SHA-256 `276e174cff438934f429cf5cc2c982a37c95ab7daf85bc4366a6be23fd001d6d` matches the committed APK byte-for-byte. |
 | Backend tests and migration check | Not run | Backend unchanged; no backend application change in this release. |
 
 ## Release Notes

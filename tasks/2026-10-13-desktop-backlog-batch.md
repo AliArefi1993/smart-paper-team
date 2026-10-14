@@ -22,7 +22,7 @@ Complete the four desktop workstreams authorized by the maintainer: Persian Idea
 - [x] Small/larger deterministic mixed EN/FA fixtures have three comparable runs, measurements and integrity checks; limits recorded.
 - [x] Desktop EN/FA keyboard/focus/names/short-viewport coverage and reproduced defects are recorded separately from native gaps.
 - [x] Relevant local checks, independent source review and documentation pass; no unresolved critical/high finding. Hosted exact-source checks remain tied to publication.
-- [ ] Scoped commit/push and signed Android release complete for validated user-visible changes, including exact-source CI, protected signing, independent artifact review and public APK verification.
+- [x] Scoped commit/push and signed Android release complete for validated user-visible changes, including exact-source CI, protected signing, independent artifact review and public APK verification.
 
 ## Non-Goals
 
@@ -47,4 +47,4 @@ Actual phone lifecycle, upgrade/OS transfer, native recipient delivery, notifica
 
 ## Outcome / Handoff
 
-App and browser evidence are complete. The exact-source checks, protected signing and independent artifact review passed for Android 2026.10.24/code41. Public tag publication and anonymous APK byte/hash verification remain in progress. Physical Android/TalkBack follow-ups remain open. The next backlog candidate is the observed Export unlock-success localization on EN→FA switch, subject to a new bounded design handoff.
+App and browser evidence are complete. Android 2026.10.24/code41 was published after exact-source checks, protected signing and independent artifact review passed. The anonymous public APK download matches the committed artifact byte-for-byte; see [the release record](../releases/smart-paper-v2026.10.24.md). Physical Android/TalkBack follow-ups remain open. The next backlog candidate is the observed Export unlock-success localization on EN→FA switch, subject to a new bounded design handoff.
