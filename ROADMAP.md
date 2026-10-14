@@ -19,7 +19,8 @@ Open Android evidence remains follow-up work, not blanket release gates:
 
 ## Next — ordered ready work
 
-1. Execute physical-device evidence when a spare device is available, including the [data-safety matrix](tasks/2026-10-08-data-safety-phone-matrix.md). Future user-visible work requires Product and Designer review. Candidates include [accessibility/Persian review](tasks/2026-10-08-accessibility-persian-phone-review.md), and evidence-based improvements in the [notification review](tasks/2026-10-08-android-notification-review.md). No order is set among these candidates.
+1. Complete hosted checks and the signed Android release for the locally validated [Export unlock locale correction](tasks/2026-10-14-export-unlock-locale.md).
+2. Execute physical-device evidence when a spare device is available, including the [data-safety matrix](tasks/2026-10-08-data-safety-phone-matrix.md). Future user-visible work requires Product and Designer review. Candidates include [accessibility/Persian review](tasks/2026-10-08-accessibility-persian-phone-review.md), and evidence-based improvements in the [notification review](tasks/2026-10-08-android-notification-review.md). No order is set among these candidates.
 
 ## Later
 
