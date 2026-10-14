@@ -2,6 +2,10 @@
 
 Task documents preserve the intent and verification context of meaningful work so a future agent can continue without reconstructing the conversation. This index groups records by current state; placement and dates do not imply priority or queue order.
 
+## Current task
+
+- [Empty-day morning reminder](2026-10-14-empty-day-notification.md): Product/Designer scope, implementation and release authorized; wider phone notification review remains separate.
+
 ## Remaining queue — one task at a time
 
 [ROADMAP.md](../ROADMAP.md#next-after-baseline-review) owns the order. The ready implementation queue is complete; the remaining phone reviews await observed device evidence.
