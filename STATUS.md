@@ -1,10 +1,12 @@
 # Smart Paper Status
 
-Last updated: 2026-10-13.
+Last updated: 2026-10-14.
 
 This is a present-state snapshot, not a changelog. Shipped history and validation details live in `releases/`; implementation history lives in each repository's Git log.
 
 ## Current Focus
+
+- [Desktop backlog batch](tasks/2026-10-13-desktop-backlog-batch.md) is validated locally and awaiting a permitted fast-forward push before hosted CI and Android 2026.10.24/code41 release. Frontend local commits `a359cad`/`4c9bfad` correct Persian Idea draft status, Templates modal keyboard behavior and JSON chooser access, with browser coverage. Chrome 155 ran 10/10 browser flows and three small/large synthetic offline comparisons with full fixture integrity. No APK has been built or published for this batch. Automatic approval review rejected the direct frontend `main` push; explicit user approval is pending. Physical Android/TalkBack checks remain open.
 
 - [Local reporting and diagnostics](tasks/2026-10-07-local-feedback-diagnostics.md) shipped in Android 2026.10.23/code40 at frontend `b5d0b6ddbb1807d3783a90bd119c37b00bb64029`: independent disclosed local recording defaults ON, preserved OFF choices, inspect/delete, unchecked per-report evidence and deliberate reviewed email/copy. Product/Designer, Docker 158 tests, bounded browser QA, independent source/candidate/signed APK reviews and exact-source CI/protected signing passed. Publisher [38449040776](https://github.com/AliArefi1993/smart-paper-team/actions/runs/38449040776) succeeded; public APK asset `637924903` matches the committed 4,409,696-byte artifact (SHA-256 `a3d49e0e08c916f61260a4d4cfc869c429076780f89f6ce931c14d738dfa17c6`). Physical email delivery, lifecycle and TalkBack remain unverified.
 

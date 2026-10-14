@@ -19,7 +19,7 @@ Open Android evidence remains follow-up work, not blanket release gates:
 
 ## Next — ordered ready work
 
-1. Review the reproduced Persian Idea Space draft-recovery status issue from the [first baseline checkpoint](tasks/2026-10-13-manual-baseline-checkpoint.md) with Designer before a bounded fix. Draft data remained intact; Product/Designer acceptance is pending.
+1. Complete the locally validated [desktop backlog batch](tasks/2026-10-13-desktop-backlog-batch.md): push the frontend change when permitted, run exact-source CI and finish the signed Android release. Persian draft recovery, browser coverage, desktop keyboard corrections and synthetic performance evidence are ready locally.
 2. Execute physical-device evidence when a spare device is available, including the [data-safety matrix](tasks/2026-10-08-data-safety-phone-matrix.md). Future user-visible work requires Product and Designer review. Candidates include [accessibility/Persian review](tasks/2026-10-08-accessibility-persian-phone-review.md), and evidence-based improvements in the [notification review](tasks/2026-10-08-android-notification-review.md). No order is set among these candidates.
 
 ## Later
@@ -27,7 +27,7 @@ Open Android evidence remains follow-up work, not blanket release gates:
 - [Periodic team reviews](tasks/2026-10-08-periodic-team-reviews.md) have an adopted manual policy in [docs/periodic-reviews.md](docs/periodic-reviews.md); the [first baseline](tasks/2026-10-13-manual-baseline-checkpoint.md) is recorded; next manual cue is five app-change batches or 30 active app-work days, or a concrete risk trigger. Device connection preparation remains pending for the available Samsung A15 (Android 16).
 - Validate week-template usage after release and consider daily/section-level defaults only if observed use supports them.
 - Improve configurable-section UX only when actual use shows a problem; review active slots, hidden slots with saved data, and optional separate English/Persian labels.
-- Add frontend integration coverage for primary user flows and configurable-section wiring where risk review supports it; current storage checks do not establish browser or native behavior.
+- Extend the new browser integration coverage where observed risks support it; native behavior remains a separate phone check.
 
 ## Ideas — needs confirmation
 

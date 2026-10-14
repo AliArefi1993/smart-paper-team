@@ -1,0 +1,83 @@
+{
+  "method": "Fresh Chromium/context; startup includes navigation+hydration, fixture injection occurs before app. Offline via setOffline after warming routes; 20ms/character deliberate typing; locator/assertion waits included. No Android or offline cold reload claim.",
+  "rows": [
+    {
+      "size": "small",
+      "run": 1,
+      "fixtureBytes": 112337,
+      "ideaBodyBytes": 1014,
+      "freshStartupMs": 251.5,
+      "offlineWeekSwitchMs": 72.7,
+      "offlineIdeasOpenMs": 141.9,
+      "offlineSearchMs": 24.8,
+      "offlineTypeSaveMs": 726.4,
+      "offlineReopenMs": 51.9,
+      "integrity": "all seeded week day/section/schedule and Idea records equal; one added Idea"
+    },
+    {
+      "size": "large",
+      "run": 1,
+      "fixtureBytes": 1741397,
+      "ideaBodyBytes": 1014,
+      "freshStartupMs": 197.6,
+      "offlineWeekSwitchMs": 81.3,
+      "offlineIdeasOpenMs": 194.6,
+      "offlineSearchMs": 11.7,
+      "offlineTypeSaveMs": 721.2,
+      "offlineReopenMs": 58.7,
+      "integrity": "all seeded week day/section/schedule and Idea records equal; one added Idea"
+    },
+    {
+      "size": "small",
+      "run": 2,
+      "fixtureBytes": 112337,
+      "ideaBodyBytes": 1014,
+      "freshStartupMs": 181.8,
+      "offlineWeekSwitchMs": 72.2,
+      "offlineIdeasOpenMs": 142.9,
+      "offlineSearchMs": 7.6,
+      "offlineTypeSaveMs": 744.4,
+      "offlineReopenMs": 48.3,
+      "integrity": "all seeded week day/section/schedule and Idea records equal; one added Idea"
+    },
+    {
+      "size": "large",
+      "run": 2,
+      "fixtureBytes": 1741397,
+      "ideaBodyBytes": 1014,
+      "freshStartupMs": 154.9,
+      "offlineWeekSwitchMs": 78.6,
+      "offlineIdeasOpenMs": 189.1,
+      "offlineSearchMs": 11.4,
+      "offlineTypeSaveMs": 754.6,
+      "offlineReopenMs": 47.2,
+      "integrity": "all seeded week day/section/schedule and Idea records equal; one added Idea"
+    },
+    {
+      "size": "small",
+      "run": 3,
+      "fixtureBytes": 112337,
+      "ideaBodyBytes": 1014,
+      "freshStartupMs": 155.6,
+      "offlineWeekSwitchMs": 75.6,
+      "offlineIdeasOpenMs": 139.6,
+      "offlineSearchMs": 8.4,
+      "offlineTypeSaveMs": 710.2,
+      "offlineReopenMs": 53.8,
+      "integrity": "all seeded week day/section/schedule and Idea records equal; one added Idea"
+    },
+    {
+      "size": "large",
+      "run": 3,
+      "fixtureBytes": 1741397,
+      "ideaBodyBytes": 1014,
+      "freshStartupMs": 153.9,
+      "offlineWeekSwitchMs": 82,
+      "offlineIdeasOpenMs": 203.1,
+      "offlineSearchMs": 10,
+      "offlineTypeSaveMs": 728.1,
+      "offlineReopenMs": 40.8,
+      "integrity": "all seeded week day/section/schedule and Idea records equal; one added Idea"
+    }
+  ]
+}
