@@ -1,6 +1,6 @@
 # Task: Complete desktop backlog confidence work
 
-Status: in progress
+Status: complete — shipped in Android 2026.10.24/code41
 Created: 2026-10-13
 Updated: 2026-10-14
 
@@ -39,7 +39,7 @@ Physical connection, native/TalkBack claims, backend/hosted work, new product fe
 - Ready [Designer handoff](../design/2026-10-13-desktop-backlog.md) and four EN/FA phone/wide studio stories passed typecheck/build and visual review. Final production preview confirmed Persian restored text, named keyboard-reachable JSON chooser, and native Templates modal focus/Escape/restore.
 - Frontend commits `a359cad` and `4c9bfad`: Docker Node24 lint, TypeScript, 158 tests and local-data production build passed for app changes. Independent source review found no actionable issue. Final Chrome 155 on macOS: **10/10 Playwright browser flows passed**, including real UI file-input Merge/Replace, cancel, invalid file, both languages and 390×600 changed-control reachability. Exact-source CI passed on `4c9bfad4f26d1165e18894eef096ee405f6f21f5` in run [38529064805](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38529064805); protected stable build passed in run [38529803527](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38529803527). Independent candidate and final artifact Security review passed. The Playwright 1.58.2 official Docker image pull stalled; system Chrome was used locally. CI remains configured to use the pinned image.
 - [Raw synthetic measurements](../docs/evidence/2026-10-14-desktop-backlog/performance.json): three interleaved runs each, small 4 weeks/20 Ideas/112,337 fixture bytes and large 52 weeks/500 Ideas/1,741,397 bytes. Median milliseconds, small → large: startup 181.8→154.9, offline week switch 72.7→81.3, offline Ideas open 141.9→194.6, offline search 8.4→11.4, offline type/save 726.4→728.1, offline reopen 51.9→47.2. Every run compared all seeded week/day/section/schedule and Idea records and one newly saved Idea. Larger fixture increased offline Ideas opening by about 53 ms in this sample; startup variance makes a speed ranking unreliable. Chrome 155/macOS desktop, warmed routes before offline, fixed UTC date, locator waits and 20 ms/character typing; no device, cold-offline, native lifecycle or promised capacity inference.
-- Browser-runner syntax and diff checks passed. Physical Android/TalkBack remain unverified. Task-owned preview container `smart-paper-desktop-preview` on port 3192 is pending cleanup after final browser use.
+- Browser-runner syntax and diff checks passed. Physical Android/TalkBack remain unverified. The production preview was subsequently stopped after Export locale browser verification; see the [Export task](2026-10-14-export-unlock-locale.md).
 
 ## Decisions And Risks
 
@@ -47,4 +47,4 @@ Actual phone lifecycle, upgrade/OS transfer, native recipient delivery, notifica
 
 ## Outcome / Handoff
 
-App and browser evidence are complete. Android 2026.10.24/code41 was published after exact-source checks, protected signing and independent artifact review passed. The anonymous public APK download matches the committed artifact byte-for-byte; see [the release record](../releases/smart-paper-v2026.10.24.md). Physical Android/TalkBack follow-ups remain open. The next backlog candidate is the observed Export unlock-success localization on EN→FA switch, subject to a new bounded design handoff.
+App and browser evidence are complete. Android 2026.10.24/code41 was published after exact-source checks, protected signing and independent artifact review passed. The anonymous public APK download matches the committed artifact byte-for-byte; see [the release record](../releases/smart-paper-v2026.10.24.md). Physical Android/TalkBack follow-ups remain open. The observed Export unlock-success localization follow-up shipped in Android 2026.10.25; see the [completed task](2026-10-14-export-unlock-locale.md).

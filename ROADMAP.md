@@ -17,11 +17,19 @@ Open Android evidence remains follow-up work, not blanket release gates:
 
 <a id="next-after-baseline-review"></a>
 
-## Next — ordered ready work
+## Next — ordered remaining work
 
-1. Execute physical-device evidence when a spare device is available, including the [data-safety matrix](tasks/2026-10-08-data-safety-phone-matrix.md). Future user-visible work requires Product and Designer review. Candidates include [accessibility/Persian review](tasks/2026-10-08-accessibility-persian-phone-review.md), and evidence-based improvements in the [notification review](tasks/2026-10-08-android-notification-review.md). No order is set among these candidates.
+Work sequentially: finish and document one selected task before starting the next. The ready implementation queue is complete; do not create speculative features to fill it.
+
+1. [Android data-safety validation](tasks/2026-10-08-android-data-safety-validation.md), using the [phone matrix](tasks/2026-10-08-data-safety-phone-matrix.md). Establish a working spare-device connection first; Samsung A15/Android 16 pairing was unsuccessful and no native cases have run.
+2. [Accessibility/Persian phone review](tasks/2026-10-08-accessibility-persian-phone-review.md), after data-safety execution.
+3. [Notification review](tasks/2026-10-08-android-notification-review.md), after accessibility. Product/Designer scope improvements from observed evidence before implementation.
+
+These tasks retain physical-device dependencies; desktop evidence cannot close them. Any reproduced issue follows the normal design, test, review and release workflow.
 
 ## Later
+
+- Full baseline studio/app fidelity comparison remains deferred in the [coverage task](tasks/2026-10-01-full-app-design-coverage.md); structural stories are reference drafts. Per-change ready Designer handoffs remain required.
 
 - [Periodic team reviews](tasks/2026-10-08-periodic-team-reviews.md) have an adopted manual policy in [docs/periodic-reviews.md](docs/periodic-reviews.md); the [first baseline](tasks/2026-10-13-manual-baseline-checkpoint.md) is recorded; next manual cue is five app-change batches or 30 active app-work days, or a concrete risk trigger. Device connection preparation remains pending for the available Samsung A15 (Android 16).
 - Validate week-template usage after release and consider daily/section-level defaults only if observed use supports them.

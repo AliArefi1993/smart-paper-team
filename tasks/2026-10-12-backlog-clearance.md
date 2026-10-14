@@ -1,8 +1,8 @@
 # Task: Execute the readiness-first backlog
 
-Status: in progress
+Status: complete — ready implementation queue shipped; device follow-ups transferred
 Created: 2026-10-12
-Updated: 2026-10-13
+Updated: 2026-10-14
 
 ## Objective
 
@@ -12,7 +12,7 @@ Work through the maintainer-authorized backlog in sequence, starting with the ea
 
 - Priority source: [ROADMAP.md](../ROADMAP.md).
 - Owning repository varies by step; coordinate in this team repository and keep app changes in their owning repositories.
-- Current Android baseline: [2026.10.21 release record](../releases/smart-paper-v2026.10.21.md).
+- Current Android baseline: [2026.10.25 release record](../releases/smart-paper-v2026.10.25.md).
 - The maintainer authorized the queue and requested no artificial closure of physical-device gaps.
 
 ## Acceptance Criteria
@@ -21,9 +21,9 @@ Work through the maintainer-authorized backlog in sequence, starting with the ea
 - [x] Review frontend repository hygiene without deleting or resetting files; record whether any safe cleanup is needed.
 - [x] Implement the evaluated XLSX writer upgrade with focused compatibility/security regressions and required reviews.
 - [x] Complete a bounded framework/build-tool refresh with scoped checks and release evidence.
-- [ ] For later user-visible candidates, have Product/Designer define scope and a ready handoff before implementation; no priority order among those candidates is assumed.
-- [ ] Preserve open physical-device evidence until actual device results are recorded.
-- [ ] Keep task, roadmap, product and status documentation accurate as each step completes.
+- [x] For later user-visible candidates, have Product/Designer define scope and a ready handoff before implementation; no priority order among those candidates is assumed.
+- [x] Preserve open physical-device evidence until actual device results are recorded.
+- [x] Keep task, roadmap, product and status documentation accurate as each step completes.
 
 ## Non-Goals
 
@@ -61,3 +61,6 @@ Work through the maintainer-authorized backlog in sequence, starting with the ea
 ## Outcome / Handoff
 
 Project-home cleanup, frontend hygiene review and the evaluated XLSX writer upgrade are complete. Framework refresh Android 2026.10.18 publication and anonymous checksum verification passed. Finance visibility shipped in Android 2026.10.19. The sixth selected task, the viewed-week Planner AI report shortcut, shipped in Android 2026.10.20 after Product/personal systems, bilingual Designer/studio, implementation, source/browser checks, exact-source CI, protected signing and final artifact Security review; anonymous asset `635037976` (4,381,120 bytes, SHA-256 `784d4f232c0fc0c5bc8dcad1c9857b528aa71ccedb25e15dae5c66289d956f79`) matches the committed APK byte-for-byte. The seventh selected task, Finance PIN change and visible-by-default behavior, shipped in Android 2026.10.21 from frontend `4a6736df8d98770ab608334583d1ba8a5ac1403d`. Exact-source CI `38334342301` passed 121 tests plus lint, types, local-data build and verification packaging; stable build `38334700023`, final artifact Security, and publisher `38341157085` passed. Anonymous asset `635744418` (4,389,312 bytes, SHA-256 `5866485c0a266e6ecca1485c7d3cd4e870e888ce3c4ad4100fc0bef9675ece69`) matches the committed APK byte-for-byte. Actual credential replacement, native credential UI, lifecycle/transfer, upgrade/data retention and TalkBack remain unverified; device evidence remains open. Backend and hosted-web work remain paused.
+
+
+Backlog reconciliation (2026-10-14): Idea Space relationships, local reporting/diagnostics, desktop confidence work and Export localization are also complete and published through Android 2026.10.25. The ready implementation queue is closed. Remaining device execution is transferred to the ordered [roadmap queue](../ROADMAP.md#next-after-baseline-review) and its task records; no phone result is inferred. Baseline studio fidelity remains explicitly deferred in the task index. Design: not applicable to this documentation reconciliation.
