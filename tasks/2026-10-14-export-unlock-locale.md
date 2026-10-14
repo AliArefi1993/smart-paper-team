@@ -1,6 +1,6 @@
 # Task: Keep Export unlock feedback in the selected language
 
-Status: local implementation validated; release pending
+Status: hosted validation and artifact review passed; publication pending
 Created: 2026-10-14
 Updated: 2026-10-14
 
@@ -18,7 +18,7 @@ Correct the observed Export unlock-success message that stays English after swit
 
 - [x] Ready bilingual Designer handoff precedes the frontend change.
 - [x] English/Persian switching updates the visible unlock-success feedback without relocking, reloading data or altering the status role/focus.
-- [ ] Focused browser regression and relevant local checks pass with no unresolved high/critical finding; hosted exact-source checks pending.
+- [x] Focused browser regression and relevant local checks pass with no unresolved high/critical finding; hosted exact-source checks passed.
 - [ ] Documentation, scoped commits and the authorized signed Android release are complete; physical/native gaps remain accurately marked.
 
 ## Non-Goals
@@ -29,8 +29,8 @@ Finance credential changes, import/export semantics, new copy, physical-device c
 
 - Studio EN/FA phone/wide story typecheck/build and interactive switching passed; final handoff ready.
 - Docker Node24 lint, TypeScript, 158/158 unit tests and local-data production build passed. Chrome 155 on macOS: existing 11 browser flows passed after the fix; two focused Export language tests passed after the final Persian-first case was added. `git diff --check` and browser test syntax passed. Independent source review found no actionable issue.
-- Final frontend commit `9aee030` includes Android code42/name2026.10.25. Exact-source hosted CI, signing and final artifact review remain pending; physical Android/TalkBack unverified.
+- Final frontend commit `9aee030` includes Android code42/name2026.10.25. Exact-source CI run [38533170570](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38533170570), protected signing and independent final artifact Security review passed in run [38533879927](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38533879927). Physical Android/TalkBack remain unverified.
 
 ## Outcome / Handoff
 
-Implementation is ready for scoped fast-forward push and hosted checks, then the authorized signed Android release. A task-owned production preview container was stopped after browser tests; no task-owned background process remains.
+Implementation, hosted checks, protected signing and independent final artifact review are complete for Android 2026.10.25/code42. Public tag publication and anonymous APK byte/hash verification remain. A task-owned production preview container was stopped after browser tests; no task-owned background process remains.

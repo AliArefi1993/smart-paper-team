@@ -24,6 +24,8 @@ Updated: 2026-10-13. Keep this file short and update it when user-visible featur
 
 ## Recent completed work
 
+- Prepared Android 2026.10.25 with the Export unlock locale correction: the visible success message follows English/Persian language changes while the Finance authorization remains active. Exact-source CI, protected signing and independent artifact Security review passed; publication and public APK verification are pending.
+
 - Shipped the desktop backlog batch in [Android 2026.10.24](releases/smart-paper-v2026.10.24.md): Persian Idea recovery status, browser integration coverage, bilingual desktop keyboard/focus corrections, and integrity-checked synthetic offline performance comparisons. Exact-source CI, protected signing, independent artifact Security review and anonymous public APK verification passed; physical Android/TalkBack remain follow-ups.
 
 - Shipped local reporting/diagnostics in [Android 2026.10.23](releases/smart-paper-v2026.10.23.md): separate disclosed ON local defaults, preserved OFF choices, inspect/delete, independent optional evidence, exact preview and deliberate email/copy. Docker/hosted checks, bilingual runtime QA/Designer, independent APK Security and anonymous public byte/hash verification passed; native email delivery and TalkBack remain follow-ups.
