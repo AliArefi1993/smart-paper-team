@@ -1,6 +1,6 @@
 # Task: Keep Export unlock feedback in the selected language
 
-Status: hosted validation and artifact review passed; publication pending
+Status: shipped in Android 2026.10.25/code42
 Created: 2026-10-14
 Updated: 2026-10-14
 
@@ -19,7 +19,7 @@ Correct the observed Export unlock-success message that stays English after swit
 - [x] Ready bilingual Designer handoff precedes the frontend change.
 - [x] English/Persian switching updates the visible unlock-success feedback without relocking, reloading data or altering the status role/focus.
 - [x] Focused browser regression and relevant local checks pass with no unresolved high/critical finding; hosted exact-source checks passed.
-- [ ] Documentation, scoped commits and the authorized signed Android release are complete; physical/native gaps remain accurately marked.
+- [x] Documentation, scoped commits and the authorized signed Android release are complete; physical/native gaps remain accurately marked.
 
 ## Non-Goals
 
@@ -33,4 +33,4 @@ Finance credential changes, import/export semantics, new copy, physical-device c
 
 ## Outcome / Handoff
 
-Implementation, hosted checks, protected signing and independent final artifact review are complete for Android 2026.10.25/code42. Public tag publication and anonymous APK byte/hash verification remain. A task-owned production preview container was stopped after browser tests; no task-owned background process remains.
+Implementation, hosted checks, protected signing, independent final artifact review and public APK byte/hash verification are complete for Android 2026.10.25/code42. A task-owned production preview container was stopped after browser tests; no task-owned background process remains.

@@ -11,7 +11,7 @@ Date: 2026-10-14
 
 | Repository | Tag | Commit | Notes |
 | --- | --- | --- | --- |
-| team root | `smart-paper-v2026.10.25` | pending | Release record, exact APK and provenance committed before tagging. |
+| team root | `smart-paper-v2026.10.25` | `d7e7c569c6bfcc69f68093bf74cb55089085e868` | Release record, exact APK and provenance committed before tagging. |
 | backend `smart-paper/` | `smart-paper-v2026.10.25` | `68c789b707239ef5451f98f7f6ce49d7c9b8a8c2` | Unchanged; release marker only. |
 | frontend `smart-paper-front/` | `smart-paper-v2026.10.25` | `9aee030bbbf312aff74fdb5caa82033585726906` | Exact source used for CI and hosted build. |
 
@@ -39,7 +39,7 @@ Date: 2026-10-14
 | Hosted unsigned candidate | [Stable build run 38533879927](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38533879927) | Lint, TypeScript, tests, local-data build, Android assembly, candidate verification and upload passed. Candidate artifact `11879411625`; archive SHA-256 `28aef958f4681a1456a5d1e66c15d36ea33dbd97d584559b6d6c43e95876e42c`. |
 | Protected stable signing | [Stable build run 38533879927](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38533879927) | Passed. Final artifact `11879582475`; archive SHA-256 `c2b68b78fee8576ac070c16b2316d35d806dafbd9f65285b522a9435b20fadee`. |
 | Artifact Security review | Independent review of candidate and signed APK | Passed: pinned v2/v3 signer, identity/version/non-debug, all 556 candidate payload entries and 112 web assets match; no high/critical finding. Final SHA-256 matches checksum and provenance. |
-| Public release | Pending tag publication | Pending; anonymous public APK bytes and SHA-256 must be verified after publication. |
+| Public release | [Publisher run 38535232702](https://github.com/AliArefi1993/smart-paper-team/actions/runs/38535232702) | Published non-draft release [Smart Paper 2026.10.25](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.25), asset `639742194`, 4,409,696 bytes. Anonymous download SHA-256 `2cc65b2695afc6fe78f02f594a690efa2281dbf7001ba21a89177235719a76cb` matches the committed APK byte-for-byte. |
 | Backend tests and migration check | Not run | Backend unchanged; no backend application change in this release. |
 
 ## Release Notes
