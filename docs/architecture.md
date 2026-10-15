@@ -116,6 +116,7 @@ See `docs/database.md` for entity relationships, persistence ownership, and sche
 - `xlsx` is used by the frontend for client-side Excel export in local mode.
 - `@capacitor/local-notifications` is used for opt-in Android local morning plan reminders.
 - Capacitor Android is configured for a local static build.
+- Android `MainActivity` consumes system Back with a lifecycle-bound AndroidX callback. A constant WebView evaluation asks `AndroidBackRoot` to cancel the current modal/surface, apply existing departure guards, traverse app-stamped history, or replace a fresh secondary entry with Planner. Only a live same-URL local root response authorizes backgrounding the task; initialization, timeout and stale responses do not exit. History stamps preserve Next router state and do not use total browser history length. The coordinator is Android-only; native IME/chooser/predictive gesture behavior remains a device verification gap.
 - Android OS backup rules exclude cloud application-data backup and permit supported device-to-device migration. API 24–27 excludes both; API 28–30 requires the device-transfer flag; API 31+ uses separate cloud/transfer rules. External JSON recovery remains required; actual OEM transfer is unverified. See [policy](android-backup-policy.md).
 
 ## Deployment

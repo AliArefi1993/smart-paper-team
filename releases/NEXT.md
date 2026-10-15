@@ -1,3 +1,3 @@
 # Next Smart Paper Release
 
-No Android release is currently in preparation. Android 2026.10.26/code43 is published from frontend `aa33f7942364185b5421fbdc65ed5944f539eda2`; its anonymous public APK download matches the committed artifact byte-for-byte. See the [release record](smart-paper-v2026.10.26.md). Backend is unchanged; physical/native notification and TalkBack checks remain open. Future user-visible work requires an approved scope and ready design handoff.
+Android 2026.10.27/code44 is in publication from frontend `6ec0eee66add646ee64f2fe335e9f044171a4531`. Exact-source CI, protected signing and independent final artifact review passed; the team tag and anonymous public APK download verification are pending. See the [release record](smart-paper-v2026.10.27.md). Backend is unchanged; physical keyboard, chooser, predictive/gesture Back and TalkBack checks remain open.

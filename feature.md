@@ -1,6 +1,6 @@
 # Smart Paper Features
 
-Updated: 2026-10-14. Keep this file short and update it when user-visible features change.
+Updated: 2026-10-15. Keep this file short and update it when user-visible features change.
 
 ## In the Android app
 
@@ -12,6 +12,7 @@ Updated: 2026-10-14. Keep this file short and update it when user-visible featur
 - Enable optional Finance in Settings to track a goal and income entries, with confirmation before deletion. Finance starts visible by default; saved visible/hidden choices remain authoritative. Hiding preserves records, PIN protection and backup/export access.
 - Change a known Finance PIN offline in Settings with current/new/confirmation, immediate relock and failure-safe persistence. PINs stay outside JSON backups; import retains the receiving device’s PIN.
 - Use English or Persian.
+- Use Android Back to close open app views and return through visited screens, with existing Settings and Planner save protections; exit is allowed at the unguarded Planner root. Physical keyboard/gesture behavior remains unverified.
 - Inspect/delete local errors and feature counts with independent disclosed ON defaults and preserved saved OFF choices. Describe a problem, choose optional evidence, review its exact text and deliberately email Smart Paper or copy the report; nothing uploads automatically and personal app contents are excluded from collection.
 - Choose a saved Light or Dark appearance across every app page, including summaries and reports.
 - Export JSON backups and readable CSV, Excel, or Markdown files.
@@ -23,6 +24,8 @@ Updated: 2026-10-14. Keep this file short and update it when user-visible featur
 - Capture freeform ideas, expand optional writing sparks, revisit an older thought each day, and search or edit saved notes. Read a thought in full and follow its original thought or direct branches while retaining unfinished writing, search and return context. Notes are included in JSON backups. Contextual new/edit/branch drafts recover separately, protect dirty writing, and retain missing/changed-source writing with Keep as new thought. Drafts are excluded from backups.
 
 ## Recent completed work
+
+- Android Back correction accepted for [Android 2026.10.27](releases/smart-paper-v2026.10.27.md): open views close through existing actions, visited app screens unwind, Settings/Planner save protections remain active, and the unguarded Planner root permits exit. Product/Designer/QA, 178 unit tests, all 30 exact-source browser checks, native compilation, protected signing and independent final artifact review passed. Publication status is in the release record; physical IME/chooser/gestures and TalkBack remain follow-ups.
 
 - Shipped empty-day reminder suppression in [Android 2026.10.26](releases/smart-paper-v2026.10.26.md): empty timed-event days stay silent while saved reminder choices and populated-event reminders remain intact. Exact-source CI, protected signing, independent artifact review and anonymous public APK verification passed; physical notification delivery and TalkBack remain follow-ups.
 

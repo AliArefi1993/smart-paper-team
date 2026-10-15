@@ -1,10 +1,12 @@
 # Smart Paper Status
 
-Last updated: 2026-10-14.
+Last updated: 2026-10-15.
 
 This is a present-state snapshot, not a changelog. Shipped history and validation details live in `releases/`; implementation history lives in each repository's Git log.
 
 ## Current Focus
+
+- [Android Back navigation](tasks/2026-10-14-android-back-navigation.md) passed source, browser, exact-SHA CI, protected signing and independent final APK review for Android 2026.10.27/code44. Team tag publication and anonymous APK download verification remain pending. Physical IME/chooser/predictive Back and TalkBack remain unverified.
 
 - [Empty-day notification correction](tasks/2026-10-14-empty-day-notification.md) shipped in Android 2026.10.26/code43 from frontend `aa33f7942364185b5421fbdc65ed5944f539eda2`. Empty target-day timed-event lists cancel the pending reminder and schedule nothing; saved choices and populated-event reminders remain intact. Exact-source CI, protected signing, independent final artifact review, publication and anonymous byte/hash verification passed. Physical notification delivery and TalkBack remain unverified.
 
@@ -88,7 +90,7 @@ Run `scripts/project-context.sh` for current branches, revisions, working-tree c
 
 ## Latest Verified Checks
 
-Frontend `aa33f7942364185b5421fbdc65ed5944f539eda2` passed exact-source CI [38589474128](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38589474128) on attempt 2 after an initial Google Maven HTTP 503 for `layoutlib-api:31.13.0`. Docker Node 24 focused tests (15/15), full tests (173/173 under CI-equivalent local mode), lint, TypeScript and local-data build passed. Protected stable build [38589501971](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38589501971), independent unsigned/signed artifact reviews and anonymous public APK verification passed. Public release publisher run [38593913916](https://github.com/AliArefi1993/smart-paper-team/actions/runs/38593913916) uploaded asset `640873575`; its 4,409,696-byte download SHA-256 `201edcc40e57ce174ae21aad8fa3a06b3d372fe720bce33fc075479ef7db55d7` matches the committed APK byte-for-byte. See the [2026.10.26 release record](releases/smart-paper-v2026.10.26.md) and [empty-day reminder task](tasks/2026-10-14-empty-day-notification.md). Physical Android notification delivery and TalkBack remain unverified. Backend remains paused and unchanged.
+Frontend `6ec0eee66add646ee64f2fe335e9f044171a4531` passed exact-source CI [38630913342](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38630913342), including lint, TypeScript, tests, local-data build, browser integration, and isolated Android APK assembly/verification. Docker Node 24 local checks passed lint, TypeScript, 178 tests and local-data build; Chrome 155 passed all 30 Back scenarios/regressions. Protected stable build [38630950484](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38630950484), unsigned/final artifact Security reviews, signing, and provenance verification passed. Team tag publication and anonymous public APK verification are pending; see the [2026.10.27 release record](releases/smart-paper-v2026.10.27.md). Physical keyboard, chooser, predictive/gesture Back and TalkBack remain unverified. Backend remains paused and unchanged.
 
 Older release verification details and the transient Maven failure are recorded in the [2026.10.12 release record](releases/smart-paper-v2026.10.12.md); its candidate/final artifact archive bytes were not retained for local rehash. The [2026.10.9 record](releases/smart-paper-v2026.10.9.md) documents its signed/public APK verification and 21 npm advisories (1 low, 4 moderate, 14 high, 2 critical); no clean audit is claimed. The earlier stable APK was independently downloaded and verified, and backend 33-test/no-migration evidence was reused; see the [CI task](tasks/2026-10-07-github-actions-ci-android-builds.md) and [2026.10.9 release record](releases/smart-paper-v2026.10.9.md). Independent CI verification-archive download/extraction, fork/cancellation/cache-hit runs, and account-specific billing usage remain unverified. Historical physical/native gaps remain in Known Risks And Gaps.
 

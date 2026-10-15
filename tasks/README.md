@@ -4,6 +4,8 @@ Task documents preserve the intent and verification context of meaningful work s
 
 ## Remaining queue — one task at a time
 
+[Android Back navigation](2026-10-14-android-back-navigation.md) passed source/browser/build/signing and final artifact gates; release publication is in progress. The phone review queue below remains separate.
+
 [ROADMAP.md](../ROADMAP.md#next-after-baseline-review) owns the order. The ready implementation queue is complete; the remaining phone reviews await observed device evidence.
 
 1. [Android data safety on a real phone](2026-10-08-android-data-safety-validation.md), using the [execution matrix](2026-10-08-data-safety-phone-matrix.md). Next action: establish a working spare-device connection and record installed/candidate APK identities before testing. Samsung A15/Android 16 connection was unsuccessful; no phone cases have run.
