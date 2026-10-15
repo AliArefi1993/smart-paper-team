@@ -1,6 +1,6 @@
 # Task: Android system Back returns within Smart Paper
 
-Status: publishing
+Status: complete — released; physical Android follow-ups remain open
 Created: 2026-10-14
 Updated: 2026-10-15
 
@@ -56,7 +56,7 @@ Checked items are verified by source, browser and hosted build evidence. Physica
 | Unsigned release candidate | [Stable build 38630950484](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38630950484), artifact `11925799407`, archive SHA-256 `12bb565171a458620773f51b9d8b284f95743e1137cc0c70fc59a1fec6efa461` | Independent Security accepted binary identity/version/non-debug status, source/provenance, all 113 web assets and native/web Back handlers; unsigned state confirmed |
 | Protected signing | Same exact-source release run; final artifact `11927385937`, archive SHA-256 `3cceb7b0aa641876624464037954d92ccb86743dfdea5b1116377f5daf474690` | Pass after candidate review and required environment approval; transient API error resolved by bounded retry with unchanged protections |
 | Final artifact Security | APK SHA-256 `4473ed6dd843b4875b9f241f6eafcfaf4cf786af3b561fde1c493531aaf2863a`, 4,413,888 bytes | Pass: one pinned v2/v3 signer, binary identity/version/non-debug, exact provenance and all 557 unsigned payload entries match; only signing metadata added |
-| Publication | [Release record](../releases/smart-paper-v2026.10.27.md) | Lead release go; tagging/public anonymous verification pending |
+| Publication | [Publisher 38698489598](https://github.com/AliArefi1993/smart-paper-team/actions/runs/38698489598), [release record](../releases/smart-paper-v2026.10.27.md), public asset `643053744` | Pass: published non-draft; anonymous 4,413,888-byte APK download matches committed artifact byte-for-byte and SHA-256 |
 
 ## Decisions And Risks
 
@@ -68,4 +68,4 @@ Checked items are verified by source, browser and hosted build evidence. Physica
 
 ## Outcome / Handoff
 
-Product, Designer, independent correctness and Security source reviews accepted the implementation. Docker checks and [bilingual browser acceptance](../design/2026-10-14-android-back-navigation-qa.md) passed. Frontend `6ec0eee66add646ee64f2fe335e9f044171a4531` is committed/pushed for Android 2026.10.27/code44; exact-source CI, protected signing and independent final artifact Security passed. The lead authorized publication of the exact verified APK; public verification remains pending. Physical Android behavior remains unobserved. The task-owned preview was stopped after QA; no task server remains.
+Product, Designer, independent correctness and Security source reviews accepted the implementation. Docker checks and [bilingual browser acceptance](../design/2026-10-14-android-back-navigation-qa.md) passed. Frontend `6ec0eee66add646ee64f2fe335e9f044171a4531` is committed/pushed for Android 2026.10.27/code44; exact-source CI, protected signing and independent final artifact Security passed. Android 2026.10.27/code44 is published. The anonymous public APK matches the committed artifact byte-for-byte (SHA-256 `4473ed6dd843b4875b9f241f6eafcfaf4cf786af3b561fde1c493531aaf2863a`). Team release tag points to `8c210f517ee705e29593274bd5619666c97d35cb`; backend remains `68c789b707239ef5451f98f7f6ce49d7c9b8a8c2`. Physical Android behavior remains unobserved. The task-owned preview was stopped after QA; no task server remains.

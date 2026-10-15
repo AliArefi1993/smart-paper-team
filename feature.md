@@ -25,7 +25,7 @@ Updated: 2026-10-15. Keep this file short and update it when user-visible featur
 
 ## Recent completed work
 
-- Android Back correction accepted for [Android 2026.10.27](releases/smart-paper-v2026.10.27.md): open views close through existing actions, visited app screens unwind, Settings/Planner save protections remain active, and the unguarded Planner root permits exit. Product/Designer/QA, 178 unit tests, all 30 exact-source browser checks, native compilation, protected signing and independent final artifact review passed. Publication status is in the release record; physical IME/chooser/gestures and TalkBack remain follow-ups.
+- Shipped Android Back correction in [Android 2026.10.27](releases/smart-paper-v2026.10.27.md): open views close through existing actions, visited app screens unwind, Settings/Planner save protections remain active, and the unguarded Planner root permits exit. Product/Designer/QA, 178 unit tests, all 30 exact-source browser checks, native compilation, protected signing and independent final artifact review passed. Anonymous public APK byte/hash verification passed; physical IME/chooser/gestures and TalkBack remain follow-ups.
 
 - Shipped empty-day reminder suppression in [Android 2026.10.26](releases/smart-paper-v2026.10.26.md): empty timed-event days stay silent while saved reminder choices and populated-event reminders remain intact. Exact-source CI, protected signing, independent artifact review and anonymous public APK verification passed; physical notification delivery and TalkBack remain follow-ups.
 

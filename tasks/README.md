@@ -4,8 +4,6 @@ Task documents preserve the intent and verification context of meaningful work s
 
 ## Remaining queue — one task at a time
 
-[Android Back navigation](2026-10-14-android-back-navigation.md) passed source/browser/build/signing and final artifact gates; release publication is in progress. The phone review queue below remains separate.
-
 [ROADMAP.md](../ROADMAP.md#next-after-baseline-review) owns the order. The ready implementation queue is complete; the remaining phone reviews await observed device evidence.
 
 1. [Android data safety on a real phone](2026-10-08-android-data-safety-validation.md), using the [execution matrix](2026-10-08-data-safety-phone-matrix.md). Next action: establish a working spare-device connection and record installed/candidate APK identities before testing. Samsung A15/Android 16 connection was unsuccessful; no phone cases have run.
@@ -24,6 +22,8 @@ Complete and document each selected task before starting the next. Reproduced is
 - [Timer optional and hidden by default](2026-10-07-timer-optional-default-hidden.md) — cancelled on 2026-10-12; keep Timer available by default.
 
 ## Completed / Assessed
+
+- [Android Back navigation](2026-10-14-android-back-navigation.md): shipped in Android 2026.10.27 after exact-source checks, protected signing, independent artifact review and public APK verification; physical Back/IME/chooser/TalkBack follow-ups remain open.
 
 - [Empty-day morning reminder](2026-10-14-empty-day-notification.md): shipped in Android 2026.10.26; physical delivery/TalkBack and the wider notification review remain open.
 - [Sequential backlog clearance](2026-10-12-backlog-clearance.md): ready implementation queue complete; phone work remains in the ordered queue above.

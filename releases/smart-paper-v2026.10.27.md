@@ -11,7 +11,7 @@ Date: 2026-10-15
 
 | Repository | Tag | Commit | Notes |
 | --- | --- | --- | --- |
-| team root | `smart-paper-v2026.10.27` | Pending tag commit | Release record, exact APK, and provenance committed before tagging. |
+| team root | `smart-paper-v2026.10.27` | `8c210f517ee705e29593274bd5619666c97d35cb` | Release record, exact APK, and provenance committed before tagging. |
 | backend `smart-paper/` | `smart-paper-v2026.10.27` | `68c789b707239ef5451f98f7f6ce49d7c9b8a8c2` | Backend source unchanged; release marker only. |
 | frontend `smart-paper-front/` | `smart-paper-v2026.10.27` | `6ec0eee66add646ee64f2fe335e9f044171a4531` | Exact source used for CI and hosted build. |
 
@@ -40,13 +40,13 @@ Date: 2026-10-15
 | Hosted unsigned candidate | [Stable build run 38630950484](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38630950484), artifact `11925799407` | Passed. Independent Security accepted package/version/non-debug identity, provenance, 113 web assets, native/web handlers, and unsigned state. Candidate archive SHA-256 `12bb565171a458620773f51b9d8b284f95743e1137cc0c70fc59a1fec6efa461`. |
 | Protected stable signing | [Stable build run 38630950484](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38630950484), final artifact `11927385937` | Passed after required environment approval. Downloaded archive SHA-256 `3cceb7b0aa641876624464037954d92ccb86743dfdea5b1116377f5daf474690`. |
 | Final artifact Security review | Signed APK and provenance | Passed: pinned v2/v3 certificate, package/version/non-debug identity, provenance, and all 557 unsigned payload entries match; only signing metadata was added. |
-| Public release | Pending | Publication and anonymous APK download verification remain in progress. |
+| Public release | [Publisher run 38698489598](https://github.com/AliArefi1993/smart-paper-team/actions/runs/38698489598) | Published non-draft [Smart Paper 2026.10.27](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.27), asset `643053744`, 4,413,888 bytes. Anonymous download SHA-256 `4473ed6dd843b4875b9f241f6eafcfaf4cf786af3b561fde1c493531aaf2863a` matches the committed APK byte-for-byte. |
 
 ## Release Notes
 
 - Android system Back returns through the current app surface and route history, falls back to Planner for a fresh secondary route, and allows the normal platform exit at the unguarded root.
 - Existing cancel, save, discard, unlock, and retry guards remain deliberate and data-safe.
-- Prepared for publication as Android 2026.10.27/code44; the public tag and download checks are pending.
+- Published as Android 2026.10.27/code44. The anonymous public APK download matches the committed artifact byte-for-byte.
 
 ## Known Follow-Ups
 
