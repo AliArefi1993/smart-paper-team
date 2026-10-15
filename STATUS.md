@@ -1,10 +1,12 @@
 # Smart Paper Status
 
-Last updated: 2026-10-15.
+Last updated: 2026-10-16.
 
 This is a present-state snapshot, not a changelog. Shipped history and validation details live in `releases/`; implementation history lives in each repository's Git log.
 
 ## Current Focus
+
+- [Import completion feedback](tasks/2026-10-15-import-feedback.md) shipped in Android 2026.10.28/code45 from frontend `baf05da37794e6c9314d9112d3c9a0c24e5fbe4b`. Contextual receipts identify file/mode and incoming collections; saved archived/future weeks are reachable through Planner. Product/Designer, 179 unit tests, 36 browser checks, exact-source CI, protected signing and independent source/unsigned/final artifact reviews passed. [Publication](releases/smart-paper-v2026.10.28.md) and anonymous byte/hash verification passed; physical chooser/TalkBack remain unverified.
 
 - [Android Back navigation](tasks/2026-10-14-android-back-navigation.md) shipped in Android 2026.10.27/code44 from frontend `6ec0eee66add646ee64f2fe335e9f044171a4531`. Exact-source CI, protected signing, independent final artifact review, publication and anonymous APK verification passed. Physical keyboard, chooser, predictive/gesture Back and TalkBack remain unverified.
 
@@ -48,7 +50,7 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 
 - Hosted stable-build workflow at frontend `625cfe0` passed a protected signing run after explicit maintainer approval in chat. Run `37905792035` built source `625cfe02204191269459093fdfa66aa3755bba62`; independent verification accepted its downloaded APK signature, version, identity, and checksum. Environment reviewer/main-only/no-bypass protections are verified. Maintainer-reported secrets remain in GitHub and were not read. See the [setup guide](smart-paper-front/.github/STABLE-BUILDS.md). Publication remains a separate team tag workflow.
 
-- Latest published release: [Android 2026.10.27](releases/smart-paper-v2026.10.27.md), code44, frontend `6ec0eee66add646ee64f2fe335e9f044171a4531`. Publisher run [38698489598](https://github.com/AliArefi1993/smart-paper-team/actions/runs/38698489598) succeeded; public APK asset `643053744` matches the committed artifact byte-for-byte (4,413,888 bytes; SHA-256 `4473ed6dd843b4875b9f241f6eafcfaf4cf786af3b561fde1c493531aaf2863a`). Backend source unchanged.
+- Latest published release: [Android 2026.10.28](releases/smart-paper-v2026.10.28.md), code45, frontend `baf05da37794e6c9314d9112d3c9a0c24e5fbe4b`. Publisher run [38804857069](https://github.com/AliArefi1993/smart-paper-team/actions/runs/38804857069) succeeded; public APK asset `645128069` matches the committed artifact byte-for-byte (4,413,888 bytes; SHA-256 `27718fdcfc11f3632282cafc3248b4dcba9fd8f2b85db244b1f68556078e4016`). Backend source unchanged.
 
 - Maintainer standing authorization dated 2026-10-09 permits the agent-operated release flow without per-run user permission requests during the pre-user phase. Lead acceptance, release go/no-go, technical gates, and GitHub environment protections remain required. Revisit when real users start using the app or the maintainer revokes authorization. See [decision D-011](docs/decisions.md).
 
@@ -85,12 +87,12 @@ Run `scripts/project-context.sh` for current branches, revisions, working-tree c
 - Backend: Python, Django 6.0.4, SQLite, `planner` and `finance` apps, committed migrations, Docker/Compose, Gunicorn startup path.
 - Frontend: Next.js 16.4.0, React 19.2.4, TypeScript, Tailwind CSS 4, Capacitor 8.5.1 (Android/core/CLI); Capacitor major remains 8.
 - Frontend routes: planner, ideas, timer, finance, summaries, export/import, and settings.
-- Current Android release: `versionCode 44`, `versionName 2026.10.27`, using the stable signing certificate.
+- Current Android release: `versionCode 45`, `versionName 2026.10.28`, using the stable signing certificate.
 - Team `smart-paper-v*` tags publish GitHub Releases when the matching release record and APK are committed.
 
 ## Latest Verified Checks
 
-Frontend `6ec0eee66add646ee64f2fe335e9f044171a4531` passed exact-source CI [38630913342](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38630913342), including lint, TypeScript, tests, local-data build, browser integration, and isolated Android APK assembly/verification. Docker Node 24 local checks passed lint, TypeScript, 178 tests and local-data build; Chrome 155 passed all 30 Back scenarios/regressions. Protected stable build [38630950484](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38630950484), unsigned/final artifact Security reviews, signing, and provenance verification passed. Publisher run [38698489598](https://github.com/AliArefi1993/smart-paper-team/actions/runs/38698489598) published the release; anonymous asset `643053744` download matches the committed 4,413,888-byte APK SHA-256 `4473ed6dd843b4875b9f241f6eafcfaf4cf786af3b561fde1c493531aaf2863a`. See the [2026.10.27 release record](releases/smart-paper-v2026.10.27.md). Physical keyboard, chooser, predictive/gesture Back and TalkBack remain unverified. Backend remains paused and unchanged.
+Frontend `baf05da37794e6c9314d9112d3c9a0c24e5fbe4b` passed exact-source [CI 38802594305](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38802594305): lint, TypeScript, 179 unit tests, local-data build, all 36 browser checks and isolated Android APK assembly/verification. Docker Node24 checks and studio typecheck/build passed. Product/Designer accepted bilingual receipt and archived-week access; independent source review passed after a Django-only metadata fix. Protected stable [build 38802646169](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38802646169), unsigned/final artifact Security, pinned signing and provenance passed. [Publisher 38804857069](https://github.com/AliArefi1993/smart-paper-team/actions/runs/38804857069) published 2026.10.28; anonymous asset `645128069` matches the committed 4,413,888-byte APK SHA-256 `27718fdcfc11f3632282cafc3248b4dcba9fd8f2b85db244b1f68556078e4016`. See the [release record](releases/smart-paper-v2026.10.28.md). Physical Android chooser/TalkBack and earlier native follow-ups remain unverified. Backend remains paused and unchanged.
 
 Older release verification details and the transient Maven failure are recorded in the [2026.10.12 release record](releases/smart-paper-v2026.10.12.md); its candidate/final artifact archive bytes were not retained for local rehash. The [2026.10.9 record](releases/smart-paper-v2026.10.9.md) documents its signed/public APK verification and 21 npm advisories (1 low, 4 moderate, 14 high, 2 critical); no clean audit is claimed. The earlier stable APK was independently downloaded and verified, and backend 33-test/no-migration evidence was reused; see the [CI task](tasks/2026-10-07-github-actions-ci-android-builds.md) and [2026.10.9 release record](releases/smart-paper-v2026.10.9.md). Independent CI verification-archive download/extraction, fork/cancellation/cache-hit runs, and account-specific billing usage remain unverified. Historical physical/native gaps remain in Known Risks And Gaps.
 

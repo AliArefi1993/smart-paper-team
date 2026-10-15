@@ -2,7 +2,7 @@
 
 Date: 2026-10-16
 
-Status: Release files prepared for publication. Exact-source CI and independent unsigned/final artifact Security reviews passed. Lead publication go-ahead received; the team release tag will trigger GitHub publication.
+Status: Published and verified. Exact-source CI, independent unsigned/final artifact Security reviews, GitHub publication, and anonymous APK byte/hash verification passed.
 
 ## Scope
 
@@ -14,7 +14,7 @@ Status: Release files prepared for publication. Exact-source CI and independent 
 
 | Repository | Tag | Commit | Notes |
 | --- | --- | --- | --- |
-| team root | `smart-paper-v2026.10.28` | Release record commit | Release record and final APK/provenance are included in the tagged commit. |
+| team root | `smart-paper-v2026.10.28` | `ec415c703e49a2a64e9d34c84c60bdf7d608e58f` | Release record and final APK/provenance are included in the tagged commit. |
 | backend `smart-paper/` | `smart-paper-v2026.10.28` | `68c789b707239ef5451f98f7f6ce49d7c9b8a8c2` | Backend source unchanged; annotated marker tag. |
 | frontend `smart-paper-front/` | `smart-paper-v2026.10.28` | `baf05da37794e6c9314d9112d3c9a0c24e5fbe4b` | Exact source for verification and stable-build candidate. |
 
@@ -47,13 +47,13 @@ Hosted stable-build run [38802646169](https://github.com/AliArefi1993/smart-pape
 | Exact-source frontend CI | Run [38802594305](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38802594305), source `baf05da37794e6c9314d9112d3c9a0c24e5fbe4b` | Passed: lint, types, 179 unit tests, local-data build, 36 browser tests (including six import-feedback cases), Android verification APK assembly and provenance. |
 | Hosted unsigned candidate | Stable-build run [38802646169](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38802646169), artifact `12005051605` | Built; independent Security review passed for package/version/local mode, provenance, 113 web assets, 557 unsigned payload entries, and unsigned signer state. |
 | Protected signing | Stable-build run [38802646169](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38802646169), final artifact `12005417537` | Passed after required reviewer approval. Independent Security verified the pinned v2/v3 signer and all 557 unsigned payload entries unchanged except signing metadata. |
-| Public release | In progress | Lead publication go-ahead received; team tag publication and anonymous download verification are pending. |
+| Public release | [Publisher run 38804857069](https://github.com/AliArefi1993/smart-paper-team/actions/runs/38804857069) | Published at [GitHub Releases](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.28); APK asset `645128069`, 4,413,888 bytes. Anonymous download SHA-256 `27718fdcfc11f3632282cafc3248b4dcba9fd8f2b85db244b1f68556078e4016` matches the committed APK byte-for-byte. |
 
 ## Release Notes
 
 - Import completion stays visible beside the action, identifies the selected backup, and links to content that can be inspected after import.
 - Archived and future imported weeks can be opened from the existing Planner selector; intermediate weeks are not generated.
-- Stable-signed Android 2026.10.28/code45 from frontend `baf05da37794e6c9314d9112d3c9a0c24e5fbe4b`, after exact-source CI and independent candidate/final artifact review.
+- Published stable-signed Android 2026.10.28/code45 from frontend `baf05da37794e6c9314d9112d3c9a0c24e5fbe4b`, after exact-source CI, independent candidate/final artifact review, and public APK byte/hash verification.
 - Count wording describes records present in the backup rather than claiming a count of newly added records.
 
 ## Known Follow-Ups

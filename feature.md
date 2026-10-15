@@ -1,6 +1,6 @@
 # Smart Paper Features
 
-Updated: 2026-10-15. Keep this file short and update it when user-visible features change.
+Updated: 2026-10-16. Keep this file short and update it when user-visible features change.
 
 ## In the Android app
 
@@ -18,12 +18,14 @@ Updated: 2026-10-15. Keep this file short and update it when user-visible featur
 - Export JSON backups and readable CSV, Excel, or Markdown files.
 - Create a selective Markdown AI report by field and date range, preview its text, then copy it for manual pasting or share its file using the phone's app chooser. Manual text selection is available when copying fails; changed source data requires reviewing the refreshed preview. The file explains itself and asks the AI for a grounded first response.
 - Prepare the viewed Planner week through “Review this week with AI”; report dates/fields remain editable, Finance starts excluded, and failed saves or active editors block departure until resolved. Report preparation works offline.
-- Import a JSON backup by merge or replace.
+- Import a JSON backup by merge or replace, with a visible filename/mode receipt and backup record counts. Open restored content through receipt links and select archived saved weeks in Planner.
 - Set an optional morning timed-event notification and explicitly save validated Settings from the header or end of the form. Days without timed events stay silent; saved reminder choices remain enabled for later populated days.
 - Run focus and rest countdowns with configurable lengths, warm natural sand and visible falling grains; pause freezes the grains and reduced motion suppresses them. A session stays accurate after navigation or app suspension.
 - Capture freeform ideas, expand optional writing sparks, revisit an older thought each day, and search or edit saved notes. Read a thought in full and follow its original thought or direct branches while retaining unfinished writing, search and return context. Notes are included in JSON backups. Contextual new/edit/branch drafts recover separately, protect dirty writing, and retain missing/changed-source writing with Keep as new thought. Drafts are excluded from backups.
 
 ## Recent completed work
+
+- Shipped clear import completion feedback in [Android 2026.10.28](releases/smart-paper-v2026.10.28.md): filename/mode receipt, truthful backup counts, content links and archived/future saved weeks in Planner. Product/Designer, 179 unit tests, all 36 browser checks, exact-source CI, protected signing, independent artifact review and public APK byte/hash verification passed. Physical chooser/TalkBack remain follow-ups.
 
 - Shipped Android Back correction in [Android 2026.10.27](releases/smart-paper-v2026.10.27.md): open views close through existing actions, visited app screens unwind, Settings/Planner save protections remain active, and the unguarded Planner root permits exit. Product/Designer/QA, 178 unit tests, all 30 exact-source browser checks, native compilation, protected signing and independent final artifact review passed. Anonymous public APK byte/hash verification passed; physical IME/chooser/gestures and TalkBack remain follow-ups.
 
