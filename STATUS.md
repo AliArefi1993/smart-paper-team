@@ -6,6 +6,8 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 
 ## Current Focus
 
+- **Published 2026.10.28 has a data-loss defect:** [safe Merge correction](tasks/2026-10-16-safe-merge.md). Android export → add Thursday day note → Merge older backup erases the note because matching weeks replace the whole days array. Correction candidate 2026.10.29/code46 is committed at frontend `40c3516c7ccd4b3ed056b9227591ca35152fef63`: keep populated device values, fill blanks/add missing records, disclose unapplied conflicts. Product/Designer actual-app acceptance, independent source review, local checks and exact-source CI (194 unit/39 browser checks plus Android verification packaging) passed; signed artifact review and publication remain pending. An initial browser-only cold-load fixture race was corrected; app code is unchanged by that test fix. No user-device data was accessed; an export predating the overwritten note cannot recover it.
+
 - [Import completion feedback](tasks/2026-10-15-import-feedback.md) shipped in Android 2026.10.28/code45 from frontend `baf05da37794e6c9314d9112d3c9a0c24e5fbe4b`. Contextual receipts identify file/mode and incoming collections; saved archived/future weeks are reachable through Planner. Product/Designer, 179 unit tests, 36 browser checks, exact-source CI, protected signing and independent source/unsigned/final artifact reviews passed. [Publication](releases/smart-paper-v2026.10.28.md) and anonymous byte/hash verification passed; physical chooser/TalkBack remain unverified.
 
 - [Android Back navigation](tasks/2026-10-14-android-back-navigation.md) shipped in Android 2026.10.27/code44 from frontend `6ec0eee66add646ee64f2fe335e9f044171a4531`. Exact-source CI, protected signing, independent final artifact review, publication and anonymous APK verification passed. Physical keyboard, chooser, predictive/gesture Back and TalkBack remain unverified.
@@ -75,7 +77,7 @@ Run `scripts/project-context.sh` for current branches, revisions, working-tree c
 - Multi-week summaries and English/Persian UI.
 - Optional Android Finance goal and income tracking: fresh installs show Finance by default, saved visibility choices remain authoritative, and an independent Settings checkbox preserves records and backup access. A known local PIN can be changed in Settings; Django mode retains its separate throttled shared PIN/session unlock.
 - Local JSON backup/import (`schema_version: 5`, including Idea Space notes) plus CSV, XLSX, and Markdown exports; older backups remain importable. Django backup remains schema 4.
-- Local JSON Merge preserves unrelated saved week templates when incoming templates are empty or omitted; matching IDs use the incoming record. Replace uses only the incoming collection.
+- Local safe Merge preserves populated device Planner values, fills blanks/adds missing records and retains saved records on matching-ID conflicts, including templates and Ideas. Saved Finance goal/configuration remain authoritative. Empty or omitted collections delete nothing; Replace uses incoming collections. See [D-020](docs/decisions.md#d-020--local-merge-preserves-device-values-on-conflict).
 - Two persistence modes: Django/SQLite API mode and browser `localStorage` mode selected by `NEXT_PUBLIC_DATA_MODE=local`.
 - The Android APK packages `smart-paper-front/` in local-data mode; it does not require Django.
 - Capacitor Android app with native file sharing and opt-in local morning plan notifications.

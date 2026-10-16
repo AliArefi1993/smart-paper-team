@@ -5,6 +5,8 @@ Updated: 2026-10-16
 Owning frontend: `/export`, `src/components/export-view.tsx`; local week list feeding `weekly-planner.tsx`
 Design type: proposed change
 
+Merge semantics in this historical feedback handoff are superseded by the [safe Merge correction](2026-10-16-safe-merge.md). Preserve receipt/focus behavior; do not restore incoming-wins handling for matching device data.
+
 ## Problem and scope
 
 [Product brief](2026-10-15-import-feedback-product.md) owns scope and acceptance. Current source clears the file chooser and puts its shared success above the overview, away from the import control. Week/income counts mean incoming records, not net additions; Ideas/templates are missing. Saved weeks beyond the generated +/-8 week window are inaccessible through the current rail.
