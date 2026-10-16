@@ -1,6 +1,6 @@
 # Design: Preserve current writing during local Merge
 
-Status: brief — ready for Designer
+Status: accepted and shipped — Android 2026.10.29; see [task verification](../tasks/2026-10-16-safe-merge.md)
 Updated: 2026-10-16
 Owning route/component: Android/local `/export`; `export-view.tsx`, `local-store.ts`, `idea-notes.ts`
 Local studio story links: Designer to provide

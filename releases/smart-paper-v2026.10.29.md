@@ -2,7 +2,7 @@
 
 Date: 2026-10-16
 
-Status: Publication in progress. Product, Designer, implementation review, actual app comparison, corrected exact-source CI, unsigned/final artifact Security reviews and protected signing passed. Final signed artifact `12030157154` is verified. Lead publication go-ahead received; pushing the team tag will trigger publication. Superseded candidate run `38861435808` is canceled.
+Status: Published on 2026-10-16. Product, Designer, implementation review, actual app comparison, corrected exact-source CI, unsigned/final artifact Security reviews, protected signing, GitHub publication and anonymous APK byte/hash verification passed. Superseded candidate run `38861435808` was canceled.
 
 ## Scope
 
@@ -14,7 +14,7 @@ Status: Publication in progress. Product, Designer, implementation review, actua
 
 | Repository | Tag | Commit | Notes |
 | --- | --- | --- | --- |
-| team root | `smart-paper-v2026.10.29` | Release record commit | Release record, final APK and provenance are included in the tagged commit. |
+| team root | `smart-paper-v2026.10.29` | `f6be0bd4dd5ba5285cca403fdacf33d351084475` | Release record, final APK and provenance are included in the tagged commit. |
 | backend `smart-paper/` | `smart-paper-v2026.10.29` | `68c789b707239ef5451f98f7f6ce49d7c9b8a8c2` | Backend source unchanged; annotated marker tag. |
 | frontend `smart-paper-front/` | `smart-paper-v2026.10.29` | `40c3516c7ccd4b3ed056b9227591ca35152fef63` | Exact source after test-only browser bootstrap fix. |
 
@@ -50,7 +50,7 @@ Stable-build run [38861893418](https://github.com/AliArefi1993/smart-paper-front
 | Superseded hosted candidate | Run [38861435808](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38861435808), SHA `3e3a1a4b9467d5c61b6e4fc73a9e5433d6fff6b5` | Canceled before artifact review because the test-only helper was corrected in a new commit. |
 | Hosted stable candidate | Run [38861893418](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38861893418), artifact `12029303458`, SHA `40c3516c7ccd4b3ed056b9227591ca35152fef63` | Unsigned artifact built and passed independent Security review; 115 web assets and 559 payload entries accepted. Original archive size/hash and APK details recorded above. |
 | Protected signing | Run [38861893418](https://github.com/AliArefi1993/smart-paper-front/actions/runs/38861893418), final artifact `12030157154` | Exact-SHA approval submitted after CI, candidate review and lead authorization. Independent Security verified the pinned v2/v3 signer and all 559 unsigned payload entries unchanged except three signature metadata records. APK: 4,422,272 bytes, SHA-256 `d3589efedb5546960d104552a1e042d0f8a61c716344740bb073a3174076a3ce`. |
-| Public release | In progress | Lead publication go-ahead received; team tag triggers GitHub publication. Anonymous APK download verification remains pending. |
+| Public release | [GitHub Release](https://github.com/AliArefi1993/smart-paper-team/releases/tag/smart-paper-v2026.10.29), publisher run [38863625805](https://github.com/AliArefi1993/smart-paper-team/actions/runs/38863625805), APK asset `646440338` | Published 2026-10-16. The public APK is 4,422,272 bytes and its anonymous download SHA-256 matches the committed APK: `d3589efedb5546960d104552a1e042d0f8a61c716344740bb073a3174076a3ce`. |
 
 ## Release Notes
 

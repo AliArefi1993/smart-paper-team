@@ -23,6 +23,8 @@ Complete and document each selected task before starting the next. Reproduced is
 
 ## Completed / Assessed
 
+- [Safe Merge preserves device writing](2026-10-16-safe-merge.md): shipped in Android 2026.10.29; reproduced Thursday-note loss fixed, with Product/Designer acceptance, 194 unit/39 browser checks, independent review, signing and public APK verification. Physical chooser/upgrade/TalkBack remain open.
+
 - [Clear import completion feedback](2026-10-15-import-feedback.md): shipped in Android 2026.10.28; visible filename/mode/count receipt and access to archived saved weeks, with exact-source checks, signing, independent artifact review and public APK verification. Physical chooser/TalkBack remain open.
 
 - [Android Back navigation](2026-10-14-android-back-navigation.md): shipped in Android 2026.10.27 after exact-source checks, protected signing, independent artifact review and public APK verification; physical Back/IME/chooser/TalkBack follow-ups remain open.

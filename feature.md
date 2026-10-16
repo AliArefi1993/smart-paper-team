@@ -25,6 +25,8 @@ Updated: 2026-10-16. Keep this file short and update it when user-visible featur
 
 ## Recent completed work
 
+- Shipped safe Merge in [Android 2026.10.29](releases/smart-paper-v2026.10.29.md): older backups preserve saved writing, fill empty fields/add missing records and disclose conflicts. The reported Thursday-note regression, Product/Designer acceptance, 194 unit/39 browser checks, independent source/artifact review, signing and anonymous public APK verification passed. No retroactive recovery is provided; physical chooser/upgrade/TalkBack remain follow-ups.
+
 - Shipped clear import completion feedback in [Android 2026.10.28](releases/smart-paper-v2026.10.28.md): filename/mode receipt, truthful backup counts, content links and archived/future saved weeks in Planner. Product/Designer, 179 unit tests, all 36 browser checks, exact-source CI, protected signing, independent artifact review and public APK byte/hash verification passed. Physical chooser/TalkBack remain follow-ups.
 
 - Shipped Android Back correction in [Android 2026.10.27](releases/smart-paper-v2026.10.27.md): open views close through existing actions, visited app screens unwind, Settings/Planner save protections remain active, and the unguarded Planner root permits exit. Product/Designer/QA, 178 unit tests, all 30 exact-source browser checks, native compilation, protected signing and independent final artifact review passed. Anonymous public APK byte/hash verification passed; physical IME/chooser/gestures and TalkBack remain follow-ups.
