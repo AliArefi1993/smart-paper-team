@@ -6,7 +6,7 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 
 ## Current Focus
 
-- Growth & Community role setup is tracked in [the team task](tasks/2026-10-16-growth-community-agent.md), with [onboarding](docs/growth-community.md) and a repo-local workflow. Audience, channels, budget, and pilot remain unselected; no outreach or campaign has started. Revisit the existing pre-user release authorization when actual users begin.
+- Growth & Community role is configured with [onboarding](docs/growth-community.md) and a repo-local workflow. Its [first pilot package](docs/growth/first-pilot.md) proposes 5–8 adult friends or colleagues using Android (maintainer-selected audience), zero spend, a saved/reopened day plan and seven days of voluntary manual learning. EN/FA copy is drafted; Persian wording and launch choices await maintainer review. No outreach or pilot has started. See [preparation evidence](tasks/2026-10-16-first-user-pilot.md); revisit existing pre-user release authorization before actual-user launch.
 
 - [Safe Merge correction](tasks/2026-10-16-safe-merge.md) shipped in Android 2026.10.29/code46 at frontend `40c3516c7ccd4b3ed056b9227591ca35152fef63`. The reported export → add Thursday day note → Merge older backup loss is reproduced and fixed: keep populated device values, fill blanks/add missing records and disclose unapplied conflicts. Product/Designer actual-app acceptance, independent source/unsigned/final artifact reviews, exact-source CI (194 unit/39 browser checks), protected signing and anonymous public APK verification passed. No user-device data was accessed; an export predating the overwritten note cannot recover it. Physical chooser, upgrade/data retention and TalkBack remain unverified.
 

@@ -23,6 +23,8 @@ Complete and document each selected task before starting the next. Reproduced is
 
 ## Completed / Assessed
 
+- [First early-user pilot preparation](2026-10-16-first-user-pilot.md): EN/FA proposal for 5–8 Android friends/colleagues, installation guidance and voluntary aggregate learning. No outreach or pilot execution; launch and Persian wording await maintainer review.
+
 - [Growth & Community agent setup](2026-10-16-growth-community-agent.md): role, focused skill, and onboarding brief for sharing/adoption work; campaign execution is outside setup scope.
 
 - [Safe Merge preserves device writing](2026-10-16-safe-merge.md): shipped in Android 2026.10.29; reproduced Thursday-note loss fixed, with Product/Designer acceptance, 194 unit/39 browser checks, independent review, signing and public APK verification. Physical chooser/upgrade/TalkBack remain open.

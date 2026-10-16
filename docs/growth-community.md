@@ -23,14 +23,14 @@ Native Android chooser, upgrade/data retention, migration, notification delivery
 
 ## Needs confirmation
 
-- Intended first audience, geography, and language mix.
+- First recruitment audience selected by the maintainer on 2026-10-16: friends or colleagues who use Android. Audience fit, geography, and language mix remain untested; see [the first pilot package](growth/first-pilot.md) and [preparation task](../tasks/2026-10-16-first-user-pilot.md).
 - Suitable community or distribution channels and whether the maintainer wants to use them.
 - Any budget, incentive, or paid promotion allowance.
 - Support contact and who may respond to prospective users or testers.
 - Whether participants can be asked to report outcomes and what consent language is acceptable.
 
-## Suggested first pilot (not started)
+## First pilot preparation (not started)
 
-Propose a small, opt-in APK evaluation with a handful of people who already want an offline bilingual personal planner. Before inviting anyone, the maintainer should approve the audience, channel, exact invitation, consent language, and support contact. Provide the current public release path and a short task asking each participant to set up one week, record a useful plan, and return to it later. Collect only voluntary, minimal answers; do not request screenshots, personal plans, finance details, or device diagnostics by default. Keep raw responses private and summarize only sanitized, aggregated observations outside public materials.
+The maintainer authorized [preparing the first pilot package](growth/first-pilot.md) for friends or colleagues using Android. It proposes a small, opt-in APK evaluation. Before inviting anyone, resolve the remaining launch choices in that package and obtain authorization covering outreach. Provide the current public release path and a short task asking each participant to record a useful plan and return to it later. Collect only voluntary, minimal answers; do not request screenshots, personal plans, finance details, or device diagnostics by default. Keep raw responses private and summarize only sanitized, aggregated observations outside public materials.
 
-Measure a manual, consented funnel: invitations accepted, installs the participant confirms, completion of one agreed first useful action, and voluntary return to use the app. Treat confirmed installs, first useful action, and return as distinct outcomes; download counts alone do not show whether the app helped. Do not add telemetry, tracking links, automatic collection, or hosted replay. A first deliverable could be a one-page pilot proposal with the invitation draft, consent text, task, and a simple aggregate tally sheet; it is only a suggestion and has not been started or approved.
+Measure a manual, consented funnel: invitations accepted, installs the participant confirms, completion of one agreed first useful action, and voluntary return to use the app. Treat confirmed installs, first useful action, and return as distinct outcomes; download counts alone do not show whether the app helped. Do not add telemetry, tracking links, automatic collection, or hosted replay. Proposal preparation does not authorize recruitment or running the experiment.
