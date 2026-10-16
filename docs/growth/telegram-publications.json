@@ -54,5 +54,17 @@
       "reconciled_at": "2026-10-16T20:01:38.568790+00:00",
       "evidence": "Fresh public timeline before=6 shows message IDs1-4 including API-confirmed tip4, no APK/caption; direct public message5 widget reports Post not found. Original upload process exited."
     }
-  ]
+  ],
+  "profile": {
+    "title": "اسمارت پیپر",
+    "description": "اسمارت پیپر؛ برنامه‌ریز هفتگی فارسی برای اندروید، بدون نیاز به اینترنت 🌱\nدریافت برنامه و شروع با یک کار کوچک:\nhttps://t.me/smart_paper_app/2",
+    "text_verified_at": "2026-10-16T20:11:55.493653+00:00",
+    "photo_status": "published",
+    "pinned_message_id": 2,
+    "photo_asset": "design/assets/telegram-channel-avatar.png",
+    "photo_sha256": "0dd00349c28f5629f4d79f4fbcde654abf38d145e5de387c278c3464038a5b9a",
+    "photo_dimensions": "1024x1024",
+    "photo_verified_at": "2026-10-16T20:12:36.639943+00:00",
+    "photo_unique_id": "AQADtBFrG5ZTmFIAAQ"
+  }
 }
