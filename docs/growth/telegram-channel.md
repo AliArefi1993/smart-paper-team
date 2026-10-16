@@ -10,6 +10,8 @@ Use truthful product and verified-release claims. Do not claim encryption, guara
 
 Sharing the already verified APK does not widen the existing pre-user app-release authorization or bypass its gates. Real pilot enrollment/installs remain unknown. The maintainer must revisit that release policy once actual users are confirmed; a channel publication alone is not evidence of installation or use.
 
+Maintainer copy preference (2026-10-16): keep routine internal test-completion caveats out of channel posts. Track unexecuted phone checks in team status/tasks; do not imply those checks passed. On explicit request, the physical-install/upgrade test-completion sentence was removed from the caption of existing post5; backup guidance and the APK remain. Telegram returned the exact revised caption and unchanged attachment identity; the publication journal retains the edit and previous content hash. Phone tests remain follow-up work, not executed by this copy edit.
+
 ## Opening batch
 
 Persian copy internally reviewed by Growth during drafting against PRODUCT.md, STATUS.md, the current release record and actual Persian report-button source. This is a content review under the user's standing authorization, not a claimed maintainer sign-off. No screenshots or UI changes.

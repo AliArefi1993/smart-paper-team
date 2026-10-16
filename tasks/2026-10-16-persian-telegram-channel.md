@@ -58,4 +58,6 @@ Establish Growth ownership of @smart_paper_app for app discovery and useful onbo
 
 ## Outcome / Handoff
 
+Follow-up copy edit on 2026-10-16: at the maintainer's explicit request, removed the internal physical-install/upgrade testing sentence from existing APK post5. Telegram confirmed the new caption and same attachment filename; source caption and journal hash/edit history match. The channel handoff records the preference to keep routine test-completion caveats internal. Phone test status remains unverified; no test execution was requested as part of this immediate edit.
+
 Published Persian [welcome2](https://t.me/smart_paper_app/2) (pinned), [tip4](https://t.me/smart_paper_app/4), and [APK5](https://t.me/smart_paper_app/5); a fresh public timeline confirmed messages 1–5 and the pin, caption, and artifact filename. Growth's standing scope is recorded in role, skill, AGENTS and the channel handoff. Preparation and publication are complete. All task-owned network commands completed; no bot server, watcher or scheduler remains. Future channel work uses reviewed Persian posts and stable journal keys during active agent runs; actual installs/returns remain unknown and the recruitment pilot has not started.
