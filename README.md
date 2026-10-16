@@ -9,7 +9,8 @@ This repository coordinates the Smart Paper product. It stores durable project c
 - [Prioritized roadmap](ROADMAP.md)
 - [Prepared task index](tasks/README.md)
 - [Release history](releases/README.md)
-- Latest published Android release: [2026.10.18 release record](releases/smart-paper-v2026.10.18.md) · [download APK](https://github.com/AliArefi1993/smart-paper-team/releases/download/smart-paper-v2026.10.18/SmartPaper-local-2026.10.18-release.apk)
+- Current Android release and verified download evidence: [STATUS.md](STATUS.md) → its latest published release record.
+- [Growth & Community onboarding](docs/growth-community.md)
 
 ## Workspace Map
 
@@ -26,7 +27,7 @@ This repository coordinates the Smart Paper product. It stores durable project c
 | [`docs/decisions.md`](docs/decisions.md) | durable decisions and their reasons |
 | [`tasks/`](tasks/README.md) | context for active and completed multi-step work |
 | [`design/`](design/) | product design briefs, interface foundations, and implementation handoffs |
-| [`skills/`](skills/) | reusable Product and Designer workflows |
+| [`skills/`](skills/) | reusable Product, Designer, Personal Systems, and Growth workflows |
 | [`releases/`](releases/README.md) | shipped release records and APK artifacts |
 
 ## Fast Start

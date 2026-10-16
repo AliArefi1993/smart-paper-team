@@ -6,6 +6,8 @@ This is a present-state snapshot, not a changelog. Shipped history and validatio
 
 ## Current Focus
 
+- Growth & Community role setup is tracked in [the team task](tasks/2026-10-16-growth-community-agent.md), with [onboarding](docs/growth-community.md) and a repo-local workflow. Audience, channels, budget, and pilot remain unselected; no outreach or campaign has started. Revisit the existing pre-user release authorization when actual users begin.
+
 - [Safe Merge correction](tasks/2026-10-16-safe-merge.md) shipped in Android 2026.10.29/code46 at frontend `40c3516c7ccd4b3ed056b9227591ca35152fef63`. The reported export → add Thursday day note → Merge older backup loss is reproduced and fixed: keep populated device values, fill blanks/add missing records and disclose unapplied conflicts. Product/Designer actual-app acceptance, independent source/unsigned/final artifact reviews, exact-source CI (194 unit/39 browser checks), protected signing and anonymous public APK verification passed. No user-device data was accessed; an export predating the overwritten note cannot recover it. Physical chooser, upgrade/data retention and TalkBack remain unverified.
 
 - [Import completion feedback](tasks/2026-10-15-import-feedback.md) shipped in Android 2026.10.28/code45 from frontend `baf05da37794e6c9314d9112d3c9a0c24e5fbe4b`. Contextual receipts identify file/mode and incoming collections; saved archived/future weeks are reachable through Planner. Product/Designer, 179 unit tests, 36 browser checks, exact-source CI, protected signing and independent source/unsigned/final artifact reviews passed. [Publication](releases/smart-paper-v2026.10.28.md) and anonymous byte/hash verification passed; physical chooser/TalkBack remain unverified.

@@ -6,6 +6,10 @@ max_concurrent_threads_per_session = 3
 description = "Product manager for evidence-based Android-first discovery and design-ready briefs. Must not modify application code."
 config_file = "agents/product.toml"
 
+[agents.growth]
+description = "Growth & Community specialist for audience discovery, truthful EN/FA sharing materials, early-user recruitment experiments, and privacy-respecting adoption learning."
+config_file = "agents/growth.toml"
+
 [agents.architect]
 description = "Read-oriented senior software architect for boundaries, API contracts, data flow, scalability, and tradeoffs."
 config_file = "agents/architect.toml"
