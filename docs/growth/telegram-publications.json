@@ -1,0 +1,39 @@
+{
+  "channel": "@smart_paper_app",
+  "entries": {
+    "welcome-2026-10-16": {
+      "status": "published",
+      "payload_sha256": "51f42a99f99c7103595748b7b4741941f05f7f15cf86ce1d08ce81bf7ceea22f",
+      "attempted_at": "2026-10-16T19:57:55.173279+00:00",
+      "message_id": 2,
+      "link": "https://t.me/smart_paper_app/2",
+      "pinned": true
+    },
+    "tip-first-plan-2026-10-16": {
+      "status": "published",
+      "payload_sha256": "9dab9345c811e4beca1235c58d5d72e91ca7714e357c34919a74fd50887c8261",
+      "attempted_at": "2026-10-16T19:59:54.263124+00:00",
+      "message_id": 4,
+      "link": "https://t.me/smart_paper_app/4",
+      "pinned": false
+    },
+    "release-2026-10-29": {
+      "status": "published",
+      "payload_sha256": "a2408ae7219a226e8501e2129e0579193ffc188fdbed19de0c9ac3f896ab6c55",
+      "attempted_at": "2026-10-16T20:01:49.683392+00:00",
+      "message_id": 5,
+      "link": "https://t.me/smart_paper_app/5",
+      "pinned": false
+    }
+  },
+  "reconciled_attempts": [
+    {
+      "key": "release-2026-10-29",
+      "status": "verified_absent",
+      "payload_sha256": "a2408ae7219a226e8501e2129e0579193ffc188fdbed19de0c9ac3f896ab6c55",
+      "attempted_at": "2026-10-16T19:58:14.861058+00:00",
+      "reconciled_at": "2026-10-16T20:01:38.568790+00:00",
+      "evidence": "Fresh public timeline before=6 shows message IDs1-4 including API-confirmed tip4, no APK/caption; direct public message5 widget reports Post not found. Original upload process exited."
+    }
+  ]
+}

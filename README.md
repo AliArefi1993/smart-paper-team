@@ -11,6 +11,7 @@ This repository coordinates the Smart Paper product. It stores durable project c
 - [Release history](releases/README.md)
 - Current Android release and verified download evidence: [STATUS.md](STATUS.md) → its latest published release record.
 - [Growth & Community onboarding](docs/growth-community.md)
+- [Persian Telegram channel](https://t.me/smart_paper_app) · [channel operating handoff](docs/growth/telegram-channel.md)
 
 ## Workspace Map
 

@@ -23,6 +23,8 @@ Complete and document each selected task before starting the next. Reproduced is
 
 ## Completed / Assessed
 
+- [Persian Telegram channel operation](2026-10-16-persian-telegram-channel.md): Growth channel remit, tested local publisher, pinned welcome, practical tip and verified signed APK posted under standing channel authorization; no recurring process or private recruitment.
+
 - [First early-user pilot preparation](2026-10-16-first-user-pilot.md): EN/FA proposal for 5–8 Android friends/colleagues, installation guidance and voluntary aggregate learning. No outreach or pilot execution; launch and Persian wording await maintainer review.
 
 - [Growth & Community agent setup](2026-10-16-growth-community-agent.md): role, focused skill, and onboarding brief for sharing/adoption work; campaign execution is outside setup scope.

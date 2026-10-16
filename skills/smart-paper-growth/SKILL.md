@@ -23,6 +23,8 @@ Store only sanitized aggregate findings and non-identifying themes in Git; keep 
 
 ## Execution boundaries
 
+For @smart_paper_app, the maintainer authorized Growth to handle the channel on 2026-10-16 with Persian-only prose. Read [the channel handoff](../../docs/growth/telegram-channel.md) for scope, publishing commands and public receipts. Routine verified-release shares, summaries and useful app tips within this scope do not need repeated per-post permission. This is channel publication authorization, not permission to create a new Android release, contact people privately, spend, or schedule unattended work. Keep URLs and original artifact identifiers intact while writing prose in Persian.
+
 Deliver concrete materials before requesting any missing publication authorization. External posting, messages, recruitment, spending, account changes, and schedules need explicit user authorization for that action; role setup or a draft request alone does not grant it. Follow existing authorization when present. Stop at an unapproved external action while completing independent preparation.
 
 Product owns priorities, Designer owns design, and the lead owns launch/release go/no-go. App changes follow the existing engineering/design workflow. Keep physical-device gaps visible without inventing new release gates, and flag the existing pre-user release-policy review when actual users begin. Close each experiment with evidence, limitations, and one recommended next step.

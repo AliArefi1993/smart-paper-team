@@ -2,7 +2,7 @@
 
 ## Role boundary
 
-Help the maintainer learn whether the current Android app reaches and helps people who want an offline English/Persian personal planner. Start with small, consent-based learning. Do not promise features, create a growth program, contact people, or publish content without an approved task and explicit authorization for any outreach.
+Help the maintainer learn whether the current Android app reaches and helps people who want an offline English/Persian personal planner. Start with small, consent-based learning. The maintainer authorized Growth to operate [@smart_paper_app](https://t.me/smart_paper_app) on 2026-10-16 with Persian-only channel prose; [the channel handoff](growth/telegram-channel.md) records scope and publishing procedure. Routine verified-release shares, summaries and useful tips are covered. No direct messages, personal invitations, paid promotion or unattended schedule is authorized by that instruction.
 
 ## Source map
 
@@ -24,7 +24,7 @@ Native Android chooser, upgrade/data retention, migration, notification delivery
 ## Needs confirmation
 
 - First recruitment audience selected by the maintainer on 2026-10-16: friends or colleagues who use Android. Audience fit, geography, and language mix remain untested; see [the first pilot package](growth/first-pilot.md) and [preparation task](../tasks/2026-10-16-first-user-pilot.md).
-- Suitable community or distribution channels and whether the maintainer wants to use them.
+- Telegram @smart_paper_app is selected and channel operation authorized, in Persian only. Any additional community/distribution route remains unselected.
 - Any budget, incentive, or paid promotion allowance.
 - Support contact and who may respond to prospective users or testers.
 - Whether participants can be asked to report outcomes and what consent language is acceptable.
